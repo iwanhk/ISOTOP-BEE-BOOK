@@ -22,12 +22,10 @@ pragma solidity ^0.8.4;
  */
 
 import "../contracts/ERC721A/extensions/IERC721AQueryable.sol";
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import {IGasLoader, IDetails} from "./IISOTOP.sol";
 
-interface IISOTOP1010 is IERC721AQueryable {
+interface IISOTOP1010 is IERC721AQueryable, IDetails {
     event baseURIChanged(string uri);
-    event detailsURIChanged(string uri);
-    event gasLoaded(address gasManager);
 
     /// @dev 标准接口
 
@@ -38,45 +36,5 @@ interface IISOTOP1010 is IERC721AQueryable {
         string memory details_
     ) external;
 
-    function contractName() external pure returns (string memory);
-
     function setBaseURI(string memory base_) external;
-
-    function setDetailsURI(string memory uri_) external;
-
-    function setTGas(address _tgas) external;
-
-    function getTGas() external view returns (address);
-
-    function Details() external view returns (string memory);
-
-    // @dev Ownerable 接口
-    event OwnershipTransferred(
-        address indexed previousOwner,
-        address indexed newOwner
-    );
-
-    /**
-     * @dev Returns the address of the current owner.
-     */
-    function owner() external returns (address);
-
-    /**
-     * @dev Leaves the contract without owner. It will not be possible to call
-     * `onlyOwner` functions anymore. Can only be called by the current owner.
-     *
-     * NOTE: Renouncing ownership will leave the contract without an owner,
-     * thereby removing any functionality that is only available to the owner.
-     */
-    function renounceOwnership() external;
-
-    /**
-     * @dev Transfers ownership of the contract to a new account (`newOwner`).
-     * Can only be called by the current owner.
-     */
-    function transferOwnership(address newOwner) external;
-
-    function mint(address _to, uint256 quantity) external;
-
-    function safeMint(address _to, uint256 quantity) external;
 }

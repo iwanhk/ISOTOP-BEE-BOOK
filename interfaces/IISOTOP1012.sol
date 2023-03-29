@@ -27,22 +27,4 @@ pragma solidity ^0.8.4;
 import "./IISOTOP1010.sol";
 import "../contracts/ERC721A/extensions/IERC4907A.sol";
 
-interface IISOTOP1012 is IISOTOP1010, IERC4907A {
-    /// @dev 新增功能
-    function setUser(
-        uint256 tokenId,
-        address user,
-        uint64 expires
-    ) external;
-
-    /**
-     * @dev Returns the user address for `tokenId`.
-     * The zero address indicates that there is no user or if the user is expired.
-     */
-    function userOf(uint256 tokenId) external view returns (address);
-
-    /**
-     * @dev Returns the user's expires of `tokenId`.
-    //  */
-    function userExpires(uint256 tokenId) external view returns (uint256);
-}
+interface IISOTOP1012 is IISOTOP1010, IERC4907A {}
