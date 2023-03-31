@@ -30,7 +30,7 @@
 2. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
 3. Factory:  "BEE_FACTORY_ADDRESS"   
 4. TGas: "BEE_TGAS_ADDRESS"   
-其中，Factory已经注册ISOTOP1010-1016,1021,1022 合约  
+其中，Factory已经注册ISOTOP1010-1016,1021,1022,1040, 1052 合约  
 
 数图链core地址：
 1. DDS： 0x89212dcE4dEaa27a25AAea1140a589D18aeBf362
@@ -38,7 +38,7 @@
 2. DDS core: 待更新   
 3. Factory："BEE_FACTORY_ADDRESS"   
 4. TGas: "BEE_TGAS_ADDRESS"   
-其中，Factory已经注册ISOTOP1010-1016,1021,1022 合约   
+其中，Factory已经注册ISOTOP1010-1016,1021,1022,1040, 1052 合约   
 ***
 
 ## 使用方式

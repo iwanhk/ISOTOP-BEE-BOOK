@@ -3,14 +3,14 @@
 // Creator: Dr. Zu team
 pragma solidity ^0.8.4;
 
-// address constant BEE_DDS_ADDRESS = 0xD4106406b32786B7A630254271d5bB40E23c5BEe;
-address constant BEE_DDS_ADDRESS = 0x2d09612785E721A363eCAD5E7475adB892013033; // polygon
+// address constant BEE_DDS_ADDRESS = 0x2d09612785E721A363eCAD5E7475adB892013033; // polygon
+// address constant BEE_DDS_ADDRESS = 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE; //wenchang
 
 // Conflux core DDS
 // address constant BEE_DDS_ADDRESS = 0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a;
 
 // Conflux test DDS
-// address constant BEE_DDS_ADDRESS = 0x89212dcE4dEaa27a25AAea1140a589D18aeBf362;
+address constant BEE_DDS_ADDRESS = 0x89212dcE4dEaa27a25AAea1140a589D18aeBf362;
 
 /// @title PLAN-BEE IDDS Domain Data System 域名数据系统
 /// @author Iwan Cao
@@ -43,10 +43,10 @@ interface IDDS {
 
     function getOwner(string calldata _domain) external view returns (address);
 
-    function get(string calldata _domain, string calldata _key)
-        external
-        view
-        returns (bytes memory);
+    function get(
+        string calldata _domain,
+        string calldata _key
+    ) external view returns (bytes memory);
 
     function get(
         string calldata _domain,
@@ -54,15 +54,14 @@ interface IDDS {
         bool _personal
     ) external view returns (bytes memory);
 
-    function getKeys(string calldata _domain)
-        external
-        view
-        returns (string[] memory);
+    function getKeys(
+        string calldata _domain
+    ) external view returns (string[] memory);
 
-    function getKeys(string calldata _domain, bool _personal)
-        external
-        view
-        returns (string[] memory);
+    function getKeys(
+        string calldata _domain,
+        bool _personal
+    ) external view returns (string[] memory);
 
     function setValue(
         string memory t,
