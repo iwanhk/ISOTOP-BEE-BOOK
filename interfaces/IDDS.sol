@@ -3,15 +3,6 @@
 // Creator: Dr. Zu team
 pragma solidity ^0.8.4;
 
-// address constant BEE_DDS_ADDRESS = 0x2d09612785E721A363eCAD5E7475adB892013033; // polygon
-// address constant BEE_DDS_ADDRESS = 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE; //wenchang
-
-// Conflux core DDS
-// address constant BEE_DDS_ADDRESS = 0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a;
-
-// Conflux test DDS
-address constant BEE_DDS_ADDRESS = 0x89212dcE4dEaa27a25AAea1140a589D18aeBf362;
-
 /// @title PLAN-BEE IDDS Domain Data System 域名数据系统
 /// @author Iwan Cao
 /// @notice 开放使用合约，任何人可以存储自己的数据

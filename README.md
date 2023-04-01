@@ -23,21 +23,18 @@
 5. DateTime : 一个时间和日期转换工具合约  
 
 
-## 合约部署地址：
+## 测试链合约部署地址：
 
+文昌链测试链：
 ***
-1. Deployer : 0x18C353Ca538702f862526Cd2DEeabA35f0ED3BEE  
-2. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
-3. Factory:  "BEE_FACTORY_ADDRESS"   
-4. TGas: "BEE_TGAS_ADDRESS"   
+1. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
+2. Factory:  0x26ad2351C5C3eD6c1d6a5cB6f7967DFb0AaE8072
 其中，Factory已经注册ISOTOP1010-1016,1021,1022,1040, 1052 合约  
 
-数图链core地址：
+树图链测试链：
 1. DDS： 0x89212dcE4dEaa27a25AAea1140a589D18aeBf362
 'CFXTEST:TYPE.USER:AAPWCNSSK1ZME8VFZNZBCUFFVHJ2Z49XPJMKGF3GX0'
-2. DDS core: 待更新   
-3. Factory："BEE_FACTORY_ADDRESS"   
-4. TGas: "BEE_TGAS_ADDRESS"   
+2. Factory：0x88089689F057F28fffC01D7A97c8a123c7C457fE / cfxtest:aceavfyk8bn9fd992as1zf8jyev6tvc192tdk8tgtm
 其中，Factory已经注册ISOTOP1010-1016,1021,1022,1040, 1052 合约   
 ***
 

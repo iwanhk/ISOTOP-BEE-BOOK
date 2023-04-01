@@ -22,7 +22,7 @@ pragma solidity ^0.8.4;
  */
 
 import "../contracts/ERC721A/extensions/IERC721AQueryable.sol";
-import {IGasLoader, IDetails} from "./IISOTOP.sol";
+import {IDetails} from "./IISOTOP.sol";
 
 interface IISOTOP1010 is IERC721AQueryable, IDetails {
     event baseURIChanged(string uri);
