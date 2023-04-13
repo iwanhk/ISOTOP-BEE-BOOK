@@ -55,4 +55,28 @@ public class ABiEncode {
         // String abiEncodeAddressData = DefaultFunctionEncoder.encode(f);
         // System.out.println(abiEncodeAddressData);
     }
+     static void decodeGreetingResult() {
+        //字符串
+        String helloWorldData = "0x0000000000000000000000007cf9adc8c5a88827eb57d4f7ac25debc6c8d586f";
+        //地址
+        String helloWorldData1 = "0x00000000000000000000000044028da500c013dd54e1e0beedc839317799b174";
+        //   TypeReference stringTypeReference = TypeReference.create(Utf8String.class);
+        TypeReference stringTypeReference = TypeReference.create(Address.class);
+        // 使用  DefaultFunctionReturnDecoder 来解析 data,
+        List<Type> list = DefaultFunctionReturnDecoder.decode(helloWorldData, Arrays.asList(stringTypeReference));
+        System.out.println(list.get(0).getValue());
+    }
+
+    /**
+     * 转树图链的cfx地址
+     *
+     * @param address
+     * @return
+     */
+    static String converCFX(String address) {
+        String hexAddress = AddressType.User.normalize(address);
+        //测试链 第二个参数改为1
+        conflux.web3j.types.Address web3jAddress = new conflux.web3j.types.Address(hexAddress, 1029);
+        return web3jAddress.getAddress();
+    }
 }
