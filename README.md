@@ -28,12 +28,18 @@
 文昌链测试链：
 ***
 1. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
-2. Factory:  0x802Ef413CD98edC1DBD839aad2e1C7ee2903a2c4
+2. Factory:  0x802Ef413CD98edC1DBD839aad2e1C7ee2903a2c4   
+3. DID: 0x98Aaea6d6BE28390595ACdCF7E39E604e54DcB6D  
+4. SBT: 0x055190564E8924A87d1d9B10e16FA43d34c5891A  
+5. SBTII: 0xFb1b71231c09E7F59B02B0545cc13C435D58cdEc  
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 
 树图链测试链：
-1. DDS： cfxtest:acewcnssk1zme8vfznzbcuffvhj2z49xpj3tn3edpf
-2. Factory：cfxtest:aceavfyk8bn9fd992as1zf8jyev6tvc192tdk8tgtm
+1. DDS： cfxtest:acewcnssk1zme8vfznzbcuffvhj2z49xpj3tn3edpf   
+2. Factory：cfxtest:aceavfyk8bn9fd992as1zf8jyev6tvc192tdk8tgtm   
+3. DID: cfxtest:acbyd1bmypb0dhy65f26hzn0yhu8pzsz364pp8vypt  
+4. SBT:   cfxtest:acf4w376cv4egvtv7tue061wbwg44uy5wu3bnpx50c   
+5. SBTII:   cfxtest:acbreyymehd1vxn6h10nzbxn5ymxvzht36j2zjnfc2   
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 ***
 
