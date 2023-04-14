@@ -20,6 +20,8 @@ interface IsotopTemplate {
     function transferOwnership(address newOwner) external;
 
     function contractName() external returns (string memory);
+
+    function contracVersion() external returns (uint8);
 }
 
 interface IDetails {
