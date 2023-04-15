@@ -1,0 +1,91 @@
+[合约]ExchangePool: 积分交换池合约
+[获取方法]从工厂合约clone，克隆后归属于调用人管理。合约名称：ExchangePool
+[描述]任何两个积分都可以创建一个交换池，由市场供需关系决定积分的汇率
+	[方法readCall] MINIMUM_LIQUIDITY: 最小流动性，积分兑换池不能把某一方兑换空
+		[出参uint256] : 10
+	[备注] 
+	[方法writeCall] addLiquidity: 注入流动性
+		[入参uint256] _amount0: 第一种积分的数量
+		[入参uint256] _amount1: 第二种积分数量
+	[备注] 需要一个用户持有两种积分，同时注入池子
+	[方法readCall] calcAtoB: 计算如果从A换B，可以得到多少数量
+		[入参uint256] amountA: 如果注入的数量
+		[出参uint256] amountB: 计算得到的数量
+	[备注] 
+	[方法readCall] calcBroA: 计算如果从B换A，可以得到多少数量
+		[入参uint256] amountB: 如果注入的数量
+		[出参uint256] amountA: 计算得到的数量
+	[备注] 
+	[方法writeCall] contracVersion: 合约版本号
+		[出参uint8] : 目前是0
+	[备注] 
+	[方法writeCall] contractName: 合约名称
+		[出参string] : ExchangePool
+	[备注] 
+	[方法readCall] getBalance: 某用户在池子里面的余额
+		[入参address] a: 某用户
+		[出参uint256] _liqudity: 余额
+	[备注] 
+	[方法readCall] getReserves: 获得池子里面的积分资产
+		[出参uint256] _reserve0: 第一种积分剩余量
+		[出参uint256] _reserve1: 第二种积分剩余量
+	[备注] 
+	[方法writeCall] init: 初始化
+		[入参address] _token0: 第一种积分
+		[入参address] _token1: 第二种积分
+	[备注] 必须管理员使用
+	[方法readCall] initialized: 合约是否初始化过
+		[出参bool] : 
+	[备注] 
+	[方法readCall] owner: 合约管理员
+		[出参address] : 
+	[备注] 
+	[方法writeCall] removeLiquidity: 撤走所有的流动性池子
+	[备注] 按照当前汇率收回投入的积分
+	[方法writeCall] renounceOwnership: 放弃合约管理员
+	[备注] 
+	[方法readCall] reserve0: 第一种积分数量
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] reserve1: 第二种积分数量
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] swapAtoB: 投入第一种积分兑换第二种积分
+		[入参uint256] amountA: 第一种积分数量
+	[备注] 需要发起人手中有足够的积分
+	[方法writeCall] swapBtoA: 投入第二种积分兑换第一种积分
+		[入参uint256] amountB: 第二种积分数量
+	[备注] 
+	[方法readCall] token0: 第一种积分地址
+		[出参address] : 
+	[备注] 
+	[方法readCall] token1: 第二种积分地址
+		[出参address] : 
+	[备注] 
+	[方法readCall] totalSupply: 合约的总流动性
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferOwnership: 转移管理员
+		[入参address] newOwner: 
+	[备注] 
+[代码示例]
+	创建积分并且分发给admin
+    p1 = Points.deploy(addr(creator))
+    p1.init('token1', 1000000, addr(creator))
+    p1.dispatch(admin, 5000, addr(creator))
+
+	创建积分并且分发给admin
+    p0 = Points.deploy(addr(consumer))
+    p0.init('token0', 1000000, addr(consumer))
+    p0.dispatch(admin, 10000, addr(consumer))
+
+	创建交换池子
+    pool = ExchangePool.deploy(addr(admin))
+    pool.init(p0, p1, addr(admin))
+
+	授权交换池使用admin的积分
+    p0.approve(pool, 100, addr(admin))
+    p1.approve(pool, 50, addr(admin))
+
+	把100和50积分放进流动性池子
+    pool.addLiquidity(100, 50, addr(admin))

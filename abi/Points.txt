@@ -1,0 +1,103 @@
+[合约]Points: 积分合约
+[获取方法]从工厂合约clone，克隆后归属于调用人管理。合约名称：POINTS
+[描述]积分合约管理导入到heyfoo钱包的社区积分。创建合约后，管理员需要设定初始积分的数量。并且负责积分的转入，转出，分发功能。
+	[方法readCall] allowance: 积分授权使用的额度数量
+		[入参address] owner: 持有人
+		[入参address] spender: 使用人
+		[出参uint256] : 数量
+	[备注] 
+	[方法writeCall] approve: 允许使用人转移和使用调用者的积分额度（需要在总数量之内）
+		[入参address] spender: 使用人
+		[入参uint256] amount: 数量
+		[出参bool] : 是否成功
+	[备注] 
+	[方法readCall] balanceOf: 积分余额
+		[入参address] account: 用户地址
+		[出参uint256] : 此地址用户的积分余额
+	[备注] 
+	[方法writeCall] burn: 烧掉积分
+		[入参uint256] amount: 数量
+	[备注] 
+	[方法writeCall] burnFrom: 烧掉某用户的积分
+		[入参address] account: 某用户
+		[入参uint256] amount: 数量
+	[备注] 
+	[方法writeCall] contracVersion: 合约版本
+		[出参uint8] : 版本号，目前是0
+	[备注] 
+	[方法writeCall] contractName: 合约名称
+		[出参string] : Points
+	[备注] 
+	[方法readCall] decimals: 积分的小数点位数
+		[出参uint8] : 目前是0，只支持整数积分，计算结果有小数自动四舍五入
+	[备注] 
+	[方法writeCall] decreaseAllowance: 降低积分额度
+		[入参address] spender: 使用人
+		[入参uint256] subtractedValue: 减少的数量
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] dispatch: 分发积分，将本合约的积分数量发给某用户
+		[入参address] who_: 某用户
+		[入参uint256] amount_: 数量
+	[备注] 
+	[方法writeCall] fill: 给合约注入积分，一般是管理员初始情况或者得到了一批量的积分总量，存储在合约地址
+		[入参uint256] amount_: 数量
+	[备注] 只能是管理员使用
+	[方法writeCall] increaseAllowance: 增加积分额度
+		[入参address] spender: 使用人
+		[入参uint256] addedValue: 增加的额度
+		[出参bool] : 成功
+	[备注] 
+	[方法writeCall] init: 初始化
+		[入参string] name_: 积分名称
+		[入参uint256] amount_: 初始化的数量
+	[备注] 只能是管理员使用
+	[方法readCall] name: 积分名称
+		[出参string] : 返回积分名称
+	[备注] 
+	[方法readCall] owner: 合约的管理员
+		[出参address] : 管理员地址
+	[备注] 
+	[方法writeCall] renounceOwnership: 放弃管理员权限
+	[备注] 只能是管理员使用
+	[方法readCall] symbol: 积分的代号
+		[出参string] : 没有使用
+	[备注] 
+	[方法readCall] totalSupply: 积分总量
+		[出参uint256] : 积分总量
+	[备注] 
+	[方法writeCall] transfer: 转移积分
+		[入参address] to: 某用户
+		[入参uint256] amount: 数量
+		[出参bool] : 成功
+	[备注] 需要发起人有足够积分数量才能成功
+	[方法writeCall] transferFrom: 把某用户积分转移给其他人
+		[入参address] from: 某用户
+		[入参address] to: 其他人
+		[入参uint256] amount: 数量
+		[出参bool] : 成功
+	[备注] 
+	[方法writeCall] transferOwnership: 把管理员权限转移给别人
+		[入参address] newOwner: 新的管理员
+	[备注] 
+[代码示例]
+	创建积分并且分发给admin
+    p1 = Points.deploy(addr(creator))
+    p1.init('token1', 1000000, addr(creator))
+    p1.dispatch(admin, 5000, addr(creator))
+
+	创建积分并且分发给admin
+    p0 = Points.deploy(addr(consumer))
+    p0.init('token0', 1000000, addr(consumer))
+    p0.dispatch(admin, 10000, addr(consumer))
+
+	创建交换池子
+    pool = ExchangePool.deploy(addr(admin))
+    pool.init(p0, p1, addr(admin))
+
+	授权交换池使用admin的积分
+    p0.approve(pool, 100, addr(admin))
+    p1.approve(pool, 50, addr(admin))
+
+	把100和50积分放进流动性池子
+    pool.addLiquidity(100, 50, addr(admin))
