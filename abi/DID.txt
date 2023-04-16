@@ -1,6 +1,6 @@
 [合约]DID: DID身份管理合约
 [获取方法]
-文昌测试链： 0x98Aaea6d6BE28390595ACdCF7E39E604e54DcB6D
+文昌测试链： 0xC9e20C60E4bA04dca7DF1d8Ff05f3a2B8248D97C
 树图测试链： cfxtest:acbyd1bmypb0dhy65f26hzn0yhu8pzsz364pp8vypt
 [描述]管理DID的入口，身份，维护DIDNFT，可以通过DID身份铸造SBT
 	[方法writeCall] addAddress: 为一个身份增加一个地址
