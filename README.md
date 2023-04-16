@@ -30,16 +30,12 @@
 1. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
 2. Factory:  0x802Ef413CD98edC1DBD839aad2e1C7ee2903a2c4   
 3. DID: 0xC9e20C60E4bA04dca7DF1d8Ff05f3a2B8248D97C  
-4. SBT: 0x055190564E8924A87d1d9B10e16FA43d34c5891A  
-5. SBTII: 0xFb1b71231c09E7F59B02B0545cc13C435D58cdEc  
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 
 树图链测试链：
 1. DDS： cfxtest:acewcnssk1zme8vfznzbcuffvhj2z49xpj3tn3edpf   
 2. Factory：cfxtest:aceavfyk8bn9fd992as1zf8jyev6tvc192tdk8tgtm   
-3. DID: cfxtest:ach9kby3wr5wsbremhy3j034ja7d8ram922gdc1msw   
-4. SBT:   cfxtest:acf4w376cv4egvtv7tue061wbwg44uy5wu3bnpx50c   
-5. SBTII:   cfxtest:acbreyymehd1vxn6h10nzbxn5ymxvzht36j2zjnfc2   
+3. DID: cfxtest:acfa7ej9n866uggdkjx2zadexv7npuknb611bswdre   
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 ***
 
