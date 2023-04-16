@@ -1,110 +1,32 @@
-[合约]SBTII: 
-[获取方法]
-[描述]
-	[方法readCall] Details: 
-		[出参string] : 
-	[备注] 
-	[方法writeCall] approve: 
-		[入参address] to: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法readCall] balanceOf: 
-		[入参address] owner: 
-		[出参uint256] : 
-	[备注] 
-	[方法writeCall] burn: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法writeCall] clone: 
-		[出参address] _clone: 
-	[备注] 
-	[方法readCall] getApproved: 
-		[入参uint256] tokenId: 
-		[出参address] : 
-	[备注] 
-	[方法writeCall] init: 
-		[入参address] _did: 
-		[入参string] _did_name: 
-		[入参string] _sbt_name: 
-	[备注] 
-	[方法readCall] isApprovedForAll: 
-		[入参address] owner: 
-		[入参address] operator: 
-		[出参bool] : 
-	[备注] 
-	[方法readCall] issuer_did: 
-		[出参string] : 
-	[备注] 
-	[方法writeCall] mint: 
-		[入参string] to: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法writeCall] mint: 
-		[入参address] to: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法readCall] name: 
-		[出参string] : 
-	[备注] 
-	[方法readCall] owner: 
-		[出参address] : 
-	[备注] 
-	[方法readCall] ownerOf: 
-		[入参uint256] tokenId: 
-		[出参address] : 
-	[备注] 
-	[方法writeCall] renounceOwnership: 
-	[备注] 
-	[方法writeCall] safeTransferFrom: 
-		[入参address] from: 
-		[入参address] to: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法writeCall] safeTransferFrom: 
-		[入参address] from: 
-		[入参address] to: 
-		[入参uint256] tokenId: 
-		[入参bytes] data: 
-	[备注] 
-	[方法readCall] sbt_name: 
-		[出参string] : 
-	[备注] 
-	[方法writeCall] setApprovalForAll: 
-		[入参address] operator: 
-		[入参bool] approved: 
-	[备注] 
-	[方法writeCall] setDetailsURI: 
-		[入参string] : 
-	[备注] 
-	[方法readCall] supportsInterface: 
-		[入参bytes4] interfaceId: 
-		[出参bool] : 
-	[备注] 
-	[方法readCall] symbol: 
-		[出参string] : 
-	[备注] 
-	[方法readCall] tokenByIndex: 
-		[入参uint256] index: 
-		[出参uint256] : 
-	[备注] 
-	[方法readCall] tokenOfOwnerByIndex: 
-		[入参address] owner: 
-		[入参uint256] index: 
-		[出参uint256] : 
-	[备注] 
-	[方法readCall] tokenURI: 
+[合约]SBTII: SoulBontToken 灵魂绑定token合约
+[获取方法]DID持有人可以调用->createSBT创建自己的SBT 
+[描述]SBTII可以生成SBT的metadata，只需要设定'[CONFIG]XXX.baseURI'为某一张图片或者某个目录（图片为0-N.jpg，即可生成SBT内容
+	[方法readCall] tokenURI: SBT的metadata
 		[入参uint256] tokenId: 
 		[出参string] : 
-	[备注] 
-	[方法readCall] totalSupply: 
-		[出参uint256] : 
-	[备注] 
-	[方法writeCall] transferFrom: 
-		[入参address] from: 
-		[入参address] to: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法writeCall] transferOwnership: 
-		[入参address] _owner: 
-	[备注] 
+	[备注] 需要设定SBT专属的一个配置key'[CONFIG]XXX.baseURI'
 [代码示例]
+    did = DID.deploy(addr(admin))
+    sbt = SBT.deploy(did, addr(admin))
+    did.setSBTTemplate(sbt, addr(admin))
+    did.create(D, consumer, time.time()+10000, addr(admin))
+    did.put(D, '[CONFIG]nft.cover', D+'.Cover', addr(consumer))
+    nft = DIDNFT.at(did.getDIDNFTAddress())
+    did.addAddress(D, iwan, addr(consumer))
+    did.createSBT(D, 'certification', addr(consumer))
+    sbt1 = SBT.at(did.getSBT(D, 'certification'))
+    did.put(D, '[CONFIG]certification.baseURI',
+            'http://URL/', addr(consumer))
+
+    sbtii = SBTII.deploy(did, addr(admin))
+    did.setSBTTemplate(sbtii, addr(admin))
+
+    did.createSBT(D, 'nana', addr(consumer))
+    sbt2 = SBT.at(did.getSBT(D, 'nana'))
+    did.put(D, '[CONFIG]nana.baseURI', 'http://Image', addr(consumer))
+
+    did.create('iwan.id', iwan, time.time()+10000, addr(admin))
+    did.put('iwan.id', '[CONFIG]nft.cover', 'Iwan.Cover', addr(iwan))
+    did.addAddress('iwan.id', newbie, addr(iwan))
+    did.create('creator.id', creator, time.time()+10000, addr(admin))
+    did.put('creator.id', '[CONFIG]nft.cover', 'Creator.Cover', addr(creator))

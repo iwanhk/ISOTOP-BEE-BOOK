@@ -157,25 +157,6 @@
         {
           "indexed": true,
           "internalType": "address",
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "OwnershipTransferred",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
           "name": "from",
           "type": "address"
         },
@@ -219,19 +200,6 @@
         }
       ],
       "name": "detailsURIChanged",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "gasManager",
-          "type": "address"
-        }
-      ],
-      "name": "gasLoaded",
       "type": "event"
     },
     {
@@ -295,19 +263,6 @@
       "name": "burn",
       "outputs": [],
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "contractName",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "pure",
       "type": "function"
     },
     {
@@ -412,19 +367,6 @@
       "type": "function"
     },
     {
-      "inputs": [],
-      "name": "getTGas",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "inputs": [
         {
           "internalType": "string",
@@ -477,24 +419,6 @@
       "type": "function"
     },
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "quantity",
-          "type": "uint256"
-        }
-      ],
-      "name": "mint",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
       "inputs": [],
       "name": "name",
       "outputs": [
@@ -505,19 +429,6 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "owner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -537,31 +448,6 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_to",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "quantity",
-          "type": "uint256"
-        }
-      ],
-      "name": "safeMint",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -655,19 +541,6 @@
         }
       ],
       "name": "setDetailsURI",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_tgas",
-          "type": "address"
-        }
-      ],
-      "name": "setTGas",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -806,49 +679,36 @@
       "outputs": [],
       "stateMutability": "payable",
       "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "transferOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
     }
   ],
   "ast": {
     "absolutePath": "interfaces/IISOTOP1011.sol",
     "exportedSymbols": {
+      "IDetails": [
+        140
+      ],
       "IERC721A": [
-        2783
+        780
       ],
       "IERC721ABurnable": [
-        1899
+        385
       ],
       "IERC721AQueryable": [
-        1886
+        372
       ],
       "IISOTOP1010": [
-        691
+        243
       ],
       "IISOTOP1011": [
-        700
-      ],
-      "Ownable": [
-        1834
+        252
       ]
     },
-    "id": 701,
+    "id": 253,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 693,
+        "id": 245,
         "literals": [
           "solidity",
           "^",
@@ -856,29 +716,29 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "81:23:27"
+        "src": "81:23:16"
       },
       {
         "absolutePath": "contracts/ERC721A/extensions/IERC721ABurnable.sol",
         "file": "../contracts/ERC721A/extensions/IERC721ABurnable.sol",
-        "id": 694,
+        "id": 246,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 701,
-        "sourceUnit": 1900,
-        "src": "550:62:27",
+        "scope": 253,
+        "sourceUnit": 386,
+        "src": "550:62:16",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
         "absolutePath": "interfaces/IISOTOP1010.sol",
         "file": "./IISOTOP1010.sol",
-        "id": 695,
+        "id": 247,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 701,
-        "sourceUnit": 692,
-        "src": "613:27:27",
+        "scope": 253,
+        "sourceUnit": 244,
+        "src": "613:27:16",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -887,69 +747,77 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 696,
+              "id": 248,
               "name": "IISOTOP1010",
+              "nameLocations": [
+                "667:11:16"
+              ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 691,
-              "src": "667:11:27"
+              "referencedDeclaration": 243,
+              "src": "667:11:16"
             },
-            "id": 697,
+            "id": 249,
             "nodeType": "InheritanceSpecifier",
-            "src": "667:11:27"
+            "src": "667:11:16"
           },
           {
             "baseName": {
-              "id": 698,
+              "id": 250,
               "name": "IERC721ABurnable",
+              "nameLocations": [
+                "680:16:16"
+              ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1899,
-              "src": "680:16:27"
+              "referencedDeclaration": 385,
+              "src": "680:16:16"
             },
-            "id": 699,
+            "id": 251,
             "nodeType": "InheritanceSpecifier",
-            "src": "680:16:27"
+            "src": "680:16:16"
           }
         ],
         "canonicalName": "IISOTOP1011",
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 700,
+        "id": 252,
         "linearizedBaseContracts": [
-          700,
-          1899,
-          691,
-          1886,
-          2783
+          252,
+          385,
+          243,
+          140,
+          372,
+          780
         ],
         "name": "IISOTOP1011",
-        "nameLocation": "652:11:27",
+        "nameLocation": "652:11:16",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 701,
-        "src": "642:263:27",
+        "scope": 253,
+        "src": "642:57:16",
         "usedErrors": [
-          1843,
-          2583,
-          2586,
-          2589,
-          2592,
-          2595,
-          2598,
-          2601,
-          2604,
-          2607,
-          2610,
-          2613,
-          2616,
-          2619
+          329,
+          580,
+          583,
+          586,
+          589,
+          592,
+          595,
+          598,
+          601,
+          604,
+          607,
+          610,
+          613,
+          616
         ]
       }
     ],
-    "src": "81:825:27"
+    "src": "81:619:16"
   },
   "contractName": "IISOTOP1011",
   "dependencies": [
+    "IDetails",
     "IERC721A",
     "IERC721ABurnable",
     "IERC721AQueryable",
@@ -957,9 +825,9 @@
   ],
   "offset": [
     642,
-    905
+    699
   ],
-  "sha1": "a62ca324c5f605c165126b5c5ca2b7b4232600a4",
-  "source": "// SPDX-License-Identifier: MIT\n// IISOTOP version 0.10\n// Creator: Dr. Zu team\n\npragma solidity ^0.8.4;\n\n/**\n * @dev Interface of ISOTOP1011: \u589e\u52a0\u53ef\u9500\u6bc1\u63a5\u53e3\n\n\u4e3b\u8981\u529f\u80fd\uff1a\n*\uff09 \u7ed9NFT\u52a0\u6301\u5185\u5bb9\uff1asetBaseURI\n*\uff09 \u94f8\u9020NFT\uff1amint\n*\uff09 \u5b89\u5168\u94f8\u9020NFT\uff08\u68c0\u67e5\u662f\u5426\u53ef\u4ee5\u88ab\u5408\u7ea6\u5730\u5740\u62e5\u6709\uff09\uff1asafeMint\n*\uff09 \u9500\u6bc1\uff1aburn\n*\uff09 \u53ef\u67e5\u8be2\u63a5\u53e3\uff1atokenByIndex, tokenOfOwnerByIndex\n*\uff09 \u8f6c\u79fb\uff1atransferFrom\n\n\u529f\u80fd\u8981\u70b9\uff1a\n1\uff09 \u76f8\u6bd4ISOTOP1010\u589e\u52a0\u9500\u6bc1\u529f\u80fd  \n2\uff09 \u5176\u5b83\u529f\u80fd\u5b8c\u5168\u517c\u5bb9ISOTOP1010\n3\uff09 \u5b8c\u5168\u517c\u5bb9ERC721\n\n */\n\nimport \"../contracts/ERC721A/extensions/IERC721ABurnable.sol\";\nimport \"./IISOTOP1010.sol\";\n\ninterface IISOTOP1011 is IISOTOP1010, IERC721ABurnable {\n    // /// @dev \u65b0\u589e\u63a5\u53e3\n    // function burn(uint256 tokenId) external;\n    // function exists(uint256 tokenId) external view returns (bool);\n    // function burned() external view returns (uint256);\n}\n",
+  "sha1": "ba9483d351a6da206227f9b9eebbf34f912aab18",
+  "source": "// SPDX-License-Identifier: MIT\n// IISOTOP version 0.10\n// Creator: Dr. Zu team\n\npragma solidity ^0.8.4;\n\n/**\n * @dev Interface of ISOTOP1011: \u589e\u52a0\u53ef\u9500\u6bc1\u63a5\u53e3\n\n\u4e3b\u8981\u529f\u80fd\uff1a\n*\uff09 \u7ed9NFT\u52a0\u6301\u5185\u5bb9\uff1asetBaseURI\n*\uff09 \u94f8\u9020NFT\uff1amint\n*\uff09 \u5b89\u5168\u94f8\u9020NFT\uff08\u68c0\u67e5\u662f\u5426\u53ef\u4ee5\u88ab\u5408\u7ea6\u5730\u5740\u62e5\u6709\uff09\uff1asafeMint\n*\uff09 \u9500\u6bc1\uff1aburn\n*\uff09 \u53ef\u67e5\u8be2\u63a5\u53e3\uff1atokenByIndex, tokenOfOwnerByIndex\n*\uff09 \u8f6c\u79fb\uff1atransferFrom\n\n\u529f\u80fd\u8981\u70b9\uff1a\n1\uff09 \u76f8\u6bd4ISOTOP1010\u589e\u52a0\u9500\u6bc1\u529f\u80fd  \n2\uff09 \u5176\u5b83\u529f\u80fd\u5b8c\u5168\u517c\u5bb9ISOTOP1010\n3\uff09 \u5b8c\u5168\u517c\u5bb9ERC721\n\n */\n\nimport \"../contracts/ERC721A/extensions/IERC721ABurnable.sol\";\nimport \"./IISOTOP1010.sol\";\n\ninterface IISOTOP1011 is IISOTOP1010, IERC721ABurnable {}\n",
   "type": "interface"
 }
