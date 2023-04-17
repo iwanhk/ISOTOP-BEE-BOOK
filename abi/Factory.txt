@@ -1,6 +1,6 @@
 [合约]Factory: 工厂合约
 [获取方法] 
-树图测试链: cfxtest:acewupvrdzbjbnxbnt7xjetac92myvkesj3k1ah97z
+树图测试链: cfxtest:accppz91rtka1ft2bmfucvddguw8cs617y417cx3mw
 文昌测试链：0x2eFfa068d5c0C6BBfB0dcD93b9EEdAcFd70b1a6C
 [描述]负责按照模板复制合约并将部署的合约管理员转给调用者
 	[方法writeCall] deployContract: 部署一个模板合约
