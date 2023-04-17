@@ -35,7 +35,7 @@
 树图链测试链：
 1. DDS： cfxtest:acewcnssk1zme8vfznzbcuffvhj2z49xpj3tn3edpf   
 2. Factory：cfxtest:acewupvrdzbjbnxbnt7xjetac92myvkesj3k1ah97z   
-3. DID: cfxtest:acfa7ej9n866uggdkjx2zadexv7npuknb611bswdre   
+3. DID: cfxtest:accppz91rtka1ft2bmfucvddguw8cs617y417cx3mw 
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 ***
 
