@@ -28,13 +28,13 @@
 文昌链测试链：
 ***
 1. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
-2. Factory:  0x802Ef413CD98edC1DBD839aad2e1C7ee2903a2c4   
+2. Factory:  0x2eFfa068d5c0C6BBfB0dcD93b9EEdAcFd70b1a6C   
 3. DID: 0xC9e20C60E4bA04dca7DF1d8Ff05f3a2B8248D97C  
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 
 树图链测试链：
 1. DDS： cfxtest:acewcnssk1zme8vfznzbcuffvhj2z49xpj3tn3edpf   
-2. Factory：cfxtest:aceavfyk8bn9fd992as1zf8jyev6tvc192tdk8tgtm   
+2. Factory：cfxtest:acewupvrdzbjbnxbnt7xjetac92myvkesj3k1ah97z   
 3. DID: cfxtest:acfa7ej9n866uggdkjx2zadexv7npuknb611bswdre   
 其中，Factory已经注册ISOTOP1010-1017, DID, SBT, SBTII
 ***

@@ -1,7 +1,7 @@
 [合约]Factory: 工厂合约
 [获取方法] 
-树图测试链: cfxtest:aceavfyk8bn9fd992as1zf8jyev6tvc192tdk8tgtm
-文昌测试链：0x802Ef413CD98edC1DBD839aad2e1C7ee2903a2c4
+树图测试链: cfxtest:acewupvrdzbjbnxbnt7xjetac92myvkesj3k1ah97z
+文昌测试链：0x2eFfa068d5c0C6BBfB0dcD93b9EEdAcFd70b1a6C
 [描述]负责按照模板复制合约并将部署的合约管理员转给调用者
 	[方法writeCall] deployContract: 部署一个模板合约
 		[入参string] _id: 模板合约的名字
@@ -14,10 +14,6 @@
 		[入参string] _id: 合约名称
 		[出参address[]] : 地址列表
 	[备注] 
-	[方法readCall] getLastDeployed: 查询某人部署的合约地址
-		[入参string] _id: 合约名称
-		[出参address] : 部署地址
-	[备注] 需要调用者的地址作为发起人
 	[方法readCall] getLastDeployed: 查询某人部署的合约地址
 		[入参string] _id: 合约名称
 		[入参address] _owner: 某人
