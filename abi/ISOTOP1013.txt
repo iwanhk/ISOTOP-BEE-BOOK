@@ -1,6 +1,6 @@
-[合约]ISOTOP1013: 
-[获取方法]
-[描述]
+[合约]ISOTOP1013: NFT，徽章合约
+[获取方法]工厂合约clone
+[描述]基础的NFT合约
 	[方法readCall] Details: 
 		[出参string] : 
 	[备注] 
@@ -39,20 +39,20 @@
 		[入参uint256] tokenId: 
 		[出参address] : 
 	[备注] 
-	[方法writeCall] init: 
-		[入参string] name_: 
-		[入参string] symbol_: 
-		[入参string] base_: 
-		[入参string] details_: 
-	[备注] 
+	[方法writeCall] init: 初始化合约
+		[入参string] name_: 合约名称
+		[入参string] symbol_: 合约代号
+		[入参string] base_: NFT metadata的目录URL
+		[入参string] details_: NFT介绍页面URL
+	[备注] 需要把数藏品的metadata提前上传到云端，提供URL作为base
 	[方法readCall] isApprovedForAll: 
 		[入参address] owner: 
 		[入参address] operator: 
 		[出参bool] : 
 	[备注] 
-	[方法writeCall] mint: 
-		[入参address] _to: 
-		[入参uint256] quantity: 
+	[方法writeCall] mint: 铸造NFT
+		[入参address] _to: 给用户
+		[入参uint256] quantity: 数量
 	[备注] 
 	[方法readCall] name: 
 		[出参string] : 
