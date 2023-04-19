@@ -36,8 +36,8 @@
 		[入参address] operator: 
 		[出参bool] : 
 	[备注] 
-	[方法writeCall] mint: 
-		[入参address] _to: 
+	[方法writeCall] mint: 铸造NFT
+		[入参address] _to: 给谁
 	[备注] 
 	[方法readCall] name: 
 		[出参string] : 
