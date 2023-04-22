@@ -1,32 +1,13 @@
 [合约]SBTII: SoulBontToken 灵魂绑定token合约
 [获取方法]DID持有人可以调用->createSBT创建自己的SBT 
-[描述]SBTII可以生成SBT的metadata，只需要设定'[CONFIG]XXX.baseURI'为某一张图片或者某个目录（图片为0-N.jpg，即可生成SBT内容
+[描述]类型：SBT_IMAGE。根据base的地址来生成SBT图片。如果base地址为一张图片，则所有SBT共享一样的图片，类似徽章。 如果base地址结尾是/，则会根据编号自动生成”编号.jpg" 作为SBT的图片
 	[方法readCall] tokenURI: SBT的metadata
 		[入参uint256] tokenId: 
 		[出参string] : 
-	[备注] 需要设定SBT专属的一个配置key'[CONFIG]XXX.baseURI'
+	[备注] 
 [代码示例]
-    did = DID.deploy(addr(admin))
-    sbt = SBT.deploy(did, addr(admin))
-    did.setSBTTemplate(sbt, addr(admin))
-    did.create(D, consumer, time.time()+10000, addr(admin))
-    did.put(D, '[CONFIG]nft.cover', D+'.Cover', addr(consumer))
-    nft = DIDNFT.at(did.getDIDNFTAddress())
-    did.addAddress(D, iwan, addr(consumer))
-    did.createSBT(D, 'certification', addr(consumer))
-    sbt1 = SBT.at(did.getSBT(D, 'certification'))
-    did.put(D, '[CONFIG]certification.baseURI',
-            'http://URL/', addr(consumer))
-
-    sbtii = SBTII.deploy(did, addr(admin))
-    did.setSBTTemplate(sbtii, addr(admin))
-
-    did.createSBT(D, 'nana', addr(consumer))
-    sbt2 = SBT.at(did.getSBT(D, 'nana'))
-    did.put(D, '[CONFIG]nana.baseURI', 'http://Image', addr(consumer))
-
-    did.create('iwan.id', iwan, time.time()+10000, addr(admin))
-    did.put('iwan.id', '[CONFIG]nft.cover', 'Iwan.Cover', addr(iwan))
-    did.addAddress('iwan.id', newbie, addr(iwan))
-    did.create('creator.id', creator, time.time()+10000, addr(admin))
-    did.put('creator.id', '[CONFIG]nft.cover', 'Creator.Cover', addr(creator))
+        did.createSBT(D, "SBT_IMAGE", True, addr(consumer))
+        sbt2 = SBT.at(did.getSBTs(D)[-1])
+        sbt2.init("SBT2", "SBT2", "http://.....pic.jpg",
+                  "Details", addr(consumer))
+        sbt2.mint['address,uint'](iwan, 0, addr(consumer))

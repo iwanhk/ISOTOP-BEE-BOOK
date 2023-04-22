@@ -1,14 +1,8 @@
 [合约]DID: DID身份管理合约
 [获取方法]
 文昌测试链： 0x4c22eADbeBf87D0b61adf67904Bff1A5B70ea549
-树图测试链： cfxtest:acdgvn8zwryw0g0cfjxxkhj2rc23z78su2gr6ypzeh
+树图测试链： cfxtest:acdgvn8zwryw0g0cfjxxkhj2rc23z78su2gr6ypzeh/0x8668aFD593692b1ac22A27349d1868b19AF7cE86
 [描述]管理DID的入口，身份，维护DIDNFT，可以通过DID身份铸造SBT
-	[方法writeCall] addAddress: 为一个身份增加一个地址
-		[入参string] _Identity: 身份字符串身份字符串
-		[入参uint256] _chainid: 链ID
-		[入参address] _addr: 地址
-		[入参string] _domain: 域名解析
-	[备注] 只有管理员调用此接口
 	[方法writeCall] addAddress: 为一个身份增加一个地址
 		[入参string] _Identity: 身份字符串身份字符串
 		[入参address] _addr: 地址
@@ -17,32 +11,23 @@
 		[入参string] _Identity: 身份字符串身份字符串
 		[出参address] : 地址
 	[备注] 
-	[方法writeCall] create: 创建一个DID身份
-		[入参string] _Identity: 身份字符串
-		[入参address] _caller: 创建人地址
-		[入参uint256] _expire: 有效期
-	[备注] 只有管理员调用此接口，通常在收费后创建
 	[方法writeCall] createSBT: DID持有人创建一个SBT
 		[入参string] _Identity: 身份字符串
-		[入参string] _name: SBT的名字（员工卡，毕业证等）
+		[入参string] _type: SBT的类型（比如SBT_META: 自定义metadata的SBT， SBT_IMAGE：自定义图片的SBT）
 		[入参bool] _restrict: 是否是一个严格SBT，严格SBT一旦发行，不能转给任何地址
 		[出参address] : SBT合约地址
 	[备注] DID的持有人可以自己创建和维护自己的SBT，并且发给任何授权的使用者，也可以销毁发出的SBT。通常是给企业和社群用户来使用的
+	[方法writeCall] claim: 申领一个DID NFT
+		[入参string] _Identity: 身份字符串
+	[备注] 任何DID持有人都可以免费获得一个NFT，用于二级交易市场
 	[方法readCall] get: 读取DID的key值
 		[入参string] _Identity: 身份字符串
 		[入参string] _key: 名称
 		[出参string] : 信息内容
 	[备注] DID支持用户定义自己的任何key值存储内容
-	[方法readCall] getAddr: 域名解析，获得某域名的解析地址
-		[入参string] _name: 域名
-		[出参address] : 地址
-	[备注] 目前仅文昌链支持，如果没有域名返回0地址
 	[方法readCall] getDIDNFTAddress: 获得DID NFT合约地址
 		[出参address] : 
 	[备注] 
-	[方法readCall] getIDs: 获得所有注册的DID身份列表
-		[出参string[]] : 
-	[备注] 只有管理员可以调用
 	[方法readCall] getIDs: 获得某用户所有注册的DID身份列表
 		[入参address] _owner: 
 		[出参string[]] IDs: 
@@ -51,10 +36,6 @@
 		[入参string] _Identity: 身份字符串
 		[出参string[]] : 
 	[备注] 
-	[方法readCall] getName: 域名解析，获得某地址对应域名
-		[入参address] _from: 
-		[出参string] : 
-	[备注] 目前仅文昌链支持，如果没有返回‘’
 	[方法readCall] getSBT: 获得某个DID下属名称的SBT合约
 		[入参string] _Identity: 身份字符串
 		[入参string] _name: SBT名称
@@ -68,39 +49,18 @@
 		[入参string] _key: 
 		[入参string] _data: 
 	[备注] key值必须唯一
-	[方法writeCall] put: 管理员写入一个DID的key值
+	[方法writeCall] put: 批量写入DID的key值
 		[入参string] _Identity: 身份字符串
-		[入参address] _who: 
-		[入参string] _key: 
-		[入参string] _data: 
-	[备注] 
-	[方法writeCall] removeAddress: 删除一个DID名下的地址
-		[入参string] _Identity: 身份字符串
-		[入参uint256] _chainid: 
-		[入参address] _addr: 
-		[入参string] _domain: 
-	[备注] 管理员使用
+		[入参string[]] _key: 键列表
+		[入参string[]] _data: 值列表
+	[备注] 两个列表必须同样长度，调用人必须是身份字符串的拥有人
 	[方法writeCall] removeAddress: 删除一个DID名下的地址
 		[入参string] _Identity: 身份字符串
 		[入参address] _addr: 
 	[备注] 
-	[方法writeCall] renounceOwnership: 放弃管理员
-	[备注] 继承函数，忽略
 	[方法readCall] sbtTemplate: SBT模板合约地址
 		[出参address] : 
 	[备注] 
-	[方法writeCall] init: 初始化合约
-		[入参address] _sbt: 设置SBT模板合约地址
-	[备注] 
-	[方法writeCall] transferOwnership: 
-		[入参address] newOwner: 
-	[备注] 
-	[方法writeCall] update: 更换DID的持有人
-		[入参string] _Identity: 身份字符串
-		[入参uint256] _chainid: 
-		[入参address] _from: 
-		[入参address] _to: 
-	[备注] 只有管理员可以调用。更换新的持有人需要原先持有人DID到期后才能进行
 	[方法writeCall] update: 更换DID的持有人
 		[入参string] _Identity: 身份字符串
 		[入参address] _to: 新持有人地址
@@ -109,26 +69,9 @@
 		[入参string] _Identity: 身份字符串
 		[入参address] _addr: 地址
 		[出参bool] : 
-	[备注] SBT只能在DID内部地址转移，DID的持有人来确保地址是否真实
+	[备注] 
 [代码示例]
-    did.create(D, consumer, time.time()+10000, addr(admin))
-    did.put(D, '[CONFIG]nft.cover', D+'.Cover', addr(consumer))
-    nft = DIDNFT.at(did.getDIDNFTAddress())
-    did.addAddress(D, iwan, addr(consumer))
-    did.createSBT(D, 'certification', addr(consumer))
-    sbt1 = SBT.at(did.getSBT(D, 'certification'))
-    did.put(D, '[CONFIG]certification.baseURI',
-            'http://URL/', addr(consumer))
-
-    sbtii = SBTII.deploy(did, addr(admin))
-    did.setSBTTemplate(sbtii, addr(admin))
-
-    did.createSBT(D, 'nana', addr(consumer))
-    sbt2 = SBT.at(did.getSBT(D, 'nana'))
-    did.put(D, '[CONFIG]nana.baseURI', 'http://Image', addr(consumer))
-
-    did.create('iwan.id', iwan, time.time()+10000, addr(admin))
-    did.put('iwan.id', '[CONFIG]nft.cover', 'Iwan.Cover', addr(iwan))
-    did.addAddress('iwan.id', newbie, addr(iwan))
-    did.create('creator.id', creator, time.time()+10000, addr(admin))
-    did.put('creator.id', '[CONFIG]nft.cover', 'Creator.Cover', addr(creator))
+        did.createSBT(D, "SBT_META", False, addr(consumer))
+        sbt1 = SBT.at(did.getSBTs(D)[-1])
+        sbt1.init("SBT1", "SBT1", "URL", "Details", addr(consumer))
+        sbt1.mint['address,uint'](iwan, 0, addr(consumer))

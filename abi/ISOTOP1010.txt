@@ -21,9 +21,6 @@
 	[方法writeCall] contractName: 
 		[出参string] : 
 	[备注] 
-	[方法readCall] detailsURI: 
-		[出参string] : 
-	[备注] 
 	[方法readCall] explicitOwnershipOf: 
 		[入参uint256] tokenId: 
 		[出参tuple] : 

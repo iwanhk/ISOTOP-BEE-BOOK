@@ -1,11 +1,11 @@
-[合约]ISOTOP1052: 
-[获取方法]
-[描述]
-	[方法readCall] Details: 
-		[出参string] : 
+[合约]ISOTOP1052: 票务NFT合约
+[获取方法] 通过工厂合约clone，名称”ISOTOP1052“
+[描述] 兼容ERC721的动态NFT，支持权益绑定，核销等门票功能
+	[方法readCall] Details: 获得门票的介绍内容
+		[出参string] : 介绍网页URL
 	[备注] 
-	[方法writeCall] addSites: 
-		[入参string[]] sites_: 
+	[方法writeCall] addSites: 增加打卡点（权益）
+		[入参string[]] sites_: 列表，景点/权益的名称
 	[备注] 
 	[方法writeCall] approve: 
 		[入参address] to: 
@@ -18,22 +18,14 @@
 	[方法readCall] baseURI: 
 		[出参string] : 
 	[备注] 
-	[方法writeCall] check: 
-		[入参uint256] tokenId: 
-		[入参uint8] _site: 
-		[入参address] _who: 
+	[方法writeCall] check: 核验/打卡
+		[入参uint256] tokenId: 门票编号
+		[入参uint8] _site: 景点
 	[备注] 
-	[方法writeCall] check: 
-		[入参uint256] tokenId: 
-		[入参uint8] _site: 
+	[方法writeCall] contracVersion: 合约版本号
+		[出参uint8] : 此版本为0
 	[备注] 
-	[方法writeCall] contracVersion: 
-		[出参uint8] : 
-	[备注] 
-	[方法writeCall] contractName: 
-		[出参string] : 
-	[备注] 
-	[方法readCall] detailsURI: 
+	[方法writeCall] contractName: 合约名称
 		[出参string] : 
 	[备注] 
 	[方法readCall] explicitOwnershipOf: 
@@ -48,28 +40,22 @@
 		[入参uint256] tokenId: 
 		[出参address] : 
 	[备注] 
-	[方法writeCall] init: 
-		[入参string] name_: 
-		[入参string] symbol_: 
-		[入参string] base_: 
-		[入参string] details_: 
-	[备注] 
-	[方法writeCall] init: 
-		[入参string] name_: 
-		[入参string] symbol_: 
-		[入参string] base_: 
-		[入参string] details_: 
-		[入参string[]] sites_: 
-		[入参string] suffix_: 
+	[方法writeCall] init: 初始化合约
+		[入参string] name_: 名称
+		[入参string] symbol_: 代号
+		[入参string] base_: metadata的目录
+		[入参string] details_: 介绍页面URL
+		[入参string[]] sites_: 景点/权益列表
+		[入参string] suffix_: 门票图片的后缀，如: .png
 	[备注] 
 	[方法readCall] isApprovedForAll: 
 		[入参address] owner: 
 		[入参address] operator: 
 		[出参bool] : 
 	[备注] 
-	[方法writeCall] mint: 
-		[入参address] _to: 
-		[入参uint256] quantity: 
+	[方法writeCall] mint: 铸造门票
+		[入参address] _to: 给谁
+		[入参uint256] quantity: 数量
 	[备注] 
 	[方法readCall] name: 
 		[出参string] : 
@@ -110,17 +96,14 @@
 	[方法writeCall] setDetailsURI: 
 		[入参string] uri_: 
 	[备注] 
-	[方法writeCall] setUser: 
-		[入参uint256] tokenId: 
-		[入参address] user: 
-		[入参uint64] expires: 
+	[方法writeCall] setUser: 门票租借
+		[入参uint256] tokenId: 门票编号
+		[入参address] user: 借给谁
+		[入参uint64] expires: 到期时间
 	[备注] 
 	[方法readCall] supportsInterface: 
 		[入参bytes4] interfaceId: 
 		[出参bool] : 
-	[备注] 
-	[方法writeCall] suspend: 
-		[入参bool] status: 
 	[备注] 
 	[方法readCall] symbol: 
 		[出参string] : 
@@ -139,8 +122,8 @@
 		[入参uint256] stop: 
 		[出参uint256[]] : 
 	[备注] 
-	[方法readCall] totalSupply: 
-		[出参uint256] : 
+	[方法readCall] totalSupply: 目前发行的总票数量
+		[出参uint256] : 数量
 	[备注] 
 	[方法writeCall] transferFrom: 
 		[入参address] from: 
@@ -150,17 +133,12 @@
 	[方法writeCall] transferOwnership: 
 		[入参address] newOwner: 
 	[备注] 
-	[方法writeCall] unCheck: 
-		[入参uint256] tokenId: 
-		[入参uint8] _site: 
-		[入参address] _who: 
+	[方法readCall] userExpires: 过期时间
+		[入参uint256] tokenId: 编号
+		[出参uint256] : 时间
 	[备注] 
-	[方法readCall] userExpires: 
-		[入参uint256] tokenId: 
-		[出参uint256] : 
-	[备注] 
-	[方法readCall] userOf: 
-		[入参uint256] tokenId: 
-		[出参address] : 
+	[方法readCall] userOf: 借给了谁
+		[入参uint256] tokenId: 编号
+		[出参address] : 借给人的地址
 	[备注] 
 [代码示例]
