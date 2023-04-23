@@ -36,10 +36,9 @@
 		[入参string] _Identity: 身份字符串
 		[出参string[]] : 
 	[备注] 
-	[方法readCall] getSBT: 获得某个DID下属名称的SBT合约
+	[方法readCall] getSBTs: 获得某个DID下属名称的SBT合约地址列表
 		[入参string] _Identity: 身份字符串
-		[入参string] _name: SBT名称
-		[出参address] : 合约地址
+		[出参address []] : 合约地址列表
 	[备注] 
 	[方法readCall] owner: 合约管理员地址
 		[出参address] : 
