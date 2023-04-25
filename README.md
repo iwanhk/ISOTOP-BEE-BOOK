@@ -27,20 +27,20 @@
 
 文昌链测试链：
 ***
-1. DDS : 0xCFfFDE169Afbd51F081d2e82aCcA0f19cAdCbbeE  
-2. Factory:  0x2eFfa068d5c0C6BBfB0dcD93b9EEdAcFd70b1a6C   
-3. DID: 0xC9e20C60E4bA04dca7DF1d8Ff05f3a2B8248D97C  
-其中，Factory已经注册ISOTOP1010-1018   
+1. DDS : 0x72829A2ed0987A6942c693F74C13fE07aE980000   
+2. Factory:  0x2451424437bBcD64a630FF940be61bd969970000   
+3. DID: 0x611cc6Fbb88AEFBb79EB4c724A08Bbcd4E990000  
+其中，Factory已经注册ISOTOP1010-1019, 1052    
 
 树图链测试链：
 1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf/0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea   
 2. Factory：cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb/0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae   
 3. DID: cfxtest:acdgvn8zwryw0g0cfjxxkhj2rc23z78su2gr6ypzeh/0x8668aFD593692b1ac22A27349d1868b19AF7cE86   
-其中，Factory已经注册ISOTOP1010-1018   
+其中，Factory已经注册ISOTOP1010-1018, 1052   
 ***
 
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
 
-last updated: 2023.4.22
+last updated: 2023.4.25
 
