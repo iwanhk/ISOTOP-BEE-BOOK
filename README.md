@@ -33,9 +33,12 @@
 其中，Factory已经注册ISOTOP1010-1019, 1052    
 
 树图链测试链：
-1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf/0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea   
-2. Factory：cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb/0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae   
-3. DID: cfxtest:acdgvn8zwryw0g0cfjxxkhj2rc23z78su2gr6ypzeh/0x8668aFD593692b1ac22A27349d1868b19AF7cE86   
+1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf   
+   (eg: 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea)   
+2. Factory：cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb    
+   (eg.: 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae)   
+3. DID: cfxtest:acdgvn8zwryw0g0cfjxxkhj2rc23z78su2gr6ypzeh   
+   (eg.: 0x8668aFD593692b1ac22A27349d1868b19AF7cE86)   
 其中，Factory已经注册ISOTOP1010-1018, 1052   
 ***
 
