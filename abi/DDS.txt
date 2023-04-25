@@ -1,5 +1,6 @@
 [合约]DDS: 用户数据注册表
 [获取方法] 
+文昌链测试：0x72829A2ed0987A6942c693F74C13fE07aE980000
 树图链：cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf/0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea
 [描述]任何用户可以维护一个域名domain，在其之下的key，value通过put写入链，通过get读出来。
 	[方法readCall] get: 
