@@ -13,10 +13,10 @@ pragma solidity ^0.8.4;
 interface IDeployer {
     event Deployed(address addr, address indexed owner, uint256 salt);
 
-    function getAddress(bytes memory bytecode, uint256 _salt)
-        external
-        view
-        returns (address);
+    function getAddress(
+        bytes memory bytecode,
+        uint256 _salt
+    ) external view returns (address);
 
     function Deploy(bytes memory bytecode, uint256 _salt) external;
 
