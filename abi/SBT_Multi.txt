@@ -1,0 +1,128 @@
+[合约]SBT_Multi: ERC1155兼容的数藏合约
+[获取方法]DID持有人可以调用->createSBT创建自己的SBT 
+[描述]可以一副图片铸造多个数藏品
+	[方法readCall] Details: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] account: 
+		[入参uint256] id: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] balanceOfBatch: 
+		[入参address[]] accounts: 
+		[入参uint256[]] ids: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] burn: 销毁
+		[入参address] from: 
+		[入参uint256] id: 
+		[入参uint256] amount: 
+	[备注] 
+	[方法writeCall] burnBatch: 批量销毁
+		[入参address] from: 
+		[入参uint256[]] ids: 
+		[入参uint256[]] amounts: 
+	[备注] 
+	[方法readCall] exists: 
+		[入参uint256] tokenId: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] init: 初始化
+		[入参string] name_: 名称
+		[入参string] symbol_: 代号
+		[入参string] base_: metadata基础目录（需要以/结尾）
+		[入参string] details_: 说明页面（可以没有）
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] account: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] mint: 铸造
+		[入参address] to: 给谁
+		[入参uint256] id: ID必须唯一
+		[入参uint256] amount: 数量
+	[备注] 
+	[方法writeCall] mintBatch: 批量铸造
+		[入参address] to: 给谁
+		[入参uint256[]] ids: ID的列表
+		[入参uint256[]] amounts: 每个ID数量
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] safeBatchTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256[]] ids: 
+		[入参uint256[]] amounts: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] id: 
+		[入参uint256] amount: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法writeCall] setDetailsURI: 
+		[入参string] _details: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] symbol: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenCountOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokens: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] tokensOf: 
+		[入参address] owner: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[入参uint256] tokenId: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] _owner: 
+	[备注] 
+	[方法readCall] uri: ERC1155的展示接口
+		[入参uint256] tokenId: 编号
+		[出参string] : metadata
+	[备注] 
+[代码示例]
