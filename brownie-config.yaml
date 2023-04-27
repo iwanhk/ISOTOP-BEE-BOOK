@@ -69,3 +69,4 @@ wallets:
   newbie1: ${NEWBIE1_PRIVATE_KEY}
   deployer: ${DEPLOYER_PRIVATE_KEY}
   alice: ${ALICE_PRIVATE_KEY}
+  zhao: ${ZHAO_PRIVATE_KEY}
