@@ -1,0 +1,86 @@
+[合约]DomainNFT: 文昌链域名NFT
+[获取方法]
+[描述]
+	[方法writeCall] approve: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] claim: 领取域名NFT
+		[入参string] _identity: 域名
+	[备注] 
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] getName: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] getTokenId: 
+		[入参string] _identity: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] ownerOf: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setAddr: 更改域名解析
+		[入参string] _identity: 域名
+		[入参address] _a: 解析地址
+	[备注] 注意，调用此函数前，应该先调用域名resolver的approve授权此NFT合约地址
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] symbol: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenURI: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferFrom: 转移域名资产
+		[入参address] from: 从某人
+		[入参address] to: 给某人
+		[入参uint256] tokenId: 编号
+	[备注] 注意，调用转增之前，需要先调用文昌链域名erc1155合约的approve本NFT 合约地址成为操作员
+[代码示例]
