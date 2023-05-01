@@ -20,7 +20,7 @@
 		[入参uint256] tokenId: 编号
 		[出参string] : 域名
 	[备注] 
-		[方法writeCall] getNode: 获取域名的node
+		[方法readCall] getNode: 获取域名的node
 		[入参string] _identity: 域名
 		[出参bytes32] : 编号
 	[备注] 
