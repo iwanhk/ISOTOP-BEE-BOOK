@@ -13,6 +13,7 @@
 	[备注] 
 	[方法writeCall] createSBT: DID持有人创建一个SBT
 		[入参string] _Identity: 身份字符串
+		[入参string] _name: SBT名（唯一）
 		[入参string] _type: SBT的类型（比如SBT_META: 自定义metadata的SBT， SBT_IMAGE：自定义图片的SBT, SBT_MULTI: 1155协议token）
 		[入参bool] _restrict: 是否是一个严格SBT，严格SBT一旦发行，不能转给任何地址
 		[出参address] : SBT合约地址
@@ -36,7 +37,12 @@
 		[入参string] _Identity: 身份字符串
 		[出参string[]] : 
 	[备注] 
-	[方法readCall] getSBTs: 获得某个DID下属名称的SBT合约地址列表
+	[方法readCall] getSBT: 获得创建的SBT地址
+		[入参string] _Identity: 身份字符串
+		[入参string] _name: SBT名字
+		[出参address] : 合约地址
+	[备注] 
+	[方法readCall] getSBTs: 
 		[入参string] _Identity: 身份字符串
 		[出参address []] : 合约地址列表
 	[备注] 
@@ -70,7 +76,7 @@
 		[出参bool] : 
 	[备注] 
 [代码示例]
-        did.createSBT(D, "SBT_META", False, addr(consumer))
-        sbt1 = SBT.at(did.getSBTs(D)[-1])
-        sbt1.init("SBT1", "SBT1", "URL", "Details", addr(consumer))
+        did.createSBT(D, "certification", "SBT_META", False, addr(consumer))
+        sbt1 = SBT.at(did.getSBT(D,'certification'))
+        sbt1.init("URL", "Details", addr(consumer))
         sbt1.mint['address,uint'](iwan, 0, addr(consumer))
