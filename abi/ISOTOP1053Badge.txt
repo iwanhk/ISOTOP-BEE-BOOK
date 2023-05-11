@@ -1,0 +1,41 @@
+[合约]ISOTOP1053Badge: 门票1053徽章合约
+[获取方法]从1053合约创建后getBadgeContract()
+[描述]
+	[方法writeCall] addSites: 增加打卡点
+		[入参uint256] _more: 数量
+	[备注] 
+	[方法readCall] balanceOf: 某个账户地址拥有多少个编号问id的token
+		[入参address] account: 
+		[入参uint256] id: 
+		[出参uint256] : 
+	[备注] id在创建的是，保留了0为合并后的token，从1开始顺序
+	[方法readCall] balanceOfBatch: 某一批账户地址拥有多少个编号问id的token
+		[入参address[]] accounts: 
+		[入参uint256[]] ids: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] burn: 销毁调用者自己拥有的编号为id的token（1个）
+		[入参uint256] id: 
+	[备注] 
+	[方法writeCall] burn: （管理员）销毁调用者from拥有的编号为id的token（1个）
+		[入参address] from: 
+		[入参uint256] id: 
+	[备注] 
+	[方法writeCall] merge: 合并自己的徽章（销毁所有子徽章并且得到一个合体徽章）
+	[备注] 调用者必须拥有每个子徽章从1-number总数，否则失败。 合体徽章的编号为0
+	[方法writeCall] merge: （管理员）合并_who的徽章（销毁所有子徽章并且得到一个合体徽章）
+		[入参address] _who: 
+	[备注] 
+	[方法readCall] mergeable: 查看某个用户可以合并多少个徽章套数
+		[入参address] _who: 
+		[出参uint256] count: 
+	[备注] 必须拥有全部子徽章一套才能产出一个合并徽章
+	[方法writeCall] mint: （管理员）铸造徽章
+		[入参address] to: 给谁
+		[入参uint256] id: 编号
+	[备注] 编号为0的徽章不能被直接铸造，需要调用merge
+	[方法readCall] uri: 徽章的metadata
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+[代码示例]

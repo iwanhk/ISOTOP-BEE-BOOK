@@ -1,5 +1,5 @@
 [合约]DomainNFT: 文昌链域名NFT
-[获取方法]
+[获取方法] 文昌链：0x3c93467dB71Be1dad04BCfDA8d428D0d8e017700
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 
@@ -15,6 +15,14 @@
 	[方法readCall] getApproved: 
 		[入参uint256] tokenId: 
 		[出参address] : 
+	[备注] 
+	[方法readCall] getExpiry: 获得域名的有效期
+		[入参uint256] tokenId: 
+		[出参uint64] : 有效期时间
+	[备注] 
+	[方法readCall] getExpiryStr: 获得域名有效期字符串
+		[入参uint256] tokenId: 
+		[出参string] : 有效期字符串
 	[备注] 
 	[方法readCall] getName: 获得编号NFT的域名
 		[入参uint256] tokenId: 编号
