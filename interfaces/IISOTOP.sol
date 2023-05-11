@@ -34,20 +34,9 @@ interface IDetails {
 }
 
 interface ITicket {
-    function init(
-        string memory name_,
-        string memory symbol_,
-        string memory base_,
-        string memory details_,
-        string[] memory sites_,
-        string memory suffix_
-    ) external;
-
     function addSites(string[] memory sites_) external;
 
-    function check(uint256 tokenId, uint8 _site, address _who) external;
-
-    function unCheck(uint256 tokenId, uint8 _site, address _who) external;
+    function check(uint256 tokenId, uint256 _site, address _who) external;
 }
 
 interface IMOAP {

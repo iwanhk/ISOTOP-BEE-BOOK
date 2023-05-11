@@ -30,7 +30,7 @@
 1. DDS : 0xF5F5517E3A4f9985B7c4ea6700A793624f7D0000   
 2. Factory:  0x969d47b6973DF7AF6ca28F0F9F67F2A2a0F20000   
 3. DID: 0x1cA031A10e28e89f76cEccf32f3f9580db7c0000  
-其中，Factory已经注册ISOTOP1010-1019, 1052    
+其中，Factory已经注册ISOTOP1010-1016, 1052    
 
 树图链测试链：
 1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf   
@@ -39,11 +39,11 @@
    (eg.: 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae)   
 3. DID: cfxtest:achp96s6g32fmfgt7j2fupy8r59thbnydehd5hnh7n   
    (eg.: 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419)   
-其中，Factory已经注册ISOTOP1010-1018, 1052   
+其中，Factory已经注册ISOTOP1017-1019, 1053   
 ***
 
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
 
-last updated: 2023.4.25
+last updated: 2023.5.11
 
