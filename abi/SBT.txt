@@ -81,7 +81,3 @@
 		[入参address] _owner: 
 	[备注] 
 [代码示例]
-        did.createSBT(D, "SBT_META", False, addr(consumer))
-        sbt1 = SBT.at(did.getSBTs(D)[-1])
-        sbt1.init("SBT1", "SBT1", "URL", "Details", addr(consumer))
-        sbt1.mint['address,uint'](iwan, 0, addr(consumer))

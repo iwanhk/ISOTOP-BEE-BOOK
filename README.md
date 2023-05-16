@@ -41,7 +41,13 @@
    (eg.: 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419)   
 其中，Factory已经注册ISOTOP1017-1019, 1053   
 ***
-
+树图链正式链：
+1. DDS: cfx:acgbcn8k6cd7eayp9s59st3bnst6ue1grjjcmp5tzp
+   (e.g. 0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a)
+2. Factory：cfx:acaxr0c0zswsczave10j37w21kr3mr1ah6u7pehppk  
+   (eg.: 0x8136d856aBa4e1541125Ec8cf658ba5b9536e03f)   
+ 
+其中，Factory已经注册ISOTOP1017-1019, 1053  
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
 
