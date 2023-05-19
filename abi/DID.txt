@@ -11,6 +11,24 @@
 		[入参string] _Identity: 身份字符串身份字符串
 		[出参address] : 地址
 	[备注] 
+	[方法writeCall] addAsset: 
+		[入参string] _Identity: 
+		[入参address] nft_: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] addVP: 
+		[入参string] _Identity: 
+		[入参string] name_: 
+		[入参string] issuer_did_: 
+		[入参string] issuanceDate_: 
+		[入参string[]] subjects_: 
+		[入参string[]] values_: 
+		[入参string] json_: 
+	[备注]
+	[方法writeCall] config: 
+		[入参address] _nft: 
+		[入参address] _vp: 
+	[备注] 
 	[方法writeCall] createSBT: DID持有人创建一个SBT
 		[入参string] _Identity: 身份字符串
 		[入参string] _name: SBT名（唯一）
@@ -46,6 +64,9 @@
 		[入参string] _Identity: 身份字符串
 		[出参address []] : 合约地址列表
 	[备注] 
+	[方法readCall] getAssets: 
+		[出参tuple[]] : 
+	[备注] 
 	[方法readCall] owner: 合约管理员地址
 		[出参address] : 
 	[备注] 
@@ -65,6 +86,17 @@
 	[备注] 
 	[方法readCall] sbtTemplate: SBT模板合约地址
 		[出参address] : 
+	[备注] 
+	[方法writeCall] setDid: 
+		[入参string] _id: 
+		[入参string] _did: 
+	[备注] 
+	[方法writeCall] setOperator: 
+		[入参address] _operator: 
+	[备注] 
+	[方法writeCall] setSBTTemplate: 
+		[入参string] _name: 
+		[入参address] _sbt: 
 	[备注] 
 	[方法writeCall] update: 更换DID的持有人
 		[入参string] _Identity: 身份字符串
