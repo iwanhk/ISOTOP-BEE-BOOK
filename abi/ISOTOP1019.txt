@@ -35,8 +35,6 @@
 		[出参bool] : 
 	[备注] 
 	[方法writeCall] init: 初始化
-		[入参string] name_: 名称
-		[入参string] symbol_: 代号
 		[入参string] base_: metadata的目录地址
 		[入参string] details_: 详情页面地址
 	[备注] 

@@ -31,7 +31,7 @@
 	[备注] 徽章合约的ABI为ISOTOP1053Badge
 	[方法writeCall] init: 初始化
 		[入参string] name_: 名称
-		[入参string] symbol_: 代号
+		[入参string] description_: 描述
 		[入参string] ticket_image_: 门票的票面图案
 		[入参string] badge_base_uri_: 徽章图案地址
 		[入参string] details_: 
