@@ -31,14 +31,14 @@
 
 |     chianid    |     链                          |     状态    | 
 |----------------|---------------------------------|-------------|
-|     1          |     Conflux Core 测试链          | &#10004;支持 |
-|     1029       |     Conflux Core 正式链          | &#10004;支持 |
-|     5555       |     武汉链正式链                  | &#10004;支持 |
-|     12231      |     文昌链测试链                  | &#10004;支持 |
-|     1224       |     文昌链正式链                  | &#10004;支持 |
+|     1          |     Conflux Core 测试链          | :heavy_check_mark:支持 |
+|     1029       |     Conflux Core 正式链          | :heavy_check_mark:支持 |
+|     5555       |     武汉链正式链                  | :heavy_check_mark:支持 |
+|     12231      |     文昌链测试链                  | :heavy_check_mark:支持 |
+|     1224       |     文昌链正式链                  | :heavy_check_mark:支持 |
 |     71         |     Conflux eSpace 测试链        | 测试中       |
 |     1030       |     Conflux eSpace 正式链        | 测试中       |
-|     27         |     草田链正式链                  | &#10004;支持 |
+|     27         |     草田链正式链                  | :heavy_check_mark:支持 |
 |     42161      |     Arbione - Arbitrum正式链     | 测试中       |
 |     421613     |     Arbitrum测试链               | 测试中       |
 |     97         |     币安测试链                    | 测试中       |
