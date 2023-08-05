@@ -49,7 +49,7 @@
 	[备注] 
 	[方法writeCall] mint: 铸造NFT
 		[入参address] _to: 给用户
-		[入参uint256] quantity: 数量
+		[入参uint256] quantity: 
 	[备注] 
 	[方法readCall] name: 
 		[出参string] : 
@@ -84,9 +84,6 @@
 	[备注] 
 	[方法writeCall] setBaseURI: 
 		[入参string] base_: 
-	[备注] 
-	[方法writeCall] setDetailsURI: 
-		[入参string] uri_: 
 	[备注] 
 	[方法readCall] supportsInterface: 
 		[入参bytes4] interfaceId: 

@@ -1,6 +1,6 @@
-[合约]ISOTOP1019: 兼容ERC1155的conflux数藏品合约
+[合约]ISOTOP1019: 兼容ERC1155的数藏品合约
 [获取方法]通过工厂合约clone得到
-[描述]可以定义铸造ID和数量，自由转增
+[描述]可以生成任意编号的徽章，支持json属性的定义
 	[方法readCall] Details: 数藏品的说明链接
 		[出参string] : 
 	[备注] 
@@ -35,9 +35,11 @@
 		[出参bool] : 
 	[备注] 
 	[方法writeCall] init: 初始化
-		[入参string] base_: metadata的目录地址
-		[入参string] details_: 详情页面地址
-	[备注] 
+		[入参string]name_：名称
+        [入参string]symbol_：编号
+        [入参string] base_：metadata的目录地址
+        [入参string]details_：详情页面地址
+	[备注] 如果base是一个文件，则使用这个json文件，如果是个目录，则后面自动拼接0.json, 1.json...
 	[方法readCall] isApprovedForAll: 
 		[入参address] account: 
 		[入参address] operator: 

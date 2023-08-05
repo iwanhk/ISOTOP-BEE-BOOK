@@ -36,7 +36,7 @@ interface IDetails {
 interface ITicket {
     function addSites(string[] memory sites_) external;
 
-    function check(uint256 tokenId, uint256 _site, address _who) external;
+    function check(uint256 tokenId, uint256 _site) external;
 }
 
 interface IMOAP {

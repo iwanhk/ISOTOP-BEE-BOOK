@@ -1,0 +1,12 @@
+[合约]Forwarder: 代付GAS合约
+[获取方法] 文昌链测试链：0x5310Fb756eb10348033EF994D351Ed567c3C3Cd3
+[描述]
+	[方法writeCall] execute: 执行操作
+		[入参address] from: 合约调用者（可以没有GAS费用）
+		[入参address] to: 被调用合约地址
+		[入参uint256] value: 转账金额，无金额的调用使用0
+		[入参bytes] data: 调用的功能及参数编码
+		[入参uint256] gasLimit: gas上限
+		[出参bytes] : 返回值（如果调用失败会revert）
+	[备注] 
+[代码示例]

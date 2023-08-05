@@ -12,13 +12,10 @@
 		[入参address] owner: 
 		[出参uint256] : 
 	[备注] 
-	[方法readCall] baseURI: 
-		[出参string] : 
-	[备注] 
-	[方法writeCall] contracVersion: 
+	[方法readCall] contracVersion: 
 		[出参uint8] : 
 	[备注] 
-	[方法writeCall] contractName: 
+	[方法readCall] contractName: 
 		[出参string] : 
 	[备注] 
 	[方法readCall] explicitOwnershipOf: 

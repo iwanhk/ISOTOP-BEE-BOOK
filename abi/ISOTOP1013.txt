@@ -88,9 +88,6 @@
 	[方法writeCall] setBaseURI: 
 		[入参string] base_: 
 	[备注] 
-	[方法writeCall] setDetailsURI: 
-		[入参string] uri_: 
-	[备注] 
 	[方法writeCall] setUser: 
 		[入参uint256] tokenId: 
 		[入参address] user: 

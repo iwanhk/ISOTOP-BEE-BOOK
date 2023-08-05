@@ -1,6 +1,6 @@
 [合约]ISOTOP1018: ERC721Enumerable兼容的单一图片POAP合约
 [获取方法]
-[描述]
+[描述] 只需要给出图片，不需要json描述文件
 	[方法readCall] Details: 
 		[出参string] : 
 	[备注] 
@@ -30,7 +30,7 @@
 		[入参string] symbol_: 代号
 		[入参string] base_: 图片URL
 		[入参string] details_: NFT介绍页面URL
-	[备注] base_是一个图片地址。如果使用IPFS，请在conflux scan设置解析网关地址防止解析失败
+	[备注] 如果base_是一个图片，所有徽章都使用相同图片，如果是个目录，那么会自动拼接0.png, 1.png 下去
 	[方法readCall] isApprovedForAll: 
 		[入参address] owner: 
 		[入参address] operator: 

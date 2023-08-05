@@ -2,18 +2,22 @@
 ## 《THE BEE BOOK》 
 
 本目录存储ISOTOP发布的智能合约接口，设计理念，和使用场景  
-1. ISOTOP1010: 低GAS费ERC721合约  
+1. ISOTOP1010: 低GAS费ERC721A合约  
 2. ISOTOP1011: 可销毁  
 3. ISOTOP1012: 可租借 
 4. ISOTOP1013: 可租借可销毁  
 5. ISOTOP1014: 跨链资产转移合约  
 6. ISOTOP1015: 单一图像徽章NFT合约，兼容ISOTOP1010   
 7. ISOTOP1016: 动态NFT   
-8. ISOTOP1017: conflux 顺序编号NFT  
-9. ISOTOP1030: 预言机调用合约，使用chainlink 预言机，无需LINK，直接使用TGAS费用  
-10. DID: 域名解析和身份合约
-11. SBT: soulBondToken 灵魂绑定合约，可定制化自己的token metadata
-12. SBTII: soulBondToken 灵魂绑定合约，可发行自定义图片的SBT
+8. ISOTOP1017: NFT藏品，支持顺序铸造和按照编号铸造 
+9. ISOTOP1018：单一图片ERC721 POAP徽章合约
+10. ISOTOP1019：兼容ERC1155的数藏品合约
+11. ISOTOP101A: 单一图片ERC1155 POAP徽章合约
+12. ISOTOP1030: 预言机调用合约，使用chainlink 预言机，无需LINK，直接使用TGAS费用  
+13. ISOTOP1052：票务NFT合约，支持打卡，兼容ERC721
+14. DID: 域名解析和身份合约
+15. SBT: soulBondToken 灵魂绑定合约，可定制化自己的token metadata
+16. SBTII: soulBondToken 灵魂绑定合约，可发行自定义图片的SBT
 
 工具合约：  
 1. Deployer : 合约部署器  

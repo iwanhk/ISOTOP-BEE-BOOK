@@ -1,6 +1,6 @@
 [合约]ISOTOP1017: ERC721Enumerable兼容的定制图片POAP合约
 [获取方法] 工厂合约clone
-[描述]按照conflux要求的规范，，支持树图链scan查看
+[描述] 支持不同的NFT有不同的json文件
 	[方法readCall] Details: NFT介绍页面URL
 		[出参string] : 
 	[备注] 可选参数
@@ -27,7 +27,7 @@
 		[入参string] symbol_: 代号
 		[入参string] base_: metadata的目录URL
 		[入参string] details_: NFT项目介绍页面URL
-	[备注] base_需要以/结尾。如果使用IPFS，请在conflux scan设置解析网关地址防止解析失败
+	[备注] 如果base_是以/结尾的目录，则顺序读取目录下0.json文件。 否则固定为一个json文件内容。
 	[方法readCall] isApprovedForAll: 
 		[入参address] owner: 
 		[入参address] operator: 
@@ -35,7 +35,18 @@
 	[备注] 
 	[方法writeCall] mint: 铸造NFT
 		[入参address] _to: 给谁
-	[备注] 
+	[备注] NFT的编号自动增加
+	[方法writeCall] mint: 铸造NFT
+		[入参address] _to: 给谁
+		[入参uint256] tokenId: 铸造的NFT编号
+	[备注] 根据编号铸造
+	[方法writeCall] safeMint: 
+		[入参address] _to: 给谁
+	[备注] NFT的编号自动增加
+	[方法writeCall] safeMint: 
+		[入参address] _to: 给谁
+		[入参uint256] tokenId: 铸造的NFT编号
+	[备注] 根据编号铸造
 	[方法readCall] name: 
 		[出参string] : 
 	[备注] 
@@ -47,10 +58,6 @@
 		[出参address] : 
 	[备注] 
 	[方法writeCall] renounceOwnership: 
-	[备注] 
-	[方法writeCall] safeMint: 
-		[入参address] _to: 
-		[入参uint256] tokenId: 
 	[备注] 
 	[方法writeCall] safeTransferFrom: 
 		[入参address] from: 

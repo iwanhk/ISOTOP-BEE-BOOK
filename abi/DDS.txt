@@ -38,21 +38,21 @@
 		[入参string] _key: 
 		[入参bytes] _data: 
 	[备注] 
-	[方法writeCall] setValue: 
+	[方法readCall] setValue: 
 		[入参string] t: 
 		[入参string] p: 
 		[入参string] l: 
 		[出参string] : 
 	[备注] 
-	[方法writeCall] toAddress: 
+	[方法readCall] toAddress: 
 		[入参bytes] b: 
 		[出参address] addr: 
 	[备注] 
-	[方法writeCall] toBool: 
+	[方法readCall] toBool: 
 		[入参bytes] b: 
 		[出参bool] : 
 	[备注] 
-	[方法writeCall] toInt: 
+	[方法readCall] toInt: 
 		[入参bytes] b: 
 		[出参uint256] value: 
 	[备注] 

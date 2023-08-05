@@ -20,11 +20,20 @@
 		[入参uint256] tokenId: 
 		[入参uint256] _site: 
 	[备注] 
+	[方法writeCall] claim: 根据用户打卡的数量领取全套的纪念徽章
+	[备注] 调用者是持有徽章的用户
+	[方法writeCall] claim: 根据用户打卡的数量领取全套的纪念徽章
+		[入参address] _who: 给哪个用户
+	[备注] 调用者是管理员地址
 	[方法readCall] contracVersion: 
 		[出参uint8] : 
 	[备注] 
 	[方法readCall] contractName: 
 		[出参string] : 
+	[备注] 
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
 	[备注] 
 	[方法readCall] getBadgeContract: 获取徽章的合约地址
 		[出参address] : 
@@ -40,6 +49,19 @@
 	[方法writeCall] mint: （管理员）铸造
 		[入参address] _to: 
 	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] merge: 根据用户打卡的数量合体全套的纪念徽章
+	[备注] 调用者是用户
+	[方法writeCall] merge: 根据用户打卡的数量合体全套的纪念徽章
+		[入参address] _who: 给谁
+	[备注] 调用者是管理员
+	[方法writeCall] mint: 
+		[入参address] _to: 
+	[备注] 
 	[方法readCall] name: 
 		[出参string] : 
 	[备注] 
@@ -49,6 +71,8 @@
 	[方法readCall] ownerOf: 
 		[入参uint256] tokenId: 
 		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
 	[备注] 
 	[方法writeCall] safeTransferFrom: 
 		[入参address] from: 
@@ -77,6 +101,9 @@
 		[入参bytes4] interfaceId: 
 		[出参bool] : 
 	[备注] 
+	[方法writeCall] suspend: 
+		[入参bool] status: 
+	[备注] 
 	[方法readCall] symbol: 
 		[出参string] : 
 	[备注] 
@@ -89,11 +116,11 @@
 		[入参uint256] index: 
 		[出参uint256] : 
 	[备注] 
-	[方法readCall] tokenURI: 门票metadata
+	[方法readCall] tokenURI: 
 		[入参uint256] tokenId: 
 		[出参string] : 
 	[备注] 
-	[方法readCall] totalSupply: 总数
+	[方法readCall] totalSupply: 
 		[出参uint256] : 
 	[备注] 
 	[方法writeCall] transferFrom: 
@@ -108,7 +135,7 @@
 		[入参uint256] tokenId: 
 		[出参uint256] : 
 	[备注] 
-	[方法readCall] userOf: 租借人
+	[方法readCall] userOf: 
 		[入参uint256] tokenId: 
 		[出参address] : 
 	[备注] 
