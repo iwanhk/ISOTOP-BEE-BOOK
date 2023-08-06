@@ -69,8 +69,8 @@
 |     ISOTOP1052          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1053          |     Conflux Core Test                                   |
 
-*主要链为列表中除了以太坊，币安的所有
-*Conflux Core的特殊地址（自作聪明，非要跟谁都不兼容）：
+*主要链为列表中除了以太坊，币安的所有   
+*Conflux Core的特殊地址（自作聪明，非要跟谁都不兼容）：   
 1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf   
    (eg: 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea)   
 2. Factory：cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb    
