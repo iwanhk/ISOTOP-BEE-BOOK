@@ -52,12 +52,9 @@
 
 |     合约                |     部署链地址                                          |
 |-------------------------|---------------------------------------------------------|
-|     Factory 合约工厂    |     全链：0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000    |
-|                         |     Conflux Core:                                       |
-|     DDS 配置数据库      |     全链：0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001    |
-|                         |     Conflux Core:                                       |
-|     DID 身份            |     全链：0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002    |
-|                         |     Conflux Core:                                       |
+|     Factory 合约工厂    |     主要链：0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000    |
+|     DDS 配置数据库      |     主要链：0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001    |
+|     DID 身份            |     主要链：0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002    |
 |     ISOTOP1010          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1011          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1012          |     文昌链测试，Conflux Core Test                       |
@@ -65,13 +62,28 @@
 |     ISOTOP1014          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1015          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1016          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1017          |     全链                                                |
+|     ISOTOP1017          |     主要链                                                |
 |     ISOTOP1018          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1019          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP101A          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1052          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1053          |     Conflux Core Test                                   |
-|                         |                                                         |
+
+*主要链为列表中除了以太坊，币安的所有
+*Conflux Core的特殊地址（自作聪明，非要跟谁都不兼容）：
+1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf   
+   (eg: 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea)   
+2. Factory：cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb    
+   (eg.: 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae)   
+3. DID: cfxtest:achp96s6g32fmfgt7j2fupy8r59thbnydehd5hnh7n   
+   (eg.: 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419)   
+其中，Factory已经注册ISOTOP1017-1019, 1053 
+
+1. DDS: cfx:acgbcn8k6cd7eayp9s59st3bnst6ue1grjjcmp5tzp
+   (e.g. 0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a)
+2. Factory：cfx:acaxr0c0zswsczave10j37w21kr3mr1ah6u7pehppk  
+   (eg.: 0x8136d856aBa4e1541125Ec8cf658ba5b9536e03f)   
+其中，Factory已经注册ISOTOP1017-1019, 1053  
 
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
