@@ -76,22 +76,22 @@
 
 | 合约 | 部署地址 |
 |-------------------------|-------------------------------------------------------|
-| Factory Conflux  Test address| cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb |
-| Factory Conflux Test EVM address| 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea|
-| Factory Conflux Mainnet address| cfx:acaxr0c0zswsczave10j37w21kr3mr1ah6u7pehppk |
-| Factory Conflux Mainnet EVM address| 0x8136d856aBa4e1541125Ec8cf658ba5b9536e03f |
-| DDS Conflux Test address| cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf |
-| DDS Conflux EVM address| 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae |
-| DDS Conflux Mainnet address| cfx:acgbcn8k6cd7eayp9s59st3bnst6ue1grjjcmp5tzp|
-| DDS Conflux Mainnet EVM address|0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a|
-| DID Conflux Test address | cfxtest:achp96s6g32fmfgt7j2fupy8r59thbnydehd5hnh7n |
-| DID Conflux EVM address | 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419 |
+| Factory Conflux  Testnet | cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb |
+|| 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea|
+| Factory Conflux Mainnet | cfx:acaxr0c0zswsczave10j37w21kr3mr1ah6u7pehppk |
+| | 0x8136d856aBa4e1541125Ec8cf658ba5b9536e03f |
+| DDS Conflux Testnet | cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf |
+| | 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae |
+| DDS Conflux Mainnet | cfx:acgbcn8k6cd7eayp9s59st3bnst6ue1grjjcmp5tzp|
+| |0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a|
+| DID Conflux Testnet  | cfxtest:achp96s6g32fmfgt7j2fupy8r59thbnydehd5hnh7n |
+| | 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419 |
 
-*) 其中，Factory已经注册ISOTOP1017-1019, 1053     
+*) 其中，Factory已经注册ISOTOP1017-101A, 1052, 1053     
 
 ***
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
 
-last updated: 2023.8.5
+last updated: 2023.8.6
 
