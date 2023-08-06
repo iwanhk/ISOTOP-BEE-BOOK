@@ -27,116 +27,52 @@
 5. DateTime : 一个时间和日期转换工具合约  
 
 
+## 链支持：
+
+|     chianid    |     链                       |
+|----------------|------------------------------|
+|     1          |     Conflux Core 测试链      |
+|     1029       |     Conflux Core 正式链      |
+|     5555       |     武汉链正式链             |
+|     12231      |     文昌链测试链             |
+|     1224       |     文昌链正式链             |
+|     71         |     Conflux eSpace 测试链    |
+|     1030       |     Conflux eSpace 正式链    |
+|     27         |     草田链正式链             |
+|     42161      |     Arbione -正式链          |
+|     421613     |     Arbitrum测试链           |
+|     97         |     币安测试链               |
+|     56         |     币安正式链               |
+|     80001      |     Polygon Mumbai测试链     |
+|     137        |     Polygon正式链            |
+|     5          |     Goerli 以太坊测试链      |
+|     1          |     以太坊正式链             |
+                                                                                  |
 ## 合约部署地址：
 
+|     合约                |     部署链地址                                          |
+|-------------------------|---------------------------------------------------------|
+|     Factory 合约工厂    |     全链：0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000    |
+|                         |     Conflux Core:                                       |
+|     DDS 配置数据库      |     全链：0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001    |
+|                         |     Conflux Core:                                       |
+|     DID 身份            |     全链：0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002    |
+|                         |     Conflux Core:                                       |
+|     ISOTOP1010          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1011          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1012          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1013          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1014          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1015          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1016          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1017          |     全链                                                |
+|     ISOTOP1018          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1019          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP101A          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1052          |     文昌链测试，Conflux Core Test                       |
+|     ISOTOP1053          |     Conflux Core Test                                   |
+|                         |                                                         |
 
-| chianid    | Chain Description       | Contracts Deployed                                  |
-| 1          | Conflux Core testnet    | Factory:                                            |
-|            |                         | DDS:                                                |
-|            |                         | DID:                                                |
-|            |                         | :heavy_check_mark:ISOTOP1010                        |
-|            |                         | :heavy_check_mark:ISOTOP1011                        |
-|            |                         | :heavy_check_mark:ISOTOP1012                        |
-|            |                         | :heavy_check_mark:ISOTOP1013                        |
-|            |                         | :heavy_check_mark:ISOTOP1014                        |
-|            |                         | :heavy_check_mark:ISOTOP1015                        |
-|            |                         | :heavy_check_mark:ISOTOP1016                        |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-|            |                         | :heavy_check_mark:ISOTOP1018                        |
-|            |                         | :heavy_check_mark:ISOTOP1019                        |
-|            |                         | :heavy_check_mark:ISOTOP101A                        |
-|            |                         | :heavy_check_mark:ISOTOP1052                        |
-|            |                         | :heavy_check_mark:ISOTOP1053                        |
-| 1029       | Conflux Core testnet    | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-|            |                         | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-|            |                         | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-| 5555       | Wuhan Mainnnet          | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         |                                                     |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-|            |                         | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-| 12231      | Wenchang testnet        | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         | :heavy_check_mark:ISOTOP1010                        |
-|            |                         | :heavy_check_mark:ISOTOP1011                        |
-|            |                         | :heavy_check_mark:ISOTOP1012                        |
-|            |                         | :heavy_check_mark:ISOTOP1013                        |
-|            |                         | :heavy_check_mark:ISOTOP1014                        |
-|            |                         | :heavy_check_mark:ISOTOP1015                        |
-|            |                         | :heavy_check_mark:ISOTOP1016                        |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-|            |                         | :heavy_check_mark:ISOTOP1018                        |
-|            |                         | :heavy_check_mark:ISOTOP1019                        |
-|            |                         | :heavy_check_mark:ISOTOP101A                        |
-|            |                         | :heavy_check_mark:ISOTOP1052                        |
-|            |                         | :heavy_check_mark:ISOTOP1053                        |
-| 1224       | Wenchang Mainnet        | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-|            |                         | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         |                                                     |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-| 71         | Conflux eSpace Testnet  | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-|            |                         | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         | :heavy_check_mark:ISOTOP1010                        |
-|            |                         | :heavy_check_mark:ISOTOP1011                        |
-|            |                         | :heavy_check_mark:ISOTOP1012                        |
-|            |                         | :heavy_check_mark:ISOTOP1013                        |
-|            |                         | :heavy_check_mark:ISOTOP1014                        |
-|            |                         | :heavy_check_mark:ISOTOP1015                        |
-|            |                         | :heavy_check_mark:ISOTOP1016                        |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-|            |                         | :heavy_check_mark:ISOTOP1018                        |
-|            |                         | :heavy_check_mark:ISOTOP1019                        |
-|            |                         | :heavy_check_mark:ISOTOP101A                        |
-|            |                         | :heavy_check_mark:ISOTOP1052                        |
-|            |                         | :heavy_check_mark:ISOTOP1053                        |
-| 1030       | Conflux eSpace Mainnnet | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-|            |                         | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         |                                                     |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-| 27         | CaoTian Mainnet         | Factory: 0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000 |
-|            |                         | DDS: 0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001     |
-|            |                         | DID: 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002     |
-|            |                         |                                                     |
-|            |                         | :heavy_check_mark:ISOTOP1017                        |
-|            |                         |                                                     |
-| 42161      | Arbione Mainnet         |                                                     |
-| 421613     | Arbitrum testnet        |                                                     |
-| 97         | Bian testnet            |                                                     |
-| 56         | Bian Mainnet            |                                                     |
-| 80001      | Polygon Mumbai testnet  |                                                     |
-| 137        | Polygon Mainnet         |                                                     |
-| 5          | Goerli testnet          |                                                     |
-| 1          | Ether Mainnnet          |                                                     |
-
-
-文昌链测试链：
-***
-1. DDS : 0xF5F5517E3A4f9985B7c4ea6700A793624f7D0000   
-2. Factory:  0x969d47b6973DF7AF6ca28F0F9F67F2A2a0F20000   
-3. DID: 0x1cA031A10e28e89f76cEccf32f3f9580db7c0000  
-其中，Factory已经注册ISOTOP1010-101A,1052  
-
-树图链测试链：
-1. DDS： cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf   
-   (eg: 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea)   
-2. Factory：cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb    
-   (eg.: 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae)   
-3. DID: cfxtest:achp96s6g32fmfgt7j2fupy8r59thbnydehd5hnh7n   
-   (eg.: 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419)   
-其中，Factory已经注册ISOTOP1017-101A, 1052
-***
-树图链正式链：
-1. DDS: cfx:acgbcn8k6cd7eayp9s59st3bnst6ue1grjjcmp5tzp
-   (e.g. 0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a)
-2. Factory：cfx:acaxr0c0zswsczave10j37w21kr3mr1ah6u7pehppk  
-   (eg.: 0x8136d856aBa4e1541125Ec8cf658ba5b9536e03f)   
- 
-其中，Factory已经注册ISOTOP1017-101A, 1052
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
 
