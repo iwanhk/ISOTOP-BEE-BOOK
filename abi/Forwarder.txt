@@ -1,5 +1,7 @@
 [合约]Forwarder: 代付GAS合约
-[获取方法] 文昌链测试链：0x5310Fb756eb10348033EF994D351Ed567c3C3Cd3
+[获取方法] 文昌链等：0x76Fd98C9EDc5dA98D8B0dF5fE303Ca0d765D9003
+Conflux Core Test： cfxtest:acf2ef54m6vuvsw1n05cex5xt04n8x5tcjgtv3bxct(0x8b82177a572308bA575dB6224F737DB4bf4f6F12)
+Conflux Core Main: cfx:aca8pfe6rcuvu2h2bjsx08eafd0td4ukh6u9mnges4 (0x81E6149C68a11860F80A1D3B788028ECF1eA093F)
 [描述]
 	[方法writeCall] execute: 执行操作
 		[入参address] from: 合约调用者（可以没有GAS费用）

@@ -27,7 +27,7 @@ import {IDetails} from "./IISOTOP.sol";
 interface IISOTOP1010 is IERC721AQueryable, IDetails {
     event baseURIChanged(string uri);
 
-    /// @dev 标准接口
+    // @dev 标准接口
 
     function init(
         string memory name_,
