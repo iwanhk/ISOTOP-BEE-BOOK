@@ -56,6 +56,7 @@
 |     Factory 合约工厂    |     主要链：0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000   |
 |     DDS 配置数据库      |     主要链：0x1E68f6Aee73e3A8e4Cb09B035b9736Ad193c1001   |
 |     DID 身份            |     主要链：0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002  |
+| Forwarder 代付合约 | 主要链：0x76Fd98C9EDc5dA98D8B0dF5fE303Ca0d765D9003 | 
 |     ISOTOP1010          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1011          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1012          |     文昌链测试，Conflux Core Test                       |
