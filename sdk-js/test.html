@@ -5,15 +5,31 @@
   <title>Convert ABI to Bytecode</title>
   <!-- 1.先引入web3模块    <script src="node_modules/web3/dist/web3.min.js"></script>   -->
   <!-- 2.引入isotop_web3_sdk    <script src="./src/index.js"></script> -->
+     <script src="node_modules/web3/dist/web3.min.js"></script>  
+    <script src="isotop_web3_sdk.js"></script>
 </head>
 
 <body>
   <h1>Convert ABI to Bytecode</h1>
   <form id="conversionForm">
     <label for="abi">ABI:</label>
-    <textarea id="abi" rows="5" cols="50"></textarea><br>
+    <textarea id="abi" rows="5" cols="50">[
+      {
+      "inputs": [],
+      "name": "getMessage",
+      "outputs": [
+      {
+      "internalType": "string",
+      "name": "",
+      "type": "string"
+      }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+      }
+      ]</textarea><br>
     <label for="functionName">函数名:</label>
-    <input type="text" id="functionName"><br>
+    <input type="text" id="functionName" value="getMessage"><br>
     <label for="params">参数:</label>
     <input type="text" id="params"><br>
     <button type="button" onclick="convertAndDisplayBytecode()">转化</button>
