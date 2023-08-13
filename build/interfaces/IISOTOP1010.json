@@ -672,24 +672,24 @@
     "absolutePath": "interfaces/IISOTOP1010.sol",
     "exportedSymbols": {
       "IDetails": [
-        140
+        175
       ],
       "IERC721A": [
-        780
+        508
       ],
       "IERC721AQueryable": [
-        372
+        302
       ],
       "IISOTOP1010": [
-        243
+        250
       ]
     },
-    "id": 244,
+    "id": 251,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 214,
+        "id": 222,
         "literals": [
           "solidity",
           "^",
@@ -697,38 +697,38 @@
           ".4"
         ],
         "nodeType": "PragmaDirective",
-        "src": "81:23:15"
+        "src": "81:23:5"
       },
       {
         "absolutePath": "contracts/ERC721A/extensions/IERC721AQueryable.sol",
         "file": "../contracts/ERC721A/extensions/IERC721AQueryable.sol",
-        "id": 215,
+        "id": 223,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 244,
-        "sourceUnit": 373,
-        "src": "969:63:15",
+        "scope": 251,
+        "sourceUnit": 303,
+        "src": "969:63:5",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
         "absolutePath": "interfaces/IISOTOP.sol",
         "file": "./IISOTOP.sol",
-        "id": 217,
+        "id": 225,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 244,
-        "sourceUnit": 213,
-        "src": "1033:39:15",
+        "scope": 251,
+        "sourceUnit": 221,
+        "src": "1033:39:5",
         "symbolAliases": [
           {
             "foreign": {
-              "id": 216,
+              "id": 224,
               "name": "IDetails",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 140,
-              "src": "1041:8:15",
+              "referencedDeclaration": 175,
+              "src": "1041:8:5",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -741,71 +741,71 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 218,
+              "id": 226,
               "name": "IERC721AQueryable",
               "nameLocations": [
-                "1099:17:15"
+                "1099:17:5"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 372,
-              "src": "1099:17:15"
+              "referencedDeclaration": 302,
+              "src": "1099:17:5"
             },
-            "id": 219,
+            "id": 227,
             "nodeType": "InheritanceSpecifier",
-            "src": "1099:17:15"
+            "src": "1099:17:5"
           },
           {
             "baseName": {
-              "id": 220,
+              "id": 228,
               "name": "IDetails",
               "nameLocations": [
-                "1118:8:15"
+                "1118:8:5"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 140,
-              "src": "1118:8:15"
+              "referencedDeclaration": 175,
+              "src": "1118:8:5"
             },
-            "id": 221,
+            "id": 229,
             "nodeType": "InheritanceSpecifier",
-            "src": "1118:8:15"
+            "src": "1118:8:5"
           }
         ],
         "canonicalName": "IISOTOP1010",
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 243,
+        "id": 250,
         "linearizedBaseContracts": [
-          243,
-          140,
-          372,
-          780
+          250,
+          175,
+          302,
+          508
         ],
         "name": "IISOTOP1010",
-        "nameLocation": "1084:11:15",
+        "nameLocation": "1084:11:5",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "anonymous": false,
             "eventSelector": "59f1ec21eb30be64a479f79da93a3f192f54c561ee637b5f589e807eb975eb4a",
-            "id": 225,
+            "id": 233,
             "name": "baseURIChanged",
-            "nameLocation": "1139:14:15",
+            "nameLocation": "1139:14:5",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 224,
+              "id": 232,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 223,
+                  "id": 231,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "uri",
-                  "nameLocation": "1161:3:15",
+                  "nameLocation": "1161:3:5",
                   "nodeType": "VariableDeclaration",
-                  "scope": 225,
-                  "src": "1154:10:15",
+                  "scope": 233,
+                  "src": "1154:10:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -813,10 +813,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 222,
+                    "id": 230,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1154:6:15",
+                    "src": "1154:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -825,38 +825,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1153:12:15"
+              "src": "1153:12:5"
             },
-            "src": "1133:33:15"
+            "src": "1133:33:5"
           },
           {
-            "documentation": {
-              "id": 226,
-              "nodeType": "StructuredDocumentation",
-              "src": "1172:22:15",
-              "text": "@dev \u6807\u51c6\u63a5\u53e3"
-            },
             "functionSelector": "8de12845",
-            "id": 237,
+            "id": 244,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "init",
-            "nameLocation": "1208:4:15",
+            "nameLocation": "1207:4:5",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 235,
+              "id": 242,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 228,
+                  "id": 235,
                   "mutability": "mutable",
                   "name": "name_",
-                  "nameLocation": "1236:5:15",
+                  "nameLocation": "1235:5:5",
                   "nodeType": "VariableDeclaration",
-                  "scope": 237,
-                  "src": "1222:19:15",
+                  "scope": 244,
+                  "src": "1221:19:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -864,10 +858,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 227,
+                    "id": 234,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1222:6:15",
+                    "src": "1221:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -877,13 +871,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 230,
+                  "id": 237,
                   "mutability": "mutable",
                   "name": "symbol_",
-                  "nameLocation": "1265:7:15",
+                  "nameLocation": "1264:7:5",
                   "nodeType": "VariableDeclaration",
-                  "scope": 237,
-                  "src": "1251:21:15",
+                  "scope": 244,
+                  "src": "1250:21:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -891,10 +885,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 229,
+                    "id": 236,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1251:6:15",
+                    "src": "1250:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -902,97 +896,15 @@
                   },
                   "visibility": "internal"
                 },
-                {
-                  "constant": false,
-                  "id": 232,
-                  "mutability": "mutable",
-                  "name": "base_",
-                  "nameLocation": "1296:5:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 237,
-                  "src": "1282:19:15",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 231,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1282:6:15",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 234,
-                  "mutability": "mutable",
-                  "name": "details_",
-                  "nameLocation": "1325:8:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 237,
-                  "src": "1311:22:15",
-                  "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 233,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1311:6:15",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "1212:127:15"
-            },
-            "returnParameters": {
-              "id": 236,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1348:0:15"
-            },
-            "scope": 243,
-            "src": "1199:150:15",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "functionSelector": "55f804b3",
-            "id": 242,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "setBaseURI",
-            "nameLocation": "1364:10:15",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 240,
-              "nodeType": "ParameterList",
-              "parameters": [
                 {
                   "constant": false,
                   "id": 239,
                   "mutability": "mutable",
                   "name": "base_",
-                  "nameLocation": "1389:5:15",
+                  "nameLocation": "1295:5:5",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
-                  "src": "1375:19:15",
+                  "scope": 244,
+                  "src": "1281:19:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1003,7 +915,34 @@
                     "id": 238,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1375:6:15",
+                    "src": "1281:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 241,
+                  "mutability": "mutable",
+                  "name": "details_",
+                  "nameLocation": "1324:8:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 244,
+                  "src": "1310:22:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 240,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1310:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1012,42 +951,97 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1374:21:15"
+              "src": "1211:127:5"
             },
             "returnParameters": {
-              "id": 241,
+              "id": 243,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1404:0:15"
+              "src": "1347:0:5"
             },
-            "scope": 243,
-            "src": "1355:50:15",
+            "scope": 250,
+            "src": "1198:150:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "55f804b3",
+            "id": 249,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBaseURI",
+            "nameLocation": "1363:10:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 247,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 246,
+                  "mutability": "mutable",
+                  "name": "base_",
+                  "nameLocation": "1388:5:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 249,
+                  "src": "1374:19:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 245,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1374:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1373:21:5"
+            },
+            "returnParameters": {
+              "id": 248,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1403:0:5"
+            },
+            "scope": 250,
+            "src": "1354:50:5",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 244,
-        "src": "1074:333:15",
+        "scope": 251,
+        "src": "1074:332:5",
         "usedErrors": [
+          259,
+          308,
+          311,
+          314,
+          317,
+          320,
+          323,
+          326,
           329,
-          580,
-          583,
-          586,
-          589,
-          592,
-          595,
-          598,
-          601,
-          604,
-          607,
-          610,
-          613,
-          616
+          332,
+          335,
+          338,
+          341,
+          344
         ]
       }
     ],
-    "src": "81:1327:15"
+    "src": "81:1326:5"
   },
   "contractName": "IISOTOP1010",
   "dependencies": [
@@ -1057,9 +1051,9 @@
   ],
   "offset": [
     1074,
-    1407
+    1406
   ],
-  "sha1": "fa0fea7c25b5d25840782445e77faa221cac524c",
-  "source": "// SPDX-License-Identifier: MIT\n// IISOTOP version 0.10\n// Creator: Dr. Zu team\n\npragma solidity ^0.8.4;\n\n/**\n * @dev Interface of ISOTOP1010\uff1a ERC721\u4f4eGAS\u7684\u517c\u5bb9\u7248\n\n\u4e3b\u8981\u529f\u80fd\uff1a\n*\uff09 \u7ed9NFT\u52a0\u6301\u5185\u5bb9\uff1asetBaseURI\n*\uff09 \u94f8\u9020NFT\uff1amint\n*\uff09 \u5b89\u5168\u94f8\u9020NFT\uff08\u68c0\u67e5\u662f\u5426\u53ef\u4ee5\u88ab\u5408\u7ea6\u5730\u5740\u62e5\u6709\uff09\uff1asafeMint\n*\uff09 \u53ef\u67e5\u8be2\u63a5\u53e3\uff1atokenByIndex, tokenOfOwnerByIndex\n*\uff09 \u8f6c\u79fb\uff1atransferFrom\n\n\u8bbe\u8ba1\u8981\u70b9\uff1a\n1)  \u666e\u901a\u7684ERC721\u5408\u7ea6\u4e00\u6b21\u53ea\u80fd\u94f8\u9020\u4e00\u4e2aNFT\uff0c\u5982\u679c\u6279\u91cf\u94f8\u90201\u4e07\u4e2a\uff0cGAS\u8d39\u7528\u592a\u9ad8\uff0cISOTOP1010\u8bbe\u5b9a\u4e86\u6279\u91cf\u529f\u80fd\uff0cGAS\u8d39\u7528\u5927\u5927\u8282\u7701\u3002\n2)  \u8054\u76df\u94fe\u9700\u8981\u7ed9\u7528\u6237\u5730\u5740\u5145\u503c\u624d\u80fd\u8c03\u7528\u4e0a\u94fe\u64cd\u4f5c\u3002\u5982\u679c\u6ca1\u6709GAS\u8d39\u7528\u5c31\u65e0\u6cd5\u4f7f\u7528\u3002\u800c\u7ed9\u94fe\u8d26\u6237\u5145\u503c\u53c8\u5f88\u96be\u9010\u4e2a\u8fdb\u884c\uff0c\u6240\u4ee5ISOTOP1010\u7279\u5730\u8bbe\u7f6e\u4e86\u7ba1\u7406\u5458(owner)\u4ee3\u66ff\u7528\u6237mint\uff0ctransfer\uff0c\u79df\u7528\u7684\u80fd\u529b\u3002\u65e0\u9700\u7528\u6237\u8d26\u6237\u6709\u4f59\u989d\u4e5f\u53ef\u4ee5\u901a\u8fc7\u7ba1\u7406\u5458\u94f8\u9020\uff0c\u7ba1\u7406\uff08\u6bd4\u5982\u79df\u501f\uff09\uff0c\u8f6c\u79fbNFT\n3\uff09 \u5176\u5b83\u529f\u80fd\u5b8c\u5168\u517c\u5bb9ERC721\n\n */\n\nimport \"../contracts/ERC721A/extensions/IERC721AQueryable.sol\";\nimport {IDetails} from \"./IISOTOP.sol\";\n\ninterface IISOTOP1010 is IERC721AQueryable, IDetails {\n    event baseURIChanged(string uri);\n\n    /// @dev \u6807\u51c6\u63a5\u53e3\n\n    function init(\n        string memory name_,\n        string memory symbol_,\n        string memory base_,\n        string memory details_\n    ) external;\n\n    function setBaseURI(string memory base_) external;\n}\n",
+  "sha1": "c56fef5230e8f68131f637c55bbb9e50d5cbae05",
+  "source": "// SPDX-License-Identifier: MIT\n// IISOTOP version 0.10\n// Creator: Dr. Zu team\n\npragma solidity ^0.8.4;\n\n/**\n * @dev Interface of ISOTOP1010\uff1a ERC721\u4f4eGAS\u7684\u517c\u5bb9\u7248\n\n\u4e3b\u8981\u529f\u80fd\uff1a\n*\uff09 \u7ed9NFT\u52a0\u6301\u5185\u5bb9\uff1asetBaseURI\n*\uff09 \u94f8\u9020NFT\uff1amint\n*\uff09 \u5b89\u5168\u94f8\u9020NFT\uff08\u68c0\u67e5\u662f\u5426\u53ef\u4ee5\u88ab\u5408\u7ea6\u5730\u5740\u62e5\u6709\uff09\uff1asafeMint\n*\uff09 \u53ef\u67e5\u8be2\u63a5\u53e3\uff1atokenByIndex, tokenOfOwnerByIndex\n*\uff09 \u8f6c\u79fb\uff1atransferFrom\n\n\u8bbe\u8ba1\u8981\u70b9\uff1a\n1)  \u666e\u901a\u7684ERC721\u5408\u7ea6\u4e00\u6b21\u53ea\u80fd\u94f8\u9020\u4e00\u4e2aNFT\uff0c\u5982\u679c\u6279\u91cf\u94f8\u90201\u4e07\u4e2a\uff0cGAS\u8d39\u7528\u592a\u9ad8\uff0cISOTOP1010\u8bbe\u5b9a\u4e86\u6279\u91cf\u529f\u80fd\uff0cGAS\u8d39\u7528\u5927\u5927\u8282\u7701\u3002\n2)  \u8054\u76df\u94fe\u9700\u8981\u7ed9\u7528\u6237\u5730\u5740\u5145\u503c\u624d\u80fd\u8c03\u7528\u4e0a\u94fe\u64cd\u4f5c\u3002\u5982\u679c\u6ca1\u6709GAS\u8d39\u7528\u5c31\u65e0\u6cd5\u4f7f\u7528\u3002\u800c\u7ed9\u94fe\u8d26\u6237\u5145\u503c\u53c8\u5f88\u96be\u9010\u4e2a\u8fdb\u884c\uff0c\u6240\u4ee5ISOTOP1010\u7279\u5730\u8bbe\u7f6e\u4e86\u7ba1\u7406\u5458(owner)\u4ee3\u66ff\u7528\u6237mint\uff0ctransfer\uff0c\u79df\u7528\u7684\u80fd\u529b\u3002\u65e0\u9700\u7528\u6237\u8d26\u6237\u6709\u4f59\u989d\u4e5f\u53ef\u4ee5\u901a\u8fc7\u7ba1\u7406\u5458\u94f8\u9020\uff0c\u7ba1\u7406\uff08\u6bd4\u5982\u79df\u501f\uff09\uff0c\u8f6c\u79fbNFT\n3\uff09 \u5176\u5b83\u529f\u80fd\u5b8c\u5168\u517c\u5bb9ERC721\n\n */\n\nimport \"../contracts/ERC721A/extensions/IERC721AQueryable.sol\";\nimport {IDetails} from \"./IISOTOP.sol\";\n\ninterface IISOTOP1010 is IERC721AQueryable, IDetails {\n    event baseURIChanged(string uri);\n\n    // @dev \u6807\u51c6\u63a5\u53e3\n\n    function init(\n        string memory name_,\n        string memory symbol_,\n        string memory base_,\n        string memory details_\n    ) external;\n\n    function setBaseURI(string memory base_) external;\n}\n",
   "type": "interface"
 }
