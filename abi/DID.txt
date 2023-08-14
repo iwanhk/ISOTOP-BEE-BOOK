@@ -24,10 +24,17 @@
 		[入参string[]] subjects_: 
 		[入参string[]] values_: 
 		[入参string] json_: 
-	[备注]
-	[方法writeCall] config: 
-		[入参address] _nft: 
-		[入参address] _vp: 
+	[备注] 
+	[方法writeCall] claim: 申领一个DID NFT
+		[入参string] _Identity: 身份字符串
+	[备注] 任何DID持有人都可以免费获得一个NFT，用于二级交易市场
+	[方法writeCall] create: 
+		[入参string] _Identity: 
+		[入参address] _caller: 
+		[入参uint256] _expire: 
+	[备注] 
+	[方法writeCall] create: 
+		[入参string] _Identity: 
 	[备注] 
 	[方法writeCall] createSBT: DID持有人创建一个SBT
 		[入参string] _Identity: 身份字符串
@@ -36,14 +43,14 @@
 		[入参bool] _restrict: 是否是一个严格SBT，严格SBT一旦发行，不能转给任何地址
 		[出参address] : SBT合约地址
 	[备注] DID的持有人可以自己创建和维护自己的SBT，并且发给任何授权的使用者，也可以销毁发出的SBT。通常是给企业和社群用户来使用的
-	[方法writeCall] claim: 申领一个DID NFT
-		[入参string] _Identity: 身份字符串
-	[备注] 任何DID持有人都可以免费获得一个NFT，用于二级交易市场
 	[方法readCall] get: 读取DID的key值
 		[入参string] _Identity: 身份字符串
 		[入参string] _key: 名称
 		[出参string] : 信息内容
 	[备注] DID支持用户定义自己的任何key值存储内容
+	[方法readCall] getAssets: 
+		[出参tuple[]] : 
+	[备注] 
 	[方法readCall] getDIDNFTAddress: 获得DID NFT合约地址
 		[出参address] : 
 	[备注] 
@@ -64,12 +71,6 @@
 		[入参string] _Identity: 身份字符串
 		[出参address []] : 合约地址列表
 	[备注] 
-	[方法readCall] getAssets: 
-		[出参tuple[]] : 
-	[备注] 
-	[方法readCall] owner: 合约管理员地址
-		[出参address] : 
-	[备注] 
 	[方法writeCall] put: 写入一个DID的key值
 		[入参string] _Identity: 身份字符串
 		[入参string] _key: 
@@ -80,16 +81,28 @@
 		[入参string[]] _key: 键列表
 		[入参string[]] _data: 值列表
 	[备注] 两个列表必须同样长度，调用人必须是身份字符串的拥有人
+	[方法readCall] query: 查询一个标识符是否被占用
+		[入参string] _Identity: DID域名
+		[出参address] : 如果是0表示未占用
+		[出参uint256] : 如果有效期过了，可以继续使用
+	[备注] 
+	[方法readCall] query: 查询一个用户有哪些DID域名
+		[入参address] _owner: 
+		[出参string[]] IDs: 域名列表
+	[备注] 
+	[方法writeCall] removeAddress: 
+		[入参string] _Identity: 
+		[入参uint256] _chainid: 
+		[入参address] _addr: 
+		[入参string] _domain: 
+	[备注] 
 	[方法writeCall] removeAddress: 删除一个DID名下的地址
 		[入参string] _Identity: 身份字符串
 		[入参address] _addr: 
 	[备注] 
-	[方法readCall] sbtTemplate: SBT模板合约地址
-		[出参address] : 
-	[备注] 
-	[方法writeCall] setDid: 
+	[方法writeCall] setDidDocument: 
 		[入参string] _id: 
-		[入参string] _did: 
+		[入参string] _document: 
 	[备注] 
 	[方法writeCall] setOperator: 
 		[入参address] _operator: 
@@ -97,6 +110,12 @@
 	[方法writeCall] setSBTTemplate: 
 		[入参string] _name: 
 		[入参address] _sbt: 
+	[备注] 
+	[方法writeCall] update: 
+		[入参string] _Identity: 
+		[入参uint256] _chainid: 
+		[入参address] _from: 
+		[入参address] _to: 
 	[备注] 
 	[方法writeCall] update: 更换DID的持有人
 		[入参string] _Identity: 身份字符串
@@ -108,7 +127,4 @@
 		[出参bool] : 
 	[备注] 
 [代码示例]
-        did.createSBT(D, "certification", "SBT_META", False, addr(consumer))
-        sbt1 = SBT.at(did.getSBT(D,'certification'))
-        sbt1.init("URL", "Details", addr(consumer))
-        sbt1.mint['address,uint'](iwan, 0, addr(consumer))
+

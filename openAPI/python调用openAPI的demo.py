@@ -5,21 +5,24 @@ from datetime import datetime
 import hashlib
 import requests
 import sys
+import os
 
 from rich import print
 from rich import pretty
 pretty.install()
 console = Console(style="white on black", stderr=True)
 
-apiKey = "7956ca03fe44238ef1d254799de1b556"
-apiSecret = "bd09139024cdd3136a4f6cf60038c1194e6641063e413c47f517a579fbb158ba"
+apiKey = os.getenv("ISOTOP_APPKEY")
+apiSecret = os.getenv("ISOTOP_SECRET")
 # contract_add="cfxtest:acdeym6gccnx752abhpupmmtar5e635uu6xcv2cfgy"
 # contract_add='0x05271BB6F2387fbFf5cacdDBCBD5a7C1021A4b11'
 # contract_add=='cfxtest:acdk44u31uwr42hy4h6ux03r5kw4ffx9ausk8k53kg'
 # contract_add = 'cfx:acak9mwwemm4tgvs7j798je832mrptyrpa9d6ea78s'
-contract_add = 'cfx:accm4vkvec1y96jajw0gw6k6k39gbm5bha9b8knzt5'
-# chain_id='5555' # BSN wuhan
-chain_id = '1029'  # Conflux
+contract_add = '0x0FF62a1b950E5dD2CCa4adB03c330679CF3220a5'
+# chain_id='5555'
+chain_id = '12231'
+# user_id = '13911024683'
+user_id = '18518517787'
 
 
 def makeHeader(body):
@@ -32,17 +35,16 @@ def makeHeader(body):
     header['timestamp'] = str(int(now))
     header['nonce'] = str(int(now*1000000))
     header['apiKey'] = apiKey
-
     sortArgs.update(header)
     sortArgs.update(body)
-    # print(f"{args=}")
+    # print(f"{sortArgs=}")
 
     content = ''
     for item in sorted(sortArgs):
         content += item+sortArgs[item]
 
     content += apiSecret
-    # print(content)
+    # print("-----------------------------"+content)
 
     hash.update(content.encode(encoding='utf-8'))
 
@@ -53,7 +55,7 @@ def makeHeader(body):
     header["content-type"] = "application/x-www-form-urlencoded"
     header['sign'] = hash.hexdigest()
 
-    # print(header)
+    print(header)
     # print(body)
     # print(hash.hexdigest())
     # print(header)
@@ -65,9 +67,10 @@ def importAccount(private_key):
     body = {}
     body['chainid'] = chain_id
     body['privateKey'] = private_key
-    body['id'] = '13911024683'
+    # body['id'] = ''
+    body['id'] = user_id
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/importAddress"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/importAddress"
 
     header = makeHeader(body)
     response = requests.post(api_url, params=body, headers=header)
@@ -83,9 +86,9 @@ def exportAccount(address):
     body = {}
     body['chainid'] = chain_id
     body['address'] = address
-    body['id'] = '13911024683'
+    body['id'] = user_id
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/exportAddress"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/exportAddress"
 
     header = makeHeader(body)
     response = requests.get(api_url, params=body, headers=header)
@@ -101,9 +104,9 @@ def getTransactionByHash(hash):
     body = {}
     body['chainid'] = chain_id
     body['hash'] = hash
-    body['id'] = '13911024683'
+    body['id'] = user_id
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/getTransactionByHash"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/getTransactionByHash"
 
     header = makeHeader(body)
     response = requests.get(api_url, params=body, headers=header)
@@ -121,9 +124,9 @@ def writeCall(_from, data):
     body['data'] = data
     body['fromAddress'] = _from
     body['contract'] = contract_add
-    body['id'] = '13911024683'
+    body['id'] = user_id
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/writeCall"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/writeCall"
 
     header = makeHeader(body)
     console.print(body, style="bold yellow")
@@ -142,9 +145,9 @@ def readCall(data):
     body['chainid'] = chain_id
     body['data'] = data
     body['contract'] = contract_add
-    body['id'] = '13911024683'
+    body['id'] = user_id
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/readCall"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/readCall"
 
     header = makeHeader(body)
     # print(body)
@@ -163,7 +166,7 @@ def supportsInterface(erc):
     body['interfaceID'] = erc
     body['contract'] = contract_add
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/supportsInterface"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/supportsInterface"
 
     header = makeHeader(body)
     response = requests.get(api_url, params=body, headers=header)
@@ -181,7 +184,7 @@ def queryAsset(tokenId):
     body['tokenId'] = tokenId
     body['contract'] = contract_add
 
-    api_url = "http://35.175.145.216:8087/api/v1/chain/queryAsset"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/queryAsset"
 
     header = makeHeader(body)
     response = requests.get(api_url, params=body, headers=header)
@@ -196,10 +199,10 @@ def queryAsset(tokenId):
 def queryUser():
     body = {}
     body['chainid'] = chain_id
-    body['id'] = '13911024683'
+    body['id'] = user_id
 
     header = makeHeader(body)
-    api_url = "http://35.175.145.216:8087/api/v1/chain/queryUser"
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/queryUser"
     response = requests.get(api_url, params=body, headers=header)
 
     json = response.json()
@@ -212,14 +215,14 @@ def queryUser():
 def createUser():
     body = {}
     body['chainid'] = chain_id
-    body['id'] = '13911024683'
+    body['id'] = user_id
 
     header = makeHeader(body)
-    api_url = "http://35.175.145.216:8087/api/v1/chain/create"
-    # print(f"{header} {body} {api_url}")
+    api_url = "https://www.isotop.top/chain-api/api/v1/chain/create"
+    print(f"{header} {body} {api_url}")
     response = requests.post(api_url, params=body, headers=header)
 
-    # print(response)
+    print(response)
     json = response.json()
     if json['success'] == True:
         return json['data']
@@ -234,7 +237,8 @@ if __name__ == "__main__":
     print(f"{contract_add=} {chain_id=}")
 
     while True:
-        choice = input("1) createUser\n2) queryUser\n3) queryAsset\n4) supportsInterface\n5) readCall\n6) writeCall\n7) getTransactionReceiptByHash\n8) importAccount\n9) exportAccount\nq) to exit:\n\n")
+        choice = input(
+            "1) createUser\n2) queryUser\n3) queryAsset [tokenId]\n4) supportsInterface [selector]\n5) readCall [data]\n6) writeCall [from, data]\n7) getTransactionReceiptByHash [hash]\n8) importAccount [private-key]\n9) exportAccount [account]\nq) to exit:\n\n")
 
         commands = choice.split()
         if len(commands) == 0 or commands[0] == "q":
