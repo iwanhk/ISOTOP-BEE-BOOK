@@ -8,7 +8,7 @@ let ABI = AbiData.toString();
 let iface = new ethers.Interface(ABI);
 
 //引入sdk的方法
-const {createUser,queryUser,writeCall,readCall,getTransactionByHash} = require("./isotop_contract_sdk");
+const {createUser,queryUser,writeCall,readCall,getTransactionByHash} = require("./node_modules/isotop_contract_sdk/src/index");
 
 //根据您调用的方法输入您的静态参数，以下为例子
 const apiKey = "1956ca03f544258ef5d255795de15552";//该api-key为模拟值
