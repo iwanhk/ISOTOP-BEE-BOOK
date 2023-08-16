@@ -11,8 +11,8 @@ let iface = new ethers.Interface(ABI);
 const {createUser,queryUser,writeCall,readCall,getTransactionByHash} = require("./node_modules/isotop_contract_sdk/src/index");
 
 //根据您调用的方法输入您的静态参数，以下为例子
-const apiKey = "1956ca03f544258ef5d255795de15552";//该api-key为模拟值
-const apiSecret = "bd09139024c2d3136a4f62f60038c1594e6641063e413c57f517a575fbb155ba";//该secret为模拟值
+const apiKey = "7956ca03fe44238ef1d254799de1b556";//该api-key为模拟值
+const apiSecret = "bd09139024cdd3136a4f6cf60038c1194e6641063e413c47f517a579fbb158ba";//该secret为模拟值
 const chainId = "1";
 const id = "13911024683";
 const contract = 'cfxtest:acaktjrdthgszgjbd0btn1c5stcyeuf3t6kp582wyd';
@@ -39,13 +39,13 @@ const api_url = "https://www.isotop.top/chain-api/api/v1/chain/getTransactionByH
 
 
 
-//   queryUser(apiKey, apiSecret, chainId, id, api_url)
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
+  queryUser(apiKey, apiSecret, chainId, id, api_url)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 
 
