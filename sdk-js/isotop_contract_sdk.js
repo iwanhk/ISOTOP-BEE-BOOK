@@ -1,5 +1,6 @@
 const axios = require("axios");
-const crypto = require("crypto");
+// const crypto = require("crypto");
+const CryptoJS = require('crypto-js')
 
 
 
@@ -20,7 +21,8 @@ function makeHeader(apiKey, apiSecret, body) {
     content += item + sortArgs[item];
   }
   content += apiSecret;
-  const hash = crypto.createHash("md5").update(content, "utf-8").digest("hex");
+  // const hash = crypto.createHash("md5").update(content, "utf-8").digest("hex");
+  const hash = CryptoJS.MD5(content).toString(CryptoJS.enc.Hex);
   header["content-type"] = "application/x-www-form-urlencoded";
   header["sign"] = hash;
   return header;

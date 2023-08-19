@@ -1,8 +1,8 @@
-package com.wallet.admin;
 
-import com.wallet.common.utils.StringUtils;
-import org.apache.commons.codec.Charsets;
+
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.io.Charsets;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -24,109 +24,84 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.math.BigDecimal;
 import java.util.*;
 
 /**
- * @ClassName: test
- * @Description:
- * @Author
- * @Date 2022/8/8
- * @Version 1.0
+ * create by wjk on 2022/8/21
  */
-public class test {
+public class OpenApiUtils {
+
     public static void main(String[] args) {
-        String result=null;
-/*
-        Map<String, String> params = new HashMap<>();
-        params.put("apiKey","7956ca03fe44238ef1d254799de1b556");
-        params.put("nonce", System.currentTimeMillis()/1000+"_"+ StringUtils.getRandom(5));
-        params.put("timestamp",String.valueOf(System.currentTimeMillis()/1000));
-*/
+        Map<String, String> paramsReadCall = new HashMap<>();
+        paramsReadCall.put("chainid", "12231");
+        // paramsReadCall.put("tokenId", "1");
+        // paramsReadCall.put("contract", "cfxtest:acc4kwp75hu9cetcdvu0dsb0zxnmr54cwpw0z77axp");
+        paramsReadCall.put("contract", "0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002");
 
-        Map<String, String> params = new HashMap<>();
-        params.put("chainid","1");
-        params.put("id","1");
-        //data入参编码可参考: 
-        //java->https://github.com/iwanhk/ISOTOP-BEE-BOOK/blob/main/openAPI/Java%E8%B0%83%E7%94%A8openAPI%E4%BC%A0%E5%8F%82%E7%9A%84%E6%89%93%E5%8C%85%E6%96%B9%E5%BC%8Fdemo.java
-        //js->https://github.com/iwanhk/ISOTOP-BEE-BOOK/tree/main/openAPI/JS%E8%B0%83%E7%94%A8openAPI%E4%BC%A0%E5%8F%82%E7%9A%84%E6%89%93%E5%8C%85%E6%96%B9%E5%BC%8Fdemo
-        //params.put("data","0xe4445210000000000000000000000000000000000000000000000000000000000000007b0000000000000000000000000000000000000000000000000000000000000001");
-        //params.put("contact","cfxtest:acfpbb9kn2b2z3bev2435dk6j236gzc0kjjj4hwm45");
+        //paramsReadCall.put("data", "0x0e89341c0000000000000000000000000000000000000000000000000000000000000000");
+        //claim
+        //paramsReadCall.put("data", "0x4e71d92d");
+        //totalSupply()
+        //paramsReadCall.put("data", "0x18160ddd");
+        //owner
+        // paramsReadCall.put("data", "0x8da5cb5b");
+        //ownerOf 48
+        //paramsReadCall.put("data", "0x6352211e0000000000000000000000000000000000000000000000000000000000000002");
+        paramsReadCall.put("data", "0xceb35b0f000000000000000000000000000000000000000000000000000000000000004000000000000000000000000044028da500c013dd54e1e0beedc839317799b174000000000000000000000000000000000000000000000000000000000000000b313233313233312e646964000000000000000000000000000000000000000000");
+       
+        paramsReadCall.put("id", "");
+        paramsReadCall.put("fromAddress", "");
+        // paramsReadCall.put("gas_limit", "625000");
+        Map<String, String> headerMap = makeHeaders(paramsReadCall);
+        System.out.println("header参数》》" + headerMap);
+        System.out.println("body参数》》" + paramsReadCall);
 
+        // String rs2 = getRequest("https://www.isotop.top/chain-api/api/v1/chain/create", headerMap, params);
+        // System.out.println(rs2);
 
+        //  String rsc3 = getRequest("https://www.isotop.top/chain-api/api/v1/chain/getTransactionByHash", headerMap, params);
+        // System.out.println(rsc3);
+//
+//         String rs = getRequest("https://www.isotop.top/chain-api/api/v1/chain/queryAsset", headerMap, paramsReadCall);
+//         System.out.println(rs);
+//         String rs = getRequest("https://www.isotop.top/chain-api/api/v1/chain/readCall", headerMap, paramsReadCall);
+//         System.out.println(rs);
+//         String rs = getRequest("https://www.isotop.top/chain-api/api/v1/chain/queryUser", headerMap, paramsReadCall);
+//         System.out.println(rs);
 
-        params.put("contract","cfxtest:acdk44u31uwr42hy4h6ux03r5kw4ffx9ausk8k53kg");
-        //params.put("tokenId","1");
-
-        //params.put("interfaceID","0x01ffc9a7");
-        params.put("hash","0xf736bbc8b9c807a57c211f2c6235ebccdd9f425f73497d769555550edcf11c89");
-        //params.put("fromAddress","cfxtest:aajpefpv3b528myyvv1p6fy8ey5j6ve63ezjb7ebxv");
-        //params.put("contract","0xc54b96b04AA8828b63Cf250408E1084E9F6Ac6c8");
-        //params.put("data","0xc87b56dd0000000000000000000000000000000000000000000000000000000000000000");
-        Map<String, String> headerMap = makeHeaders(params);
-        System.out.println("header参数》》"+headerMap);
-        System.out.println("body参数》》"+params);
-
-        String rsc= getRequest("http://localhost:8088/api/v1/chain/getTransactionByHash",headerMap,params);
-        System.out.println(rsc);
-        String rsc1= getRequest("http://35.175.145.216:8087/api/v1/chain/getTransactionByHash",headerMap,params);
-        System.out.println(rsc1);
-
-
-/*
-        String rs1= getRequest("http://35.175.145.216:8087/api/v1/chain/queryUser",headerMap,params);
-        System.out.println(rs1);
-*/
-
-/*
-        String rs1= postRequest("http://localhost:8088/api/v1/chain/create",headerMap,params);
-        System.out.println(rs1);
-*/
-
-/*
-        String rsc= getRequest("http://localhost:8088/api/v1/chain/queryUser",headerMap,params);
-        System.out.println(rsc);
-*/
-
-/*
-        String rs= getRequest("http://localhost:8088/api/v1/chain/supportsInterface",headerMap,params);
-        System.out.println(rs);
-*/
+        String rs3 = postRequest("https://www.isotop.top/chain-api/api/v1/chain/writeCall", headerMap, paramsReadCall);
+        System.out.println(rs3);
 
     }
-    private static Map<String, String> makeHeaders(Map<String, String> data){
+
+    public static Map<String, String> makeHeaders(Map<String, String> data) {
         Map<String, String> rsMap = new HashMap<>();
-        String nonce = System.currentTimeMillis()/1000+""+ (int)((Math.random()*9+1)*100000);
-        String timestamp = System.currentTimeMillis()/1000+"";
-/*
-        timestamp="1660278066";
-        nonce="1660278066380482";
-*/
-        rsMap.put("apiKey","7956ca03fe44238ef1d254799de1b556");
-        rsMap.put("timestamp",timestamp);
-        rsMap.put("nonce",nonce);
-        SortedMap<String,String> sortedMap = new TreeMap<>();
+        String nonce = System.currentTimeMillis() / 1000 + "" + (int) ((Math.random() * 9 + 1) * 100000);
+        String timestamp = System.currentTimeMillis() / 1000 + "";
+
+        //替换自己的apikey
+        rsMap.put("apiKey", "7956ca03fe44238ef1d254799de1b556");
+        rsMap.put("timestamp", timestamp);
+        rsMap.put("nonce", nonce);
+        SortedMap<String, String> sortedMap = new TreeMap<>();
         sortedMap.putAll(rsMap);
         sortedMap.putAll(data);
         StringBuilder sbd = new StringBuilder();
         for (Map.Entry<String, String> entry : sortedMap.entrySet()) {
             // 排除空val的参数
-            if (StringUtils.isEmpty(entry.getValue())){
+            if (StringUtils.isEmpty(entry.getValue())) {
                 continue;
             }
             sbd.append(entry.getKey()).append(entry.getValue());
         }
-        System.out.println("ASCII排序字符串"+sbd.toString());
-        String apiSecret="bd09139024cdd3136a4f6cf60038c1194e6641063e413c47f517a579fbb158ba";
+        // System.out.println("ASCII排序字符串" + sbd.toString());
+        //替换自己的apiSecret
+        String apiSecret = "bd09139024cdd3136a4f6cf60038c1194e6641063e413c47f517a579fbb158ba";
         sbd.append(apiSecret);
-        rsMap.put("sign",DigestUtils.md5Hex(sbd.toString()));
-/*
-        System.out.println(nonce);
-        System.out.println(timestamp);
-        System.out.println(rsMap.get("sign"));
-*/
+        rsMap.put("sign", DigestUtils.md5Hex(sbd.toString()));
         return rsMap;
     }
+
     private static String sign(String nonce, Map<String, String> data) {
         List paramArr = new ArrayList<>();
         for (String key : data.keySet()) {
@@ -139,30 +114,32 @@ public class test {
         String signature = DigestUtils.md5Hex(paramStr);
         return signature;
     }
-    public static String postRequest(String url, Map<String,String> headerMap, Map<String, String> paramsMap) {
+
+    public static String postRequest(String url, Map<String, String> headerMap, Map<String, String> paramsMap) {
+        System.out.println("header参数》》" + headerMap);
+        System.out.println("body参数》》" + paramsMap);
         String result = null;
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost post = new HttpPost(url);
         List<NameValuePair> content = new ArrayList<NameValuePair>();
         Iterator iterator = paramsMap.entrySet().iterator();           //将content生成entity
-        while(iterator.hasNext()){
-            Map.Entry<String,String> elem = (Map.Entry<String, String>) iterator.next();
-            content.add(new BasicNameValuePair(elem.getKey(),elem.getValue()));
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> elem = (Map.Entry<String, String>) iterator.next();
+            content.add(new BasicNameValuePair(elem.getKey(), elem.getValue()));
         }
         CloseableHttpResponse response = null;
         try {
             Iterator headerIterator = headerMap.entrySet().iterator();          //循环增加header
-            while(headerIterator.hasNext()){
-                Map.Entry<String,String> elem = (Map.Entry<String, String>) headerIterator.next();
-                post.addHeader(elem.getKey(),elem.getValue());
+            while (headerIterator.hasNext()) {
+                Map.Entry<String, String> elem = (Map.Entry<String, String>) headerIterator.next();
+                post.addHeader(elem.getKey(), elem.getValue());
             }
-            if(content.size() > 0){
-                UrlEncodedFormEntity entity = new UrlEncodedFormEntity(content,"UTF-8");
+            if (content.size() > 0) {
+                UrlEncodedFormEntity entity = new UrlEncodedFormEntity(content, "UTF-8");
                 post.setEntity(entity);
             }
             response = httpClient.execute(post);            //发送请求并接收返回数据
-            if(response != null && response.getStatusLine().getStatusCode() == 200)
-            {
+            if (response != null && response.getStatusLine().getStatusCode() == 200) {
                 HttpEntity entity = response.getEntity();       //获取response的body部分
                 result = EntityUtils.toString(entity);          //读取reponse的body部分并转化成字符串
             }
@@ -176,8 +153,7 @@ public class test {
         } finally {
             try {
                 httpClient.close();
-                if(response != null)
-                {
+                if (response != null) {
                     response.close();
                 }
             } catch (IOException e) {
@@ -188,13 +164,16 @@ public class test {
         return null;
     }
 
-    public static String getRequest(String url,  Map<String, String> headerMap,Map<String, String> paramMap) {
+    public static String getRequest(String url, Map<String, String> headerMap, Map<String, String> paramMap) {
+        System.out.println("header参数》》" + headerMap);
+        System.out.println("body参数》》" + paramMap);
         String result = "";
         BufferedReader in = null;
         List<NameValuePair> formparams = setHttpParams(paramMap);
         String param = URLEncodedUtils.format(formparams, "UTF-8");
 
         String reqUrl = url + "?" + param;
+        System.out.println("******************" + reqUrl);
         try {
             RequestConfig config = RequestConfig.custom().setConnectTimeout(3000)
                     .setConnectionRequestTimeout(3000).build();
@@ -226,6 +205,7 @@ public class test {
         }
         return result;
     }
+
     private static List<NameValuePair> setHttpParams(Map<String, String> paramMap) {
         List<NameValuePair> formparams = new ArrayList<NameValuePair>();
         Set<Map.Entry<String, String>> set = paramMap.entrySet();
@@ -234,4 +214,29 @@ public class test {
         }
         return formparams;
     }
+
+    /**
+     * base64解码
+     *
+     * @param record
+     * @return
+     */
+    public static String base64(String record) {
+        if (record.contains("base64")) {
+            /**
+             * base64的方式
+             */
+            //以逗号分割取出
+            String[] split = record.split(",");
+            String s = split[1];
+            //base64解码
+            byte[] decodeBytes = Base64.getDecoder().decode(split[1]);
+            String s1 = new String(decodeBytes);
+            return s1;
+        } else {
+            return null;
+        }
+
+    }
+
 }
