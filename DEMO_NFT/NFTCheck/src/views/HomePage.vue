@@ -9,12 +9,6 @@
     <!-- 下半部分：显示查询结果和 NFT 卡片 -->
     <div>
       <p>已铸造 {{ numNFTs }} 个 NFT</p>
-      <!-- <div class="nft-cards">
-        <div v-for="(nft, index) in nftList" :key="index" class="nft-card">
-          <img :src="nft.image" :alt="nft.name" />
-          <p>{{ nft.name }}</p>
-        </div>
-      </div> -->
 
       <div class="nft-cards">
         <div
@@ -35,10 +29,10 @@
 <script>
 import { ethers } from "ethers";
 import axios from "axios";
-import { readCall } from "isotop_contract_sdk/src/index";
+import { readCall } from "isotop_web_contract_sdk/src/index";
 import DetailPage from "./DetailPage.vue";
-// import { config } from 'dotenv';
-// config();
+import loadingImg from "../assets/img/loading.png"
+
 export default {
   components: {
     DetailPage,
@@ -54,8 +48,10 @@ export default {
       // apiKey: import.meta.env.VITE_API_KEY,
       // apiSecret: import.meta.env.VITE_API_SECRET,
       chainId: "1029",
-      // data: "0x18160ddd",
       id: "13911024683",
+      placeholderImage: "",
+      baseImageUrl: loadingImg, // 将 baseImageUrl 定义在 data 中
+      baseName: "", // 将 baseName 定义在 data 中
       api_url: "https://www.isotop.top/chain-api/api/v1/chain/readCall",
       ABI: [
         {
@@ -743,20 +739,14 @@ export default {
           this.api_url
         );
 
-        console.log("result:", totalSupplyResult);
-
         this.iface = new ethers.Interface(this.ABI);
         const decodedResult = this.iface.decodeFunctionResult(
           "totalSupply",
           totalSupplyResult
         );
-        console.log("decodedResult:", decodedResult);
-        // 更新 Vue 组件的数据parseInt(decodedResult[0])
-        // this.numNFTs = decodedResult.length;
+
         this.numNFTs = parseInt(decodedResult[0]);
         this.nftList = parseInt(decodedResult[0]);
-
-        ////
 
         const tokenURLData =
           "0xc87b56dd0000000000000000000000000000000000000000000000000000000000000015";
@@ -769,20 +759,19 @@ export default {
           this.id,
           this.api_url
         );
-        console.log("tokenURLResult:", tokenURLResult);
+      
         const URLdecodedResult = this.iface.decodeFunctionResult(
           "tokenURI",
           tokenURLResult
         );
-        console.log("URLdecodedResult:", URLdecodedResult);
 
         const URL = URLdecodedResult[0];
-        console.log("URL:", URL);
-
         const response = await axios.get(URL);
         const jsonData = response.data;
 
-        console.log("jsonData:", jsonData);
+        //用于图片展示动态调用
+        this.baseImageUrl = jsonData.image;
+        this.baseName = jsonData.name;
       } catch (error) {
         console.error("Error searching NFT:", error);
       }
@@ -790,11 +779,21 @@ export default {
 
     // 获取 NFT 名称
     getNFTName(n) {
-      return `yiou#${n}`;
+      if (this.baseName) {
+        const showName = this.baseName; 
+        return showName.replace("21#42", `${n}`);
+      } else {
+        return "加载中..."; 
+      }
     },
-    // 获取 NFT 图像链接
+
     getImageUrl(n) {
-      return `https://nftstorage.link/ipfs/bafybeie5nossbjqw7hqo4xr2bnovd5hwssy3uuy3y7vbervigdwrifnnpa/${n}.png`;
+      if (this.baseImageUrl) {
+        const imageUrl = this.baseImageUrl; 
+        return imageUrl.replace("/21.png", `/${n}.png`);
+      } else {
+        return placeholderImage; // 或者返回一个默认的链接或占位图
+      }
     },
 
     async goToDetailPage(n) {
