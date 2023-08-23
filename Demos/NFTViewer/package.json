@@ -16,6 +16,7 @@
     "ethers": "^6.7.1",
     "isotop_web_contract_sdk": "^1.0.0",
     "vue": "^3.3.4",
+    "three": "^0.155.0",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
