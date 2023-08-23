@@ -31,10 +31,6 @@
 	[方法writeCall] create: 
 		[入参string] _Identity: 
 		[入参address] _caller: 
-		[入参uint256] _expire: 
-	[备注] 
-	[方法writeCall] create: 
-		[入参string] _Identity: 
 	[备注] 
 	[方法writeCall] createSBT: DID持有人创建一个SBT
 		[入参string] _Identity: 身份字符串
