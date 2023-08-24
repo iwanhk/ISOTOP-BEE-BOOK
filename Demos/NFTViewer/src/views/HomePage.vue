@@ -77,13 +77,15 @@ export default {
           }
         );
         //处理服务端返回的json地址
-        const tokenURLResult = tokenURL.data;
-        const URL = tokenURLResult[0];
-        const response = await axios.get(URL);
-        const jsonData = response.data;
+        const jsonData = tokenURL.data;
+        // const URL = tokenURLResult[0];
+        // const response = await axios.get(URL);
+        // const jsonData = response.data;
+        console.log("jsonData:",jsonData);
 
         //用于图片展示动态调用
         this.baseImageUrl = jsonData.image;
+        console.log("baseImageUrl:",this.baseImageUrl);
         this.baseName = jsonData.name;
       } catch (error) {
         console.error("Error searching NFT:", error);
@@ -109,10 +111,13 @@ export default {
       }
     },
 
-    async goToDetailPage(n) {
+     goToDetailPage(n) {
       try {
+        const imageUrl = this.baseImageUrl;
+        console.log("imageUrl:",imageUrl);
         // 使用 Vue Router 的编程式导航来跳转到详情页，并传递参数 n
-        await this.$router.push({ name: "DetailsPage", params: { n } });
+         this.$router.push({ name: "DetailsPage", params: {  n }, query: { imageUrl: imageUrl} });
+         
       } catch (error) {
         console.error("Error navigating to detail page:", error);
       }

@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const { ethers } = require("ethers");
+
+const axios = require("axios");
 // const CryptoJS = require("crypto-js");
 var fs = require("fs");
 require("dotenv").config();
@@ -47,7 +49,15 @@ router.post("/tokenURI", async (req, res) => {
     console.log("result:", result);
     const tokenURIderesult = iface.decodeFunctionResult("tokenURI", result);
     console.log("tokenURIderesult:", tokenURIderesult);
-    res.json(tokenURIderesult);
+    const URL = tokenURIderesult[0];
+    console.log("URL:", URL);
+    const response = await axios.get(URL);
+    const jsonData = response.data;
+    console.log("jsonData:", jsonData);
+    const image = jsonData.image;
+    console.log("image:", image);
+
+    res.json(jsonData);
   } catch (error) {
     res.status(500).json({ error: "An error occurred" });
   }
@@ -92,9 +102,8 @@ router.post("/totalSupply", async (req, res) => {
     console.log("totalSupplyderesult:", totalSupplyderesult);
     const num = parseInt(totalSupplyderesult[0]);
     console.log("num:", num);
- 
+
     res.json(num);
-    
   } catch (error) {
     res.status(500).json({ error: "An error occurred" });
   }
