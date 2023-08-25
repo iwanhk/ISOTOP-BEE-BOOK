@@ -54,10 +54,14 @@ router.post("/tokenURI", async (req, res) => {
     const response = await axios.get(URL);
     const jsonData = response.data;
     console.log("jsonData:", jsonData);
-    const image = jsonData.image;
-    console.log("image:", image);
-
-    res.json(jsonData);
+    // const image = jsonData.image;
+    // console.log("image:", image);
+    const Res = {
+      jsonData: jsonData,
+      URL: URL
+    };
+    console.log("res:", Res);
+    res.json(Res);
   } catch (error) {
     res.status(500).json({ error: "An error occurred" });
   }

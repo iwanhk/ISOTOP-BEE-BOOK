@@ -15,7 +15,7 @@
           v-for="n in this.numNFTs"
           :key="n"
           class="nft-card"
-          @click="goToDetailPage(n)"
+          @click="showModal(n)"
         >
           <img :src="getImageUrl(n)" :alt="getNFTName(n)" />
           <p>{{ getNFTName(n) }}</p>
@@ -23,17 +23,28 @@
       </div>
     </div>
   </div>
-  <DetailsPage :params="n" />
+
+  <model
+  v-if="jsonDATAN"
+    :title="modalTitle"
+    :show="isModalVisible"
+    @close="closeModal"
+    :jsonData="jsonDATAN"
+    :imageUrl="baseImageUrl"
+    :name="baseName"
+  ></model>
 </template>
 
 <script>
 import axios from "axios";
-import DetailPage from "./DetailPage.vue";
+// import DetailPage from "./DetailPage.vue";
 import loadingImg from "../assets/img/loading.png";
+import model from "./model.vue";
 
 export default {
   components: {
-    DetailPage,
+    // DetailPage,
+    model,
   },
   data() {
     return {
@@ -45,6 +56,12 @@ export default {
       placeholderImage: "",
       baseImageUrl: loadingImg, // 将 baseImageUrl 定义在 data 中
       baseName: "", // 将 baseName 定义在 data 中
+      isModalVisible: false,
+      modalTitle: "sss",
+  
+      jsonDATA: {},
+      jsonDATAN: {},
+      JsonUrl: {},
     };
   },
   methods: {
@@ -77,16 +94,17 @@ export default {
           }
         );
         //处理服务端返回的json地址
-        const jsonData = tokenURL.data;
-        // const URL = tokenURLResult[0];
-        // const response = await axios.get(URL);
-        // const jsonData = response.data;
-        console.log("jsonData:",jsonData);
-
+        const jsonData = tokenURL.data.jsonData;
+        console.log("jsonData:", jsonData);
+        this.jsonDATA = jsonData;
         //用于图片展示动态调用
         this.baseImageUrl = jsonData.image;
-        console.log("baseImageUrl:",this.baseImageUrl);
+        console.log("baseImageUrl:", this.baseImageUrl);
         this.baseName = jsonData.name;
+
+        const url = tokenURL.data.URL;
+        this.JsonUrl = url;
+        console.log("url:", url);
       } catch (error) {
         console.error("Error searching NFT:", error);
       }
@@ -111,16 +129,31 @@ export default {
       }
     },
 
-     goToDetailPage(n) {
-      try {
-        const imageUrl = this.baseImageUrl;
-        console.log("imageUrl:",imageUrl);
-        // 使用 Vue Router 的编程式导航来跳转到详情页，并传递参数 n
-         this.$router.push({ name: "DetailsPage", params: {  n }, query: { imageUrl: imageUrl} });
-         
-      } catch (error) {
-        console.error("Error navigating to detail page:", error);
+    showModal(n) {
+      this.isModalVisible = true;
+      console.log("modalVisible:", this.isModalVisible);
+      console.log("n:", n);
+      if (this.JsonUrl) {
+        const json = this.JsonUrl;
+        const jsonurl = json.replace("/21.json", `/${n}.json`);
+        console.log("jsonurl:", jsonurl);
+        axios
+          .get(jsonurl)
+          .then((response) => {
+            // 在请求成功后，更新解析后的链接
+            const jsonD = response.data; // 假设服务器返回的数据即为链接内容
+            console.log("jsonD=:", jsonD);
+            this.jsonDATAN = jsonD;
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      } else {
+        return "加载中...";
       }
+    },
+    closeModal() {
+      this.isModalVisible = false;
     },
   },
 };

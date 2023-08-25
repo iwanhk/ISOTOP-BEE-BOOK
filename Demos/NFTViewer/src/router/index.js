@@ -19,6 +19,7 @@ const routes = [
     component: () => import("../views/DetailPage.vue"),
     props: true, // 将路由参数作为组件的 props 传递
   },
+ 
 ];
 
 // 创建路由
