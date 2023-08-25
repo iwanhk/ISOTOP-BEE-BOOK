@@ -298,6 +298,19 @@
             "inputs": [
                 {
                     "internalType": "address",
+                    "name": "_operator",
+                    "type": "address"
+                }
+            ],
+            "name": "addOperator",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
                     "name": "to",
                     "type": "address"
                 },
@@ -441,6 +454,38 @@
                     "internalType": "address",
                     "name": "",
                     "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_Identity",
+                    "type": "string"
+                }
+            ],
+            "name": "getManagersAddress",
+            "outputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "",
+                    "type": "address[]"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getOperators",
+            "outputs": [
+                {
+                    "internalType": "address[]",
+                    "name": "",
+                    "type": "address[]"
                 }
             ],
             "stateMutability": "view",
@@ -668,6 +713,19 @@
                 }
             ],
             "name": "removeAddress",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "_operator",
+                    "type": "address"
+                }
+            ],
+            "name": "removeOperator",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"
