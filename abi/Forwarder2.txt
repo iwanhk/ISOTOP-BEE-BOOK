@@ -1,0 +1,25 @@
+[合约]Forwarder2: 
+[获取方法]
+[描述]
+	[方法writeCall] execute: 
+		[入参address] caller: 
+		[入参address] contractAddr: 
+		[入参uint256] value: 
+		[入参bytes] data: 
+		[入参bytes32] dataHash: 
+		[入参bytes] signature: 
+		[入参uint256] gasLimit: 
+		[出参bytes] result: 
+	[备注] 
+	[方法readCall] recoverSigner: 
+		[入参bytes32] message: 
+		[入参bytes] sig: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] splitSignature: 
+		[入参bytes] sig: 
+		[出参uint8] : 
+		[出参bytes32] : 
+		[出参bytes32] : 
+	[备注] 
+[代码示例]

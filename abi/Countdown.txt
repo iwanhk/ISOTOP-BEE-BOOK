@@ -1,0 +1,106 @@
+[合约]Countdown: 
+[获取方法]
+[描述]
+	[方法writeCall] approve: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] mint: 
+		[入参address] _to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] mint: 
+		[入参address] _to: 
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] ownerOf: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] safeMint: 
+		[入参address] _to: 
+	[备注] 
+	[方法writeCall] safeMint: 
+		[入参address] _to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] symbol: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenURI: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokens: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] tokensOf: 
+		[入参address] owner: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+[代码示例]

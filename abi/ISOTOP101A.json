@@ -149,25 +149,25 @@
                 {
                     "indexed": true,
                     "internalType": "address",
-                    "name": "from_",
+                    "name": "from",
                     "type": "address"
                 },
                 {
                     "indexed": true,
                     "internalType": "bytes32",
-                    "name": "id_",
+                    "name": "id",
                     "type": "bytes32"
                 },
                 {
                     "indexed": false,
                     "internalType": "string",
-                    "name": "contract_",
+                    "name": "contractName",
                     "type": "string"
                 },
                 {
                     "indexed": false,
                     "internalType": "string",
-                    "name": "function_",
+                    "name": "functionName",
                     "type": "string"
                 },
                 {
@@ -179,7 +179,7 @@
                 {
                     "indexed": false,
                     "internalType": "string[]",
-                    "name": "party",
+                    "name": "parties",
                     "type": "string[]"
                 },
                 {
