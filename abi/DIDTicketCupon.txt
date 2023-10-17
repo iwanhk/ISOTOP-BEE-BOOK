@@ -1,5 +1,5 @@
-[合约]DIDCupon: DID 发行优惠券和票务（ERC721标准，自动编号）
-[获取方法] 需要自行部署合约，自动关联DID合约地址
+[合约]DIDTicketCupon: DID 发行优惠券和票务（ERC721标准，自动编号）
+[获取方法] 0x9221405441870b8250Ee7738C462ad49cdC6c615
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 

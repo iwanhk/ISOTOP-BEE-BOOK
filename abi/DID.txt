@@ -1,126 +1,148 @@
-[合约]DID: DID身份管理合约
-[获取方法]
-文昌链等： 0x02E9c23e26FCc2489F9f64EAdfd6E2288B06D002
-树图测试链： cfxtest:acdgvn8zwryw0g0cfjxxkhj2rc23z78su2gr6ypzeh(0x8668aFD593692b1ac22A27349d1868b19AF7cE86)
-[描述]管理DID的入口，身份，维护DIDNFT，可以通过DID身份铸造SBT
-	[方法writeCall] addAddress: 为一个身份增加一个地址
-		[入参string] _Identity: 身份字符串身份字符串
-		[入参address] _addr: 地址
-	[备注] DID的拥有者可以添加任何地址给这个DID，用户需要自己保证地址是自己的，否则资产转移给不明地址可能会丢失
-	[方法readCall] addr: 获得一个DID身份的归属人地址
-		[入参string] _Identity: 身份字符串身份字符串
-		[出参address] : 地址
-	[备注] 
-	[方法writeCall] addAsset: 
-		[入参string] _Identity: 
-		[入参address] nft_: 
-		[入参uint256] tokenId: 
-	[备注] 
-	[方法writeCall] addVP: 
-		[入参string] _Identity: 
-		[入参string] name_: 
-		[入参string] issuer_did_: 
-		[入参string] issuanceDate_: 
-		[入参string[]] subjects_: 
-		[入参string[]] values_: 
-		[入参string] json_: 
-	[备注] 
-	[方法writeCall] claim: 申领一个DID NFT
-		[入参string] _Identity: 身份字符串
-	[备注] 任何DID持有人都可以免费获得一个NFT，用于二级交易市场
-	[方法writeCall] create: 
-		[入参string] _Identity: 
-		[入参address] _caller: 
-	[备注] 
-	[方法writeCall] createSBT: DID持有人创建一个SBT
-		[入参string] _Identity: 身份字符串
-		[入参string] _name: SBT名（唯一）
-		[入参string] _type: SBT的类型（比如SBT_META: 自定义metadata的SBT， SBT_IMAGE：自定义图片的SBT, SBT_MULTI: 1155协议token）
-		[入参bool] _restrict: 是否是一个严格SBT，严格SBT一旦发行，不能转给任何地址
-		[出参address] : SBT合约地址
-	[备注] DID的持有人可以自己创建和维护自己的SBT，并且发给任何授权的使用者，也可以销毁发出的SBT。通常是给企业和社群用户来使用的
-	[方法readCall] get: 读取DID的key值
-		[入参string] _Identity: 身份字符串
-		[入参string] _key: 名称
-		[出参string] : 信息内容
-	[备注] DID支持用户定义自己的任何key值存储内容
-	[方法readCall] getAssets: 
-		[出参tuple[]] : 
-	[备注] 
-	[方法readCall] getDIDNFTAddress: 获得DID NFT合约地址
+[合约]DID: 
+[获取方法] 地址：0x91aC2634832e85e795F77Fd28D27F1Bda05c0002
+[描述]
+	[方法readCall] Account: 每个DID都对应一个AA链账户地址
+		[入参uint256] tokenId: 通过tokenID取得AA链账户地址
 		[出参address] : 
 	[备注] 
-	[方法readCall] getIDs: 获得某用户所有注册的DID身份列表
-		[入参address] _owner: 
-		[出参string[]] IDs: 
+	[方法readCall] Account: 
+		[入参string] _did: 通过DID名字取得链账户地址
+		[出参address] : 
 	[备注] 
-	[方法readCall] getKeys: 获得某个DID身份所有的key
-		[入参string] _Identity: 身份字符串
+	[方法readCall] Details: 
+		[出参string] : 
+	[备注] 
+	[方法writeCall] addAddress: 添加某个DID的管理员地址
+		[入参string] _Identity: 
+		[入参address] _addr: 
+	[备注] 
+	[方法writeCall] addOperator: 添加DID合约的管理员地址
+		[入参address] _operator: 
+	[备注] 
+	[方法writeCall] approve: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] contracVersion: 
+		[出参uint8] : 
+	[备注] 
+	[方法readCall] contractName: 
+		[出参string] : 
+	[备注] 
+	[方法writeCall] create: 创建DID
+		[入参string] _Identity: DID名称
+		[入参string] _ar_file: arweave的json地址
+		[入参address] _owner: DID名称归属人
+	[备注] 需要管理员来调用此操作
+	[方法writeCall] createSBT: 创建一个SBT
+		[入参string] _Identity: DID名称
+		[入参string] _name: SBT名称
+		[入参string] _type: SBT类型
+		[入参bool] _restrict: 是否是严格SBT（无法转移）
+		[出参address] : SBT地址
+	[备注] 需要DID的归属人来调用
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] getManagersAddress: 获得某个DID的管理员列表
+		[入参string] _Identity: DID名称
+		[出参address[]] : 管理员地址列表
+	[备注] 
+	[方法readCall] getOperators: 获得DID合约的管理员列表
+		[出参address[]] : 
+	[备注] 
+	[方法readCall] getSBT: 获得SBT合约的地址
+		[入参string] _Identity: 
+		[入参string] _name: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] ownerOf: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] query: 查询DID的持有人地址
+		[入参string] _Identity: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] query: 查询NFT编号的DID名称
+		[入参uint256] tokenID: 
+		[出参string] : DID名称
+	[备注] 
+	[方法readCall] query: 查询某个地址持有的DID列表
+		[入参address] _owner: 
 		[出参string[]] : 
-	[备注] 
-	[方法readCall] getSBT: 获得创建的SBT地址
-		[入参string] _Identity: 身份字符串
-		[入参string] _name: SBT名字
-		[出参address] : 合约地址
-	[备注] 
-	[方法readCall] getSBTs: 
-		[入参string] _Identity: 身份字符串
-		[出参address []] : 合约地址列表
-	[备注] 
-	[方法writeCall] put: 写入一个DID的key值
-		[入参string] _Identity: 身份字符串
-		[入参string] _key: 
-		[入参string] _data: 
-	[备注] key值必须唯一
-	[方法writeCall] put: 批量写入DID的key值
-		[入参string] _Identity: 身份字符串
-		[入参string[]] _key: 键列表
-		[入参string[]] _data: 值列表
-	[备注] 两个列表必须同样长度，调用人必须是身份字符串的拥有人
-	[方法readCall] query: 查询一个标识符是否被占用
-		[入参string] _Identity: DID域名
-		[出参address] : 如果是0表示未占用
-		[出参uint256] : 如果有效期过了，可以继续使用
-	[备注] 
-	[方法readCall] query: 查询一个用户有哪些DID域名
-		[入参address] _owner: 
-		[出参string[]] IDs: 域名列表
 	[备注] 
 	[方法writeCall] removeAddress: 
 		[入参string] _Identity: 
-		[入参uint256] _chainid: 
-		[入参address] _addr: 
-		[入参string] _domain: 
-	[备注] 
-	[方法writeCall] removeAddress: 删除一个DID名下的地址
-		[入参string] _Identity: 身份字符串
 		[入参address] _addr: 
 	[备注] 
-	[方法writeCall] setDidDocument: 
-		[入参string] _id: 
-		[入参string] _document: 
-	[备注] 
-	[方法writeCall] setOperator: 
+	[方法writeCall] removeOperator: 
 		[入参address] _operator: 
 	[备注] 
 	[方法writeCall] setSBTTemplate: 
 		[入参string] _name: 
 		[入参address] _sbt: 
 	[备注] 
-	[方法writeCall] update: 
-		[入参string] _Identity: 
-		[入参uint256] _chainid: 
-		[入参address] _from: 
-		[入参address] _to: 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
 	[备注] 
-	[方法writeCall] update: 更换DID的持有人
-		[入参string] _Identity: 身份字符串
-		[入参address] _to: 新持有人地址
-	[备注] 更换持有人不会更改key值，需要新的持有人自己选择更换或者保留
-	[方法readCall] validateAddress: 验证DID是否包含某个地址
-		[入参string] _Identity: 身份字符串
-		[入参address] _addr: 地址
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenURI: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokens: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] tokensOf: 
+		[入参address] owner: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法readCall] validateAddress: 验证某个地址是否是DID的管理员
+		[入参string] _Identity: 
+		[入参address] _addr: 
 		[出参bool] : 
 	[备注] 
 [代码示例]
-

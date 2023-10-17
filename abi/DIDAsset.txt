@@ -1,5 +1,5 @@
 [合约]DIDAsset: DID 发行的资产（ERC721兼容）
-[获取方法] 需要自行部署合约，自动关联DID合约地址
+[获取方法] 0x5ff6371F332dab377c8d8f72a0E79a94b3F43c6D
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 
