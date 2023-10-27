@@ -9,7 +9,7 @@
 		[入参address] owner: 
 		[出参uint256] : 
 	[备注] 
-	[方法writeCall] create: 创建一个会员卡模板
+	[方法writeCall] create: 创建一个会员卡模板（更新模板）
 		[入参string] name: 名字（唯一）
 		[入参string] description: 描述
 		[入参string[]] images: 不同级别卡面的图片

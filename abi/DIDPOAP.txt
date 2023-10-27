@@ -1,0 +1,74 @@
+[合约]DIDPOAP: DID徽章合约
+[获取方法] 0xD0dE2559b3e4122B5B2EDf175b02211B41B016C8
+[描述]
+	[方法readCall] balanceOf: 
+		[入参address] account: 
+		[入参uint256] id: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] balanceOfBatch: 
+		[入参address[]] accounts: 
+		[入参uint256[]] ids: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] create: 创建（更新）一个徽章
+		[入参string] name: 名字（必须唯一，如果重名会覆盖之前的内容，等同于update）
+		[入参string] description: 描述
+		[入参string] image: 图片
+		[入参string] _Identiry: DID标识符
+	[备注] 
+	[方法readCall] index: 通过名字查询徽章tokenID
+		[入参string] name: 徽章名字
+		[出参uint256] : tokenID
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] account: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] mint: 颁发徽章
+		[入参address] to: 给谁
+		[入参uint256] tokenId: 徽章tokenID
+	[备注] 每次只能发一枚徽章，徽章可以累计
+	[方法writeCall] mint: 颁发徽章
+		[入参address] to: 给谁
+		[入参string] name: 徽章名字
+	[备注] 每次只能发一枚徽章，徽章可以累计
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] safeBatchTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256[]] ids: 
+		[入参uint256[]] amounts: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] id: 
+		[入参uint256] amount: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法readCall] uri: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+[代码示例]

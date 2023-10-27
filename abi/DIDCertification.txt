@@ -11,7 +11,7 @@
 		[入参uint256[]] ids: 
 		[出参uint256[]] : 
 	[备注] 
-	[方法writeCall] create: 创建证书
+	[方法writeCall] create: 创建证书（更新证书）
 		[入参string] name: 名字（唯一）
 		[入参string] description: 描述
 		[入参string] image: 图片
