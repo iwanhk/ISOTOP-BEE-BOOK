@@ -17,6 +17,13 @@
 		[入参string] image: 图片
 		[入参string] _Identiry: DID标识符
 	[备注] 
+	[方法writeCall] create: 
+		[入参string] name: 
+		[入参string] description: 
+		[入参string] image: 
+		[入参string] _Identiry: 
+		[入参address] operator: 
+	[备注] 
 	[方法readCall] index: 通过名字查询徽章tokenID
 		[入参string] name: 徽章名字
 		[出参uint256] : tokenID
@@ -34,6 +41,16 @@
 		[入参address] to: 给谁
 		[入参string] name: 徽章名字
 	[备注] 每次只能发一枚徽章，徽章可以累计
+	[方法writeCall] mint: 管理员代付颁发
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参address] operator: 
+	[备注] 
+	[方法writeCall] mint: 管理员代付颁发
+		[入参address] to: 
+		[入参string] name: 
+		[入参address] operator: 
+	[备注] 
 	[方法readCall] owner: 
 		[出参address] : 
 	[备注] 

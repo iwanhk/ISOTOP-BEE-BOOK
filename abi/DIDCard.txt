@@ -25,10 +25,20 @@
 		[入参address] operator: 
 		[出参bool] : 
 	[备注] 
+	[方法readCall] index: 查询会员卡的tokenID
+		[入参string] cardName: 卡名字
+		[入参string] cardId: 卡编号
+		[出参uint256] : 
+	[备注] 
 	[方法writeCall] mint: 铸造一个会员卡
 		[入参address] to: 给谁
 		[入参string] cardName: 创建时候的会员卡模板的名字
-	[备注] 创建的会员卡自动编号，编号自动增加，唯一
+	[备注] 没有提供卡号时，自动用tokenID作为卡号
+	[方法writeCall] mint: 铸造一个会员卡
+		[入参address] to: 给谁
+		[入参string] cardName: 创建时候的会员卡模板的名字
+		[入参string] cardId: 卡编号
+	[备注] 创建的会员卡的tokenId是自动分配的，自动增加，唯一
 	[方法readCall] name: 
 		[出参string] : 
 	[备注] 

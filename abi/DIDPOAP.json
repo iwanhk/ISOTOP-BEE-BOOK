@@ -236,6 +236,39 @@
                 "internalType": "string",
                 "name": "_Identiry",
                 "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            }
+        ],
+        "name": "create",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_Identiry",
+                "type": "string"
             }
         ],
         "name": "create",
@@ -297,6 +330,29 @@
                 "internalType": "uint256",
                 "name": "tokenId",
                 "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
             }
         ],
         "name": "mint",
@@ -315,6 +371,29 @@
                 "internalType": "string",
                 "name": "name",
                 "type": "string"
+            }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
             }
         ],
         "name": "mint",
