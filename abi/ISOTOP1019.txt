@@ -1,5 +1,10 @@
-[合约]ISOTOP1019: 兼容ERC1155的数藏品合约
-[获取方法]通过工厂合约clone得到
+数字徽章合约
+
+说明：数字徽章，是一种数字资产，可以发行任意多份，类似不同面额的硬币，可以铸造很多个，又被称为POAP（出席证明）。是通过区块链技术铸造的证明，发给某些用户用于纪念某个事件，或者身份。
+支持数字资产的智能合约是ERC1155兼容的独立实现，我们还扩展了合约，支持资产扩展信息。
+
+[合约]ISOTOP1019: 兼容ERC1155的徽章合约
+[获取方法]通过工厂合约clone，名称：ISOTOP1019
 [描述]可以生成任意编号的徽章，支持json属性的定义
 	[方法readCall] Details: 数藏品的说明链接
 		[出参string] : 
@@ -94,9 +99,6 @@
 	[方法readCall] symbol: 代号
 		[出参string] : 
 	[备注] 
-	[方法readCall] symbol: 
-		[出参string] : 
-	[备注] 
 	[方法readCall] tokenByIndex: 
 		[入参uint256] index: 
 		[出参uint256] : 
@@ -130,11 +132,12 @@
 		[入参uint256] tokenId: 编号
 		[出参uint256] : 
 	[备注] 
-	[方法writeCall] transferOwnership: 
+	[方法writeCall] transferOwnership: 转移管理员
 		[入参address] newOwner: 
 	[备注] 
 	[方法readCall] uri: metadata的返回内容
 		[入参uint256] tokenId: 编号
 		[出参string] : 
 	[备注] 类似于ERC721的tokenURI函数
-[代码示例]
+
+在使用本合约时，请参考avatar-v3的调用方法。
