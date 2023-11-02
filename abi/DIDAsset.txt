@@ -1,6 +1,6 @@
-[合约]DIDAsset: DID 发行的资产（ERC721兼容）
-[获取方法] 0x5ff6371F332dab377c8d8f72a0E79a94b3F43c6D
-[描述]
+[合约]DIDAsset: 创建创作品及数字资产(ERC1155兼容)
+[获取方法] 0xf11155F0EA41bAA67Db5BF57bAbb18a18d056005
+[描述] 
 	[方法writeCall] approve: 
 		[入参address] to: 
 		[入参uint256] tokenId: 
@@ -22,15 +22,30 @@
 		[入参string] name: 名字
 		[入参string] description: 描述
 		[入参string] image: 图片链接
+		[入参string] amount: 发行数量（一经发行，数量不能增加）
 		[入参string] _Identiry: DID名字
 		[入参bool] toDID: 铸造后放在哪个地址，如果是TRUE就放在DID地址，否则放在铸造人的私人地址
 	[备注] 
+	[方法writeCall] mint: 代付管理员铸造
+		[入参string] name: 名字
+		[入参string] description: 描述
+		[入参string] image: 图片链接
+		[入参string] amount: 发行数量（一经发行，数量不能增加）
+		[入参string] _Identiry: DID名字
+		[入参bool] toDID: 铸造后放在哪个地址，如果是TRUE就放在DID地址，否则放在铸造人的私人地址
+		[入参address] operator: 操作员
+	[备注] 此方法仅仅能被管理员调用
 	[方法readCall] name: 
 		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
 	[备注] 
 	[方法readCall] ownerOf: 
 		[入参uint256] tokenId: 
 		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
 	[备注] 
 	[方法writeCall] safeTransferFrom: 
 		[入参address] from: 
@@ -87,5 +102,8 @@
 		[入参address] from: 
 		[入参address] to: 
 		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
 	[备注] 
 [代码示例]
