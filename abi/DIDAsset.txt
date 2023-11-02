@@ -22,7 +22,7 @@
 		[入参string] name: 名字
 		[入参string] description: 描述
 		[入参string] image: 图片链接
-		[入参string] amount: 发行数量（一经发行，数量不能增加）
+		[入参uint256] amount: 发行数量（一经发行，数量不能增加）
 		[入参string] _Identiry: DID名字
 		[入参bool] toDID: 铸造后放在哪个地址，如果是TRUE就放在DID地址，否则放在铸造人的私人地址
 	[备注] 
@@ -30,7 +30,7 @@
 		[入参string] name: 名字
 		[入参string] description: 描述
 		[入参string] image: 图片链接
-		[入参string] amount: 发行数量（一经发行，数量不能增加）
+		[入参uint256] amount: 发行数量（一经发行，数量不能增加）
 		[入参string] _Identiry: DID名字
 		[入参bool] toDID: 铸造后放在哪个地址，如果是TRUE就放在DID地址，否则放在铸造人的私人地址
 		[入参address] operator: 操作员
