@@ -205,6 +205,11 @@
             },
             {
                 "internalType": "string",
+                "name": "hash",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
                 "name": "_Identiry",
                 "type": "string"
             },
@@ -239,6 +244,11 @@
             {
                 "internalType": "string",
                 "name": "file",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "hash",
                 "type": "string"
             },
             {

@@ -24,6 +24,7 @@
 		[入参string] name: 名称
 		[入参string] content: 文字内容，描述
 		[入参string] file: 图片等内容地址
+		[入参string] hash: 内容的hash
 		[入参string] _Identiry: DID名字
 		[入参bool] toDID: 发行给DID地址或者发行给自己的链账户地址
 		[入参address] operator: DID的管理员
@@ -32,6 +33,7 @@
 		[入参string] name: 
 		[入参string] content: 
 		[入参string] file: 
+		[入参string] hash: 
 		[入参string] _Identiry: 
 		[入参bool] toDID: 
 	[备注] 
