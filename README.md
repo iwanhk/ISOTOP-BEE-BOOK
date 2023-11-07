@@ -53,10 +53,16 @@
 
 |     合约                |     部署链地址                                          |
 |-------------------------|-------------------------------------------------------|
-|     Factory 合约工厂     |     主要链：0x4941dbF5bfeD7E6aEc7Da053177212CF1Abd0000   |
-|     DDS 配置数据库       |     主要链：0xA397f9f07EC7f102d6CfE59f638F50807cB83001   |
-|     DID 身份            |     主要链：0x91aC2634832e85e795F77Fd28D27F1Bda05c0002  |
-| Forwarder 代付合约 | 主要链：0x76Fd98C9EDc5dA98D8B0dF5fE303Ca0d765D9003 | 
+|     Factory 合约工厂     |     0x17f5b38Dd7F0662A838b1cc2035be18A1E800000   |
+|     DDS 配置数据库       |     0x72d89f284B6C9CC7873E5190ca303e88b8094001   |
+|     DID 身份            |     0x84D414DE639c5233F36F1E765b96d5D8188CD002  |
+| Forwarder 代付合约 | 0xc77FA7345679ccdBDB6204F0Ca6a024Be4Abd003 | 
+| DIDVC | 0xaFD2422d3E1e01F9c6fb470DA81B7b3338bc4004 |
+| DIDAsset |0x4F469550a98E2a73E9552114594f59260e872005 |
+| DIDPOAP | 0xEAf5028A0eAdEBFb5C2cda412737b05B14E54006 |
+| DIDCertification |0xff4B9490D6C876f53dE4929b068D422e06bcF007 |
+| DIDCard | 0x2bb9645Cc02c9aA8010329ec05C1c8077dd36008 |
+| DIDTicketCupon  | 0xc02CdbEefD51fd8ED9E2ab00719206EE76A09009 |
 |     ISOTOP1010          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1011          |     文昌链测试，Conflux Core Test                       |
 |     ISOTOP1012          |     文昌链测试，Conflux Core Test                       |
