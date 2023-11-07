@@ -205,7 +205,7 @@
             },
             {
                 "internalType": "string",
-                "name": "hash",
+                "name": "hx",
                 "type": "string"
             },
             {
@@ -248,7 +248,7 @@
             },
             {
                 "internalType": "string",
-                "name": "hash",
+                "name": "hx",
                 "type": "string"
             },
             {

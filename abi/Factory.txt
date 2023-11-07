@@ -1,5 +1,5 @@
 [合约]Factory: 工厂合约
-[获取方法] 
+[获取方法] 0x17f5b38Dd7F0662A838b1cc2035be18A1E800000
 树图测试链: cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb/0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae
 文昌链等：0xCE0Fcafb4da817636F118c77a7CFcee3d1adF000
 [描述]负责按照模板复制合约并将部署的合约管理员转给调用者

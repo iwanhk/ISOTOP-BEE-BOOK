@@ -1,5 +1,5 @@
-[合约]DID: 
-[获取方法] 地址：0x91aC2634832e85e795F77Fd28D27F1Bda05c0002
+[合约]DID: DID身份合约
+[获取方法] 0x84D414DE639c5233F36F1E765b96d5D8188CD002
 [描述]
 	[方法readCall] Account: 每个DID都对应一个AA链账户地址
 		[入参uint256] tokenId: 通过tokenID取得AA链账户地址

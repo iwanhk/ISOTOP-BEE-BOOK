@@ -309,11 +309,6 @@
                 "components": [
                     {
                         "internalType": "string",
-                        "name": "name",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
                         "name": "description",
                         "type": "string"
                     },

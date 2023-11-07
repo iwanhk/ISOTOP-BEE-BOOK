@@ -533,7 +533,7 @@
     },
     {
         "inputs": [],
-        "name": "totalSupply",
+        "name": "totalPOAPs",
         "outputs": [
             {
                 "internalType": "uint256",

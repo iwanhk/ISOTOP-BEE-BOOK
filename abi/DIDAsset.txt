@@ -1,5 +1,5 @@
 [合约]DIDAsset: 创建创作品及数字资产(ERC1155兼容)
-[获取方法] 0xf11155F0EA41bAA67Db5BF57bAbb18a18d056005
+[获取方法] 0x4F469550a98E2a73E9552114594f59260e872005
 [描述] 
 	[方法writeCall] approve: 
 		[入参address] to: 
