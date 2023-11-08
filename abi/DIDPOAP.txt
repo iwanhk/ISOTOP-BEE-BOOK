@@ -1,5 +1,5 @@
 [合约]DIDPOAP: DID徽章合约
-[获取方法] 0xD0dE2559b3e4122B5B2EDf175b02211B41B016C8
+[获取方法] 0xEAf5028A0eAdEBFb5C2cda412737b05B14E54006
 [描述]
 	[方法readCall] balanceOf: 
 		[入参address] account: 
