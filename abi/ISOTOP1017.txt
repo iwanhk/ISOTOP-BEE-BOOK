@@ -44,6 +44,9 @@
 		[入参address] _to: 给谁
 		[入参uint256] tokenId: 铸造的NFT编号
 	[备注] 根据编号铸造
+	[方法writeCall] burn: 销毁token，仅限管理员
+		[入参uint256] tokenId: 铸造的NFT编号
+	[备注] 
 	[方法readCall] name: 资产名
 		[出参string] : 
 	[备注] 
