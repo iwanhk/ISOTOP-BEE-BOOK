@@ -13,6 +13,14 @@
 		[入参uint256] tokenId: 
 		[出参address] : 
 	[备注] 
+	[方法readCall] getAsset: 查询资产信息
+		[入参uint256] tokenId: 资产编号
+		[出参tuple] : 资产内容结构体：string name; string description; string image; string did;
+	[备注] 
+	[方法readCall] getLastAsset: 查询某个用户最后一个资产详情
+		[入参address] owner: 
+		[出参tuple] : 资产内容结构体：string name; string description; string image; string did;
+	[备注] 如果用户没有任何资产，返回一个全部为空字符串的资产
 	[方法writeCall] init: 
 	[备注] 
 	[方法readCall] isApprovedForAll: 
@@ -91,12 +99,12 @@
 		[出参uint256] total: 
 		[出参uint256[]] tokenIds: 
 	[备注] 
-	[方法readCall] tokensOf: 
+	[方法readCall] tokensOf: 查询某个用户拥有的tokenId列表
 		[入参address] owner: 
-		[入参uint256] offset: 
-		[入参uint256] limit: 
-		[出参uint256] total: 
-		[出参uint256[]] tokenIds: 
+		[入参uint256] offset: 从第几个开始（一般是0）
+		[入参uint256] limit: 到第几个截至
+		[出参uint256] total: 总共数量
+		[出参uint256[]] tokenIds: 编号列表
 	[备注] 
 	[方法readCall] totalSupply: 
 		[出参uint256] : 
