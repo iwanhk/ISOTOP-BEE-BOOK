@@ -318,46 +318,73 @@
             {
                 "components": [
                     {
-                        "components": [
-                            {
-                                "internalType": "string",
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "description",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "image",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string[]",
-                                "name": "rights",
-                                "type": "string[]"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "did",
-                                "type": "string"
-                            }
-                        ],
-                        "internalType": "struct DIDTicketCupon.CuponTemplate",
-                        "name": "ct",
-                        "type": "tuple"
+                        "internalType": "string",
+                        "name": "ct_name",
+                        "type": "string"
                     },
                     {
                         "internalType": "bool[]",
                         "name": "checked",
                         "type": "bool[]"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "time",
+                        "type": "uint256"
                     }
                 ],
                 "internalType": "struct DIDTicketCupon.Cupon",
                 "name": "",
                 "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getCuponDetails",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "ct_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "string[]",
+                "name": "rights",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_did",
+                "type": "string"
+            },
+            {
+                "internalType": "bool[]",
+                "name": "checked",
+                "type": "bool[]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_time",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -376,46 +403,73 @@
             {
                 "components": [
                     {
-                        "components": [
-                            {
-                                "internalType": "string",
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "description",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "image",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string[]",
-                                "name": "rights",
-                                "type": "string[]"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "did",
-                                "type": "string"
-                            }
-                        ],
-                        "internalType": "struct DIDTicketCupon.CuponTemplate",
-                        "name": "ct",
-                        "type": "tuple"
+                        "internalType": "string",
+                        "name": "ct_name",
+                        "type": "string"
                     },
                     {
                         "internalType": "bool[]",
                         "name": "checked",
                         "type": "bool[]"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "time",
+                        "type": "uint256"
                     }
                 ],
                 "internalType": "struct DIDTicketCupon.Cupon",
                 "name": "",
                 "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "name": "getLastCuponDetails",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "ct_name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "string[]",
+                "name": "rights",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_did",
+                "type": "string"
+            },
+            {
+                "internalType": "bool[]",
+                "name": "checked",
+                "type": "bool[]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_time",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
