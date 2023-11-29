@@ -6,9 +6,8 @@ Conflux Core Main: cfx:aca8pfe6rcuvu2h2bjsx08eafd0td4ukh6u9mnges4 (0x81E6149C68a
 	[方法writeCall] execute: 执行
 		[入参address] caller: 调用人
 		[入参address] contractAddr: 调用合约
-		[入参uint256] value: 付费（忽略为0）
 		[入参string] data: 要执行的内容的编码
-		[入参bytes32] dataHash: 数据的hash
+		[入参string] hashStr: 数据的hash
 		[入参string] signature: 数据的签名
 		[入参uint256] gasLimit: gas上限
 		[出参bytes] result: 返回值

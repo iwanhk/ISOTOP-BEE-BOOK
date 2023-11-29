@@ -22,12 +22,6 @@
             },
             {
                 "indexed": false,
-                "internalType": "uint256",
-                "name": "value",
-                "type": "uint256"
-            },
-            {
-                "indexed": false,
                 "internalType": "bytes",
                 "name": "data",
                 "type": "bytes"
@@ -55,19 +49,14 @@
                 "type": "address"
             },
             {
-                "internalType": "uint256",
-                "name": "value",
-                "type": "uint256"
-            },
-            {
                 "internalType": "string",
                 "name": "data",
                 "type": "string"
             },
             {
-                "internalType": "bytes32",
-                "name": "dataHash",
-                "type": "bytes32"
+                "internalType": "string",
+                "name": "hashStr",
+                "type": "string"
             },
             {
                 "internalType": "string",
