@@ -37,6 +37,7 @@
 		[入参string] _Identity: DID名称
 		[入参string] _ar_file: arweave的json地址
 		[入参address] _owner: DID名称归属人
+		[入参uint256] _expired: 有效期（UINIX时间）
 	[备注] 需要管理员来调用此操作
 	[方法writeCall] createSBT: 创建一个SBT
 		[入参string] _Identity: DID名称
@@ -45,6 +46,14 @@
 		[入参bool] _restrict: 是否是严格SBT（无法转移）
 		[出参address] : SBT地址
 	[备注] 需要DID的归属人来调用
+	[方法readCall] data: 查询DID数据
+		[入参string] _Identity: DID
+		[出参tuple] : 返回一个结构structure，分别是DID的tokenID，content, owner, expire
+	[备注] 
+	[方法readCall] expire: 查询DID过期时间
+		[入参string] _Identity: DID名
+		[出参uint256] : 过期时间
+	[备注] 
 	[方法readCall] getApproved: 
 		[入参uint256] tokenId: 
 		[出参address] : 
@@ -95,6 +104,12 @@
 	[方法writeCall] removeOperator: 
 		[入参address] _operator: 
 	[备注] 
+	[方法writeCall] sell: 转售DID
+		[入参address] from: 从某人
+		[入参address] to: 到新用户地址
+		[入参uint256] tokenId: DID token
+		[入参uint256] _expired: 新的过期时间
+	[备注] 需要原先的DID过期后才能由管理员转售这个DID
 	[方法writeCall] setSBTTemplate: 
 		[入参string] _name: 
 		[入参address] _sbt: 
@@ -132,10 +147,10 @@
 	[方法readCall] totalSupply: 
 		[出参uint256] : 
 	[备注] 
-	[方法writeCall] transferFrom: 
-		[入参address] from: 
-		[入参address] to: 
-		[入参uint256] tokenId: 
+	[方法writeCall] transferFrom: 转增DID
+		[入参address] from: 主人
+		[入参address] to: 新主人
+		[入参uint256] tokenId: 编号
 	[备注] 
 	[方法writeCall] transferOwnership: 
 		[入参address] newOwner: 

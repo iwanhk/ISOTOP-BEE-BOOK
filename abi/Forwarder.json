@@ -22,6 +22,12 @@
             },
             {
                 "indexed": false,
+                "internalType": "uint256",
+                "name": "value",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
                 "internalType": "bytes",
                 "name": "data",
                 "type": "bytes"
@@ -35,6 +41,55 @@
         ],
         "name": "TransactionExecuted",
         "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "contractAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "value",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "dataHash",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes",
+                "name": "signature",
+                "type": "bytes"
+            },
+            {
+                "internalType": "uint256",
+                "name": "gasLimit",
+                "type": "uint256"
+            }
+        ],
+        "name": "execute",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "result",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
     },
     {
         "inputs": [
@@ -86,6 +141,25 @@
                 "internalType": "bytes",
                 "name": "data",
                 "type": "bytes"
+            }
+        ],
+        "name": "getMessageHash",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "data",
+                "type": "string"
             }
         ],
         "name": "getMessageHash",
