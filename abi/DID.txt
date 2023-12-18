@@ -16,6 +16,10 @@
 		[入参string] _Identity: 
 		[入参address] _addr: 
 	[备注] 
+	[方法writeCall] addAsset: 
+		[入参string] _Identity: 
+		[入参address] _asset: 
+	[备注] 
 	[方法writeCall] addOperator: 添加DID合约的管理员地址
 		[入参address] _operator: 
 	[备注] 
@@ -39,13 +43,6 @@
 		[入参address] _owner: DID名称归属人
 		[入参uint256] _expired: 有效期（UINIX时间）
 	[备注] 需要管理员来调用此操作
-	[方法writeCall] createSBT: 创建一个SBT
-		[入参string] _Identity: DID名称
-		[入参string] _name: SBT名称
-		[入参string] _type: SBT类型
-		[入参bool] _restrict: 是否是严格SBT（无法转移）
-		[出参address] : SBT地址
-	[备注] 需要DID的归属人来调用
 	[方法readCall] data: 查询DID数据
 		[入参string] _Identity: DID
 		[出参tuple] : 返回一个结构structure，分别是DID的tokenID，content, owner, expire
@@ -64,11 +61,6 @@
 	[备注] 
 	[方法readCall] getOperators: 获得DID合约的管理员列表
 		[出参address[]] : 
-	[备注] 
-	[方法readCall] getSBT: 获得SBT合约的地址
-		[入参string] _Identity: 
-		[入参string] _name: 
-		[出参address] : 
 	[备注] 
 	[方法readCall] isApprovedForAll: 
 		[入参address] owner: 
@@ -104,6 +96,10 @@
 	[方法writeCall] removeOperator: 
 		[入参address] _operator: 
 	[备注] 
+	[方法writeCall] renew: 续费DID
+		[入参uint256] tokenId: 编号
+		[入参uint256] period: 续费时间（UNIX秒）
+	[备注] 需要管理员操作，续费时间会累加。如果当前已经过期，那么以当前续费时间为准累加。
 	[方法writeCall] sell: 转售DID
 		[入参address] from: 从某人
 		[入参address] to: 到新用户地址
