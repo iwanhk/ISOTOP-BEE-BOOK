@@ -9,6 +9,7 @@ dependencies:
   - OpenZeppelin/openzeppelin-contracts@4.7.3
 compiler:
   solc:
+    version: 0.8.19
     remappings:
       - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.7.3"
 networks:

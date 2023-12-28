@@ -1,5 +1,5 @@
 [合约]DIDCertification: DID证书（ERC1155标准，一个token是一个证书模板，可以发给N个人）
-[获取方法] 0xff4B9490D6C876f53dE4929b068D422e06bcF007
+[获取方法] 0x89Aa3E7fD67C90AD6c1397568BaBB3d7f665c007
 [描述]
 	[方法readCall] balanceOf: 
 		[入参address] account: 

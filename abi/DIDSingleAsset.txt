@@ -1,5 +1,5 @@
 [合约]DIDSingleAsset: 单一NFT资产发行，tokenID自增
-[获取方法] 0xc550773362A9178731478077410477999ed7d010
+[获取方法] 0x33Fcc2f0a9D5bE51f5Cbc9d3094aDa6998Ab9010
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 

@@ -1,5 +1,5 @@
 [合约]DIDVC: 存证(ERC721兼容的数字资产)
-[获取方法] 0xaFD2422d3E1e01F9c6fb470DA81B7b3338bc4004
+[获取方法] 0x067eA3ebD341ac7E4F363865805d75409e748004
 [描述] 
 	[方法writeCall] approve: 
 		[入参address] to: 

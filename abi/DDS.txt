@@ -1,5 +1,5 @@
 [合约]DDS: 用户数据注册表
-[获取方法]  0x72d89f284B6C9CC7873E5190ca303e88b8094001
+[获取方法]  0x9E4eE1Cb21DfAA91d513B2BE088338C834DEf001
 树图链：cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf/0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea
 [描述]任何用户可以维护一个域名domain，在其之下的key，value通过put写入链，通过get读出来。
 	[方法readCall] get: 

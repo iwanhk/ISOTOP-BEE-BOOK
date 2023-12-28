@@ -1,5 +1,5 @@
 [合约]DIDCard: DID 发行会员卡（ERC721标准，每个会员卡都是一个独立的token）
-[获取方法] 0x2bb9645Cc02c9aA8010329ec05C1c8077dd36008
+[获取方法] 0x1895E341FEE7D41f7bD1820918883F9311c5F008
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 

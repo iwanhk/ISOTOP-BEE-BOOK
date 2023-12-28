@@ -1,5 +1,5 @@
 [合约]DIDTicketCupon: ERC721兼容的门票和优惠券合约
-[获取方法] 0xc02CdbEefD51fd8ED9E2ab00719206EE76A09009
+[获取方法] 0x99966Da4c579d46AA953f028aF8E29Aba970E009
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 
