@@ -116,10 +116,10 @@
 	[备注] 
 	[方法readCall] totalNFT: 总共发行的证书模板数量
 		[出参uint256] : 
-	[备注] 也是下一个证书的编号。0被系统占用，从1开始
-	[方法readCall] totalSupply: 
+	[备注] 也是下一个证书的编号。0被系统占用，从1开始，一旦mint之后，这个编号会自增
+	[方法readCall] totalSupply: 总共使用过的证书模板数量
 		[出参uint256] : 
-	[备注] 
+	[备注] 这个函数必须mint之后才能计数，没有mint的模板不算
 	[方法readCall] totalSupply: 证书ID发放的总数量
 		[入参uint256] tokenId: 
 		[出参uint256] : 
