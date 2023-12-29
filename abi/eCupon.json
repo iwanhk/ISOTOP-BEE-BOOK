@@ -2,24 +2,9 @@
     {
         "inputs": [
             {
-                "internalType": "string[]",
-                "name": "_info",
-                "type": "string[]"
-            },
-            {
                 "internalType": "string",
-                "name": "right_",
+                "name": "id",
                 "type": "string"
-            },
-            {
-                "internalType": "bool",
-                "name": "type_",
-                "type": "bool"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_validTime",
-                "type": "uint256"
             }
         ],
         "stateMutability": "nonpayable",
@@ -209,6 +194,25 @@
                 "type": "uint256"
             }
         ],
+        "name": "exists",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
         "name": "getApproved",
         "outputs": [
             {
@@ -231,6 +235,34 @@
             }
         ],
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[]",
+                "name": "_info",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "right_",
+                "type": "string"
+            },
+            {
+                "internalType": "bool",
+                "name": "type_",
+                "type": "bool"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_validTime",
+                "type": "uint256"
+            }
+        ],
+        "name": "init",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
