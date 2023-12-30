@@ -263,9 +263,9 @@
     {
         "inputs": [
             {
-                "internalType": "string[]",
+                "internalType": "string[5]",
                 "name": "_info",
-                "type": "string[]"
+                "type": "string[5]"
             },
             {
                 "internalType": "string[]",

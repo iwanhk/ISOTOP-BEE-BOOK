@@ -36,7 +36,7 @@
 		[出参address[]] : 
 	[备注] 
 	[方法writeCall] init: 初始化
-		[入参string[]] _info:4个字符串：名字，描述，detailsURL，did
+		[入参string[5]] _info:5个字符串：名字，描述，图片，detailsURL，did
 		[入参string] right_: 若干权益数组
 		[入参bool] type_: 布尔值的数组。TRUE是扫码，FALSE亮码
 		[入参uint256] _validTime: 到期时间

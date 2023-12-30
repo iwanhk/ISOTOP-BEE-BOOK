@@ -16,6 +16,8 @@
 		[入参string] description: 
 		[入参string] image: 
 		[入参string] _did: 
+		[入参uint256] totalSupply: 
+		[入参uint256] quota: 
 		[入参address] operator: 
 	[备注] 
 	[方法writeCall] create: 创建证书（更新证书）
@@ -23,10 +25,16 @@
 		[入参string] description: 描述
 		[入参string] image: 图片
 		[入参string] _Identiry: 发行DID
+		[入参uint256] totalSupply: 总发行量上限（0为不限量）
+		[入参uint256] quota: 每个用户可以领取的上限（0为不限量）
 	[备注] 要求创建者必须是DID的管理员
 	[方法readCall] exists: 
 		[入参uint256] tokenId: 
 		[出参bool] : 
+	[备注] 
+	[方法readCall] getDetails: 读取模板详细数据
+		[入参string] name: 名字
+		[出参tuple] : 结构体，返回:("cert", "description", "image", "iwantest", 0, 1, 1703865126)
 	[备注] 
 	[方法readCall] index: 获取证书编号
 		[入参string] name: 名字（唯一）
@@ -126,6 +134,21 @@
 	[备注] 
 	[方法writeCall] transferOwnership: 
 		[入参address] newOwner: 
+	[备注] 
+	[方法writeCall] update: 更新模板
+		[入参string] name: 名称唯一标识
+		[入参string] description: 描述（如果为空字符串不做改动）
+		[入参string] image: 图片（如果为空字符串不做改动）
+		[入参uint256] totalSupply: 总发行量上限（0为不限量）
+		[入参uint256] quota: 每个用户可以领取的上限（0为不限量）
+	[备注] 
+	[方法writeCall] update: 
+		[入参string] name: 
+		[入参string] description: 
+		[入参string] image: 
+		[入参uint256] totalSupply: 
+		[入参uint256] quota: 
+		[入参address] operator: 
 	[备注] 
 	[方法readCall] uri: 
 		[入参uint256] tokenId: 
