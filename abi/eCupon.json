@@ -240,9 +240,28 @@
     {
         "inputs": [
             {
-                "internalType": "string[5]",
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getStatus",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[]",
                 "name": "_info",
-                "type": "string[5]"
+                "type": "string[]"
             },
             {
                 "internalType": "string",

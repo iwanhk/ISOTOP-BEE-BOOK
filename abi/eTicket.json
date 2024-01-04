@@ -176,9 +176,9 @@
                 "type": "uint256"
             },
             {
-                "internalType": "uint16",
+                "internalType": "uint8",
                 "name": "_right",
-                "type": "uint16"
+                "type": "uint8"
             },
             {
                 "internalType": "address",
@@ -199,9 +199,32 @@
                 "type": "uint256"
             },
             {
-                "internalType": "uint16",
+                "internalType": "string",
                 "name": "_right",
-                "type": "uint16"
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "_who",
+                "type": "address"
+            }
+        ],
+        "name": "check",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "_right",
+                "type": "uint8"
             }
         ],
         "name": "check",
@@ -263,9 +286,28 @@
     {
         "inputs": [
             {
-                "internalType": "string[5]",
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getStatus",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[]",
                 "name": "_info",
-                "type": "string[5]"
+                "type": "string[]"
             },
             {
                 "internalType": "string[]",

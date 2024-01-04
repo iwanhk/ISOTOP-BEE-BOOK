@@ -34,24 +34,11 @@
         "anonymous": false,
         "inputs": [
             {
-                "indexed": true,
+                "indexed": false,
                 "internalType": "address",
-                "name": "previousOwner",
+                "name": "operator",
                 "type": "address"
             },
-            {
-                "indexed": true,
-                "internalType": "address",
-                "name": "newOwner",
-                "type": "address"
-            }
-        ],
-        "name": "OwnershipTransferred",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
             {
                 "indexed": false,
                 "internalType": "string",
@@ -65,7 +52,76 @@
                 "type": "uint256"
             }
         ],
-        "name": "POAPCreated",
+        "name": "DIDProofCreated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "DIDProofMinted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "DIDProofUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
         "type": "event"
     },
     {
@@ -164,47 +220,6 @@
     {
         "inputs": [
             {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "description",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "image",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_Identiry",
-                "type": "string"
-            }
-        ],
-        "name": "_create",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_operator",
-                "type": "address"
-            }
-        ],
-        "name": "addOperator",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "address",
                 "name": "account",
                 "type": "address"
@@ -253,29 +268,294 @@
     {
         "inputs": [
             {
-                "internalType": "address[]",
-                "name": "tos",
-                "type": "address[]"
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
             },
             {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
             }
         ],
-        "name": "batchMint",
+        "name": "burn",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "getOperators",
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "burn",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "image",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_did",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            }
+        ],
+        "name": "create",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_did",
+                "type": "string"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "detailURL",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "totalSupply",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quota",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct POAP.PTemplate",
+                "name": "eviItem",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bool",
+                "name": "isSBT",
+                "type": "bool"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            }
+        ],
+        "name": "create",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_did",
+                "type": "string"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "detailURL",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "totalSupply",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quota",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct POAP.PTemplate",
+                "name": "eviItem",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bool",
+                "name": "isSBT",
+                "type": "bool"
+            }
+        ],
+        "name": "create",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "exists",
         "outputs": [
             {
-                "internalType": "address[]",
+                "internalType": "bool",
                 "name": "",
-                "type": "address[]"
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "getProof",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "did",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "tokenId",
+                        "type": "uint256"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "description",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "image",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "detailURL",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "totalSupply",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "quota",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct POAP.PTemplate",
+                        "name": "template",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isSBT",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "time",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct POAP.Proof",
+                "name": "",
+                "type": "tuple"
             }
         ],
         "stateMutability": "view",
@@ -298,6 +578,13 @@
             }
         ],
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "init",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -328,19 +615,41 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_operator",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
                 "type": "address"
             }
         ],
-        "name": "isOperator",
-        "outputs": [
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
             {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
             }
         ],
-        "stateMutability": "view",
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -362,6 +671,29 @@
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "owner",
         "outputs": [
@@ -372,19 +704,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_operator",
-                "type": "address"
-            }
-        ],
-        "name": "removeOperator",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -499,7 +818,26 @@
     },
     {
         "inputs": [],
-        "name": "totalPOAPs",
+        "name": "totalProof",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            }
+        ],
+        "name": "totalSupply",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -519,6 +857,101 @@
             }
         ],
         "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "detailURL",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "totalSupply",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quota",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct POAP.PTemplate",
+                "name": "eviItem",
+                "type": "tuple"
+            },
+            {
+                "internalType": "address",
+                "name": "operator",
+                "type": "address"
+            }
+        ],
+        "name": "update",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "detailURL",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "totalSupply",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quota",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct POAP.PTemplate",
+                "name": "eviItem",
+                "type": "tuple"
+            }
+        ],
+        "name": "update",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
