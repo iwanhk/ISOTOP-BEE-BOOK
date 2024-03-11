@@ -50,59 +50,36 @@
 
 ***
 ## 合约部署地址：
+    "Factory": "0x5067CE4dC9a2fb2c3E1898fc24B067cd8d92A000",  # salt[0]
+    "DDS": "0x9E4eE1Cb21DfAA91d513B2BE088338C834DEf001",  # salt[1]
+    "DID": "0x7D5D9e9033dF0939c0fc2CD5CE42667Bc2B31002",  # salt[2]
+    "Forwarder": "0x0a5d59B18feEd1ef5feB16b302c92AfAc9cbA003",  # salt[3]
+    "ERC6551Registry": "0xF6bcf03C6487D1F34e1327263405044BA227C8f4",
+    "ERC6551Account": "0x1Fb2690a088B6eE0d4B1646689d46D8afE9a4c8A",
+    "ERC6551AccountProxy": "0xFe4f8682D3300D1E5e580a91eaF1BCc7F6B385Ff",
+    "String": "0x7142516F3725a711EFEa0Afe90f45b80F88A8713",
+    "DateTime": "0x4adc7057e73719857DCDe18E573b1A3B184F612E",
+    "List": "0xDBe0b154776c5CEbCdAA399CaF2B89F8649a5e05",
+    "BytesUtils": "0xdc5721B288a03f3405f2893E79f87B927C199bDe",
+    "Tools": "0x83fB290Bba50BaC4DB1Db93861102c923181AFda",
+    'Reset': "0x73Bd86d33E8793161E02Bebc61CDB735Eea8007b",
 
-|     合约                |     部署链地址                                          |
-|-------------------------|-------------------------------------------------------|
-| Factory 合约工厂  | 0x17f5b38Dd7F0662A838b1cc2035be18A1E800000 |
-| DDS 配置数据库  | 0x72d89f284B6C9CC7873E5190ca303e88b8094001 |
-| DID 身份  | 0x84D414DE639c5233F36F1E765b96d5D8188CD002 |
-| Forwarder 代付合约 | 0xc77FA7345679ccdBDB6204F0Ca6a024Be4Abd003 | 
-| DIDVC | 0xaFD2422d3E1e01F9c6fb470DA81B7b3338bc4004 |
-| DIDAsset | 0x4F469550a98E2a73E9552114594f59260e872005 |
-| DIDPOAP | 0xEAf5028A0eAdEBFb5C2cda412737b05B14E54006 |
-| DIDCertification | 0xff4B9490D6C876f53dE4929b068D422e06bcF007 |
-| DIDCard | 0x2bb9645Cc02c9aA8010329ec05C1c8077dd36008 |
-| DIDTicketCupon  | 0xc02CdbEefD51fd8ED9E2ab00719206EE76A09009 |
-|     ISOTOP1010          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1011          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1012          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1013          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1014          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1015          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1016          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1017          |     主要链                                             |
-|     ISOTOP1018          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1019          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP101A          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1052          |     文昌链测试，Conflux Core Test                       |
-|     ISOTOP1053          |     Conflux Core Test                                 |
+    "Deployer": "0xb1eFE38b2A51035652631ec27cD634A144B605CC",  # salt 1
+    "Admin": "0x82846E3ffEc9f329FCFdE053E29428f3B0CFe20a",  # salt 1
+    "Empty": "0x9A62607A54c38b7F672e5Dd41a0B1f7D0a983A21"  # salt 1
 
 *) 主要链为列表中除了以太坊，币安的所有    
-***
-*) Conflux Core测试链地址（自作聪明的特殊化）：   
-
-| 合约 | 部署地址 |
-|-------------------------|-------------------------------------------------------|
-| Factory Conflux  Testnet | cfxtest:acfnywnk65cey1hjf71pa312sspn353uz2u48491sb |
-|| 0x856f6fF92fD7b0dbC7B615F0eE33e9cF281268ea|
-| Factory Conflux Mainnet | cfx:acaxr0c0zswsczave10j37w21kr3mr1ah6u7pehppk |
-| | 0x8136d856aBa4e1541125Ec8cf658ba5b9536e03f |
-| DDS Conflux Testnet | cfxtest:acc08593f9n5b08h02m9b5vx7hhwuexj7j892dzxuf |
-| | 0x8AbA4969E6C44a5cE82F6EC066f87398bcEF30ae |
-| DDS Conflux Mainnet | cfx:acgbcn8k6cd7eayp9s59st3bnst6ue1grjjcmp5tzp|
-| |0x8C112fc9e087D2028CFbb7f73F215B9Fc812e66a|
-| DID Conflux Testnet  | cfxtest:achp96s6g32fmfgt7j2fupy8r59thbnydehd5hnh7n |
-| | 0x8ecfF1DC36705514cFeA3058329e6eFEf3857419 |
-| Fowarder Conflux Mainnet | cfx:aca8pfe6rcuvu2h2bjsx08eafd0td4ukh6u9mnges4 |
-| | 0x81E6149C68a11860F80A1D3B788028ECF1eA093F |
-| Forwarder Conflux Testnet | cfxtest:acf2ef54m6vuvsw1n05cex5xt04n8x5tcjgtv3bxct |
-| | 0x8b82177a572308bA575dB6224F737DB4bf4f6F12 |
-
-*) 其中，Factory已经注册ISOTOP1017-101A, 1052, 1053     
+*) 其中，Factory已经注册ISOTOP1017-101A, 1052, 1053, DID相关      
 
 ***
 ## 使用方式
 参考文档《同位素智能合约对接开发文档.pdf》
 
 last updated: 2023.11.07
+
+Conflux deployment at 2024.1.13
+String Contract '0x86e333f6D75a09Ee13C8206847072283F1086a3c' 'cfx:acdsgp9047rax5ux3auguv2hemb9ccdmhug174skbt'
+Factory Contract '0x8641e0fb6d1eb2D4f513e3cc079CA27Ec9385922' 'cfx:acded2h5rytnfzhzctv62b66yk9pwsc3ejf1jwaw0h'
+ISOTOP1013: 0x8BF6B70F1E309F07061156c92560A7613B64103C 'cfx:acf9rr2td22k8b2gcfnpwknay7ux03auhuu7ey4n0s'
+
 

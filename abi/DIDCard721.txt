@@ -1,0 +1,1 @@
+../nft2/abi/DIDCard721.txt
