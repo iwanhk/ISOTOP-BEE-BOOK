@@ -1,1 +1,30 @@
-../eTicket/abi/test.txt
+[合约]test: 
+[获取方法]
+[描述]
+	[方法readCall] boollist: 
+		[入参bool[]] arg: 
+		[出参bool[]] : 
+	[备注] 
+	[方法readCall] foo: 
+		[入参string[]] _info: 
+		[入参string[]] _rights: 
+		[入参bool[]] _types: 
+		[入参uint256] _validTime: 
+	[备注] 
+	[方法readCall] string1: 
+		[入参string] arg: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] stringlist: 
+		[入参string[]] arg: 
+		[出参string[]] : 
+	[备注] 
+	[方法readCall] stringlist5: 
+		[入参string[5]] arg: 
+		[出参string[5]] : 
+	[备注] 
+	[方法readCall] struct1: 
+		[入参tuple] arg: 
+		[出参tuple] : 
+	[备注] 
+[代码示例]

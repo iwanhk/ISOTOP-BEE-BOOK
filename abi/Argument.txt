@@ -1,1 +1,29 @@
-../nft2/abi/Argument.txt
+[合约]Argument: 
+[获取方法]
+[描述]
+	[方法readCall] test: 
+		[入参tuple] args: 
+		[出参tuple] : 
+	[备注] 
+	[方法readCall] test: 
+		[入参string[]] args: 
+		[入参int256[]] args2: 
+		[入参bool[]] args3: 
+		[出参string[]] : 
+		[出参int256[]] : 
+		[出参bool[]] : 
+	[备注] 
+	[方法readCall] test: 
+		[入参string[]] args: 
+		[入参int256[]] args2: 
+		[出参string[]] : 
+		[出参int256[]] : 
+	[备注] 
+	[方法readCall] test: 
+		[入参string[]] args: 
+		[出参string[]] : 
+	[备注] 
+	[方法readCall] test: 
+		[出参string] : 
+	[备注] 
+[代码示例]

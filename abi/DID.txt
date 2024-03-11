@@ -1,1 +1,177 @@
-../nft2/abi/DID.txt
+[合约]DID: DID身份合约
+[获取方法] 0x7D5D9e9033dF0939c0fc2CD5CE42667Bc2B31002
+[描述]
+	[方法readCall] Account: 每个DID都对应一个AA链账户地址
+		[入参uint256] tokenId: 通过tokenID取得AA链账户地址
+		[出参address] : 
+	[备注] 
+	[方法readCall] Account: 
+		[入参string] _did: 通过DID名字取得链账户地址
+		[出参address] : 
+	[备注] 
+	[方法writeCall] addAddress: 添加某个DID的管理员地址
+		[入参string] _Identity: 
+		[入参address] _addr: 
+	[备注] 
+	[方法writeCall] addAsset: 
+		[入参string] _Identity: 
+		[入参address] _asset: 
+	[备注] 
+	[方法writeCall] addOperator: 
+		[入参address] _operator: 
+	[备注] 
+	[方法writeCall] approve: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] burn: 
+		[入参uint256] _tokenId: 
+	[备注] 
+	[方法writeCall] create: 创建DID
+		[入参string] _Identity: DID名称
+		[入参string] _ar_file: arweave的json地址
+		[入参address] _owner: DID名称归属人
+		[入参uint256] _expired: 有效期（UINIX时间）
+	[备注] 需要管理员来调用此操作
+	[方法readCall] data: 查询DID数据
+		[入参string] _Identity: DID
+		[出参tuple] : 返回一个结构structure，分别是DID的tokenID，content, owner, expire
+	[备注] 
+	[方法writeCall] createAccount: 
+		[入参string] _Identity: 
+	[备注] 
+	[方法readCall] expire: 查询DID过期时间
+		[入参string] _Identity: DID名
+		[出参uint256] : 过期时间
+	[备注] 
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] getManagersAddress: 获得某个DID的管理员列表
+		[入参string] _Identity: DID名称
+		[出参address[]] : 管理员地址列表
+	[备注] 
+	[方法readCall] getOperators: 获得DID合约的管理员列表
+		[出参address[]] : 
+	[备注] 
+	[方法readCall] hasAsset: 
+		[入参string] _Identity: 
+		[入参address] _asset: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] index: 
+		[入参string] _Identity: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] init: 
+		[入参address] tokenBoundRegistry_: 
+		[入参address] erc6551ImplementationAddress_: 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] ownerOf: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] query: 查询DID的持有人地址
+		[入参string] _Identity: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] query: 查询NFT编号的DID名称
+		[入参uint256] tokenID: 
+		[出参string] : DID名称
+	[备注] 
+	[方法readCall] query: 查询某个地址持有的DID列表
+		[入参address] _owner: 
+		[出参string[]] : 
+	[备注] 
+	[方法writeCall] removeAddress: 
+		[入参string] _Identity: 
+		[入参address] _addr: 
+	[备注] 
+	[方法writeCall] removeOperator: 
+		[入参address] _operator: 
+	[备注] 
+	[方法writeCall] renew: 续费DID
+		[入参uint256] tokenId: 编号
+		[入参uint256] period: 续费时间（UNIX秒）
+	[备注] 需要管理员操作，续费时间会累加。如果当前已经过期，那么以当前续费时间为准累加。
+	[方法writeCall] sell: 转售DID
+		[入参address] from: 从某人
+		[入参address] to: 到新用户地址
+		[入参uint256] tokenId: DID token
+		[入参uint256] _expired: 新的过期时间
+	[备注] 需要原先的DID过期后才能由管理员转售这个DID
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] reset: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] symbol: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokenBoundRegistry: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenURI: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferFrom: 转增DID
+		[入参address] from: 主人
+		[入参address] to: 新主人
+		[入参uint256] tokenId: 编号
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法readCall] validateAddress: 验证某个地址是否是DID的管理员
+		[入参string] _Identity: 
+		[入参address] _addr: 
+		[出参bool] : 
+	[备注] 
+[代码示例]

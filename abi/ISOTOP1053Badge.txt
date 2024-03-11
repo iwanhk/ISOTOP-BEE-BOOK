@@ -1,1 +1,28 @@
-../nft2/abi/ISOTOP1053Badge.txt
+[合约]ISOTOP1053Badge: 
+[获取方法]
+[描述]
+	[方法readCall] balanceOf: 某个账户地址拥有多少个编号问id的token
+		[入参address] account: 
+		[入参uint256] id: 
+		[出参uint256] : 
+	[备注] id在创建的是，保留了0为合并后的token，从1开始顺序
+	[方法readCall] balanceOfBatch: 
+		[入参address[]] accounts: 
+		[入参uint256[]] ids: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] burn: 销毁自己的徽章
+		[入参uint256] id: 徽章ID
+	[备注] 只有拥有人可以销毁，每次销毁一个
+	[方法readCall] number: 本合约的徽章数量
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] totalBalance: 返回整套攒齐的徽章的数量
+		[入参address] _who: 拥有人
+		[出参uint256] balance: 数量
+	[备注] 只有整套（除了0之外）的徽章才计数
+	[方法readCall] uri: 本徽章合约的metadata
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+[代码示例]

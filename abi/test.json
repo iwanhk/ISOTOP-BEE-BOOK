@@ -1,1 +1,159 @@
-../eTicket/abi/test.json
+[
+    {
+        "inputs": [
+            {
+                "internalType": "bool[]",
+                "name": "arg",
+                "type": "bool[]"
+            }
+        ],
+        "name": "boollist",
+        "outputs": [
+            {
+                "internalType": "bool[]",
+                "name": "",
+                "type": "bool[]"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[]",
+                "name": "_info",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_rights",
+                "type": "string[]"
+            },
+            {
+                "internalType": "bool[]",
+                "name": "_types",
+                "type": "bool[]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_validTime",
+                "type": "uint256"
+            }
+        ],
+        "name": "foo",
+        "outputs": [],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "arg",
+                "type": "string"
+            }
+        ],
+        "name": "string1",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[]",
+                "name": "arg",
+                "type": "string[]"
+            }
+        ],
+        "name": "stringlist",
+        "outputs": [
+            {
+                "internalType": "string[]",
+                "name": "",
+                "type": "string[]"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string[5]",
+                "name": "arg",
+                "type": "string[5]"
+            }
+        ],
+        "name": "stringlist5",
+        "outputs": [
+            {
+                "internalType": "string[5]",
+                "name": "",
+                "type": "string[5]"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "info",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "info2",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "i",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct test.ARG",
+                "name": "arg",
+                "type": "tuple"
+            }
+        ],
+        "name": "struct1",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "info",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "info2",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "i",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct test.ARG",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    }
+]
