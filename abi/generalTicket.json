@@ -182,12 +182,35 @@
                 "type": "string[]"
             },
             {
-                "internalType": "bool[]",
+                "internalType": "bytes1[]",
                 "name": "_types",
-                "type": "bool[]"
+                "type": "bytes1[]"
             }
         ],
         "name": "addRights",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "value",
+                "type": "string"
+            }
+        ],
+        "name": "appendMemo",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -451,9 +474,9 @@
                 "type": "string[]"
             },
             {
-                "internalType": "bool[]",
+                "internalType": "bytes1[]",
                 "name": "_types",
-                "type": "bool[]"
+                "type": "bytes1[]"
             },
             {
                 "internalType": "uint256",
@@ -675,11 +698,16 @@
             },
             {
                 "internalType": "string",
-                "name": "_dna",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "value",
                 "type": "string"
             }
         ],
-        "name": "setDNA",
+        "name": "setMemo",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"

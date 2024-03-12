@@ -11,6 +11,11 @@
 		[入参string[]] _rights: 
 		[入参bool[]] _types: 
 	[备注] 
+	[方法writeCall] appendMemo: 增加一个memo
+		[入参uint256] tokenId: 
+		[入参string] name: 
+		[入参string] value: 
+	[备注] 添加的memo名字必须之前存在，新内容会附加在之前内容之后
 	[方法writeCall] approve: 
 		[入参address] to: 
 		[入参uint256] tokenId: 
@@ -67,7 +72,7 @@
 	[方法writeCall] init: 
 		[入参string[]] _info: 5个字符串：名字，描述，图片，detailsURL，did
 		[入参string[]] _rights: 若干权益数组及权益的图片数组。如果数组长度等同于_rights长度，则一一对应。如果是_rights长度的2倍，则前半部分对于权益名字，后半部分对应权益图片地址。
-		[入参bool[]] _types: 布尔值的数组。TRUE是扫码，FALSE亮码
+		[入参bytes1[]] _types: 字符数组。N代表亮码，S代表扫码，R代表预约入园码
 		[入参uint256] _startTime: 开始时间
 		[入参uint256] _validTime: 到期时间
 	[备注] 权益图片是可选的，可以不设置。如果设置了权益图片，则权益图片数组长度必须等于权益数组长度的2倍。权益图片会出现在tokenURI的属性中，属性名称为权益名称，value为图片的地址。
@@ -110,6 +115,11 @@
 		[入参uint256] tokenId: 
 		[入参bytes] data: 
 	[备注] 
+	[方法writeCall] setMemo: 添加一个memo
+		[入参uint256] tokenId: 
+		[入参string] name: 
+		[入参string] value: 
+	[备注] memo可以是任何字符串，名字必须之前不存在，新内容会覆盖之前内容。
 	[方法writeCall] setApprovalForAll: 
 		[入参address] operator: 
 		[入参bool] approved: 
