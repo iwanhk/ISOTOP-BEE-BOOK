@@ -1,7 +1,0 @@
-[合约]Isotop: 
-[获取方法]
-[描述]
-	[方法readCall] getMessage: 
-		[出参string] : 
-	[备注] 
-[代码示例]
