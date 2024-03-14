@@ -1,0 +1,138 @@
+[合约]ISOTOP1054: 碎片合体合约
+[获取方法] 文昌链test：0xAC2df303E1F45538176DE6dEF2eaf1D34551b376
+[描述] 这个合约是ERC1155兼容标准，编号1-N是碎片，编号0是完整体
+	[方法readCall] Details: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] balanceOf: 查看某个账户有多少个token
+		[入参address] account: 
+		[入参uint256] id: 第几号token
+		[出参uint256] : 返回有几个
+	[备注] 
+	[方法readCall] balanceOfBatch: 
+		[入参address[]] accounts: 
+		[入参uint256[]] ids: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] burn: 
+		[入参uint256] _id: 
+	[备注] 
+	[方法writeCall] burn: 
+		[入参address] from: 
+		[入参uint256] _id: 
+		[入参uint256] _num: 
+	[备注] 
+	[方法writeCall] check: 兑换实物（用户自己调用）
+	[备注] 
+	[方法writeCall] check: 兑换实物（管理员调用）
+		[入参address] from: 
+	[备注] 
+	[方法readCall] contracVersion: 
+		[出参uint8] : 
+	[备注] 
+	[方法readCall] contractName: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] exists: 
+		[入参uint256] tokenId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] getChecked: 
+		[入参address] from: 
+		[出参uint8] : 
+	[备注] 
+	[方法writeCall] init: 
+		[入参string] base_uri: 
+		[入参string] details_: 
+		[入参uint8] points_: 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] account: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] merge: 合体（用户调用）
+	[备注] 
+	[方法writeCall] merge: 合体（管理员调用）
+		[入参address] from: 
+	[备注] 
+	[方法writeCall] mint: 铸造1个NFT token（用户自己调用，注意，仅供测试）
+		[入参uint256] _id: 第几号token
+	[备注] 	
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] safeBatchTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256[]] ids: 
+		[入参uint256[]] amounts: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] id: 
+		[入参uint256] amount: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法writeCall] setDetailsURI: 
+		[入参string] uri_: 
+	[备注] 
+	[方法writeCall] setPoints: 
+		[入参uint8] points_: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] suspend: 
+		[入参bool] status: 
+	[备注] 
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenCountOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokens: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] tokensOf: 
+		[入参address] owner: 
+		[入参uint256] offset: 
+		[入参uint256] limit: 
+		[出参uint256] total: 
+		[出参uint256[]] tokenIds: 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[入参uint256] tokenId: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法readCall] uri: token的metadata，用于展示NFT
+		[入参uint256] tokenId: 编号
+		[出参string] : json文件地址
+	[备注] 
+[代码示例]

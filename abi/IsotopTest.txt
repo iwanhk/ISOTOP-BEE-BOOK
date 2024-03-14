@@ -1,0 +1,55 @@
+[合约]IsotopTest: SDK参数测试合约
+[获取方法]
+[描述]
+	[方法readCall] check: 检查所有历史输入的内容
+		[出参string[]] : 
+	[备注] 
+	[方法writeCall] test1: 
+		[入参string] _data: 
+		[出参string] : 
+	[备注] 
+	[方法writeCall] test2: 
+		[入参uint256] number: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] test3: 
+		[入参uint256[]] numbers: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] test4: 
+		[入参string[]] strs: 
+		[出参string[]] : 
+	[备注] 
+	[方法writeCall] test5: 
+		[入参uint256[]] numbers: 
+		[入参string[]] strs: 
+		[出参uint256[]] : 
+		[出参string[]] : 
+	[备注] 
+	[方法writeCall] test6: 
+		[入参string] input1: 
+		[入参string] input2: 
+		[入参string] input3: 
+		[入参string[]] strs: 
+		[出参string] : 
+		[出参string] : 
+		[出参string] : 
+		[出参string[]] : 
+	[备注] 
+	[方法writeCall] test7: 
+		[入参tuple] args: 参数是一个结构：里面有如下内容：
+	struct ARGS {
+        string input1;
+        string input2;
+        string input3;
+        string[] strs;
+    }
+		[出参tuple] : 输出也是同样结构
+	[备注] 
+	[方法writeCall] test8: 
+		[入参uint256] number: 数字
+		[入参tuple] args: 结构体ARGS
+		[出参tuple] : 结构体ARGS
+		[出参uint256] : 数字
+	[备注] 
+[代码示例]

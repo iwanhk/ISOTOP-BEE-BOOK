@@ -1,0 +1,132 @@
+[合约]POAP: 
+[获取方法]
+[描述]
+	[方法readCall] balanceOf: 
+		[入参address] account: 
+		[入参uint256] id: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] balanceOfBatch: 
+		[入参address[]] accounts: 
+		[入参uint256[]] ids: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法writeCall] burn: 
+		[入参address] from: 
+		[入参uint256] id: 
+		[入参uint256] amount: 
+		[入参address] operator: 
+	[备注] 
+	[方法writeCall] burn: 
+		[入参address] from: 
+		[入参uint256] tokenId: 
+		[入参uint256] amount: 
+	[备注] 
+	[方法writeCall] create: 
+		[入参string] name: 
+		[入参string] description: 
+		[入参string] image: 
+		[入参string] _did: 
+		[入参address] operator: 
+	[备注] 
+	[方法writeCall] create: 
+		[入参string] name: 
+		[入参string] _did: 
+		[入参tuple] eviItem: 
+		[入参bool] isSBT: 
+		[入参address] operator: 
+	[备注] 
+	[方法writeCall] create: 
+		[入参string] name: 
+		[入参string] _did: 
+		[入参tuple] eviItem: 
+		[入参bool] isSBT: 
+	[备注] 
+	[方法readCall] exists: 
+		[入参uint256] id: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] getProof: 
+		[入参uint256] id: 
+		[出参tuple] : 
+	[备注] 
+	[方法readCall] index: 
+		[入参string] name: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] init: 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] account: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] mint: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参address] operator: 
+	[备注] 
+	[方法writeCall] mint: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] mint: 
+		[入参address] to: 
+		[入参string] name: 
+	[备注] 
+	[方法writeCall] mint: 
+		[入参address] to: 
+		[入参string] name: 
+		[入参address] operator: 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] safeBatchTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256[]] ids: 
+		[入参uint256[]] amounts: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] id: 
+		[入参uint256] amount: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] totalProof: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[入参uint256] id: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法writeCall] update: 
+		[入参string] name: 
+		[入参tuple] eviItem: 
+		[入参address] operator: 
+	[备注] 
+	[方法writeCall] update: 
+		[入参string] name: 
+		[入参tuple] eviItem: 
+	[备注] 
+	[方法readCall] uri: 
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+[代码示例]

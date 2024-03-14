@@ -1,0 +1,157 @@
+数字票务合约
+
+说明：数字票务，也是一种数字资产，但是包含了一些列权益，比如“入场”，“优惠”， “打卡点”等，可以在用户得到票务后通过打卡核销改变状态。
+
+支持数字资产的智能合约是ERC721兼容的独立实现，我们还扩展了合约，支持资产扩展信息。
+
+[合约]ISOTOP1052Single: 单一图片的票务
+[获取方法] 合约工厂clone ，名称：ISOTOP1052Single
+[描述]
+	[方法readCall] Details: NFT详情页
+		[出参string] : 
+	[备注] 
+	[方法writeCall] addSites: 添加权益（或打卡点）
+		[入参string[]] sites_: 权益（打卡点）的名称
+	[备注] 
+	[方法writeCall] approve: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] check: 核销权益（点位）
+		[入参uint256] tokenId: 资产ID
+		[入参uint256] _site: 权益（打卡点）编号
+		[入参address] _who: 用户地址
+	[备注] 
+	[方法writeCall] check: 核销权益（点位）
+		[入参uint256] tokenId: 资产ID
+		[入参uint256] _site: 权益（打卡点）编号
+	[备注] 
+	[方法readCall] contracVersion: 
+		[出参uint8] : 
+	[备注] 
+	[方法readCall] contractName: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] explicitOwnershipOf: 
+		[入参uint256] tokenId: 
+		[出参tuple] : 
+	[备注] 
+	[方法readCall] explicitOwnershipsOf: 
+		[入参uint256[]] tokenIds: 
+		[出参tuple[]] : 
+	[备注] 
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] init: 初始化合约（需要管理员调用）
+		[入参string] name_: 名字
+		[入参string] description_: 描述
+		[入参string] base_: 图片地址
+		[入参string] details_: 说明链接
+		[入参string[]] sites_: 打卡点列表
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] mint: 铸造票务
+		[入参address] _to: 给谁
+		[入参uint256] quantity: 数量
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] ownerOf: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 放弃管理员权限
+	[备注] 
+	[方法writeCall] safeMint: 安全铸造票务
+		[入参address] _to: 
+		[入参uint256] quantity: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 安全转移票务
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参bytes] _data: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法writeCall] setBaseURI: 设置票务内容
+		[入参string] base_: 
+	[备注] 
+	[方法writeCall] setDetailsURI: 设置票务的详情页面URI
+		[入参string] uri_: 
+	[备注] 
+	[方法writeCall] setParty: 设定链上分账
+		[入参string[]] parties_: 分账方
+		[入参uint8[]] shares_: 分账比例
+	[备注] 
+	[方法writeCall] setUser: 租借票务
+		[入参uint256] tokenId: 票务编号
+		[入参address] user: 租借给谁
+		[入参uint64] expires: 过期时间
+	[备注] 
+	[方法readCall] supportsInterface: 支持接口
+		[入参bytes4] interfaceId: ERC721等
+		[出参bool] : 
+	[备注] 
+	[方法writeCall] suspend: 暂停发行票务
+		[入参bool] status: 
+	[备注] 
+	[方法readCall] symbol: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokenURI: 票务内容
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokensOfOwner: 
+		[入参address] owner: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法readCall] tokensOfOwnerIn: 
+		[入参address] owner: 
+		[入参uint256] start: 
+		[入参uint256] stop: 
+		[出参uint256[]] : 
+	[备注] 
+	[方法readCall] totalSupply: 票务总发行量
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法readCall] userExpires: 查询租借票务的有效期
+		[入参uint256] tokenId: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] userOf: 查询票务的租借人
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+
+在使用本合约时，请参考avatar-v3的调用方法。
