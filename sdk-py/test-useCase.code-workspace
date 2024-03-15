@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "test-useCase",
+			"path": ".."
+		},
+		{
+			"name": "abi",
+			"path": "../../nft2/abi"
+		}
+	],
+	"settings": {}
+}
