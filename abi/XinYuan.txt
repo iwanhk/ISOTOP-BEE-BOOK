@@ -28,11 +28,6 @@
 	[方法writeCall] claim: 
 		[入参uint256] tokenId: : 
 	[备注] 
-	[方法writeCall] claim: 
-	[备注] 
-	[方法readCall] contracVersion: 
-		[出参uint8] : 
-	[备注] 
 	[方法readCall] contractInfo: 
 		[出参string] : 
 	[备注] 
