@@ -56,6 +56,19 @@
         "type": "event"
     },
     {
+        "inputs": [],
+        "name": "contractInfo",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "string",
@@ -66,17 +79,36 @@
         "name": "deployContract",
         "outputs": [
             {
-                "internalType": "address",
-                "name": "child",
-                "type": "address"
-            },
-            {
                 "internalType": "uint256",
                 "name": "id",
                 "type": "uint256"
             }
         ],
         "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_cname",
+                "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "who",
+                "type": "address"
+            }
+        ],
+        "name": "getContractDeployed",
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
+            }
+        ],
+        "stateMutability": "view",
         "type": "function"
     },
     {

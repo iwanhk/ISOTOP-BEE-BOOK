@@ -1,0 +1,27 @@
+[合约]ISOTOP1030: 
+[获取方法]
+[描述]
+	[方法readCall] contractInfo: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] getRequestStatus: 
+		[入参uint256] _requestId: 
+		[出参bool] fulfilled: 
+		[出参uint256[]] randomWords: 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] requestRandomWords: 
+		[入参uint32] numWords: 
+		[出参uint256] requestId: 
+	[备注] 
+	[方法writeCall] suspend: 
+		[入参bool] status: 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+[代码示例]

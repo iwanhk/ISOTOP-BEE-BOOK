@@ -18,7 +18,7 @@
 	[方法writeCall] contracVersion: 
 		[出参uint8] : 
 	[备注] 
-	[方法writeCall] contractName: 
+	[方法writeCall] contractInfo: 
 		[出参string] : 
 	[备注] 
 	[方法readCall] explicitOwnershipOf: 

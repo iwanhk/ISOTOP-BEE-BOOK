@@ -3,13 +3,17 @@
 [描述]
 	[方法writeCall] deployContract: 克隆复制一个合约
 		[入参string] _cname: 合约模板名
-		[出参address] child: 复制地址
 		[出参uint256] id: 编号（自增）
 	[备注] 
 	[方法readCall] getContractDeployed: 获得某用户之前克隆的合约地址
 		[入参uint256] _id: 编号
 		[入参address] who: 用户
 		[出参address] : 克隆合约地址
+	[备注] 
+	[方法readCall] getContractDeployed: 获得某用户之前克隆的合约地址列表
+		[入参string] _cname: 合约类型
+		[入参address] who: 用户
+		[出参address[]] : 克隆过的合约地址列表
 	[备注] 
 	[方法readCall] getContractNumber: 获得当前编号（自增）
 		[入参address] who: 用户
@@ -20,7 +24,7 @@
 	[备注] 
 	[方法readCall] getContractTemplate: 获得合约模板的详细情况
 		[入参string] _cname: 
-		[出参tuple] : 
+		[出参tuple] : 模版合约地址，创建人地址
 	[备注] 
 	[方法readCall] getLastContractDeployed: 获得上一个克隆的合约地址
 		[入参address] who: 用户
@@ -28,6 +32,6 @@
 	[备注] 
 	[方法writeCall] register: 注册一个合约模板
 		[入参string] _cname: 模板名称
-		[入参address] _template: 一经部署的合约
+		[入参address] _template: 已经部署的合约
 	[备注] 
 [代码示例]

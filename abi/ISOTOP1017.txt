@@ -21,7 +21,7 @@
 	[方法readCall] baseURI: 资产的内容URI
 		[出参string] : 
 	[备注] 
-	[方法writeCall] contractName:本合约的名字ISOTOP1017
+	[方法writeCall] contractInfo:本合约的名字ISOTOP1017
 		[出参string] : 
 	[备注] 
 	[方法writeCall] init: 初始化合约

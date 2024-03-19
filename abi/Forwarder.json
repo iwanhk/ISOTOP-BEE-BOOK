@@ -43,6 +43,19 @@
         "type": "event"
     },
     {
+        "inputs": [],
+        "name": "contractInfo",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "address",

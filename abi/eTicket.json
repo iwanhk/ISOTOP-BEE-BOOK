@@ -187,7 +187,7 @@
                 "type": "bytes1[]"
             }
         ],
-        "name": "addRights",
+        "name": "addSites",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -365,6 +365,19 @@
         "name": "check",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "contractInfo",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "pure",
         "type": "function"
     },
     {
@@ -861,19 +874,6 @@
         "name": "updateDetails",
         "outputs": [],
         "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "version",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "stateMutability": "pure",
         "type": "function"
     }
 ]

@@ -27,7 +27,7 @@
 	[方法writeCall] contracVersion: 合约版本
 		[出参uint8] : 
 	[备注] 
-	[方法writeCall] contractName: 合约名称
+	[方法writeCall] contractInfo: 合约名称
 		[出参string] : 
 	[备注] 
 	[方法readCall] detailsURI: 查询资产详情页URI

@@ -255,7 +255,7 @@
             {
                 "indexed": false,
                 "internalType": "string",
-                "name": "contractName",
+                "name": "contractInfo",
                 "type": "string"
             },
             {
@@ -364,20 +364,7 @@
     },
     {
         "inputs": [],
-        "name": "contracVersion",
-        "outputs": [
-            {
-                "internalType": "uint8",
-                "name": "",
-                "type": "uint8"
-            }
-        ],
-        "stateMutability": "pure",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "contractName",
+        "name": "contractInfo",
         "outputs": [
             {
                 "internalType": "string",

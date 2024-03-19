@@ -25,7 +25,7 @@
 	[方法writeCall] contracVersion: 合约版本号
 		[出参uint8] : 此版本为0
 	[备注] 
-	[方法writeCall] contractName: 合约名称
+	[方法writeCall] contractInfo: 合约名称
 		[出参string] : 
 	[备注] 
 	[方法readCall] explicitOwnershipOf: 

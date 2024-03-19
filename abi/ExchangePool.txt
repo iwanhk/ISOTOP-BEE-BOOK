@@ -19,7 +19,7 @@
 	[方法writeCall] contracVersion: 合约版本号
 		[出参uint8] : 目前是0
 	[备注] 
-	[方法writeCall] contractName: 合约名称
+	[方法writeCall] contractInfo: 合约名称
 		[出参string] : ExchangePool
 	[备注] 
 	[方法readCall] getBalance: 某用户在池子里面的余额
