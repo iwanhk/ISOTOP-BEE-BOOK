@@ -18,6 +18,8 @@
 14. DID: 域名解析和身份合约
 15. SBT: soulBondToken 灵魂绑定合约，可定制化自己的token metadata
 16. SBTII: soulBondToken 灵魂绑定合约，可发行自定义图片的SBT
+17. eTicket 门票合约
+18. eCardTicket 权益卡合约
 
 工具合约：  
 1. Deployer : 合约部署器  
@@ -50,10 +52,10 @@
 
 ***
 ## 合约部署地址：
-    "Factory": "0x5067CE4dC9a2fb2c3E1898fc24B067cd8d92A000",  # salt[0]
-    "DDS": "0x9E4eE1Cb21DfAA91d513B2BE088338C834DEf001",  # salt[1]
-    "DID": "0x7D5D9e9033dF0939c0fc2CD5CE42667Bc2B31002",  # salt[2]
-    "Forwarder": "0x0a5d59B18feEd1ef5feB16b302c92AfAc9cbA003",  # salt[3]
+    "Factory": "0x5067CE4dC9a2fb2c3E1898fc24B067cd8d92A000", 
+    "DDS": "0x9E4eE1Cb21DfAA91d513B2BE088338C834DEf001",  
+    "DID": "0x7D5D9e9033dF0939c0fc2CD5CE42667Bc2B31002",  
+    "Forwarder": "0x0a5d59B18feEd1ef5feB16b302c92AfAc9cbA003",  
     "ERC6551Registry": "0xF6bcf03C6487D1F34e1327263405044BA227C8f4",
     "ERC6551Account": "0x1Fb2690a088B6eE0d4B1646689d46D8afE9a4c8A",
     "ERC6551AccountProxy": "0xFe4f8682D3300D1E5e580a91eaF1BCc7F6B385Ff",
@@ -63,19 +65,18 @@
     "BytesUtils": "0xdc5721B288a03f3405f2893E79f87B927C199bDe",
     "Tools": "0x83fB290Bba50BaC4DB1Db93861102c923181AFda",
     'Reset': "0x73Bd86d33E8793161E02Bebc61CDB735Eea8007b",
-
-    "Deployer": "0xb1eFE38b2A51035652631ec27cD634A144B605CC",  # salt 1
-    "Admin": "0x82846E3ffEc9f329FCFdE053E29428f3B0CFe20a",  # salt 1
-    "Empty": "0x9A62607A54c38b7F672e5Dd41a0B1f7D0a983A21"  # salt 1
+    "Deployer": "0xb1eFE38b2A51035652631ec27cD634A144B605CC", 
+    "Admin": "0x82846E3ffEc9f329FCFdE053E29428f3B0CFe20a",  
+    "Empty": "0x9A62607A54c38b7F672e5Dd41a0B1f7D0a983A21"  
 
 *) 主要链为列表中除了以太坊，币安的所有    
-*) 其中，Factory已经注册ISOTOP1017-101A, 1052, 1053, DID相关      
+*) 其中，Factory已经注册ISOTOP1017-101A, 1052, 1053, DID相关，eTicket， eCardTicket    
 
 ***
 ## 使用方式
-参考文档《同位素智能合约对接开发文档.pdf》
+参考文档《openAPI调用规范及接口说明v1.8.pdf》
 
-last updated: 2023.11.07
+last updated: 2024.8.24
 
 Conflux deployment at 2024.1.13
 String Contract '0x86e333f6D75a09Ee13C8206847072283F1086a3c' 'cfx:acdsgp9047rax5ux3auguv2hemb9ccdmhug174skbt'
