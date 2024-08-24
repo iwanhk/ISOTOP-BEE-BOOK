@@ -50,6 +50,8 @@ networks:
     host: https://polygon-mumbai.g.alchemy.com/v2/$WEB3_ALCHEMY_POLYON
   mumbai:
     host: https://polygon-mumbai.g.alchemy.com/v2/$WEB3_ALCHEMY_MUMBAI
+  amoy:
+    host: https://polygon-amoy.g.alchemy.com/v2/$WEB3_ALCHEMY_AMOY
   wuhan:
     host: https://opbningxia.bsngate.com:18602/api/0edab0cd18e44c9cb9ad2a82cac45b62/rpc
     gas_limit: 30000000

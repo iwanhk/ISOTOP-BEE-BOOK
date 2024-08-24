@@ -75,15 +75,71 @@
                 "internalType": "uint256",
                 "name": "right",
                 "type": "uint256"
+            }
+        ],
+        "name": "Check",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "right",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "time",
+                "type": "uint256"
             },
             {
                 "indexed": false,
                 "internalType": "string",
-                "name": "note",
+                "name": "code",
                 "type": "string"
             }
         ],
         "name": "Check",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "value",
+                "type": "string"
+            }
+        ],
+        "name": "Memo",
         "type": "event"
     },
     {
@@ -183,6 +239,19 @@
     {
         "inputs": [
             {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "addBank",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
                 "internalType": "address",
                 "name": "_operator",
                 "type": "address"
@@ -207,24 +276,6 @@
             }
         ],
         "name": "addQuota",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "string[]",
-                "name": "_rights",
-                "type": "string[]"
-            },
-            {
-                "internalType": "bytes1[]",
-                "name": "_types",
-                "type": "bytes1[]"
-            }
-        ],
-        "name": "addSites",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -310,59 +361,18 @@
                 "type": "uint256"
             },
             {
-                "internalType": "uint8",
+                "internalType": "string",
                 "name": "_right",
-                "type": "uint8"
+                "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "_note",
-                "type": "string"
-            }
-        ],
-        "name": "check",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "uint256",
-                "name": "tokenId",
+                "name": "_time",
                 "type": "uint256"
             },
             {
                 "internalType": "string",
-                "name": "_right",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_note",
-                "type": "string"
-            }
-        ],
-        "name": "check",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_right",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_note",
+                "name": "_code",
                 "type": "string"
             },
             {
@@ -384,13 +394,8 @@
                 "type": "uint256"
             },
             {
-                "internalType": "uint8",
-                "name": "_right",
-                "type": "uint8"
-            },
-            {
                 "internalType": "string",
-                "name": "_note",
+                "name": "_right",
                 "type": "string"
             },
             {
@@ -414,7 +419,7 @@
                 "type": "string"
             }
         ],
-        "stateMutability": "pure",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -445,6 +450,38 @@
             }
         ],
         "name": "getApproved",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getBankRest",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getOperator",
         "outputs": [
             {
                 "internalType": "address",
@@ -490,49 +527,6 @@
     {
         "inputs": [
             {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "site",
-                "type": "string"
-            }
-        ],
-        "name": "getStatus",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            }
-        ],
-        "name": "getStatus",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "string[]",
                 "name": "_info",
                 "type": "string[]"
@@ -546,6 +540,11 @@
                 "internalType": "bytes1[]",
                 "name": "_types",
                 "type": "bytes1[]"
+            },
+            {
+                "internalType": "uint8",
+                "name": "_rightsLimit",
+                "type": "uint8"
             },
             {
                 "internalType": "uint256",
@@ -672,6 +671,50 @@
     {
         "inputs": [
             {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "refund",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "removeBank",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            }
+        ],
+        "name": "removeMemo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
                 "internalType": "address",
                 "name": "_operator",
                 "type": "address"
@@ -685,6 +728,34 @@
     {
         "inputs": [],
         "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_to",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_time",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_code",
+                "type": "string"
+            }
+        ],
+        "name": "reserveTicket",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -851,6 +922,32 @@
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "totalBank",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "address",
@@ -933,19 +1030,6 @@
             }
         ],
         "name": "update",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "string",
-                "name": "_details",
-                "type": "string"
-            }
-        ],
-        "name": "updateDetails",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"

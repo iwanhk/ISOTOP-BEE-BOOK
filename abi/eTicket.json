@@ -75,12 +75,6 @@
                 "internalType": "uint256",
                 "name": "right",
                 "type": "uint256"
-            },
-            {
-                "indexed": false,
-                "internalType": "string",
-                "name": "note",
-                "type": "string"
             }
         ],
         "name": "Check",
@@ -400,59 +394,8 @@
                 "type": "uint256"
             },
             {
-                "internalType": "uint8",
-                "name": "_right",
-                "type": "uint8"
-            },
-            {
-                "internalType": "string",
-                "name": "_note",
-                "type": "string"
-            }
-        ],
-        "name": "check",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            },
-            {
                 "internalType": "string",
                 "name": "_right",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_note",
-                "type": "string"
-            }
-        ],
-        "name": "check",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_right",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "_note",
                 "type": "string"
             },
             {
@@ -476,7 +419,7 @@
                 "type": "string"
             }
         ],
-        "stateMutability": "pure",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -525,30 +468,6 @@
                 "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
-            }
-        ],
-        "name": "getMemo",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
             }
         ],
         "stateMutability": "view",
@@ -611,38 +530,14 @@
                 "internalType": "uint256",
                 "name": "tokenId",
                 "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "site",
-                "type": "string"
             }
         ],
         "name": "getStatus",
         "outputs": [
             {
-                "internalType": "string",
+                "internalType": "uint8",
                 "name": "",
-                "type": "string"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            }
-        ],
-        "name": "getStatus",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
+                "type": "uint8"
             }
         ],
         "stateMutability": "view",

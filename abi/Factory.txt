@@ -1,6 +1,6 @@
 [合约]Factory: 工厂合约
-[获取方法]
-[描述]
+[获取方法] 0x5067CE4dC9a2fb2c3E1898fc24B067cd8d92A000
+[描述] v1.5 工厂合约，用于管理合约模板，克隆合约。
 	[方法writeCall] deployContract: 克隆复制一个合约
 		[入参string] _cname: 合约模板名
 		[出参uint256] id: 编号（自增）
