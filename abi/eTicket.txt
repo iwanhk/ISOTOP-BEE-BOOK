@@ -31,6 +31,13 @@
 	[方法writeCall] burn: 
 		[入参uint256] tokenId: 
 	[备注] 
+	[方法readCall] beijingTimeMidnight: 给定一个时间，转化成北京时区的当天0点时间
+		[入参uint256] _time: 
+		[出参uint256] : 
+	[备注] 注意，这个时间需要是带utc时区的时间（我的实现方式是-8小时后传入）
+	[方法readCall] blockTimeMidnight: 取当前时间的当天北京时间午夜0点
+		[出参uint256] : 
+	[备注] 根据链上当前时间转化成北京时间，然后去掉0点后的小时分秒
 	[方法writeCall] check: 预约
 		[入参uint256] tokenId: 门票ID
 		[入参string] _right: 权益/打卡点（注意是字符串，必须和创建时候的权益一致）
@@ -70,8 +77,21 @@
 	[备注] 
 	[方法readCall] getStatus: 获取门票的状态（权益0号）
 		[入参uint256] tokenId: 
-		[出参uint8] : 0= 未预约 1= 已预约 2= 已核销 3= 已过预约时间核销 4= 已过期 5= 未开始 6= 门票不存在
+		[出参uint8] : 
+		// 0= 未预约
+        // 1= 已预约未到时间
+        // 2= 已预约已到今天
+        // 3= 已过预约时间核销
+        // 4= 已核销
+        // 5= 已过期
+        // 6= 未开始
+        // 7= 门票不存在
 	[备注] 只获取0号权益，忽略其他权益
+	[方法readCall] getStatus: 
+		[入参uint256] tokenId: 
+		[入参uint8] rightId: 
+		[出参uint8] : 
+	[备注] 
 	[方法writeCall] init: 初始化门票
 		[入参string[]] _info: 5个字符串：名字，描述，图片，detailsURL，did
 		[入参string[]] _rights: 若干权益数组及权益的图片数组。如果数组长度等同于_rights长度，则一一对应。如果是_rights长度的2倍，则前半部分对于权益名字，后半部分对应权益图片地址。
@@ -87,6 +107,11 @@
 	[方法readCall] isOperator: 
 		[入参address] _operator: 
 		[出参bool] : 
+	[备注] 
+	[方法readCall] isReservedDay: 判断是否是预约日期当天
+		[入参uint256] tokenId: 
+		[入参uint8] rightId: 
+		[出参bool] : true/false
 	[备注] 
 	[方法writeCall] mint: 铸造门票/发票
 		[入参address] _to: 给用户的地址

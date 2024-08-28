@@ -1,13 +1,13 @@
 [合约]eCardTicket: 权益卡合约模板
 [获取方法]工厂合约clone eCardTicket
 [描述] 本合约完全兼容eTicket，唯一区别是增加了可核销权益数量，如包含10个权益，但是可以任选5个
-	[方法writeCall] addBank: 
+	[方法writeCall] addBank: 加库存
 		[入参uint256] _amount: 
 	[备注] 
-	[方法writeCall] addOperator: 
+	[方法writeCall] addOperator: 增加管理员/渠道商
 		[入参address] _operator: 
 	[备注] 
-	[方法writeCall] addQuota: 
+	[方法writeCall] addQuota: 给管理员渠道商限定最多可卖的票
 		[入参address] _operator: 
 		[入参uint256] _quota: 
 	[备注] 
@@ -24,6 +24,13 @@
 		[入参address] owner: 
 		[出参uint256] : 
 	[备注] 
+	[方法readCall] beijingTimeMidnight: 给定一个时间，转化成北京时区的当天0点时间
+		[入参uint256] _time: 
+		[出参uint256] : 
+	[备注] 注意，这个时间需要是带utc时区的时间（我的实现方式是-8小时后传入）
+	[方法readCall] blockTimeMidnight: 取当前时间的当天北京时间午夜0点
+		[出参uint256] : 
+	[备注] 根据链上当前时间转化成北京时间，然后去掉0点后的小时分秒
 	[方法writeCall] burn: 
 		[入参uint256] tokenId: 
 	[备注] 
@@ -66,8 +73,21 @@
 	[备注] 
 	[方法readCall] getStatus: 获取门票的状态（权益0号）
 		[入参uint256] tokenId: 
-		[出参uint8] : 0= 未预约 1= 已预约 2= 已核销 3= 已过预约时间核销 4= 已过期 5= 未开始 6= 门票不存在
+		[出参uint8] : 
+		// 0= 未预约
+        // 1= 已预约未到时间
+        // 2= 已预约已到今天
+        // 3= 已过预约时间核销
+        // 4= 已核销
+        // 5= 已过期
+        // 6= 未开始
+        // 7= 门票不存在
 	[备注] 只获取0号权益，忽略其他权益
+	[方法readCall] getStatus: 
+		[入参uint256] tokenId: 
+		[入参uint8] rightId: 
+		[出参uint8] : 
+	[备注] 
 	[方法writeCall] init: 
 		[入参string[]] _info: 
 		[入参string[]] _rights: 
@@ -84,6 +104,11 @@
 	[方法readCall] isOperator: 
 		[入参address] _operator: 
 		[出参bool] : 
+	[备注] 
+	[方法readCall] isReservedDay: 判断是否是预约日期当天
+		[入参uint256] tokenId: 
+		[入参uint8] rightId: 
+		[出参bool] : true/false
 	[备注] 
 	[方法writeCall] mint: 
 		[入参address] _to: 
