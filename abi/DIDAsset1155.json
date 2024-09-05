@@ -69,7 +69,7 @@
                             },
                             {
                                 "internalType": "uint256",
-                                "name": "circulation",
+                                "name": "total_supply",
                                 "type": "uint256"
                             },
                             {
@@ -96,6 +96,16 @@
                         "internalType": "uint256",
                         "name": "time",
                         "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "signers",
+                        "type": "string[]"
                     }
                 ],
                 "indexed": false,
@@ -106,8 +116,14 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "tokenId",
+                "name": "assetID",
                 "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
             }
         ],
         "name": "DIDAssetCreate",
@@ -152,7 +168,7 @@
                             },
                             {
                                 "internalType": "uint256",
-                                "name": "circulation",
+                                "name": "total_supply",
                                 "type": "uint256"
                             },
                             {
@@ -179,6 +195,16 @@
                         "internalType": "uint256",
                         "name": "time",
                         "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "signers",
+                        "type": "string[]"
                     }
                 ],
                 "indexed": false,
@@ -189,8 +215,14 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "tokenId",
+                "name": "assetID",
                 "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
             }
         ],
         "name": "DIDAssetUpdated",
@@ -309,6 +341,19 @@
         "type": "event"
     },
     {
+        "inputs": [],
+        "name": "assetID",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "address",
@@ -375,29 +420,6 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "address",
-                "name": "operator",
-                "type": "address"
-            }
-        ],
-        "name": "burn",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
         "inputs": [],
         "name": "contractInfo",
         "outputs": [
@@ -446,7 +468,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -458,6 +480,11 @@
                 "internalType": "struct DIDAsset1155.AssetTemplate",
                 "name": "_asset",
                 "type": "tuple"
+            },
+            {
+                "internalType": "string",
+                "name": "_did",
+                "type": "string"
             }
         ],
         "name": "create",
@@ -501,7 +528,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -513,11 +540,6 @@
                 "internalType": "struct DIDAsset1155.AssetTemplate",
                 "name": "_asset",
                 "type": "tuple"
-            },
-            {
-                "internalType": "address",
-                "name": "operator",
-                "type": "address"
             }
         ],
         "name": "create",
@@ -545,13 +567,7 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "string",
-                "name": "_did",
-                "type": "string"
-            }
-        ],
+        "inputs": [],
         "name": "init",
         "outputs": [],
         "stateMutability": "nonpayable",
@@ -584,9 +600,9 @@
     {
         "inputs": [
             {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
+                "internalType": "address",
+                "name": "toUser",
+                "type": "address"
             },
             {
                 "internalType": "uint256",
@@ -594,162 +610,9 @@
                 "type": "uint256"
             },
             {
-                "internalType": "address",
-                "name": "toUser",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "operator",
-                "type": "address"
-            }
-        ],
-        "name": "mint",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "string",
                 "name": "name",
                 "type": "string"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "address",
-                "name": "toUser",
-                "type": "address"
-            }
-        ],
-        "name": "mint",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "components": [
-                    {
-                        "internalType": "string",
-                        "name": "name",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "description",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "image",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "hash",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "detailURL",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "isSBT",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "circulation",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "quota",
-                        "type": "uint256"
-                    }
-                ],
-                "internalType": "struct DIDAsset1155.AssetTemplate",
-                "name": "_asset",
-                "type": "tuple"
-            },
-            {
-                "internalType": "address",
-                "name": "toUser",
-                "type": "address"
-            }
-        ],
-        "name": "mint",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "components": [
-                    {
-                        "internalType": "string",
-                        "name": "name",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "description",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "image",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "hash",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "detailURL",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "isSBT",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "circulation",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "quota",
-                        "type": "uint256"
-                    }
-                ],
-                "internalType": "struct DIDAsset1155.AssetTemplate",
-                "name": "_asset",
-                "type": "tuple"
-            },
-            {
-                "internalType": "address",
-                "name": "toUser",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "operator",
-                "type": "address"
             }
         ],
         "name": "mint",
@@ -864,12 +727,17 @@
     {
         "inputs": [
             {
-                "internalType": "address",
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
                 "name": "_did",
-                "type": "address"
+                "type": "string"
             }
         ],
-        "name": "setDID",
+        "name": "sign",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -1020,19 +888,6 @@
     },
     {
         "inputs": [],
-        "name": "totalAsset",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
         "name": "totalSupply",
         "outputs": [
             {
@@ -1112,7 +967,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -1124,66 +979,6 @@
                 "internalType": "struct DIDAsset1155.AssetTemplate",
                 "name": "_asset",
                 "type": "tuple"
-            }
-        ],
-        "name": "update",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "components": [
-                    {
-                        "internalType": "string",
-                        "name": "name",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "description",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "image",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "hash",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "detailURL",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "isSBT",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "circulation",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "quota",
-                        "type": "uint256"
-                    }
-                ],
-                "internalType": "struct DIDAsset1155.AssetTemplate",
-                "name": "_asset",
-                "type": "tuple"
-            },
-            {
-                "internalType": "address",
-                "name": "operator",
-                "type": "address"
             }
         ],
         "name": "update",

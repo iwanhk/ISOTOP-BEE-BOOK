@@ -59,6 +59,93 @@
         "anonymous": false,
         "inputs": [
             {
+                "indexed": false,
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "right",
+                "type": "uint256"
+            }
+        ],
+        "name": "Check",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "right",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "time",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "code",
+                "type": "string"
+            }
+        ],
+        "name": "Check",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "value",
+                "type": "string"
+            }
+        ],
+        "name": "Memo",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
                 "indexed": true,
                 "internalType": "address",
                 "name": "operator",
@@ -91,6 +178,56 @@
             }
         ],
         "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "operater",
+                "type": "address"
+            }
+        ],
+        "name": "TicketRefunded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "description",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "baseURI",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "detailsURI",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "TokenCustomized",
         "type": "event"
     },
     {
@@ -219,6 +356,19 @@
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "blockTimeMidnight",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "uint256",
@@ -239,13 +389,18 @@
                 "type": "uint256"
             },
             {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
+                "internalType": "string",
+                "name": "_right",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_time",
+                "type": "uint256"
             },
             {
                 "internalType": "string",
-                "name": "_right",
+                "name": "_code",
                 "type": "string"
             },
             {
@@ -267,23 +422,8 @@
                 "type": "uint256"
             },
             {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
-            },
-            {
                 "internalType": "string",
                 "name": "_right",
-                "type": "string"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_time",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_code",
                 "type": "string"
             },
             {
@@ -418,11 +558,25 @@
                 "internalType": "uint256",
                 "name": "tokenId",
                 "type": "uint256"
-            },
+            }
+        ],
+        "name": "getStatus",
+        "outputs": [
             {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
             },
             {
                 "internalType": "uint8",
@@ -444,43 +598,19 @@
     {
         "inputs": [
             {
-                "internalType": "uint256",
-                "name": "tokenId",
-                "type": "uint256"
-            },
-            {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
-            }
-        ],
-        "name": "getStatus",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
                 "internalType": "string[]",
                 "name": "_info",
                 "type": "string[]"
             },
             {
-                "internalType": "address[]",
-                "name": "_tickets",
-                "type": "address[]"
+                "internalType": "string[]",
+                "name": "_rights",
+                "type": "string[]"
             },
             {
-                "internalType": "uint8",
-                "name": "_rightsLimit",
-                "type": "uint8"
+                "internalType": "bytes1[]",
+                "name": "_types",
+                "type": "bytes1[]"
             },
             {
                 "internalType": "uint256",
@@ -531,6 +661,30 @@
             }
         ],
         "name": "isOperator",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "rightId",
+                "type": "uint8"
+            }
+        ],
+        "name": "isReservedDay",
         "outputs": [
             {
                 "internalType": "bool",

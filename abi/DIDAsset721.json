@@ -254,7 +254,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -309,7 +309,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -507,7 +507,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -917,7 +917,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {
@@ -972,7 +972,7 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "circulation",
+                        "name": "total_supply",
                         "type": "uint256"
                     },
                     {

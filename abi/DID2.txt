@@ -1,0 +1,207 @@
+[合约]DID2: DID身份合约
+[获取方法] 0x7D5D9e9033dF0939c0fc2CD5CE42667Bc2B31002
+[描述]
+	[方法readCall] Account: 每个DID都对应一个AA链账户地址
+		[入参uint256] tokenId: 通过tokenID取得AA链账户地址
+		[出参address] : 
+	[备注] 
+	[方法readCall] Account: 
+		[入参string] _did: 通过DID名字取得链账户地址
+		[出参address] : 
+	[备注] 
+	[方法writeCall] addAddress: 添加某个DID的管理员地址
+		[入参string] _Identity: 
+		[入参address] _addr: 
+	[备注] 
+	[方法writeCall] addOperator: 
+		[入参address] _operator: 
+	[备注] 
+	[方法writeCall] addQuota: 
+		[入参address] _operator: 
+		[入参uint256] _quota: 
+	[备注] 
+	[方法writeCall] approve: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法readCall] balanceOf: 
+		[入参address] owner: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] burn: 
+		[入参uint256] _tokenId: 
+	[备注] 
+	[方法readCall] contractInfo: 
+		[出参string] : 
+	[备注] 
+	[方法writeCall] create: 创建DID
+		[入参string] _Identity: 名称（必须唯一）
+		[入参address] _owner: 给某人
+		[入参uint256] _expired: 过期时间（一般是明年今天）
+	[备注] 
+	[方法writeCall] createAccount: 
+		[入参string] _Identity: 
+	[备注] 
+	[方法readCall] data: 
+		[入参string] _Identity: 
+		[出参tuple] : 
+	[备注] 
+	[方法readCall] dump: 
+		[出参string[]] nameList: 
+	[备注] 
+	[方法readCall] erc6551ImplementationAddress: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] expire: 
+		[入参string] _Identity: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] getApproved: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] getManagersAddress: 
+		[入参string] _Identity: 
+		[出参address[]] : 
+	[备注] 
+	[方法readCall] getOperators: 
+		[出参address[]] : 
+	[备注] 
+	[方法readCall] getQuota: 
+		[入参address] _operator: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] index: 
+		[入参string] _Identity: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] init: 
+		[入参address] tokenBoundRegistry_: 
+		[入参address] erc6551ImplementationAddress_: 
+	[备注] 
+	[方法readCall] isApprovedForAll: 
+		[入参address] owner: 
+		[入参address] operator: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] isOperator: 
+		[入参address] _operator: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] name: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] owner: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] ownerOf: 
+		[入参uint256] tokenId: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] query: 查询DID的持有人地址
+		[入参string] _Identity: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] query: 查询NFT编号的DID名称
+		[入参uint256] tokenID: 
+		[出参string] : DID名称
+	[备注] 
+	[方法readCall] query: 查询某个地址持有的DID列表
+		[入参address] _owner: 
+		[出参string[]] : 
+	[备注] 
+	[方法writeCall] removeAddress: 
+		[入参string] _Identity: 
+		[入参address] _addr: 
+	[备注] 
+	[方法writeCall] removeOperator: 
+		[入参address] _operator: 
+	[备注] 
+	[方法writeCall] renew: 
+		[入参uint256] tokenId: 
+		[入参uint256] period: 
+	[备注] 
+	[方法writeCall] renounceOwnership: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] safeTransferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参bytes] data: 
+	[备注] 
+	[方法writeCall] sell: 卖掉一个DID（转增）
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+		[入参uint256] _expired: 
+	[备注] 
+	[方法writeCall] setApprovalForAll: 
+		[入参address] operator: 
+		[入参bool] approved: 
+	[备注] 
+	[方法writeCall] setContent: 添加/修改一个内容
+		[入参uint256] tokenId: DID编号
+		[入参string] _key: 
+		[入参string] _value: 
+		[入参string] _mime: 内容类型MIME格式
+	[备注] 
+	[方法writeCall] setQuota: 
+		[入参address] _operator: 
+		[入参uint256] _quota: 
+	[备注] 
+	[方法writeCall] sign: 给某个资产签名
+		[入参string] _did: DID名称
+		[入参address] _asset: 资产合约地址
+		[入参string] _id: 资产编号（字符串或者整数）
+	[备注] 
+	[方法readCall] supportsInterface: 
+		[入参bytes4] interfaceId: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] symbol: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] tokenBoundRegistry: 
+		[出参address] : 
+	[备注] 
+	[方法readCall] tokenByIndex: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenOfOwnerByIndex: 
+		[入参address] owner: 
+		[入参uint256] index: 
+		[出参uint256] : 
+	[备注] 
+	[方法readCall] tokenURI: DID详细的元数据（json格式）
+		[入参uint256] tokenId: 
+		[出参string] : 
+	[备注] 
+	[方法readCall] totalSupply: 
+		[出参uint256] : 
+	[备注] 
+	[方法writeCall] transferFrom: 
+		[入参address] from: 
+		[入参address] to: 
+		[入参uint256] tokenId: 
+	[备注] 
+	[方法writeCall] transferOwnership: 
+		[入参address] newOwner: 
+	[备注] 
+	[方法readCall] validateAddress: 
+		[入参string] _Identity: 
+		[入参address] _addr: 
+		[出参bool] : 
+	[备注] 
+	[方法readCall] verify: 验证资产是否被签名
+		[入参string] _did: 
+		[入参address] _asset: 
+		[入参string] _id: 
+		[出参bool] : 
+	[备注] 
+[代码示例]

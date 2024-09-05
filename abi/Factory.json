@@ -9,6 +9,12 @@
                 "type": "string"
             },
             {
+                "indexed": false,
+                "internalType": "string",
+                "name": "version",
+                "type": "string"
+            },
+            {
                 "indexed": true,
                 "internalType": "address",
                 "name": "deployAddress",
@@ -65,49 +71,6 @@
                 "type": "string"
             }
         ],
-        "stateMutability": "pure",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "string",
-                "name": "_cname",
-                "type": "string"
-            }
-        ],
-        "name": "deployContract",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "id",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "string",
-                "name": "_cname",
-                "type": "string"
-            },
-            {
-                "internalType": "address",
-                "name": "who",
-                "type": "address"
-            }
-        ],
-        "name": "getContractDeployed",
-        "outputs": [
-            {
-                "internalType": "address[]",
-                "name": "",
-                "type": "address[]"
-            }
-        ],
         "stateMutability": "view",
         "type": "function"
     },
@@ -119,8 +82,32 @@
                 "type": "uint256"
             },
             {
+                "internalType": "string",
+                "name": "_cname",
+                "type": "string"
+            }
+        ],
+        "name": "deployContract",
+        "outputs": [
+            {
                 "internalType": "address",
-                "name": "who",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "deployer",
                 "type": "address"
             }
         ],
@@ -139,16 +126,43 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "who",
+                "name": "_contract",
                 "type": "address"
             }
         ],
-        "name": "getContractNumber",
+        "name": "getContractInfo",
         "outputs": [
             {
-                "internalType": "uint256",
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "id",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "verison",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "deployer",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "deployedTime",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct Factory.ContractInfo",
                 "name": "",
-                "type": "uint256"
+                "type": "tuple"
             }
         ],
         "stateMutability": "view",
@@ -185,6 +199,11 @@
                         "type": "address"
                     },
                     {
+                        "internalType": "string",
+                        "name": "verison",
+                        "type": "string"
+                    },
+                    {
                         "internalType": "address",
                         "name": "owner",
                         "type": "address"
@@ -193,25 +212,6 @@
                 "internalType": "struct Factory.ContractTemplate",
                 "name": "",
                 "type": "tuple"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "who",
-                "type": "address"
-            }
-        ],
-        "name": "getLastContractDeployed",
-        "outputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
             }
         ],
         "stateMutability": "view",

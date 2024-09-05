@@ -375,7 +375,7 @@
                 "type": "uint256"
             }
         ],
-        "stateMutability": "view",
+        "stateMutability": "pure",
         "type": "function"
     },
     {
@@ -586,9 +586,9 @@
         "name": "getStatus",
         "outputs": [
             {
-                "internalType": "uint8",
+                "internalType": "string",
                 "name": "",
-                "type": "uint8"
+                "type": "string"
             }
         ],
         "stateMutability": "view",
