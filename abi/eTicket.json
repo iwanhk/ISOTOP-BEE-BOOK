@@ -1100,7 +1100,7 @@
             },
             {
                 "internalType": "string",
-                "name": "_descruption",
+                "name": "_description",
                 "type": "string"
             },
             {
@@ -1111,6 +1111,24 @@
             {
                 "internalType": "string",
                 "name": "_detailsURI",
+                "type": "string"
+            }
+        ],
+        "name": "update",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_image",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_suffix",
                 "type": "string"
             }
         ],
