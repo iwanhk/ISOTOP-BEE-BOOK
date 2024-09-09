@@ -980,9 +980,9 @@
                 "type": "address"
             },
             {
-                "internalType": "string",
+                "internalType": "uint256",
                 "name": "_id",
-                "type": "string"
+                "type": "uint256"
             }
         ],
         "name": "sign",
@@ -1183,9 +1183,9 @@
                 "type": "address"
             },
             {
-                "internalType": "string",
+                "internalType": "uint256",
                 "name": "_id",
-                "type": "string"
+                "type": "uint256"
             }
         ],
         "name": "verify",
