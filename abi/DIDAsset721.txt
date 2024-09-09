@@ -1,5 +1,5 @@
-[合约]DIDAsset721: 
-[获取方法]
+[合约]DIDAsset721: NFT资产721
+[获取方法]工厂克隆
 [描述]
 	[方法writeCall] approve: 
 		[入参address] to: 
@@ -12,49 +12,27 @@
 	[方法writeCall] burn: 
 		[入参uint256] tokenId: 
 	[备注] 
-	[方法writeCall] burn: 
-		[入参uint256] tokenId: 
-		[入参address] operator: 
-	[备注] 
-	[方法writeCall] create: 
-		[入参tuple] _asset: 
-	[备注] 
-	[方法writeCall] create: 
-		[入参tuple] _asset: 
-		[入参address] operator: 
+	[方法readCall] contractInfo: 
+		[出参string] : 
 	[备注] 
 	[方法readCall] getApproved: 
 		[入参uint256] tokenId: 
 		[出参address] : 
 	[备注] 
-	[方法readCall] getAsset: 
-		[入参uint256] tokenId: 
-		[出参tuple] : 
-	[备注] 
-	[方法writeCall] init: 
-		[入参string] _did: 
+	[方法writeCall] init: 初始化
+		[入参string[]] _info: 5个字符串参数，分别是NFT名称、NFT简介、NFT图片、哈希，详情链接
+		[入参bool] _isSBT: 是否是SBT
+		[入参uint256] _max_supply: 最大发行量（0不限量）
+		[入参uint256] _quota: 单用户最大持有量（0不限量）
 	[备注] 
 	[方法readCall] isApprovedForAll: 
 		[入参address] owner: 
 		[入参address] operator: 
 		[出参bool] : 
 	[备注] 
-	[方法writeCall] mint: 
-		[入参string] name: 
-		[入参uint256] tokenId: 
-		[入参address] toUser: 
-		[入参address] operator: 
-	[备注] 
-	[方法writeCall] mint: 
-		[入参string] name: 
-		[入参uint256] tokenId: 
-		[入参address] toUser: 
-	[备注] 
-	[方法writeCall] mint: 
-		[入参tuple] _asset: 
-		[入参uint256] tokenId: 
-		[入参address] toUser: 
-		[入参address] operator: 
+	[方法writeCall] mint: 发行
+		[入参uint256] tokenId: 编号
+		[入参address] toUser: 用户地址
 	[备注] 
 	[方法readCall] name: 
 		[出参string] : 
@@ -83,9 +61,10 @@
 		[入参address] operator: 
 		[入参bool] approved: 
 	[备注] 
-	[方法writeCall] setDID: 
-		[入参address] _did: 
-	[备注] 
+	[方法writeCall] sign: 签名
+		[入参uint256] tokenId: 编号
+		[入参string] _did: DID名称
+	[备注] 要求签名人必须是DID的管理者
 	[方法readCall] supportsInterface: 
 		[入参bytes4] interfaceId: 
 		[出参bool] : 
@@ -93,36 +72,14 @@
 	[方法readCall] symbol: 
 		[出参string] : 
 	[备注] 
-	[方法readCall] tokenByIndex: 
-		[入参uint256] index: 
-		[出参uint256] : 
-	[备注] 
-	[方法readCall] tokenOfOwnerByIndex: 
-		[入参address] owner: 
-		[入参uint256] index: 
-		[出参uint256] : 
-	[备注] 
-	[方法readCall] tokenURI: 
+	[方法readCall] tokenURI: 读取资产元数据
 		[入参uint256] tokenId: 
 		[出参string] : 
 	[备注] 
-	[方法readCall] tokens: 
-		[入参uint256] offset: 
-		[入参uint256] limit: 
-		[出参uint256] total: 
-		[出参uint256[]] tokenIds: 
-	[备注] 
-	[方法readCall] tokensOf: 
-		[入参address] owner: 
-		[入参uint256] offset: 
-		[入参uint256] limit: 
-		[出参uint256] total: 
-		[出参uint256[]] tokenIds: 
-	[备注] 
-	[方法readCall] totalSupply: 
+	[方法readCall] totalSupply: 已经发行的总量
 		[出参uint256] : 
 	[备注] 
-	[方法writeCall] transferFrom: 
+	[方法writeCall] transferFrom: 转增
 		[入参address] from: 
 		[入参address] to: 
 		[入参uint256] tokenId: 
@@ -130,11 +87,12 @@
 	[方法writeCall] transferOwnership: 
 		[入参address] newOwner: 
 	[备注] 
-	[方法writeCall] update: 
-		[入参tuple] _asset: 
+	[方法writeCall] update: 更新全体图片
+		[入参string] _url: 链接地址带/ 的完整路径
+		[入参string] _suffix: 
 	[备注] 
-	[方法writeCall] update: 
-		[入参tuple] _asset: 
-		[入参address] operator: 
+	[方法writeCall] update: 更新某个资产的图片
+		[入参uint256] tokenId: 
+		[入参string] url: 
 	[备注] 
 [代码示例]
