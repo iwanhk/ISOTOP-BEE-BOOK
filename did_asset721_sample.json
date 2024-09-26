@@ -1,0 +1,22 @@
+{
+    "name": "GuGong Site",
+    "description": "a picture of gugong",
+    "image": "image/0.png",
+    "extURI": "details",
+    "details": "3D Model",
+    "attributes": [
+        {
+            "trait_type": "全球限量",
+            "value": "100"
+        },
+        {
+            "trait_type": "DNA",
+            "value": "ISO0918"
+        },
+        {
+            "trait_type": "签名DID",
+            "value": "故宫博物院.did"
+        }
+    ],
+    "designer": "isotop.top"
+}

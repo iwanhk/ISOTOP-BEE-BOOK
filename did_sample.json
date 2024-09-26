@@ -1,0 +1,77 @@
+{
+    "name": "故宫博物院.did",
+    "description": "The Palace Museum。又称北京故宫，是位于中国北京紫禁城内的博物馆。",
+    "symbol": "DID2",
+    "image": "http://quanyishucang.chuxingshi.top/uploads/20240901/8f85b6e0f7dd82ed2f3cfd5ce414e7c8.jpg",
+    "designer": "isotop.top",
+    "attributes": [
+        {
+            "trait_type": "contents",
+            "value": "9"
+        },
+        {
+            "trait_type": "created",
+            "value": "1727316345"
+        },
+        {
+            "trait_type": "updated",
+            "value": "1727316346"
+        }
+    ],
+    "contents": [
+        {
+            "type": "plain/text",
+            "key": "/tags/热门景区",
+            "value": "中青编辑推荐",
+            "updated": "1727316345"
+        },
+        {
+            "type": "image/svg+xml",
+            "key": "/token_image",
+            "value": "http://quanyishucang.chuxingshi.top/uploads/20240901/8f85b6e0f7dd82ed2f3cfd5ce414e7c8.jpg",
+            "updated": "1727316345"
+        },
+        {
+            "type": "text/html",
+            "key": "/details",
+            "value": "https://www.dpm.org.cn/",
+            "updated": "1727316345"
+        },
+        {
+            "type": "plain/text",
+            "key": "/description",
+            "value": "The Palace Museum。又称北京故宫，是位于中国北京紫禁城内的博物馆。",
+            "updated": "1727316345"
+        },
+        {
+            "type": "plain/text",
+            "key": "/级别",
+            "value": "5A级",
+            "updated": "1727316346"
+        },
+        {
+            "type": "plain/text",
+            "key": "/地址",
+            "value": "中国北京市东城区景山前街4号 邮政编码: 100009",
+            "updated": "1727316346"
+        },
+        {
+            "type": "plain/text",
+            "key": "/开放时间",
+            "value": "8:30AM- 16:30PM",
+            "updated": "1727316346"
+        },
+        {
+            "type": "application/nft",
+            "key": "/signed/0xfdaaae9e3761ce66c61038b5b9bdfb580f8f8f4d/0",
+            "value": "0x8ce68c53ec6c8a55a32dd6c84c9207bfbd901eab",
+            "updated": "1727316350"
+        },
+        {
+            "type": "application/nft",
+            "key": "/signed/0x9104dd0dde51ea9a75fc31d316f545f134ca39aa/0",
+            "value": "0x8ce68c53ec6c8a55a32dd6c84c9207bfbd901eab",
+            "updated": "1727316351"
+        }
+    ]
+}

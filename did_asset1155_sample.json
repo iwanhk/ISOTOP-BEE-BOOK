@@ -1,0 +1,34 @@
+{
+    "name": "GuGong Site",
+    "description": "a picture of gugong",
+    "image": "image/",
+    "extURI": "details",
+    "details": "3D Model",
+    "attributes": [
+        {
+            "trait_type": "数量",
+            "value": "10"
+        },
+        {
+            "trait_type": "发行时间",
+            "value": "UTC+8 2024年9月26日10时5分49秒"
+        },
+        {
+            "trait_type": "全球限量",
+            "value": "100"
+        },
+        {
+            "trait_type": "更多详情",
+            "value": "3D Model"
+        },
+        {
+            "trait_type": "签名DID",
+            "value": "故宫博物院.did"
+        },
+        {
+            "trait_type": "签名DID",
+            "value": "故宫.did"
+        }
+    ],
+    "designer": "isotop.top"
+}

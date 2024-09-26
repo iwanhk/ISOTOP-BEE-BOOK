@@ -1,0 +1,74 @@
+{
+    "name": "故宫博物院",
+    "description": "故宫博物院成立于1925年10月10日，是以明清两代皇宫和宫廷旧藏文物为基础建立起来的大型综合性古代艺术博物馆，是世界文化遗产地、全国重点文物保护单位和爱国主义教育基地",
+    "details": "https://isotop.oss-cn-shanghai.aliyuncs.com/20240102/2f0c555cd605483b9edd679f4e9d6d27.html",
+    "image": "https://cctv2024.oss-cn-beijing.aliyuncs.com/gugong.png",
+    "extURI": "3D Model",
+    "designer": "isotop.top",
+    "attributes": [
+        {
+            "trait_type": "出品方DID",
+            "value": "https://isotop.oss-cn-shanghai.aliyuncs.com/20240102/2f0c555cd605483b9edd679f4e9d6d27.html"
+        },
+        {
+            "trait_type": "有效期",
+            "value": "2024.8.26 - 2024.12.31"
+        },
+        {
+            "trait_type": "[S]入口",
+            "value": "未预约"
+        },
+        {
+            "trait_type": "入口",
+            "value": "入口 Image"
+        },
+        {
+            "trait_type": "[S]午门及东西雁翅楼展厅",
+            "value": "已预约:UTC+8 2024年9月28日:SECRET"
+        },
+        {
+            "trait_type": "午门及东西雁翅楼展厅",
+            "value": "午门及东西雁翅楼展厅 Image"
+        },
+        {
+            "trait_type": "[S]永寿宫展厅",
+            "value": "未预约"
+        },
+        {
+            "trait_type": "永寿宫展厅",
+            "value": "永寿宫展厅 Image"
+        },
+        {
+            "trait_type": "[S]斋宫展厅",
+            "value": "未预约"
+        },
+        {
+            "trait_type": "斋宫展厅",
+            "value": "斋宫展厅 Image"
+        },
+        {
+            "trait_type": "[S]古陶瓷研究中心",
+            "value": "未预约"
+        },
+        {
+            "trait_type": "古陶瓷研究中心",
+            "value": "古陶瓷研究中心 Image"
+        },
+        {
+            "trait_type": "[S]古书画研究中心",
+            "value": "已预约:UTC+8 2024年12月30日:SECRET"
+        },
+        {
+            "trait_type": "古书画研究中心",
+            "value": "古书画研究中心 Image"
+        },
+        {
+            "trait_type": "[S]神武门展厅",
+            "value": "已预约:UTC+8 2024年10月1日:SECRET"
+        },
+        {
+            "trait_type": "神武门展厅",
+            "value": "神武门展厅 Image"
+        }
+    ]
+}
