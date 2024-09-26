@@ -36,75 +36,53 @@
             {
                 "components": [
                     {
-                        "components": [
-                            {
-                                "internalType": "uint256",
-                                "name": "id",
-                                "type": "uint256"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "description",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "image",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "hash",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "detailURL",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "bool",
-                                "name": "isSBT",
-                                "type": "bool"
-                            },
-                            {
-                                "internalType": "uint256",
-                                "name": "total_supply",
-                                "type": "uint256"
-                            },
-                            {
-                                "internalType": "uint256",
-                                "name": "quota",
-                                "type": "uint256"
-                            }
-                        ],
-                        "internalType": "struct DIDAsset1155.AssetTemplate",
-                        "name": "info",
-                        "type": "tuple"
-                    },
-                    {
                         "internalType": "uint256",
-                        "name": "time",
+                        "name": "id",
                         "type": "uint256"
                     },
                     {
-                        "internalType": "address",
-                        "name": "owner",
-                        "type": "address"
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
                     },
                     {
-                        "internalType": "string[]",
-                        "name": "signers",
-                        "type": "string[]"
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "detailURL",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "extURI",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isSBT",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "total_supply",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quota",
+                        "type": "uint256"
                     }
                 ],
                 "indexed": false,
-                "internalType": "struct DIDAsset1155.Asset",
+                "internalType": "struct DIDAsset1155.AssetTemplate",
                 "name": "asset",
                 "type": "tuple"
             },
@@ -130,75 +108,53 @@
             {
                 "components": [
                     {
-                        "components": [
-                            {
-                                "internalType": "uint256",
-                                "name": "id",
-                                "type": "uint256"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "description",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "image",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "hash",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "detailURL",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "bool",
-                                "name": "isSBT",
-                                "type": "bool"
-                            },
-                            {
-                                "internalType": "uint256",
-                                "name": "total_supply",
-                                "type": "uint256"
-                            },
-                            {
-                                "internalType": "uint256",
-                                "name": "quota",
-                                "type": "uint256"
-                            }
-                        ],
-                        "internalType": "struct DIDAsset1155.AssetTemplate",
-                        "name": "info",
-                        "type": "tuple"
-                    },
-                    {
                         "internalType": "uint256",
-                        "name": "time",
+                        "name": "id",
                         "type": "uint256"
                     },
                     {
-                        "internalType": "address",
-                        "name": "owner",
-                        "type": "address"
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
                     },
                     {
-                        "internalType": "string[]",
-                        "name": "signers",
-                        "type": "string[]"
+                        "internalType": "string",
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "image",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "detailURL",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "extURI",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isSBT",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "total_supply",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "quota",
+                        "type": "uint256"
                     }
                 ],
                 "indexed": false,
-                "internalType": "struct DIDAsset1155.Asset",
+                "internalType": "struct DIDAsset1155.AssetTemplate",
                 "name": "asset",
                 "type": "tuple"
             },
@@ -216,6 +172,37 @@
             }
         ],
         "name": "DIDAssetUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "did",
+                "type": "string"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "assetID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "signer",
+                "type": "address"
+            }
+        ],
+        "name": "DIDSigned",
         "type": "event"
     },
     {
@@ -329,6 +316,29 @@
         ],
         "name": "URI",
         "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "value",
+                "type": "string"
+            }
+        ],
+        "name": "appendAttr",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
     },
     {
         "inputs": [
@@ -463,12 +473,12 @@
                     },
                     {
                         "internalType": "string",
-                        "name": "hash",
+                        "name": "detailURL",
                         "type": "string"
                     },
                     {
                         "internalType": "string",
-                        "name": "detailURL",
+                        "name": "extURI",
                         "type": "string"
                     },
                     {
@@ -528,12 +538,12 @@
                     },
                     {
                         "internalType": "string",
-                        "name": "hash",
+                        "name": "detailURL",
                         "type": "string"
                     },
                     {
                         "internalType": "string",
-                        "name": "detailURL",
+                        "name": "extURI",
                         "type": "string"
                     },
                     {
@@ -649,6 +659,43 @@
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "ownerOf",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            }
+        ],
+        "name": "removeAttr",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "renounceOwnership",
         "outputs": [],
@@ -735,6 +782,47 @@
             }
         ],
         "name": "setApprovalForAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "value",
+                "type": "string"
+            }
+        ],
+        "name": "setAttr",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_treadstone",
+                "type": "address"
+            }
+        ],
+        "name": "setTreadstone",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -972,12 +1060,12 @@
                     },
                     {
                         "internalType": "string",
-                        "name": "hash",
+                        "name": "detailURL",
                         "type": "string"
                     },
                     {
                         "internalType": "string",
-                        "name": "detailURL",
+                        "name": "extURI",
                         "type": "string"
                     },
                     {

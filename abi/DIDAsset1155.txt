@@ -1,6 +1,20 @@
 [合约]DIDAsset1155: 同质化数藏合约
 [获取方法] 工厂克隆部署
-[描述]
+[描述]创建一个资产可以后可以发行多个同样内容
+	[方法writeCall] appendAttr: 给已经存在的一个属性添加内容
+		[入参uint256] tokenId: 编号
+		[入参string] name: 属性名称（之前用sétAttr创建过）
+		[入参string] value: 内容
+	[备注] 
+	[方法writeCall] removeAttr: 删除一个属性及其内容
+		[入参uint256] tokenId: 
+		[入参string] name: 
+	[备注] 
+	[方法writeCall] setAttr: 设置一个属性及其内容
+		[入参uint256] tokenId: 
+		[入参string] name: 
+		[入参string] value: 
+	[备注] 属性在token的元数据中会出现
 	[方法readCall] balanceOf: 
 		[入参address] account: 
 		[入参uint256] id: 
@@ -25,20 +39,20 @@
 		[入参string] image: 图片
 	[备注] 
 	[方法writeCall] create: 创建一个资产
-		[入参tuple] _asset: 结构（9个参数）
+		[入参tuple] _asset: 结构（8个参数）
 		uint256 id; 编号
         string name; 名称
         string description; 描述
         string image; 图片
-        string hash; 图片哈希（可选，用于校验图片内容）
-        string detailURL; 详情链接（可选）
+		string extURI; NFT额外图片3D地址，
+        string detailURL; 详情链接（图文信息）
         bool isSBT; 是否是SBT（可选，默认为false））
         uint256 total_supply; 总发行量（可选，默认为无限量）
         uint256 quota;每个用户限额（可选，默认为不限量）
 		[入参string] _did: 认证DID
 	[备注] 要求调用者必须是DID的管理员地址
 	[方法writeCall] create: 创建一个资产
-		[入参tuple] _asset: 结构（9个参数）同上
+		[入参tuple] _asset: 结构（8个参数）同上
 	[备注] 
 	[方法readCall] exists: 是否存在
 		[入参uint256] tokenId: 

@@ -92,6 +92,9 @@
 		[入参uint256] tokenId: 
 		[出参string] : 可以返回以下的状态：门票不存在，已过期，未核销， 已核销， 未开始
 	[备注] 这是兼容央博的老版本，只针对打卡点0号
+	[方法readCall] getStatusInfo: 获得门票状态的字符串
+		[出参string[9]] : 从0-8返回值对应的字符串组成的数组
+	[备注] 配合getStatus使用
 	[方法writeCall] init: 初始化门票
 		[入参string[]] _info: 5个字符串：名字，描述，图片，detailsURL，did
 		[入参string[]] _rights: 若干权益数组及权益的图片数组。如果数组长度等同于_rights长度，则一一对应。如果是_rights长度的2倍，则前半部分对于权益名字，后半部分对应权益图片地址。

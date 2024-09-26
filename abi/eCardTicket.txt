@@ -1,6 +1,6 @@
 [合约]eCardTicket: 权益卡合约模板
 [获取方法]工厂合约clone eCardTicket
-[描述]
+[描述] 每张卡可以兑换任何N张门票，每张票只限一张，先到先得，如果票仓没票，兑换失败
 	[方法writeCall] addBank: 加库存
 		[入参uint256] _amount: 
 	[备注] 
@@ -77,7 +77,7 @@
 		[出参string] : 
 	[备注] 
 	[方法writeCall] init: 初始化
-		[入参string[]] _info: 名字，描述，图片地址，详情页地址（4个字符串）
+		[入参string[]] _info: 包含5个字符串：名称，描述，图片地址，额外图片如3D地址，详情页地址（5个字符串）
 		[入参address[]] _tickets: 门票地址（多个）
 		[入参uint8] _rightsLimit: 最多可以使用的门票数量（0表示不限制）
 		[入参uint256] _startTime: 有效时间
@@ -93,6 +93,10 @@
 		[出参bool] : 
 	[备注] 
 	[方法writeCall] mint: 铸造权益卡
+		[入参address] _to: 给某人
+		[入参uint256] tokenId: 卡号
+	[备注] 
+	[方法writeCall] claim: 活动（免费）领取
 		[入参address] _to: 给某人
 		[入参uint256] tokenId: 卡号
 	[备注] 

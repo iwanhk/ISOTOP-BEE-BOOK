@@ -1,6 +1,20 @@
 [合约]DIDAsset721: NFT资产721
 [获取方法]工厂克隆
 [描述]
+	[方法writeCall] appendAttr: 给已经存在的一个属性添加内容
+		[入参uint256] tokenId: 编号
+		[入参string] name: 属性名称（之前用sétAttr创建过）
+		[入参string] value: 内容
+	[备注] 
+	[方法writeCall] removeAttr: 删除一个属性及其内容
+		[入参uint256] tokenId: 
+		[入参string] name: 
+	[备注] 
+	[方法writeCall] setAttr: 设置一个属性及其内容
+		[入参uint256] tokenId: 
+		[入参string] name: 
+		[入参string] value: 
+	[备注] 属性在token的元数据中会出现
 	[方法writeCall] approve: 
 		[入参address] to: 
 		[入参uint256] tokenId: 
@@ -20,7 +34,7 @@
 		[出参address] : 
 	[备注] 
 	[方法writeCall] init: 初始化
-		[入参string[]] _info: 5个字符串参数，分别是NFT名称、NFT简介、NFT图片、哈希，详情链接
+		[入参string[]] _info: 5个字符串参数，分别是NFT名称、NFT简介、NFT图片地址、NFT额外图片3D地址，详情链接（图文信息）
 		[入参bool] _isSBT: 是否是SBT
 		[入参uint256] _max_supply: 最大发行量（0不限量）
 		[入参uint256] _quota: 单用户最大持有量（0不限量）
