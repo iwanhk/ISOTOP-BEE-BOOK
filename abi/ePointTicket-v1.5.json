@@ -246,9 +246,9 @@
                 "type": "uint256"
             },
             {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
+                "internalType": "uint16",
+                "name": "ticketId",
+                "type": "uint16"
             },
             {
                 "internalType": "string",
@@ -274,9 +274,9 @@
                 "type": "uint256"
             },
             {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
+                "internalType": "uint16",
+                "name": "ticketId",
+                "type": "uint16"
             },
             {
                 "internalType": "string",
@@ -445,9 +445,9 @@
                 "type": "uint256"
             },
             {
-                "internalType": "address",
-                "name": "_ticket",
-                "type": "address"
+                "internalType": "uint16",
+                "name": "ticketId",
+                "type": "uint16"
             },
             {
                 "internalType": "uint8",
@@ -484,9 +484,19 @@
                 "type": "address[]"
             },
             {
-                "internalType": "uint8",
-                "name": "_limit",
-                "type": "uint8"
+                "internalType": "uint16[]",
+                "name": "_price",
+                "type": "uint16[]"
+            },
+            {
+                "internalType": "uint8[]",
+                "name": "_limits",
+                "type": "uint8[]"
+            },
+            {
+                "internalType": "uint16",
+                "name": "_points",
+                "type": "uint16"
             },
             {
                 "internalType": "uint256",
@@ -608,6 +618,29 @@
             }
         ],
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_ticket",
+                "type": "address"
+            },
+            {
+                "internalType": "uint8",
+                "name": "_amount",
+                "type": "uint8"
+            }
+        ],
+        "name": "redeem",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -783,6 +816,30 @@
                 "internalType": "string",
                 "name": "",
                 "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "ticketsPool",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
             }
         ],
         "stateMutability": "view",

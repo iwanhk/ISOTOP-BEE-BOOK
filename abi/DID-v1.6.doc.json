@@ -1,0 +1,544 @@
+{
+    "合约及版本": "DID-v1.6",
+    "获取方法": "",
+    "描述": "",
+    "ABI": "DID-v1.6.json",
+    "方法": {
+        "Account(uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] tokenId": ""
+            },
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0xc496a4e1"
+        },
+        "Account(string)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0xc4b6395c"
+        },
+        "addAddress(string,address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": "",
+                "[address] _addr": ""
+            },
+            "备注": "",
+            "selector": "0xceb35b0f"
+        },
+        "addAsset(string,address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": "",
+                "[address] _asset": ""
+            },
+            "备注": "",
+            "selector": "0xadc02a64"
+        },
+        "addOperator(address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _operator": ""
+            },
+            "备注": "",
+            "selector": "0x9870d7fe"
+        },
+        "addQuota(address,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _operator": "",
+                "[uint256] _quota": ""
+            },
+            "备注": "",
+            "selector": "0xf045000d"
+        },
+        "approve(address,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] to": "",
+                "[uint256] tokenId": ""
+            },
+            "备注": "",
+            "selector": "0x095ea7b3"
+        },
+        "balanceOf(address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] owner": ""
+            },
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0x70a08231"
+        },
+        "burn(uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] _tokenId": ""
+            },
+            "备注": "",
+            "selector": "0x42966c68"
+        },
+        "contractInfo()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[string] ": ""
+            },
+            "备注": "",
+            "selector": "0x15c43aaf"
+        },
+        "create(string,string,address,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": "",
+                "[string] _ar_file": "",
+                "[address] _owner": "",
+                "[uint256] _expired": ""
+            },
+            "备注": "",
+            "selector": "0xd069c371"
+        },
+        "createAccount(string)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "备注": "",
+            "selector": "0x298daf5b"
+        },
+        "data(string)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "返回值": {
+                "[tuple] ": ""
+            },
+            "备注": "",
+            "selector": "0x04f6748c"
+        },
+        "dump()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[string[]] nameList": ""
+            },
+            "备注": "",
+            "selector": "0xe4330545"
+        },
+        "erc6551ImplementationAddress()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0xee845881"
+        },
+        "expire(string)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0x1cae3bee"
+        },
+        "getApproved(uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] tokenId": ""
+            },
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0x081812fc"
+        },
+        "getManagersAddress(string)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "返回值": {
+                "[address[]] ": ""
+            },
+            "备注": "",
+            "selector": "0xaa1266d1"
+        },
+        "getOperators()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[address[]] ": ""
+            },
+            "备注": "",
+            "selector": "0x27a099d8"
+        },
+        "getQuota(address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _operator": ""
+            },
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0x43a2a302"
+        },
+        "hasAsset(string,address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": "",
+                "[address] _asset": ""
+            },
+            "返回值": {
+                "[bool] ": ""
+            },
+            "备注": "",
+            "selector": "0xfecdd62f"
+        },
+        "index(string)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0xf5db08d9"
+        },
+        "init(address,address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] tokenBoundRegistry_": "",
+                "[address] erc6551ImplementationAddress_": ""
+            },
+            "备注": "",
+            "selector": "0xf09a4016"
+        },
+        "isApprovedForAll(address,address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] owner": "",
+                "[address] operator": ""
+            },
+            "返回值": {
+                "[bool] ": ""
+            },
+            "备注": "",
+            "selector": "0xe985e9c5"
+        },
+        "isOperator(address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _operator": ""
+            },
+            "返回值": {
+                "[bool] ": ""
+            },
+            "备注": "",
+            "selector": "0x6d70f7ae"
+        },
+        "name()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[string] ": ""
+            },
+            "备注": "",
+            "selector": "0x06fdde03"
+        },
+        "owner()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0x8da5cb5b"
+        },
+        "ownerOf(uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] tokenId": ""
+            },
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0x6352211e"
+        },
+        "query(string)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": ""
+            },
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0x7c261929"
+        },
+        "query(uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] tokenId": ""
+            },
+            "返回值": {
+                "[string] ": ""
+            },
+            "备注": "",
+            "selector": "0xafdac68d"
+        },
+        "query(address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _owner": ""
+            },
+            "返回值": {
+                "[string[]] ": ""
+            },
+            "备注": "",
+            "selector": "0xd4fc9fc6"
+        },
+        "removeAddress(string,address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": "",
+                "[address] _addr": ""
+            },
+            "备注": "",
+            "selector": "0xb166493b"
+        },
+        "removeOperator(address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _operator": ""
+            },
+            "备注": "",
+            "selector": "0xac8a584a"
+        },
+        "renew(uint256,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] tokenId": "",
+                "[uint256] period": ""
+            },
+            "备注": "",
+            "selector": "0xc475abff"
+        },
+        "renounceOwnership()🇼": {
+            "描述": "",
+            "版本更新": "",
+            "备注": "",
+            "selector": "0x715018a6"
+        },
+        "safeTransferFrom(address,address,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] from": "",
+                "[address] to": "",
+                "[uint256] tokenId": ""
+            },
+            "备注": "",
+            "selector": "0x42842e0e"
+        },
+        "safeTransferFrom(address,address,uint256,bytes)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] from": "",
+                "[address] to": "",
+                "[uint256] tokenId": "",
+                "[bytes] data": ""
+            },
+            "备注": "",
+            "selector": "0xb88d4fde"
+        },
+        "sell(address,address,uint256,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] from": "",
+                "[address] to": "",
+                "[uint256] tokenId": "",
+                "[uint256] _expired": ""
+            },
+            "备注": "",
+            "selector": "0x31de7d15"
+        },
+        "setApprovalForAll(address,bool)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] operator": "",
+                "[bool] approved": ""
+            },
+            "备注": "",
+            "selector": "0xa22cb465"
+        },
+        "setQuota(address,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] _operator": "",
+                "[uint256] _quota": ""
+            },
+            "备注": "",
+            "selector": "0x03ce3355"
+        },
+        "supportsInterface(bytes4)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[bytes4] interfaceId": ""
+            },
+            "返回值": {
+                "[bool] ": ""
+            },
+            "备注": "",
+            "selector": "0x01ffc9a7"
+        },
+        "symbol()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[string] ": ""
+            },
+            "备注": "",
+            "selector": "0x95d89b41"
+        },
+        "tokenBoundRegistry()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[address] ": ""
+            },
+            "备注": "",
+            "selector": "0xfdf250df"
+        },
+        "tokenByIndex(uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] index": ""
+            },
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0x4f6ccce7"
+        },
+        "tokenOfOwnerByIndex(address,uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] owner": "",
+                "[uint256] index": ""
+            },
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0x2f745c59"
+        },
+        "tokenURI(uint256)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[uint256] tokenId": ""
+            },
+            "返回值": {
+                "[string] ": ""
+            },
+            "备注": "",
+            "selector": "0xc87b56dd"
+        },
+        "totalSupply()🇷": {
+            "描述": "",
+            "版本更新": "",
+            "返回值": {
+                "[uint256] ": ""
+            },
+            "备注": "",
+            "selector": "0x18160ddd"
+        },
+        "transferFrom(address,address,uint256)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] from": "",
+                "[address] to": "",
+                "[uint256] tokenId": ""
+            },
+            "备注": "",
+            "selector": "0x23b872dd"
+        },
+        "transferOwnership(address)🇼": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[address] newOwner": ""
+            },
+            "备注": "",
+            "selector": "0xf2fde38b"
+        },
+        "validateAddress(string,address)🇷": {
+            "描述": "",
+            "版本更新": "",
+            "参数": {
+                "[string] _Identity": "",
+                "[address] _addr": ""
+            },
+            "返回值": {
+                "[bool] ": ""
+            },
+            "备注": "",
+            "selector": "0x5f1c0fbd"
+        }
+    }
+}
