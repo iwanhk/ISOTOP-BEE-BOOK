@@ -68,6 +68,8 @@
 ## <b id="addBank(uint256)🇼">addBank(uint256)🇼</b>
 - **描述**: 加库存
 
+- selector: 0x9e8d004a
+
 - 版本更新: 
 
 ### 参数
@@ -76,10 +78,10 @@
 
 - 备注: 
 
-- selector: 0x9e8d004a
-
 ## <b id="addOperator(address)🇼">addOperator(address)🇼</b>
 - 描述: 
+
+- selector: 0x9870d7fe
 
 - 版本更新: 
 
@@ -89,10 +91,10 @@
 
 - 备注: 
 
-- selector: 0x9870d7fe
-
 ## <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>
 - **描述**: 给管理员渠道商限定最多可卖的票
+
+- selector: 0xf045000d
 
 - 版本更新: 
 
@@ -104,10 +106,10 @@
 
 - 备注: 
 
-- selector: 0xf045000d
-
 ## <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x095ea7b3
 
 - 版本更新: 
 
@@ -119,10 +121,10 @@
 
 - 备注: 
 
-- selector: 0x095ea7b3
-
 ## <b id="balanceOf(address)🇷">balanceOf(address)🇷</b>
 - 描述: 
+
+- selector: 0x70a08231
 
 - 版本更新: 
 
@@ -136,10 +138,10 @@
 
 - 备注: 
 
-- selector: 0x70a08231
-
 ## <b id="burn(uint256)🇼">burn(uint256)🇼</b>
 - 描述: 
+
+- selector: 0x42966c68
 
 - 版本更新: 
 
@@ -149,10 +151,10 @@
 
 - 备注: 
 
-- selector: 0x42966c68
-
 ## <b id="check(uint256,address,string,address)🇼">check(uint256,address,string,address)🇼</b>
 - **描述**: 核销权益卡
+
+- selector: 0x1812c00a
 
 - 版本更新: 
 
@@ -168,10 +170,10 @@
 
 - 备注: 
 
-- selector: 0x1812c00a
-
 ## <b id="check(uint256,address,string,uint256,string,address)🇼">check(uint256,address,string,uint256,string,address)🇼</b>
 - **描述**: 预约核销卡权益
+
+- selector: 0x9b5414f2
 
 - 版本更新: 
 
@@ -191,10 +193,10 @@
 
 - 备注: 
 
-- selector: 0x9b5414f2
-
 ## <b id="claim(address,uint256)🇼">claim(address,uint256)🇼</b>
 - **描述**: 活动（免费）领取
+
+- selector: 0xaad3ec96
 
 - 版本更新: 
 
@@ -206,10 +208,10 @@
 
 - 备注: 
 
-- selector: 0xaad3ec96
-
 ## <b id="contractInfo()🇷">contractInfo()🇷</b>
 - 描述: 
+
+- selector: 0x15c43aaf
 
 - 版本更新: 
 
@@ -219,10 +221,10 @@
 
 - 备注: 
 
-- selector: 0x15c43aaf
-
 ## <b id="exists(uint256)🇷">exists(uint256)🇷</b>
 - 描述: 
+
+- selector: 0x4f558e79
 
 - 版本更新: 
 
@@ -236,10 +238,10 @@
 
 - 备注: 
 
-- selector: 0x4f558e79
-
 ## <b id="getApproved(uint256)🇷">getApproved(uint256)🇷</b>
 - 描述: 
+
+- selector: 0x081812fc
 
 - 版本更新: 
 
@@ -253,10 +255,10 @@
 
 - 备注: 
 
-- selector: 0x081812fc
-
 ## <b id="getBankRest()🇷">getBankRest()🇷</b>
 - 描述: 
+
+- selector: 0x6b796ec0
 
 - 版本更新: 
 
@@ -266,10 +268,10 @@
 
 - 备注: 
 
-- selector: 0x6b796ec0
-
 ## <b id="getOperator(uint256)🇷">getOperator(uint256)🇷</b>
 - 描述: 
+
+- selector: 0x05f63c8a
 
 - 版本更新: 
 
@@ -283,10 +285,10 @@
 
 - 备注: 
 
-- selector: 0x05f63c8a
-
 ## <b id="getOperators()🇷">getOperators()🇷</b>
 - 描述: 
+
+- selector: 0x27a099d8
 
 - 版本更新: 
 
@@ -296,10 +298,10 @@
 
 - 备注: 
 
-- selector: 0x27a099d8
-
 ## <b id="getQuota(address)🇷">getQuota(address)🇷</b>
 - 描述: 
+
+- selector: 0x43a2a302
 
 - 版本更新: 
 
@@ -313,10 +315,10 @@
 
 - 备注: 
 
-- selector: 0x43a2a302
-
 ## <b id="getStatus(uint256,address,uint8)🇷">getStatus(uint256,address,uint8)🇷</b>
 - 描述: 
+
+- selector: 0x2f2885f4
 
 - 版本更新: 
 
@@ -336,10 +338,10 @@
 
 - 备注: 
 
-- selector: 0x2f2885f4
-
 ## <b id="init(string[],address[],uint8,uint256,uint256)🇼">init(string[],address[],uint8,uint256,uint256)🇼</b>
 - **描述**: 初始化
+
+- selector: 0xe5a0d3c0
 
 - 版本更新: 
 
@@ -357,10 +359,10 @@
 
 - 备注: 
 
-- selector: 0xe5a0d3c0
-
 ## <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>
 - 描述: 
+
+- selector: 0xe985e9c5
 
 - 版本更新: 
 
@@ -376,10 +378,10 @@
 
 - 备注: 
 
-- selector: 0xe985e9c5
-
 ## <b id="isOperator(address)🇷">isOperator(address)🇷</b>
 - 描述: 
+
+- selector: 0x6d70f7ae
 
 - 版本更新: 
 
@@ -393,10 +395,10 @@
 
 - 备注: 
 
-- selector: 0x6d70f7ae
-
 ## <b id="mint(address,uint256)🇼">mint(address,uint256)🇼</b>
 - **描述**: 发行权益卡
+
+- selector: 0x40c10f19
 
 - 版本更新: 
 
@@ -408,10 +410,10 @@
 
 - 备注: 
 
-- selector: 0x40c10f19
-
 ## <b id="name()🇷">name()🇷</b>
 - 描述: 
+
+- selector: 0x06fdde03
 
 - 版本更新: 
 
@@ -421,10 +423,10 @@
 
 - 备注: 
 
-- selector: 0x06fdde03
-
 ## <b id="owner()🇷">owner()🇷</b>
 - 描述: 
+
+- selector: 0x8da5cb5b
 
 - 版本更新: 
 
@@ -433,12 +435,12 @@
 - [address] : 
 
 - 备注: 
-
-- selector: 0x8da5cb5b
 
 ## <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>
 - 描述: 
 
+- selector: 0x6352211e
+
 - 版本更新: 
 
 ### 参数
@@ -451,10 +453,10 @@
 
 - 备注: 
 
-- selector: 0x6352211e
-
 ## <b id="refund(uint256)🇼">refund(uint256)🇼</b>
 - 描述: 
+
+- selector: 0x278ecde1
 
 - 版本更新: 
 
@@ -464,10 +466,10 @@
 
 - 备注: 
 
-- selector: 0x278ecde1
-
 ## <b id="removeBank(uint256)🇼">removeBank(uint256)🇼</b>
 - 描述: 
+
+- selector: 0x3ad3bfa8
 
 - 版本更新: 
 
@@ -477,10 +479,10 @@
 
 - 备注: 
 
-- selector: 0x3ad3bfa8
-
 ## <b id="removeOperator(address)🇼">removeOperator(address)🇼</b>
 - 描述: 
+
+- selector: 0xac8a584a
 
 - 版本更新: 
 
@@ -490,19 +492,19 @@
 
 - 备注: 
 
-- selector: 0xac8a584a
-
 ## <b id="renounceOwnership()🇼">renounceOwnership()🇼</b>
 - 描述: 
+
+- selector: 0x715018a6
 
 - 版本更新: 
 
 - 备注: 
 
-- selector: 0x715018a6
-
 ## <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>
 - **描述**: 转增权益卡
+
+- selector: 0x42842e0e
 
 - 版本更新: 
 
@@ -516,10 +518,10 @@
 
 - 备注: 
 
-- selector: 0x42842e0e
-
 ## <b id="safeTransferFrom(address,address,uint256,bytes)🇼">safeTransferFrom(address,address,uint256,bytes)🇼</b>
 - 描述: 
+
+- selector: 0xb88d4fde
 
 - 版本更新: 
 
@@ -535,10 +537,10 @@
 
 - 备注: 
 
-- selector: 0xb88d4fde
-
 ## <b id="setApprovalForAll(address,bool)🇼">setApprovalForAll(address,bool)🇼</b>
 - 描述: 
+
+- selector: 0xa22cb465
 
 - 版本更新: 
 
@@ -550,10 +552,10 @@
 
 - 备注: 
 
-- selector: 0xa22cb465
-
 ## <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x03ce3355
 
 - 版本更新: 
 
@@ -565,10 +567,10 @@
 
 - 备注: 
 
-- selector: 0x03ce3355
-
 ## <b id="setTreadstone(address)🇼">setTreadstone(address)🇼</b>
 - 描述: 
+
+- selector: 0xfc780816
 
 - 版本更新: 
 
@@ -578,10 +580,10 @@
 
 - 备注: 
 
-- selector: 0xfc780816
-
 ## <b id="supportsInterface(bytes4)🇷">supportsInterface(bytes4)🇷</b>
 - 描述: 
+
+- selector: 0x01ffc9a7
 
 - 版本更新: 
 
@@ -595,10 +597,10 @@
 
 - 备注: 
 
-- selector: 0x01ffc9a7
-
 ## <b id="symbol()🇷">symbol()🇷</b>
 - 描述: 
+
+- selector: 0x95d89b41
 
 - 版本更新: 
 
@@ -607,12 +609,12 @@
 - [string] : 
 
 - 备注: 
-
-- selector: 0x95d89b41
 
 ## <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>
 - 描述: 
 
+- selector: 0x4f6ccce7
+
 - 版本更新: 
 
 ### 参数
@@ -625,10 +627,10 @@
 
 - 备注: 
 
-- selector: 0x4f6ccce7
-
 ## <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>
 - 描述: 
+
+- selector: 0x2f745c59
 
 - 版本更新: 
 
@@ -644,10 +646,10 @@
 
 - 备注: 
 
-- selector: 0x2f745c59
-
 ## <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>
 - 描述: 
+
+- selector: 0xc87b56dd
 
 - 版本更新: 
 
@@ -661,10 +663,10 @@
 
 - 备注: 
 
-- selector: 0xc87b56dd
-
 ## <b id="tokens(uint256,uint256)🇷">tokens(uint256,uint256)🇷</b>
 - 描述: 
+
+- selector: 0x8b4864d6
 
 - 版本更新: 
 
@@ -682,10 +684,10 @@
 
 - 备注: 
 
-- selector: 0x8b4864d6
-
 ## <b id="tokensOf(address,uint256,uint256)🇷">tokensOf(address,uint256,uint256)🇷</b>
 - 描述: 
+
+- selector: 0x23185dc9
 
 - 版本更新: 
 
@@ -705,10 +707,10 @@
 
 - 备注: 
 
-- selector: 0x23185dc9
-
 ## <b id="totalBank()🇷">totalBank()🇷</b>
 - 描述: 
+
+- selector: 0x22457b02
 
 - 版本更新: 
 
@@ -717,12 +719,12 @@
 - [uint256] : 
 
 - 备注: 
-
-- selector: 0x22457b02
 
 ## <b id="totalSupply()🇷">totalSupply()🇷</b>
 - 描述: 
 
+- selector: 0x18160ddd
+
 - 版本更新: 
 
 ### 返回值
@@ -731,10 +733,10 @@
 
 - 备注: 
 
-- selector: 0x18160ddd
-
 ## <b id="transfer(address,address,uint256)🇼">transfer(address,address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0xbeabacc8
 
 - 版本更新: 
 
@@ -747,12 +749,12 @@
 - [uint256] tokenId: 
 
 - 备注: 
-
-- selector: 0xbeabacc8
 
 ## <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b>
 - 描述: 
 
+- selector: 0x23b872dd
+
 - 版本更新: 
 
 ### 参数
@@ -765,10 +767,10 @@
 
 - 备注: 
 
-- selector: 0x23b872dd
-
 ## <b id="transferOwnership(address)🇼">transferOwnership(address)🇼</b>
 - 描述: 
+
+- selector: 0xf2fde38b
 
 - 版本更新: 
 
@@ -778,9 +780,7 @@
 
 - 备注: 
 
-- selector: 0xf2fde38b
-
 ___
 
-*updated: 2024-10-05 01:58:43 - isotop⚛“2024*
+*updated: 2024-10-05 02:08:36 - isotop⚛“2024*
 

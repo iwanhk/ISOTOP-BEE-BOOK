@@ -64,6 +64,8 @@
 ## <b id="Account(uint256)🇷">Account(uint256)🇷</b>
 - 描述: 
 
+- selector: 0xc496a4e1
+
 - 版本更新: 
 
 ### 参数
@@ -76,10 +78,10 @@
 
 - 备注: 
 
-- selector: 0xc496a4e1
-
 ## <b id="Account(string)🇷">Account(string)🇷</b>
 - 描述: 
+
+- selector: 0xc4b6395c
 
 - 版本更新: 
 
@@ -93,10 +95,10 @@
 
 - 备注: 
 
-- selector: 0xc4b6395c
-
 ## <b id="addAddress(string,address)🇼">addAddress(string,address)🇼</b>
 - 描述: 
+
+- selector: 0xceb35b0f
 
 - 版本更新: 
 
@@ -108,10 +110,10 @@
 
 - 备注: 
 
-- selector: 0xceb35b0f
-
 ## <b id="addAsset(string,address)🇼">addAsset(string,address)🇼</b>
 - 描述: 
+
+- selector: 0xadc02a64
 
 - 版本更新: 
 
@@ -123,10 +125,10 @@
 
 - 备注: 
 
-- selector: 0xadc02a64
-
 ## <b id="addOperator(address)🇼">addOperator(address)🇼</b>
 - 描述: 
+
+- selector: 0x9870d7fe
 
 - 版本更新: 
 
@@ -136,10 +138,10 @@
 
 - 备注: 
 
-- selector: 0x9870d7fe
-
 ## <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0xf045000d
 
 - 版本更新: 
 
@@ -151,10 +153,10 @@
 
 - 备注: 
 
-- selector: 0xf045000d
-
 ## <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x095ea7b3
 
 - 版本更新: 
 
@@ -166,10 +168,10 @@
 
 - 备注: 
 
-- selector: 0x095ea7b3
-
 ## <b id="balanceOf(address)🇷">balanceOf(address)🇷</b>
 - 描述: 
+
+- selector: 0x70a08231
 
 - 版本更新: 
 
@@ -183,10 +185,10 @@
 
 - 备注: 
 
-- selector: 0x70a08231
-
 ## <b id="burn(uint256)🇼">burn(uint256)🇼</b>
 - 描述: 
+
+- selector: 0x42966c68
 
 - 版本更新: 
 
@@ -196,10 +198,10 @@
 
 - 备注: 
 
-- selector: 0x42966c68
-
 ## <b id="contractInfo()🇷">contractInfo()🇷</b>
 - 描述: 
+
+- selector: 0x15c43aaf
 
 - 版本更新: 
 
@@ -209,10 +211,10 @@
 
 - 备注: 
 
-- selector: 0x15c43aaf
-
 ## <b id="create(string,string,address,uint256)🇼">create(string,string,address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0xd069c371
 
 - 版本更新: 
 
@@ -228,10 +230,10 @@
 
 - 备注: 
 
-- selector: 0xd069c371
-
 ## <b id="createAccount(string)🇼">createAccount(string)🇼</b>
 - 描述: 
+
+- selector: 0x298daf5b
 
 - 版本更新: 
 
@@ -241,10 +243,10 @@
 
 - 备注: 
 
-- selector: 0x298daf5b
-
 ## <b id="data(string)🇷">data(string)🇷</b>
 - 描述: 
+
+- selector: 0x04f6748c
 
 - 版本更新: 
 
@@ -258,10 +260,10 @@
 
 - 备注: 
 
-- selector: 0x04f6748c
-
 ## <b id="dump()🇷">dump()🇷</b>
 - 描述: 
+
+- selector: 0xe4330545
 
 - 版本更新: 
 
@@ -271,10 +273,10 @@
 
 - 备注: 
 
-- selector: 0xe4330545
-
 ## <b id="erc6551ImplementationAddress()🇷">erc6551ImplementationAddress()🇷</b>
 - 描述: 
+
+- selector: 0xee845881
 
 - 版本更新: 
 
@@ -284,10 +286,10 @@
 
 - 备注: 
 
-- selector: 0xee845881
-
 ## <b id="expire(string)🇷">expire(string)🇷</b>
 - 描述: 
+
+- selector: 0x1cae3bee
 
 - 版本更新: 
 
@@ -301,10 +303,10 @@
 
 - 备注: 
 
-- selector: 0x1cae3bee
-
 ## <b id="getApproved(uint256)🇷">getApproved(uint256)🇷</b>
 - 描述: 
+
+- selector: 0x081812fc
 
 - 版本更新: 
 
@@ -318,10 +320,10 @@
 
 - 备注: 
 
-- selector: 0x081812fc
-
 ## <b id="getManagersAddress(string)🇷">getManagersAddress(string)🇷</b>
 - 描述: 
+
+- selector: 0xaa1266d1
 
 - 版本更新: 
 
@@ -335,10 +337,10 @@
 
 - 备注: 
 
-- selector: 0xaa1266d1
-
 ## <b id="getOperators()🇷">getOperators()🇷</b>
 - 描述: 
+
+- selector: 0x27a099d8
 
 - 版本更新: 
 
@@ -348,10 +350,10 @@
 
 - 备注: 
 
-- selector: 0x27a099d8
-
 ## <b id="getQuota(address)🇷">getQuota(address)🇷</b>
 - 描述: 
+
+- selector: 0x43a2a302
 
 - 版本更新: 
 
@@ -365,10 +367,10 @@
 
 - 备注: 
 
-- selector: 0x43a2a302
-
 ## <b id="hasAsset(string,address)🇷">hasAsset(string,address)🇷</b>
 - 描述: 
+
+- selector: 0xfecdd62f
 
 - 版本更新: 
 
@@ -384,10 +386,10 @@
 
 - 备注: 
 
-- selector: 0xfecdd62f
-
 ## <b id="index(string)🇷">index(string)🇷</b>
 - 描述: 
+
+- selector: 0xf5db08d9
 
 - 版本更新: 
 
@@ -401,10 +403,10 @@
 
 - 备注: 
 
-- selector: 0xf5db08d9
-
 ## <b id="init(address,address)🇼">init(address,address)🇼</b>
 - 描述: 
+
+- selector: 0xf09a4016
 
 - 版本更新: 
 
@@ -416,10 +418,10 @@
 
 - 备注: 
 
-- selector: 0xf09a4016
-
 ## <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>
 - 描述: 
+
+- selector: 0xe985e9c5
 
 - 版本更新: 
 
@@ -435,10 +437,10 @@
 
 - 备注: 
 
-- selector: 0xe985e9c5
-
 ## <b id="isOperator(address)🇷">isOperator(address)🇷</b>
 - 描述: 
+
+- selector: 0x6d70f7ae
 
 - 版本更新: 
 
@@ -452,10 +454,10 @@
 
 - 备注: 
 
-- selector: 0x6d70f7ae
-
 ## <b id="name()🇷">name()🇷</b>
 - 描述: 
+
+- selector: 0x06fdde03
 
 - 版本更新: 
 
@@ -465,10 +467,10 @@
 
 - 备注: 
 
-- selector: 0x06fdde03
-
 ## <b id="owner()🇷">owner()🇷</b>
 - 描述: 
+
+- selector: 0x8da5cb5b
 
 - 版本更新: 
 
@@ -478,10 +480,10 @@
 
 - 备注: 
 
-- selector: 0x8da5cb5b
-
 ## <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>
 - 描述: 
+
+- selector: 0x6352211e
 
 - 版本更新: 
 
@@ -495,10 +497,10 @@
 
 - 备注: 
 
-- selector: 0x6352211e
-
 ## <b id="query(string)🇷">query(string)🇷</b>
 - 描述: 
+
+- selector: 0x7c261929
 
 - 版本更新: 
 
@@ -512,10 +514,10 @@
 
 - 备注: 
 
-- selector: 0x7c261929
-
 ## <b id="query(uint256)🇷">query(uint256)🇷</b>
 - 描述: 
+
+- selector: 0xafdac68d
 
 - 版本更新: 
 
@@ -529,10 +531,10 @@
 
 - 备注: 
 
-- selector: 0xafdac68d
-
 ## <b id="query(address)🇷">query(address)🇷</b>
 - 描述: 
+
+- selector: 0xd4fc9fc6
 
 - 版本更新: 
 
@@ -546,10 +548,10 @@
 
 - 备注: 
 
-- selector: 0xd4fc9fc6
-
 ## <b id="removeAddress(string,address)🇼">removeAddress(string,address)🇼</b>
 - 描述: 
+
+- selector: 0xb166493b
 
 - 版本更新: 
 
@@ -561,10 +563,10 @@
 
 - 备注: 
 
-- selector: 0xb166493b
-
 ## <b id="removeOperator(address)🇼">removeOperator(address)🇼</b>
 - 描述: 
+
+- selector: 0xac8a584a
 
 - 版本更新: 
 
@@ -574,10 +576,10 @@
 
 - 备注: 
 
-- selector: 0xac8a584a
-
 ## <b id="renew(uint256,uint256)🇼">renew(uint256,uint256)🇼</b>
 - 描述: 
+
+- selector: 0xc475abff
 
 - 版本更新: 
 
@@ -589,19 +591,19 @@
 
 - 备注: 
 
-- selector: 0xc475abff
-
 ## <b id="renounceOwnership()🇼">renounceOwnership()🇼</b>
 - 描述: 
+
+- selector: 0x715018a6
 
 - 版本更新: 
 
 - 备注: 
 
-- selector: 0x715018a6
-
 ## <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x42842e0e
 
 - 版本更新: 
 
@@ -615,10 +617,10 @@
 
 - 备注: 
 
-- selector: 0x42842e0e
-
 ## <b id="safeTransferFrom(address,address,uint256,bytes)🇼">safeTransferFrom(address,address,uint256,bytes)🇼</b>
 - 描述: 
+
+- selector: 0xb88d4fde
 
 - 版本更新: 
 
@@ -634,10 +636,10 @@
 
 - 备注: 
 
-- selector: 0xb88d4fde
-
 ## <b id="sell(address,address,uint256,uint256)🇼">sell(address,address,uint256,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x31de7d15
 
 - 版本更新: 
 
@@ -653,10 +655,10 @@
 
 - 备注: 
 
-- selector: 0x31de7d15
-
 ## <b id="setApprovalForAll(address,bool)🇼">setApprovalForAll(address,bool)🇼</b>
 - 描述: 
+
+- selector: 0xa22cb465
 
 - 版本更新: 
 
@@ -668,10 +670,10 @@
 
 - 备注: 
 
-- selector: 0xa22cb465
-
 ## <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x03ce3355
 
 - 版本更新: 
 
@@ -683,10 +685,10 @@
 
 - 备注: 
 
-- selector: 0x03ce3355
-
 ## <b id="supportsInterface(bytes4)🇷">supportsInterface(bytes4)🇷</b>
 - 描述: 
+
+- selector: 0x01ffc9a7
 
 - 版本更新: 
 
@@ -700,10 +702,10 @@
 
 - 备注: 
 
-- selector: 0x01ffc9a7
-
 ## <b id="symbol()🇷">symbol()🇷</b>
 - 描述: 
+
+- selector: 0x95d89b41
 
 - 版本更新: 
 
@@ -713,10 +715,10 @@
 
 - 备注: 
 
-- selector: 0x95d89b41
-
 ## <b id="tokenBoundRegistry()🇷">tokenBoundRegistry()🇷</b>
 - 描述: 
+
+- selector: 0xfdf250df
 
 - 版本更新: 
 
@@ -726,10 +728,10 @@
 
 - 备注: 
 
-- selector: 0xfdf250df
-
 ## <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>
 - 描述: 
+
+- selector: 0x4f6ccce7
 
 - 版本更新: 
 
@@ -743,10 +745,10 @@
 
 - 备注: 
 
-- selector: 0x4f6ccce7
-
 ## <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>
 - 描述: 
+
+- selector: 0x2f745c59
 
 - 版本更新: 
 
@@ -762,10 +764,10 @@
 
 - 备注: 
 
-- selector: 0x2f745c59
-
 ## <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>
 - 描述: 
+
+- selector: 0xc87b56dd
 
 - 版本更新: 
 
@@ -779,10 +781,10 @@
 
 - 备注: 
 
-- selector: 0xc87b56dd
-
 ## <b id="totalSupply()🇷">totalSupply()🇷</b>
 - 描述: 
+
+- selector: 0x18160ddd
 
 - 版本更新: 
 
@@ -792,10 +794,10 @@
 
 - 备注: 
 
-- selector: 0x18160ddd
-
 ## <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b>
 - 描述: 
+
+- selector: 0x23b872dd
 
 - 版本更新: 
 
@@ -809,10 +811,10 @@
 
 - 备注: 
 
-- selector: 0x23b872dd
-
 ## <b id="transferOwnership(address)🇼">transferOwnership(address)🇼</b>
 - 描述: 
+
+- selector: 0xf2fde38b
 
 - 版本更新: 
 
@@ -822,10 +824,10 @@
 
 - 备注: 
 
-- selector: 0xf2fde38b
-
 ## <b id="validateAddress(string,address)🇷">validateAddress(string,address)🇷</b>
 - 描述: 
+
+- selector: 0x5f1c0fbd
 
 - 版本更新: 
 
@@ -841,9 +843,7 @@
 
 - 备注: 
 
-- selector: 0x5f1c0fbd
-
 ___
 
-*updated: 2024-10-05 01:58:57 - isotop⚛“2024*
+*updated: 2024-10-05 02:08:41 - isotop⚛“2024*
 

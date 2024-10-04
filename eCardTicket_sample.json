@@ -1,0 +1,30 @@
+{
+    "name": "十一特惠卡",
+    "description": "中青文旅特别款，仅限学生用户",
+    "details": "detailsURI",
+    "image": "https://cctv2024.oss-cn-beijing.aliyuncs.com/gugong.png",
+    "extURI": "https://isotop.oss-cn-shanghai.aliyuncs.com/20240102/2f0c555cd605483b9edd679f4e9d6d27.html",
+    "designer": "isotop.top",
+    "attributes": [
+        {
+            "trait_type": "有效期",
+            "value": "2024/10/26 - 2024/12/31"
+        },
+        {
+            "trait_type": "包含门票",
+            "value": "2"
+        },
+        {
+            "trait_type": "可用门票",
+            "value": "0"
+        },
+        {
+            "trait_type": "0:漫葡·看见贺兰沉浸式演艺小镇",
+            "value": "已预约未到时间:1735516800"
+        },
+        {
+            "trait_type": "1:故宫博物院",
+            "value": "未预约"
+        }
+    ]
+}
