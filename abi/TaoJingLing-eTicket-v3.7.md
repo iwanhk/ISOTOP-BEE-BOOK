@@ -23,7 +23,7 @@
 | 2️⃣0️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
 | 2️⃣1️⃣ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
 | 2️⃣2️⃣ [isReservedDay(uint256,uint8)🇷](#isReservedDay(uint256,uint8)🇷)|  |  |  |
-| 2️⃣3️⃣ [mint(address,uint256)🇼](#mint(address,uint256)🇼)|  |  |  |
+| 2️⃣3️⃣ [mint(address,uint256)🇼](#mint(address,uint256)🇼)| 发行门票 | ✅ |  |
 | 2️⃣4️⃣ [name()🇷](#name()🇷)|  |  |  |
 | 2️⃣5️⃣ [owner()🇷](#owner()🇷)|  |  |  |
 | 2️⃣6️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
@@ -428,7 +428,7 @@
 - 备注: 
 
 ## 2️⃣3️⃣ <b id="mint(address,uint256)🇼">mint(address,uint256)🇼</b> [🔙](#home)
-- 描述: 
+- **描述**: 发行门票
 
 - selector: 0x40c10f19
 
@@ -721,5 +721,5 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 18:47:35    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 18:52:15    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
