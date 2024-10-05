@@ -1,50 +1,50 @@
 | <b id="home">方法</b>   | 说明  | 重要  | 更新    |
 |-------|-------|-------|-------|
-| 0️⃣ [addBank(uint256)🇼](#addBank(uint256)🇼)| 加库存 | ✅ |  |
-| 1️⃣ [addOperator(address)🇼](#addOperator(address)🇼)|  |  |  |
-| 2️⃣ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 给管理员渠道商限定最多可卖的票 | ✅ |  |
-| 3️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
-| 4️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)|  |  |  |
-| 5️⃣ [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
-| 6️⃣ [check(uint256,address,string,address)🇼](#check(uint256,address,string,address)🇼)| 核销权益卡 | ✅ |  |
-| 7️⃣ [check(uint256,address,string,uint256,string,address)🇼](#check(uint256,address,string,uint256,string,address)🇼)| 预约核销卡权益 | ✅ |  |
-| 8️⃣ [claim(address,uint256)🇼](#claim(address,uint256)🇼)| 活动（免费）领取 | ✅ |  |
-| 9️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
-| 1️⃣0️⃣ [exists(uint256)🇷](#exists(uint256)🇷)|  |  |  |
-| 1️⃣1️⃣ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
-| 1️⃣2️⃣ [getBankRest()🇷](#getBankRest()🇷)|  |  |  |
-| 1️⃣3️⃣ [getOperator(uint256)🇷](#getOperator(uint256)🇷)|  |  |  |
-| 1️⃣4️⃣ [getOperators()🇷](#getOperators()🇷)|  |  |  |
-| 1️⃣5️⃣ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
-| 1️⃣6️⃣ [getStatus(uint256,address,uint8)🇷](#getStatus(uint256,address,uint8)🇷)|  |  |  |
-| 1️⃣7️⃣ [init(string[],address[],uint8,uint256,uint256)🇼](#init(string[],address[],uint8,uint256,uint256)🇼)| 初始化 | ✅ |  |
-| 1️⃣8️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
-| 1️⃣9️⃣ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
-| 2️⃣0️⃣ [mint(address,uint256)🇼](#mint(address,uint256)🇼)| 发行权益卡 | ✅ |  |
-| 2️⃣1️⃣ [name()🇷](#name()🇷)|  |  |  |
-| 2️⃣2️⃣ [owner()🇷](#owner()🇷)|  |  |  |
-| 2️⃣3️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
-| 2️⃣4️⃣ [refund(uint256)🇼](#refund(uint256)🇼)|  |  |  |
-| 2️⃣5️⃣ [removeBank(uint256)🇼](#removeBank(uint256)🇼)|  |  |  |
-| 2️⃣6️⃣ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
-| 2️⃣7️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
-| 2️⃣8️⃣ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)| 转增权益卡 | ✅ |  |
-| 2️⃣9️⃣ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
-| 3️⃣0️⃣ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
-| 3️⃣1️⃣ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
-| 3️⃣2️⃣ [setTreadstone(address)🇼](#setTreadstone(address)🇼)|  |  |  |
-| 3️⃣3️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
-| 3️⃣4️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
-| 3️⃣5️⃣ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
-| 3️⃣6️⃣ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
-| 3️⃣7️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)|  |  |  |
-| 3️⃣8️⃣ [tokens(uint256,uint256)🇷](#tokens(uint256,uint256)🇷)|  |  |  |
-| 3️⃣9️⃣ [tokensOf(address,uint256,uint256)🇷](#tokensOf(address,uint256,uint256)🇷)|  |  |  |
-| 4️⃣0️⃣ [totalBank()🇷](#totalBank()🇷)|  |  |  |
-| 4️⃣1️⃣ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
-| 4️⃣2️⃣ [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
-| 4️⃣3️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)|  |  |  |
-| 4️⃣4️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
+| ⁰ [addBank(uint256)🇼](#addBank(uint256)🇼)| 加库存 | ✅ |  |
+| ¹ [addOperator(address)🇼](#addOperator(address)🇼)|  |  |  |
+| ² [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 给管理员渠道商限定最多可卖的票 | ✅ |  |
+| ³ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
+| ⁴ [balanceOf(address)🇷](#balanceOf(address)🇷)|  |  |  |
+| ⁵ [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
+| ⁶ [check(uint256,address,string,address)🇼](#check(uint256,address,string,address)🇼)| 核销权益卡 | ✅ |  |
+| ⁷ [check(uint256,address,string,uint256,string,address)🇼](#check(uint256,address,string,uint256,string,address)🇼)| 预约核销卡权益 | ✅ |  |
+| ⁸ [claim(address,uint256)🇼](#claim(address,uint256)🇼)| 活动（免费）领取 | ✅ |  |
+| ⁹ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
+| ¹⁰ [exists(uint256)🇷](#exists(uint256)🇷)|  |  |  |
+| ¹¹ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
+| ¹² [getBankRest()🇷](#getBankRest()🇷)|  |  |  |
+| ¹³ [getOperator(uint256)🇷](#getOperator(uint256)🇷)|  |  |  |
+| ¹⁴ [getOperators()🇷](#getOperators()🇷)|  |  |  |
+| ¹⁵ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
+| ¹⁶ [getStatus(uint256,address,uint8)🇷](#getStatus(uint256,address,uint8)🇷)|  |  |  |
+| ¹⁷ [init(string[],address[],uint8,uint256,uint256)🇼](#init(string[],address[],uint8,uint256,uint256)🇼)| 初始化 | ✅ |  |
+| ¹⁸ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
+| ¹⁹ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
+| ²⁰ [mint(address,uint256)🇼](#mint(address,uint256)🇼)| 发行权益卡 | ✅ |  |
+| ²¹ [name()🇷](#name()🇷)|  |  |  |
+| ²² [owner()🇷](#owner()🇷)|  |  |  |
+| ²³ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
+| ²⁴ [refund(uint256)🇼](#refund(uint256)🇼)|  |  |  |
+| ²⁵ [removeBank(uint256)🇼](#removeBank(uint256)🇼)|  |  |  |
+| ²⁶ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
+| ²⁷ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
+| ²⁸ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)| 转增权益卡 | ✅ |  |
+| ²⁹ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
+| ³⁰ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
+| ³¹ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
+| ³² [setTreadstone(address)🇼](#setTreadstone(address)🇼)|  |  |  |
+| ³³ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
+| ³⁴ [symbol()🇷](#symbol()🇷)|  |  |  |
+| ³⁵ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
+| ³⁶ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
+| ³⁷ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)|  |  |  |
+| ³⁸ [tokens(uint256,uint256)🇷](#tokens(uint256,uint256)🇷)|  |  |  |
+| ³⁹ [tokensOf(address,uint256,uint256)🇷](#tokensOf(address,uint256,uint256)🇷)|  |  |  |
+| ⁴⁰ [totalBank()🇷](#totalBank()🇷)|  |  |  |
+| ⁴¹ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
+| ⁴² [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
+| ⁴³ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)|  |  |  |
+| ⁴⁴ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
 
 - **合约及版本**: eCardTicket-v4.3
 
@@ -56,7 +56,7 @@
 
 # 方法「✔ ᵛᵉʳᶦᶠᶦᵉᵈ」
 
-## 0️⃣ <b id="addBank(uint256)🇼">addBank(uint256)🇼</b>[^2]  [🔙](#home)
+## ⁰ <b id="addBank(uint256)🇼">addBank(uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 加库存
 
 - selector: 0x9e8d004a
@@ -69,7 +69,7 @@
 
 - 备注: 
 
-## 1️⃣ <b id="addOperator(address)🇼">addOperator(address)🇼</b>[^2]  [🔙](#home)
+## ¹ <b id="addOperator(address)🇼">addOperator(address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x9870d7fe
@@ -82,7 +82,7 @@
 
 - 备注: 
 
-## 2️⃣ <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ² <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 给管理员渠道商限定最多可卖的票
 
 - selector: 0xf045000d
@@ -97,7 +97,7 @@
 
 - 备注: 
 
-## 3️⃣ <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ³ <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x095ea7b3
@@ -112,7 +112,7 @@
 
 - 备注: 
 
-## 4️⃣ <b id="balanceOf(address)🇷">balanceOf(address)🇷</b>[^1]  [🔙](#home)
+## ⁴ <b id="balanceOf(address)🇷">balanceOf(address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x70a08231
@@ -129,7 +129,7 @@
 
 - 备注: 
 
-## 5️⃣ <b id="burn(uint256)🇼">burn(uint256)🇼</b>[^2]  [🔙](#home)
+## ⁵ <b id="burn(uint256)🇼">burn(uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x42966c68
@@ -142,7 +142,7 @@
 
 - 备注: 
 
-## 6️⃣ <b id="check(uint256,address,string,address)🇼">check(uint256,address,string,address)🇼</b>[^2]  [🔙](#home)
+## ⁶ <b id="check(uint256,address,string,address)🇼">check(uint256,address,string,address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 核销权益卡
 
 - selector: 0x1812c00a
@@ -161,7 +161,7 @@
 
 - 备注: 
 
-## 7️⃣ <b id="check(uint256,address,string,uint256,string,address)🇼">check(uint256,address,string,uint256,string,address)🇼</b>[^2]  [🔙](#home)
+## ⁷ <b id="check(uint256,address,string,uint256,string,address)🇼">check(uint256,address,string,uint256,string,address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 预约核销卡权益
 
 - selector: 0x9b5414f2
@@ -184,7 +184,7 @@
 
 - 备注: 
 
-## 8️⃣ <b id="claim(address,uint256)🇼">claim(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ⁸ <b id="claim(address,uint256)🇼">claim(address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 活动（免费）领取
 
 - selector: 0xaad3ec96
@@ -199,7 +199,7 @@
 
 - 备注: 
 
-## 9️⃣ <b id="contractInfo()🇷">contractInfo()🇷</b>[^1]  [🔙](#home)
+## ⁹ <b id="contractInfo()🇷">contractInfo()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x15c43aaf
@@ -212,7 +212,7 @@
 
 - 备注: 
 
-## 1️⃣0️⃣ <b id="exists(uint256)🇷">exists(uint256)🇷</b>[^1]  [🔙](#home)
+## ¹⁰ <b id="exists(uint256)🇷">exists(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x4f558e79
@@ -229,7 +229,7 @@
 
 - 备注: 
 
-## 1️⃣1️⃣ <b id="getApproved(uint256)🇷">getApproved(uint256)🇷</b>[^1]  [🔙](#home)
+## ¹¹ <b id="getApproved(uint256)🇷">getApproved(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x081812fc
@@ -246,7 +246,7 @@
 
 - 备注: 
 
-## 1️⃣2️⃣ <b id="getBankRest()🇷">getBankRest()🇷</b>[^1]  [🔙](#home)
+## ¹² <b id="getBankRest()🇷">getBankRest()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x6b796ec0
@@ -259,7 +259,7 @@
 
 - 备注: 
 
-## 1️⃣3️⃣ <b id="getOperator(uint256)🇷">getOperator(uint256)🇷</b>[^1]  [🔙](#home)
+## ¹³ <b id="getOperator(uint256)🇷">getOperator(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x05f63c8a
@@ -276,7 +276,7 @@
 
 - 备注: 
 
-## 1️⃣4️⃣ <b id="getOperators()🇷">getOperators()🇷</b>[^1]  [🔙](#home)
+## ¹⁴ <b id="getOperators()🇷">getOperators()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x27a099d8
@@ -289,7 +289,7 @@
 
 - 备注: 
 
-## 1️⃣5️⃣ <b id="getQuota(address)🇷">getQuota(address)🇷</b>[^1]  [🔙](#home)
+## ¹⁵ <b id="getQuota(address)🇷">getQuota(address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x43a2a302
@@ -306,7 +306,7 @@
 
 - 备注: 
 
-## 1️⃣6️⃣ <b id="getStatus(uint256,address,uint8)🇷">getStatus(uint256,address,uint8)🇷</b>[^1]  [🔙](#home)
+## ¹⁶ <b id="getStatus(uint256,address,uint8)🇷">getStatus(uint256,address,uint8)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x2f2885f4
@@ -329,7 +329,7 @@
 
 - 备注: 
 
-## 1️⃣7️⃣ <b id="init(string[],address[],uint8,uint256,uint256)🇼">init(string[],address[],uint8,uint256,uint256)🇼</b>[^2]  [🔙](#home)
+## ¹⁷ <b id="init(string[],address[],uint8,uint256,uint256)🇼">init(string[],address[],uint8,uint256,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 初始化
 
 - selector: 0xe5a0d3c0
@@ -350,7 +350,7 @@
 
 - 备注: 
 
-## 1️⃣8️⃣ <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>[^1]  [🔙](#home)
+## ¹⁸ <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0xe985e9c5
@@ -369,7 +369,7 @@
 
 - 备注: 
 
-## 1️⃣9️⃣ <b id="isOperator(address)🇷">isOperator(address)🇷</b>[^1]  [🔙](#home)
+## ¹⁹ <b id="isOperator(address)🇷">isOperator(address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x6d70f7ae
@@ -386,7 +386,7 @@
 
 - 备注: 
 
-## 2️⃣0️⃣ <b id="mint(address,uint256)🇼">mint(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ²⁰ <b id="mint(address,uint256)🇼">mint(address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 发行权益卡
 
 - selector: 0x40c10f19
@@ -401,7 +401,7 @@
 
 - 备注: 
 
-## 2️⃣1️⃣ <b id="name()🇷">name()🇷</b>[^1]  [🔙](#home)
+## ²¹ <b id="name()🇷">name()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x06fdde03
@@ -414,7 +414,7 @@
 
 - 备注: 
 
-## 2️⃣2️⃣ <b id="owner()🇷">owner()🇷</b>[^1]  [🔙](#home)
+## ²² <b id="owner()🇷">owner()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x8da5cb5b
@@ -427,7 +427,7 @@
 
 - 备注: 
 
-## 2️⃣3️⃣ <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>[^1]  [🔙](#home)
+## ²³ <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x6352211e
@@ -444,7 +444,7 @@
 
 - 备注: 
 
-## 2️⃣4️⃣ <b id="refund(uint256)🇼">refund(uint256)🇼</b>[^2]  [🔙](#home)
+## ²⁴ <b id="refund(uint256)🇼">refund(uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x278ecde1
@@ -457,7 +457,7 @@
 
 - 备注: 
 
-## 2️⃣5️⃣ <b id="removeBank(uint256)🇼">removeBank(uint256)🇼</b>[^2]  [🔙](#home)
+## ²⁵ <b id="removeBank(uint256)🇼">removeBank(uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x3ad3bfa8
@@ -470,7 +470,7 @@
 
 - 备注: 
 
-## 2️⃣6️⃣ <b id="removeOperator(address)🇼">removeOperator(address)🇼</b>[^2]  [🔙](#home)
+## ²⁶ <b id="removeOperator(address)🇼">removeOperator(address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xac8a584a
@@ -483,7 +483,7 @@
 
 - 备注: 
 
-## 2️⃣7️⃣ <b id="renounceOwnership()🇼">renounceOwnership()🇼</b>[^2]  [🔙](#home)
+## ²⁷ <b id="renounceOwnership()🇼">renounceOwnership()🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x715018a6
@@ -492,7 +492,7 @@
 
 - 备注: 
 
-## 2️⃣8️⃣ <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
+## ²⁸ <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 转增权益卡
 
 - selector: 0x42842e0e
@@ -509,7 +509,7 @@
 
 - 备注: 
 
-## 2️⃣9️⃣ <b id="safeTransferFrom(address,address,uint256,bytes)🇼">safeTransferFrom(address,address,uint256,bytes)🇼</b>[^2]  [🔙](#home)
+## ²⁹ <b id="safeTransferFrom(address,address,uint256,bytes)🇼">safeTransferFrom(address,address,uint256,bytes)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xb88d4fde
@@ -528,7 +528,7 @@
 
 - 备注: 
 
-## 3️⃣0️⃣ <b id="setApprovalForAll(address,bool)🇼">setApprovalForAll(address,bool)🇼</b>[^2]  [🔙](#home)
+## ³⁰ <b id="setApprovalForAll(address,bool)🇼">setApprovalForAll(address,bool)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xa22cb465
@@ -543,7 +543,7 @@
 
 - 备注: 
 
-## 3️⃣1️⃣ <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ³¹ <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x03ce3355
@@ -558,7 +558,7 @@
 
 - 备注: 
 
-## 3️⃣2️⃣ <b id="setTreadstone(address)🇼">setTreadstone(address)🇼</b>[^2]  [🔙](#home)
+## ³² <b id="setTreadstone(address)🇼">setTreadstone(address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xfc780816
@@ -571,7 +571,7 @@
 
 - 备注: 
 
-## 3️⃣3️⃣ <b id="supportsInterface(bytes4)🇷">supportsInterface(bytes4)🇷</b>[^1]  [🔙](#home)
+## ³³ <b id="supportsInterface(bytes4)🇷">supportsInterface(bytes4)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x01ffc9a7
@@ -588,7 +588,7 @@
 
 - 备注: 
 
-## 3️⃣4️⃣ <b id="symbol()🇷">symbol()🇷</b>[^1]  [🔙](#home)
+## ³⁴ <b id="symbol()🇷">symbol()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x95d89b41
@@ -601,7 +601,7 @@
 
 - 备注: 
 
-## 3️⃣5️⃣ <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>[^1]  [🔙](#home)
+## ³⁵ <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x4f6ccce7
@@ -618,7 +618,7 @@
 
 - 备注: 
 
-## 3️⃣6️⃣ <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>[^1]  [🔙](#home)
+## ³⁶ <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x2f745c59
@@ -637,7 +637,7 @@
 
 - 备注: 
 
-## 3️⃣7️⃣ <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>[^1]  [🔙](#home)
+## ³⁷ <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0xc87b56dd
@@ -654,7 +654,7 @@
 
 - 备注: 
 
-## 3️⃣8️⃣ <b id="tokens(uint256,uint256)🇷">tokens(uint256,uint256)🇷</b>[^1]  [🔙](#home)
+## ³⁸ <b id="tokens(uint256,uint256)🇷">tokens(uint256,uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x8b4864d6
@@ -675,7 +675,7 @@
 
 - 备注: 
 
-## 3️⃣9️⃣ <b id="tokensOf(address,uint256,uint256)🇷">tokensOf(address,uint256,uint256)🇷</b>[^1]  [🔙](#home)
+## ³⁹ <b id="tokensOf(address,uint256,uint256)🇷">tokensOf(address,uint256,uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x23185dc9
@@ -698,7 +698,7 @@
 
 - 备注: 
 
-## 4️⃣0️⃣ <b id="totalBank()🇷">totalBank()🇷</b>[^1]  [🔙](#home)
+## ⁴⁰ <b id="totalBank()🇷">totalBank()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x22457b02
@@ -711,7 +711,7 @@
 
 - 备注: 
 
-## 4️⃣1️⃣ <b id="totalSupply()🇷">totalSupply()🇷</b>[^1]  [🔙](#home)
+## ⁴¹ <b id="totalSupply()🇷">totalSupply()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x18160ddd
@@ -724,7 +724,7 @@
 
 - 备注: 
 
-## 4️⃣2️⃣ <b id="transfer(address,address,uint256)🇼">transfer(address,address,uint256)🇼</b>[^2]  [🔙](#home)
+## ⁴² <b id="transfer(address,address,uint256)🇼">transfer(address,address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xbeabacc8
@@ -741,7 +741,7 @@
 
 - 备注: 
 
-## 4️⃣3️⃣ <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
+## ⁴³ <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x23b872dd
@@ -758,7 +758,7 @@
 
 - 备注: 
 
-## 4️⃣4️⃣ <b id="transferOwnership(address)🇼">transferOwnership(address)🇼</b>[^2]  [🔙](#home)
+## ⁴⁴ <b id="transferOwnership(address)🇼">transferOwnership(address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xf2fde38b
@@ -773,7 +773,7 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 19:34:26    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 19:38:33    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
 
 

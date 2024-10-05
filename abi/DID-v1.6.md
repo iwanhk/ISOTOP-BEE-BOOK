@@ -1,55 +1,55 @@
 | <b id="home">方法</b>   | 说明  | 重要  | 更新    |
 |-------|-------|-------|-------|
-| 0️⃣ [Account(uint256)🇷](#Account(uint256)🇷)| 通过编号获得对应的DID名称 | ✅ |  |
-| 1️⃣ [Account(string)🇷](#Account(string)🇷)| 通过DID名字取得链账户地址 | ✅ |  |
-| 2️⃣ [addAddress(string,address)🇼](#addAddress(string,address)🇼)| 添加DID的共享人地址 | ✅ |  |
-| 3️⃣ [addAsset(string,address)🇼](#addAsset(string,address)🇼)| 添加DID资产 | ✅ |  |
-| 4️⃣ [addOperator(address)🇼](#addOperator(address)🇼)| 添加管理员地址 | ✅ |  |
-| 5️⃣ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制管理员能够操作的次数 | ✅ |  |
-| 6️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
-| 7️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)| 查询某个地址拥有的DID数量 | ✅ |  |
-| 8️⃣ [burn(uint256)🇼](#burn(uint256)🇼)| 销毁DID | ✅ |  |
-| 9️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
-| 1️⃣0️⃣ [create(string,string,address,uint256)🇼](#create(string,string,address,uint256)🇼)| 创建DID | ✅ |  |
-| 1️⃣1️⃣ [createAccount(string)🇼](#createAccount(string)🇼)|  |  |  |
-| 1️⃣2️⃣ [data(string)🇷](#data(string)🇷)|  |  |  |
-| 1️⃣3️⃣ [dump()🇷](#dump()🇷)| 导出所有创建的DID清单 | ✅ |  |
-| 1️⃣4️⃣ [erc6551ImplementationAddress()🇷](#erc6551ImplementationAddress()🇷)|  |  |  |
-| 1️⃣5️⃣ [expire(string)🇷](#expire(string)🇷)|  |  |  |
-| 1️⃣6️⃣ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
-| 1️⃣7️⃣ [getManagersAddress(string)🇷](#getManagersAddress(string)🇷)|  |  |  |
-| 1️⃣8️⃣ [getOperators()🇷](#getOperators()🇷)|  |  |  |
-| 1️⃣9️⃣ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
-| 2️⃣0️⃣ [hasAsset(string,address)🇷](#hasAsset(string,address)🇷)| 是否拥有一个资产 | ✅ |  |
-| 2️⃣1️⃣ [index(string)🇷](#index(string)🇷)| 查询DID的编号 | ✅ |  |
-| 2️⃣2️⃣ [init(address,address)🇼](#init(address,address)🇼)| 初始化合约 | ✅ |  |
-| 2️⃣3️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
-| 2️⃣4️⃣ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
-| 2️⃣5️⃣ [name()🇷](#name()🇷)|  |  |  |
-| 2️⃣6️⃣ [owner()🇷](#owner()🇷)|  |  |  |
-| 2️⃣7️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
-| 2️⃣8️⃣ [query(string)🇷](#query(string)🇷)| 查询DID的拥有人 | ✅ |  |
-| 2️⃣9️⃣ [query(uint256)🇷](#query(uint256)🇷)| 查询编号的DID名称 | ✅ |  |
-| 3️⃣0️⃣ [query(address)🇷](#query(address)🇷)| 查询某个地址拥有的DID清单 | ✅ |  |
-| 3️⃣1️⃣ [removeAddress(string,address)🇼](#removeAddress(string,address)🇼)|  |  |  |
-| 3️⃣2️⃣ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
-| 3️⃣3️⃣ [renew(uint256,uint256)🇼](#renew(uint256,uint256)🇼)| 续约 | ✅ |  |
-| 3️⃣4️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
-| 3️⃣5️⃣ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
-| 3️⃣6️⃣ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
-| 3️⃣7️⃣ [sell(address,address,uint256,uint256)🇼](#sell(address,address,uint256,uint256)🇼)| 售卖 | ✅ |  |
-| 3️⃣8️⃣ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
-| 3️⃣9️⃣ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
-| 4️⃣0️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
-| 4️⃣1️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
-| 4️⃣2️⃣ [tokenBoundRegistry()🇷](#tokenBoundRegistry()🇷)|  |  |  |
-| 4️⃣3️⃣ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
-| 4️⃣4️⃣ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
-| 4️⃣5️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| DID的元数据 | ✅ |  |
-| 4️⃣6️⃣ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
-| 4️⃣7️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转增 | ✅ |  |
-| 4️⃣8️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
-| 4️⃣9️⃣ [validateAddress(string,address)🇷](#validateAddress(string,address)🇷)| 验证某个地址是否是DID的共享人 | ✅ |  |
+| ⁰ [Account(uint256)🇷](#Account(uint256)🇷)| 通过编号获得对应的DID名称 | ✅ |  |
+| ¹ [Account(string)🇷](#Account(string)🇷)| 通过DID名字取得链账户地址 | ✅ |  |
+| ² [addAddress(string,address)🇼](#addAddress(string,address)🇼)| 添加DID的共享人地址 | ✅ |  |
+| ³ [addAsset(string,address)🇼](#addAsset(string,address)🇼)| 添加DID资产 | ✅ |  |
+| ⁴ [addOperator(address)🇼](#addOperator(address)🇼)| 添加管理员地址 | ✅ |  |
+| ⁵ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制管理员能够操作的次数 | ✅ |  |
+| ⁶ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
+| ⁷ [balanceOf(address)🇷](#balanceOf(address)🇷)| 查询某个地址拥有的DID数量 | ✅ |  |
+| ⁸ [burn(uint256)🇼](#burn(uint256)🇼)| 销毁DID | ✅ |  |
+| ⁹ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
+| ¹⁰ [create(string,string,address,uint256)🇼](#create(string,string,address,uint256)🇼)| 创建DID | ✅ |  |
+| ¹¹ [createAccount(string)🇼](#createAccount(string)🇼)|  |  |  |
+| ¹² [data(string)🇷](#data(string)🇷)|  |  |  |
+| ¹³ [dump()🇷](#dump()🇷)| 导出所有创建的DID清单 | ✅ |  |
+| ¹⁴ [erc6551ImplementationAddress()🇷](#erc6551ImplementationAddress()🇷)|  |  |  |
+| ¹⁵ [expire(string)🇷](#expire(string)🇷)|  |  |  |
+| ¹⁶ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
+| ¹⁷ [getManagersAddress(string)🇷](#getManagersAddress(string)🇷)|  |  |  |
+| ¹⁸ [getOperators()🇷](#getOperators()🇷)|  |  |  |
+| ¹⁹ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
+| ²⁰ [hasAsset(string,address)🇷](#hasAsset(string,address)🇷)| 是否拥有一个资产 | ✅ |  |
+| ²¹ [index(string)🇷](#index(string)🇷)| 查询DID的编号 | ✅ |  |
+| ²² [init(address,address)🇼](#init(address,address)🇼)| 初始化合约 | ✅ |  |
+| ²³ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
+| ²⁴ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
+| ²⁵ [name()🇷](#name()🇷)|  |  |  |
+| ²⁶ [owner()🇷](#owner()🇷)|  |  |  |
+| ²⁷ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
+| ²⁸ [query(string)🇷](#query(string)🇷)| 查询DID的拥有人 | ✅ |  |
+| ²⁹ [query(uint256)🇷](#query(uint256)🇷)| 查询编号的DID名称 | ✅ |  |
+| ³⁰ [query(address)🇷](#query(address)🇷)| 查询某个地址拥有的DID清单 | ✅ |  |
+| ³¹ [removeAddress(string,address)🇼](#removeAddress(string,address)🇼)|  |  |  |
+| ³² [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
+| ³³ [renew(uint256,uint256)🇼](#renew(uint256,uint256)🇼)| 续约 | ✅ |  |
+| ³⁴ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
+| ³⁵ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
+| ³⁶ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
+| ³⁷ [sell(address,address,uint256,uint256)🇼](#sell(address,address,uint256,uint256)🇼)| 售卖 | ✅ |  |
+| ³⁸ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
+| ³⁹ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
+| ⁴⁰ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
+| ⁴¹ [symbol()🇷](#symbol()🇷)|  |  |  |
+| ⁴² [tokenBoundRegistry()🇷](#tokenBoundRegistry()🇷)|  |  |  |
+| ⁴³ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
+| ⁴⁴ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
+| ⁴⁵ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| DID的元数据 | ✅ |  |
+| ⁴⁶ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
+| ⁴⁷ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转增 | ✅ |  |
+| ⁴⁸ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
+| ⁴⁹ [validateAddress(string,address)🇷](#validateAddress(string,address)🇷)| 验证某个地址是否是DID的共享人 | ✅ |  |
 
 - **合约及版本**: DID-v1.6
 
@@ -61,7 +61,7 @@
 
 # 方法「✔ ᵛᵉʳᶦᶠᶦᵉᵈ」
 
-## 0️⃣ <b id="Account(uint256)🇷">Account(uint256)🇷</b>[^1]  [🔙](#home)
+## ⁰ <b id="Account(uint256)🇷">Account(uint256)🇷</b>[^1]  [🔙](#home)
 - **描述**: 通过编号获得对应的DID名称
 
 - selector: 0xc496a4e1
@@ -78,7 +78,7 @@
 
 - 备注: 
 
-## 1️⃣ <b id="Account(string)🇷">Account(string)🇷</b>[^1]  [🔙](#home)
+## ¹ <b id="Account(string)🇷">Account(string)🇷</b>[^1]  [🔙](#home)
 - **描述**: 通过DID名字取得链账户地址
 
 - selector: 0xc4b6395c
@@ -95,7 +95,7 @@
 
 - 备注: 
 
-## 2️⃣ <b id="addAddress(string,address)🇼">addAddress(string,address)🇼</b>[^2]  [🔙](#home)
+## ² <b id="addAddress(string,address)🇼">addAddress(string,address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 添加DID的共享人地址
 
 - selector: 0xceb35b0f
@@ -110,7 +110,7 @@
 
 - 备注: 
 
-## 3️⃣ <b id="addAsset(string,address)🇼">addAsset(string,address)🇼</b>[^2]  [🔙](#home)
+## ³ <b id="addAsset(string,address)🇼">addAsset(string,address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 添加DID资产
 
 - selector: 0xadc02a64
@@ -125,7 +125,7 @@
 
 - 备注: 
 
-## 4️⃣ <b id="addOperator(address)🇼">addOperator(address)🇼</b>[^2]  [🔙](#home)
+## ⁴ <b id="addOperator(address)🇼">addOperator(address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 添加管理员地址
 
 - selector: 0x9870d7fe
@@ -138,7 +138,7 @@
 
 - **备注**: 管理员可以创建DID等操作
 
-## 5️⃣ <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ⁵ <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 限制管理员能够操作的次数
 
 - selector: 0xf045000d
@@ -153,7 +153,7 @@
 
 - 备注: 
 
-## 6️⃣ <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ⁶ <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x095ea7b3
@@ -168,7 +168,7 @@
 
 - 备注: 
 
-## 7️⃣ <b id="balanceOf(address)🇷">balanceOf(address)🇷</b>[^1]  [🔙](#home)
+## ⁷ <b id="balanceOf(address)🇷">balanceOf(address)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询某个地址拥有的DID数量
 
 - selector: 0x70a08231
@@ -185,7 +185,7 @@
 
 - 备注: 
 
-## 8️⃣ <b id="burn(uint256)🇼">burn(uint256)🇼</b>[^2]  [🔙](#home)
+## ⁸ <b id="burn(uint256)🇼">burn(uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 销毁DID
 
 - selector: 0x42966c68
@@ -198,7 +198,7 @@
 
 - 备注: 
 
-## 9️⃣ <b id="contractInfo()🇷">contractInfo()🇷</b>[^1]  [🔙](#home)
+## ⁹ <b id="contractInfo()🇷">contractInfo()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x15c43aaf
@@ -211,7 +211,7 @@
 
 - 备注: 
 
-## 1️⃣0️⃣ <b id="create(string,string,address,uint256)🇼">create(string,string,address,uint256)🇼</b>[^2]  [🔙](#home)
+## ¹⁰ <b id="create(string,string,address,uint256)🇼">create(string,string,address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 创建DID
 
 - selector: 0xd069c371
@@ -230,7 +230,7 @@
 
 - 备注: 
 
-## 1️⃣1️⃣ <b id="createAccount(string)🇼">createAccount(string)🇼</b>[^2]  [🔙](#home)
+## ¹¹ <b id="createAccount(string)🇼">createAccount(string)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x298daf5b
@@ -243,7 +243,7 @@
 
 - 备注: 
 
-## 1️⃣2️⃣ <b id="data(string)🇷">data(string)🇷</b>[^1]  [🔙](#home)
+## ¹² <b id="data(string)🇷">data(string)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x04f6748c
@@ -260,7 +260,7 @@
 
 - 备注: 
 
-## 1️⃣3️⃣ <b id="dump()🇷">dump()🇷</b>[^1]  [🔙](#home)
+## ¹³ <b id="dump()🇷">dump()🇷</b>[^1]  [🔙](#home)
 - **描述**: 导出所有创建的DID清单
 
 - selector: 0xe4330545
@@ -273,7 +273,7 @@
 
 - 备注: 
 
-## 1️⃣4️⃣ <b id="erc6551ImplementationAddress()🇷">erc6551ImplementationAddress()🇷</b>[^1]  [🔙](#home)
+## ¹⁴ <b id="erc6551ImplementationAddress()🇷">erc6551ImplementationAddress()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0xee845881
@@ -286,7 +286,7 @@
 
 - 备注: 
 
-## 1️⃣5️⃣ <b id="expire(string)🇷">expire(string)🇷</b>[^1]  [🔙](#home)
+## ¹⁵ <b id="expire(string)🇷">expire(string)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x1cae3bee
@@ -303,7 +303,7 @@
 
 - 备注: 
 
-## 1️⃣6️⃣ <b id="getApproved(uint256)🇷">getApproved(uint256)🇷</b>[^1]  [🔙](#home)
+## ¹⁶ <b id="getApproved(uint256)🇷">getApproved(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x081812fc
@@ -320,7 +320,7 @@
 
 - 备注: 
 
-## 1️⃣7️⃣ <b id="getManagersAddress(string)🇷">getManagersAddress(string)🇷</b>[^1]  [🔙](#home)
+## ¹⁷ <b id="getManagersAddress(string)🇷">getManagersAddress(string)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0xaa1266d1
@@ -337,7 +337,7 @@
 
 - 备注: 
 
-## 1️⃣8️⃣ <b id="getOperators()🇷">getOperators()🇷</b>[^1]  [🔙](#home)
+## ¹⁸ <b id="getOperators()🇷">getOperators()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x27a099d8
@@ -350,7 +350,7 @@
 
 - 备注: 
 
-## 1️⃣9️⃣ <b id="getQuota(address)🇷">getQuota(address)🇷</b>[^1]  [🔙](#home)
+## ¹⁹ <b id="getQuota(address)🇷">getQuota(address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x43a2a302
@@ -367,7 +367,7 @@
 
 - 备注: 
 
-## 2️⃣0️⃣ <b id="hasAsset(string,address)🇷">hasAsset(string,address)🇷</b>[^1]  [🔙](#home)
+## ²⁰ <b id="hasAsset(string,address)🇷">hasAsset(string,address)🇷</b>[^1]  [🔙](#home)
 - **描述**: 是否拥有一个资产
 
 - selector: 0xfecdd62f
@@ -386,7 +386,7 @@
 
 - 备注: 
 
-## 2️⃣1️⃣ <b id="index(string)🇷">index(string)🇷</b>[^1]  [🔙](#home)
+## ²¹ <b id="index(string)🇷">index(string)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询DID的编号
 
 - selector: 0xf5db08d9
@@ -403,7 +403,7 @@
 
 - 备注: 
 
-## 2️⃣2️⃣ <b id="init(address,address)🇼">init(address,address)🇼</b>[^2]  [🔙](#home)
+## ²² <b id="init(address,address)🇼">init(address,address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 初始化合约
 
 - selector: 0xf09a4016
@@ -418,7 +418,7 @@
 
 - **备注**: 需要超级管理员一次操作即可
 
-## 2️⃣3️⃣ <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>[^1]  [🔙](#home)
+## ²³ <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0xe985e9c5
@@ -437,7 +437,7 @@
 
 - 备注: 
 
-## 2️⃣4️⃣ <b id="isOperator(address)🇷">isOperator(address)🇷</b>[^1]  [🔙](#home)
+## ²⁴ <b id="isOperator(address)🇷">isOperator(address)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x6d70f7ae
@@ -454,7 +454,7 @@
 
 - 备注: 
 
-## 2️⃣5️⃣ <b id="name()🇷">name()🇷</b>[^1]  [🔙](#home)
+## ²⁵ <b id="name()🇷">name()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x06fdde03
@@ -467,7 +467,7 @@
 
 - 备注: 
 
-## 2️⃣6️⃣ <b id="owner()🇷">owner()🇷</b>[^1]  [🔙](#home)
+## ²⁶ <b id="owner()🇷">owner()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x8da5cb5b
@@ -480,7 +480,7 @@
 
 - 备注: 
 
-## 2️⃣7️⃣ <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>[^1]  [🔙](#home)
+## ²⁷ <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x6352211e
@@ -497,7 +497,7 @@
 
 - 备注: 
 
-## 2️⃣8️⃣ <b id="query(string)🇷">query(string)🇷</b>[^1]  [🔙](#home)
+## ²⁸ <b id="query(string)🇷">query(string)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询DID的拥有人
 
 - selector: 0x7c261929
@@ -514,7 +514,7 @@
 
 - 备注: 
 
-## 2️⃣9️⃣ <b id="query(uint256)🇷">query(uint256)🇷</b>[^1]  [🔙](#home)
+## ²⁹ <b id="query(uint256)🇷">query(uint256)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询编号的DID名称
 
 - selector: 0xafdac68d
@@ -531,7 +531,7 @@
 
 - 备注: 
 
-## 3️⃣0️⃣ <b id="query(address)🇷">query(address)🇷</b>[^1]  [🔙](#home)
+## ³⁰ <b id="query(address)🇷">query(address)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询某个地址拥有的DID清单
 
 - selector: 0xd4fc9fc6
@@ -548,7 +548,7 @@
 
 - 备注: 
 
-## 3️⃣1️⃣ <b id="removeAddress(string,address)🇼">removeAddress(string,address)🇼</b>[^2]  [🔙](#home)
+## ³¹ <b id="removeAddress(string,address)🇼">removeAddress(string,address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xb166493b
@@ -563,7 +563,7 @@
 
 - 备注: 
 
-## 3️⃣2️⃣ <b id="removeOperator(address)🇼">removeOperator(address)🇼</b>[^2]  [🔙](#home)
+## ³² <b id="removeOperator(address)🇼">removeOperator(address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xac8a584a
@@ -576,7 +576,7 @@
 
 - 备注: 
 
-## 3️⃣3️⃣ <b id="renew(uint256,uint256)🇼">renew(uint256,uint256)🇼</b>[^2]  [🔙](#home)
+## ³³ <b id="renew(uint256,uint256)🇼">renew(uint256,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 续约
 
 - selector: 0xc475abff
@@ -591,7 +591,7 @@
 
 - 备注: 
 
-## 3️⃣4️⃣ <b id="renounceOwnership()🇼">renounceOwnership()🇼</b>[^2]  [🔙](#home)
+## ³⁴ <b id="renounceOwnership()🇼">renounceOwnership()🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x715018a6
@@ -600,7 +600,7 @@
 
 - 备注: 
 
-## 3️⃣5️⃣ <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
+## ³⁵ <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x42842e0e
@@ -617,7 +617,7 @@
 
 - 备注: 
 
-## 3️⃣6️⃣ <b id="safeTransferFrom(address,address,uint256,bytes)🇼">safeTransferFrom(address,address,uint256,bytes)🇼</b>[^2]  [🔙](#home)
+## ³⁶ <b id="safeTransferFrom(address,address,uint256,bytes)🇼">safeTransferFrom(address,address,uint256,bytes)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xb88d4fde
@@ -636,7 +636,7 @@
 
 - 备注: 
 
-## 3️⃣7️⃣ <b id="sell(address,address,uint256,uint256)🇼">sell(address,address,uint256,uint256)🇼</b>[^2]  [🔙](#home)
+## ³⁷ <b id="sell(address,address,uint256,uint256)🇼">sell(address,address,uint256,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 售卖
 
 - selector: 0x31de7d15
@@ -655,7 +655,7 @@
 
 - 备注: 
 
-## 3️⃣8️⃣ <b id="setApprovalForAll(address,bool)🇼">setApprovalForAll(address,bool)🇼</b>[^2]  [🔙](#home)
+## ³⁸ <b id="setApprovalForAll(address,bool)🇼">setApprovalForAll(address,bool)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xa22cb465
@@ -670,7 +670,7 @@
 
 - 备注: 
 
-## 3️⃣9️⃣ <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
+## ³⁹ <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0x03ce3355
@@ -685,7 +685,7 @@
 
 - 备注: 
 
-## 4️⃣0️⃣ <b id="supportsInterface(bytes4)🇷">supportsInterface(bytes4)🇷</b>[^1]  [🔙](#home)
+## ⁴⁰ <b id="supportsInterface(bytes4)🇷">supportsInterface(bytes4)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x01ffc9a7
@@ -702,7 +702,7 @@
 
 - 备注: 
 
-## 4️⃣1️⃣ <b id="symbol()🇷">symbol()🇷</b>[^1]  [🔙](#home)
+## ⁴¹ <b id="symbol()🇷">symbol()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x95d89b41
@@ -715,7 +715,7 @@
 
 - 备注: 
 
-## 4️⃣2️⃣ <b id="tokenBoundRegistry()🇷">tokenBoundRegistry()🇷</b>[^1]  [🔙](#home)
+## ⁴² <b id="tokenBoundRegistry()🇷">tokenBoundRegistry()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0xfdf250df
@@ -728,7 +728,7 @@
 
 - 备注: 
 
-## 4️⃣3️⃣ <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>[^1]  [🔙](#home)
+## ⁴³ <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x4f6ccce7
@@ -745,7 +745,7 @@
 
 - 备注: 
 
-## 4️⃣4️⃣ <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>[^1]  [🔙](#home)
+## ⁴⁴ <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x2f745c59
@@ -764,7 +764,7 @@
 
 - 备注: 
 
-## 4️⃣5️⃣ <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>[^1]  [🔙](#home)
+## ⁴⁵ <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>[^1]  [🔙](#home)
 - **描述**: DID的元数据
 
 - selector: 0xc87b56dd
@@ -781,7 +781,7 @@
 
 - **备注**: 此地址固定在ARWEAVE上，可以通过arweave读取内容
 
-## 4️⃣6️⃣ <b id="totalSupply()🇷">totalSupply()🇷</b>[^1]  [🔙](#home)
+## ⁴⁶ <b id="totalSupply()🇷">totalSupply()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x18160ddd
@@ -794,7 +794,7 @@
 
 - 备注: 
 
-## 4️⃣7️⃣ <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
+## ⁴⁷ <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b>[^2]  [🔙](#home)
 - **描述**: 转增
 
 - selector: 0x23b872dd
@@ -811,7 +811,7 @@
 
 - 备注: 
 
-## 4️⃣8️⃣ <b id="transferOwnership(address)🇼">transferOwnership(address)🇼</b>[^2]  [🔙](#home)
+## ⁴⁸ <b id="transferOwnership(address)🇼">transferOwnership(address)🇼</b>[^2]  [🔙](#home)
 - 描述: 
 
 - selector: 0xf2fde38b
@@ -824,7 +824,7 @@
 
 - 备注: 
 
-## 4️⃣9️⃣ <b id="validateAddress(string,address)🇷">validateAddress(string,address)🇷</b>[^1]  [🔙](#home)
+## ⁴⁹ <b id="validateAddress(string,address)🇷">validateAddress(string,address)🇷</b>[^1]  [🔙](#home)
 - **描述**: 验证某个地址是否是DID的共享人
 
 - selector: 0x5f1c0fbd
@@ -845,7 +845,7 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 19:34:26    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 19:38:32    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
 
 
