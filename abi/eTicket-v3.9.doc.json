@@ -193,8 +193,8 @@
                 "[uint8] rightId": "权益打卡点的编号，注意不是字符串"
             },
             "返回值": {
-                "[uint8]": "状态码：\n 0= 未预约\n 1= 已预约未到时间 \n 2= 已预约已到今天 \n 3= 已过预约时间核销 \n 4= 已核销 \n 5= 已过期 \n 6= 未开始 \n 7= 门票不存在 \n 8= 其它错误",
-                "[uint256]": "预约/核销的时间戳"
+                "[uint8] ": "",
+                "[uint256] ": ""
             },
             "备注": "获得状态码后可以查询状态信息数组对应信息"
         },
@@ -540,5 +540,79 @@
             },
             "备注": ""
         }
+    },
+    "示例": {
+        "name": "故宫博物院",
+        "description": "故宫博物院成立于1925年10月10日，是以明清两代皇宫和宫廷旧藏文物为基础建立起来的大型综合性古代艺术博物馆，是世界文化遗产地、全国重点文物保护单位和爱国主义教育基地",
+        "details": "故宫博物院.did",
+        "image": "https://cctv2024.oss-cn-beijing.aliyuncs.com/gugong.png",
+        "extURI": "https://isotop.oss-cn-shanghai.aliyuncs.com/20240102/2f0c555cd605483b9edd679f4e9d6d27.html",
+        "designer": "isotop.top",
+        "attributes": [
+            {
+                "trait_type": "出品方DID",
+                "value": "故宫博物院.did"
+            },
+            {
+                "trait_type": "有效期",
+                "value": "2024/8/26-2024/12/31"
+            },
+            {
+                "trait_type": "[S]入口",
+                "value": "已预约已到今天:1728086400"
+            },
+            {
+                "trait_type": "入口",
+                "value": "入口 Image"
+            },
+            {
+                "trait_type": "[S]午门及东西雁翅楼展厅",
+                "value": "已预约已到今天:1728086400"
+            },
+            {
+                "trait_type": "午门及东西雁翅楼展厅",
+                "value": "午门及东西雁翅楼展厅 Image"
+            },
+            {
+                "trait_type": "[S]永寿宫展厅",
+                "value": "未预约"
+            },
+            {
+                "trait_type": "永寿宫展厅",
+                "value": "永寿宫展厅 Image"
+            },
+            {
+                "trait_type": "[S]斋宫展厅",
+                "value": "未预约"
+            },
+            {
+                "trait_type": "斋宫展厅",
+                "value": "斋宫展厅 Image"
+            },
+            {
+                "trait_type": "[S]古陶瓷研究中心",
+                "value": "未预约"
+            },
+            {
+                "trait_type": "古陶瓷研究中心",
+                "value": "古陶瓷研究中心 Image"
+            },
+            {
+                "trait_type": "[S]古书画研究中心",
+                "value": "已预约未到时间:1735516800"
+            },
+            {
+                "trait_type": "古书画研究中心",
+                "value": "古书画研究中心 Image"
+            },
+            {
+                "trait_type": "[S]神武门展厅",
+                "value": "已预约未到时间:1733011200"
+            },
+            {
+                "trait_type": "神武门展厅",
+                "value": "神武门展厅 Image"
+            }
+        ]
     }
 }
