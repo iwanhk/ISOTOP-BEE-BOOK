@@ -5,9 +5,9 @@
 | 2️⃣ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制渠道发行数量 | ✅ |  |
 | 3️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
 | 4️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)|  |  |  |
-| 5️⃣ [beijingTimeMidnight(uint256)🇷](#beijingTimeMidnight(uint256)🇷)| 转化时间为北京时间午夜零点（已废弃 | ✅ |  |
+| 5️⃣ [beijingTimeMidnight(uint256)🇷](#beijingTimeMidnight(uint256)🇷)| 转化时间为北京时间午夜零点（已转移到DateTime库中标准功能） | ✅ |  |
 | 6️⃣ [blockTimeMidnight()🇷](#blockTimeMidnight()🇷)| 转化当前时间为北京时间午夜零点（已废弃） | ✅ |  |
-| 7️⃣ [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
+| 7️⃣ [burn(uint256)🇼](#burn(uint256)🇼)| 销毁门票 | ✅ |  |
 | 8️⃣ [check(uint256,string,uint256,string,address)🇼](#check(uint256,string,uint256,string,address)🇼)| 预约 | ✅ |  |
 | 9️⃣ [check(uint256,string,address)🇼](#check(uint256,string,address)🇼)| 核销 | ✅ |  |
 | 1️⃣0️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
@@ -27,7 +27,7 @@
 | 2️⃣4️⃣ [name()🇷](#name()🇷)|  |  |  |
 | 2️⃣5️⃣ [owner()🇷](#owner()🇷)|  |  |  |
 | 2️⃣6️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
-| 2️⃣7️⃣ [refund(uint256)🇼](#refund(uint256)🇼)|  |  |  |
+| 2️⃣7️⃣ [refund(uint256)🇼](#refund(uint256)🇼)| 退票 | ✅ |  |
 | 2️⃣8️⃣ [removeBank(uint256)🇼](#removeBank(uint256)🇼)|  |  |  |
 | 2️⃣9️⃣ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
 | 3️⃣0️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
@@ -38,10 +38,10 @@
 | 3️⃣5️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
 | 3️⃣6️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
 | 3️⃣7️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| 读取门票的元数据 | ✅ |  |
-| 3️⃣8️⃣ [totalBank()🇷](#totalBank()🇷)|  |  |  |
-| 3️⃣9️⃣ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
+| 3️⃣8️⃣ [totalBank()🇷](#totalBank()🇷)| 总票仓数量 | ✅ |  |
+| 3️⃣9️⃣ [totalSupply()🇷](#totalSupply()🇷)| 总发行的门票 | ✅ |  |
 | 4️⃣0️⃣ [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
-| 4️⃣1️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)|  |  |  |
+| 4️⃣1️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转移资产 | ✅ |  |
 | 4️⃣2️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
 
 - **合约及版本**: TaoJingLing-eTicket-v3.7
@@ -128,7 +128,7 @@
 - 备注: 
 
 ## 5️⃣ <b id="beijingTimeMidnight(uint256)🇷">beijingTimeMidnight(uint256)🇷</b> [🔙](#home)
-- **描述**: 转化时间为北京时间午夜零点（已废弃
+- **描述**: 转化时间为北京时间午夜零点（已转移到DateTime库中标准功能）
 
 - selector: 0x9d3c22fb
 
@@ -158,7 +158,7 @@
 - **备注**: 转化包含错误
 
 ## 7️⃣ <b id="burn(uint256)🇼">burn(uint256)🇼</b> [🔙](#home)
-- 描述: 
+- **描述**: 销毁门票
 
 - selector: 0x42966c68
 
@@ -486,7 +486,7 @@
 - 备注: 
 
 ## 2️⃣7️⃣ <b id="refund(uint256)🇼">refund(uint256)🇼</b> [🔙](#home)
-- 描述: 
+- **描述**: 退票
 
 - selector: 0x278ecde1
 
@@ -496,7 +496,7 @@
 
 - [uint256] tokenId: 
 
-- 备注: 
+- **备注**: 退票需要门票没有被核销
 
 ## 2️⃣8️⃣ <b id="removeBank(uint256)🇼">removeBank(uint256)🇼</b> [🔙](#home)
 - 描述: 
@@ -647,7 +647,7 @@
 - 备注: 
 
 ## 3️⃣8️⃣ <b id="totalBank()🇷">totalBank()🇷</b> [🔙](#home)
-- 描述: 
+- **描述**: 总票仓数量
 
 - selector: 0x22457b02
 
@@ -660,7 +660,7 @@
 - 备注: 
 
 ## 3️⃣9️⃣ <b id="totalSupply()🇷">totalSupply()🇷</b> [🔙](#home)
-- 描述: 
+- **描述**: 总发行的门票
 
 - selector: 0x18160ddd
 
@@ -690,7 +690,7 @@
 - 备注: 
 
 ## 4️⃣1️⃣ <b id="transferFrom(address,address,uint256)🇼">transferFrom(address,address,uint256)🇼</b> [🔙](#home)
-- 描述: 
+- **描述**: 转移资产
 
 - selector: 0x23b872dd
 
@@ -721,5 +721,5 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 18:43:25    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 18:47:35    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
