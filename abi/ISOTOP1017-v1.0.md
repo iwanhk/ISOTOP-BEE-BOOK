@@ -1,111 +1,39 @@
 | <b id="home">方法</b>   | 说明  | 重要  | 更新    |
 |-------|-------|-------|-------|
-| 0️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
-| 1️⃣ [deployContract(uint256,string)🇼](#deployContract(uint256,string)🇼)| 部署一个合约 | ✅ |  |
-| 2️⃣ [getContractDeployed(uint256,address)🇷](#getContractDeployed(uint256,address)🇷)| 获得已经部署的合约地址 | ✅ |  |
-| 3️⃣ [getContractInfo(address)🇷](#getContractInfo(address)🇷)| 查询某个工厂部署的合约的信息 | ✅ |  |
-| 4️⃣ [getContractRegisted()🇷](#getContractRegisted()🇷)| 查询工厂已经注册的合约模版 | ✅ |  |
-| 5️⃣ [getContractTemplate(string)🇷](#getContractTemplate(string)🇷)| 查询某个合约模版的信息 | ✅ |  |
-| 6️⃣ [register(string,address)🇼](#register(string,address)🇼)| 注册一个合约模版 | ✅ |  |
-| 7️⃣ [Account(uint256)🇷](#Account(uint256)🇷)| 查询某个ID的账户地址 | ✅ |  |
-| 8️⃣ [Account(string)🇷](#Account(string)🇷)| 查询某个DID的账户地址 | ✅ |  |
-| 9️⃣ [addAddress(string,address)🇼](#addAddress(string,address)🇼)| 添加某个DID的管理员地址 | ✅ |  |
-| 1️⃣0️⃣ [addAsset(string,address)🇼](#addAsset(string,address)🇼)| 添加DID资产 | ✅ |  |
-| 1️⃣1️⃣ [addOperator(address)🇼](#addOperator(address)🇼)|  |  |  |
-| 1️⃣2️⃣ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制渠道发行数量 | ✅ |  |
-| 1️⃣3️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
-| 1️⃣4️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)| 查询某个地址拥有几个资产 | ✅ |  |
-| 1️⃣5️⃣ [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
-| 1️⃣6️⃣ [create(string,string,address,uint256)🇼](#create(string,string,address,uint256)🇼)| 创建DID | ✅ |  |
-| 1️⃣7️⃣ [createAccount(string)🇼](#createAccount(string)🇼)|  |  |  |
-| 1️⃣8️⃣ [data(string)🇷](#data(string)🇷)| 返回DID详细信息 | ✅ |  |
-| 1️⃣9️⃣ [dump()🇷](#dump()🇷)| 导出全部发行的DID名称清单 | ✅ |  |
-| 2️⃣0️⃣ [erc6551ImplementationAddress()🇷](#erc6551ImplementationAddress()🇷)|  |  |  |
-| 2️⃣1️⃣ [expire(string)🇷](#expire(string)🇷)| 到期日 | ✅ |  |
-| 2️⃣2️⃣ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
-| 2️⃣3️⃣ [getManagersAddress(string)🇷](#getManagersAddress(string)🇷)| 返回DID全部管理员地址列表 | ✅ |  |
-| 2️⃣4️⃣ [getOperators()🇷](#getOperators()🇷)|  |  |  |
-| 2️⃣5️⃣ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
-| 2️⃣6️⃣ [hasAsset(string,address)🇷](#hasAsset(string,address)🇷)| 是否拥有一个资产 | ✅ |  |
-| 2️⃣7️⃣ [index(string)🇷](#index(string)🇷)| 根据DID名称查询tokenID | ✅ |  |
-| 2️⃣8️⃣ [init(address,address)🇼](#init(address,address)🇼)|  |  |  |
-| 2️⃣9️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
-| 3️⃣0️⃣ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
-| 3️⃣1️⃣ [name()🇷](#name()🇷)|  |  |  |
-| 3️⃣2️⃣ [owner()🇷](#owner()🇷)|  |  |  |
-| 3️⃣3️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)| 查询某个资产的拥有人 | ✅ |  |
-| 3️⃣4️⃣ [query(string)🇷](#query(string)🇷)| 查询DID的拥有人 | ✅ |  |
-| 3️⃣5️⃣ [query(uint256)🇷](#query(uint256)🇷)| 查询编号的DID名称 | ✅ |  |
-| 3️⃣6️⃣ [query(address)🇷](#query(address)🇷)| 查询某个地址拥有的DID清单 | ✅ |  |
-| 3️⃣7️⃣ [removeAddress(string,address)🇼](#removeAddress(string,address)🇼)|  |  |  |
-| 3️⃣8️⃣ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
-| 3️⃣9️⃣ [renew(uint256,uint256)🇼](#renew(uint256,uint256)🇼)| 续约 | ✅ |  |
-| 4️⃣0️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
-| 4️⃣1️⃣ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
-| 4️⃣2️⃣ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
-| 4️⃣3️⃣ [sell(address,address,uint256,uint256)🇼](#sell(address,address,uint256,uint256)🇼)| 售卖 | ✅ |  |
-| 4️⃣4️⃣ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
-| 4️⃣5️⃣ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
-| 4️⃣6️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
-| 4️⃣7️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
-| 4️⃣8️⃣ [tokenBoundRegistry()🇷](#tokenBoundRegistry()🇷)|  |  |  |
-| 4️⃣9️⃣ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
-| 5️⃣0️⃣ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
-| 5️⃣1️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| 资产的元数据metadata | ✅ |  |
-| 5️⃣2️⃣ [totalSupply()🇷](#totalSupply()🇷)| 资产的总发行量 | ✅ |  |
-| 5️⃣3️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转移资产 | ✅ |  |
-| 5️⃣4️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
-| 5️⃣5️⃣ [validateAddress(string,address)🇷](#validateAddress(string,address)🇷)| 核验某个地址是否是某个DID的管理员 | ✅ |  |
-| 5️⃣6️⃣ [create(string,address,uint256)🇼](#create(string,address,uint256)🇼)| 创建DID | ✅ |  |
-| 5️⃣7️⃣ [name(uint256)🇷](#name(uint256)🇷)|  |  |  |
-| 5️⃣8️⃣ [ownerOfID(string)🇷](#ownerOfID(string)🇷)| 查询某个DID的拥有人地址 | ✅ |  |
-| 5️⃣9️⃣ [setContent(uint256,string,string,string)🇼](#setContent(uint256,string,string,string)🇼)| 添加DID的内容 | ✅ |  |
-| 6️⃣0️⃣ [sign(string,address,uint256)🇼](#sign(string,address,uint256)🇼)| 签名 | ✅ |  |
-| 6️⃣1️⃣ [tokens(uint256,uint256)🇷](#tokens(uint256,uint256)🇷)|  |  |  |
-| 6️⃣2️⃣ [tokensOf(address,uint256,uint256)🇷](#tokensOf(address,uint256,uint256)🇷)|  |  |  |
-| 6️⃣3️⃣ [verify(string,address,uint256)🇷](#verify(string,address,uint256)🇷)| 核验某个资产是否被签名 | ✅ |  |
-| 6️⃣4️⃣ [addBank(uint256)🇼](#addBank(uint256)🇼)| 添加票仓数量 | ✅ |  |
-| 6️⃣5️⃣ [check(uint256,string,uint256,string,address)🇼](#check(uint256,string,uint256,string,address)🇼)| 预约 | ✅ |  |
-| 6️⃣6️⃣ [check(uint256,string,address)🇼](#check(uint256,string,address)🇼)| 核销 | ✅ |  |
-| 6️⃣7️⃣ [claim(address,uint256)🇼](#claim(address,uint256)🇼)| 活动兑换领取卡 | ✅ |  |
-| 6️⃣8️⃣ [creator(uint256)🇷](#creator(uint256)🇷)|  |  |  |
-| 6️⃣9️⃣ [exists(uint256)🇷](#exists(uint256)🇷)|  |  |  |
-| 7️⃣0️⃣ [getBankRest()🇷](#getBankRest()🇷)|  |  |  |
-| 7️⃣1️⃣ [getOperator(uint256)🇷](#getOperator(uint256)🇷)|  |  |  |
-| 7️⃣2️⃣ [getStatus(uint256,uint8)🇷](#getStatus(uint256,uint8)🇷)|  |  |  |
-| 7️⃣3️⃣ [init(string[],string[],bytes1[],uint256,uint256)🇼](#init(string[],string[],bytes1[],uint256,uint256)🇼)| 初始化合约 | ✅ |  |
-| 7️⃣4️⃣ [isReservedDay(uint256,uint8)🇷](#isReservedDay(uint256,uint8)🇷)|  |  |  |
-| 7️⃣5️⃣ [mint(address,uint256)🇼](#mint(address,uint256)🇼)|  |  |  |
-| 7️⃣6️⃣ [refund(uint256)🇼](#refund(uint256)🇼)|  |  |  |
-| 7️⃣7️⃣ [removeBank(uint256)🇼](#removeBank(uint256)🇼)|  |  |  |
-| 7️⃣8️⃣ [setAttr(uint256,string,string)🇼](#setAttr(uint256,string,string)🇼)|  |  |  |
-| 7️⃣9️⃣ [setTreadstone(address)🇼](#setTreadstone(address)🇼)|  |  |  |
-| 8️⃣0️⃣ [ticketStatusInfo()🇷](#ticketStatusInfo()🇷)|  |  |  |
-| 8️⃣1️⃣ [totalBank()🇷](#totalBank()🇷)|  |  |  |
-| 8️⃣2️⃣ [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
-| 8️⃣3️⃣ [update(string,string)🇼](#update(string,string)🇼)|  |  |  |
-| 8️⃣4️⃣ [check(uint256,address,string,address)🇼](#check(uint256,address,string,address)🇼)| 核销权益卡 | ✅ |  |
-| 8️⃣5️⃣ [check(uint256,address,string,uint256,string,address)🇼](#check(uint256,address,string,uint256,string,address)🇼)| 预约核销卡权益 | ✅ |  |
-| 8️⃣6️⃣ [getStatus(uint256,address,uint8)🇷](#getStatus(uint256,address,uint8)🇷)|  |  |  |
-| 8️⃣7️⃣ [init(string[],address[],uint8,uint256,uint256)🇼](#init(string[],address[],uint8,uint256,uint256)🇼)| 初始化 | ✅ |  |
-| 8️⃣8️⃣ [check(uint256,uint16,string,address)🇼](#check(uint256,uint16,string,address)🇼)| 核销卡中的门票 | ✅ |  |
-| 8️⃣9️⃣ [check(uint256,uint16,string,uint256,string,address)🇼](#check(uint256,uint16,string,uint256,string,address)🇼)| 预约卡中的门票 | ✅ |  |
-| 9️⃣0️⃣ [getStatus(uint256,uint16,uint8)🇷](#getStatus(uint256,uint16,uint8)🇷)|  |  |  |
-| 9️⃣1️⃣ [init(string[],address[],uint16[],uint8[],uint16,uint256,uint256)🇼](#init(string[],address[],uint16[],uint8[],uint16,uint256,uint256)🇼)| 初始化卡片 | ✅ |  |
-| 9️⃣2️⃣ [redeem(uint256,address,uint8)🇼](#redeem(uint256,address,uint8)🇼)| 兑换门票 | ✅ |  |
-| 9️⃣3️⃣ [ticketsPool(uint256,uint256)🇷](#ticketsPool(uint256,uint256)🇷)|  |  |  |
-| 9️⃣4️⃣ [beijingTimeMidnight(uint256)🇷](#beijingTimeMidnight(uint256)🇷)| 转化时间为北京时间午夜零点（已废弃 | ✅ |  |
-| 9️⃣5️⃣ [blockTimeMidnight()🇷](#blockTimeMidnight()🇷)| 转化当前时间为北京时间午夜零点（已废弃） | ✅ |  |
-| 9️⃣6️⃣ [getStatus(uint256)🇷](#getStatus(uint256)🇷)|  |  |  |
-| 9️⃣7️⃣ [Details()🇷](#Details()🇷)| 资产介绍页面URL | ✅ |  |
-| 9️⃣8️⃣ [init(string,string,string,string)🇼](#init(string,string,string,string)🇼)| 初始化合约 | ✅ |  |
-| 9️⃣9️⃣ [mint(address)🇼](#mint(address)🇼)|  铸造NFT | ✅ |  |
-| 1️⃣0️⃣0️⃣ [safeMint(address)🇼](#safeMint(address)🇼)|  |  |  |
-| 1️⃣0️⃣1️⃣ [safeMint(address,uint256)🇼](#safeMint(address,uint256)🇼)|  |  |  |
-| 1️⃣0️⃣2️⃣ [setBaseURI(string)🇼](#setBaseURI(string)🇼)| 更改metadata的目录URL | ✅ |  |
-| 1️⃣0️⃣3️⃣ [setDetailsURI(string)🇼](#setDetailsURI(string)🇼)|  |  |  |
-| 1️⃣0️⃣4️⃣ [setParty(string[],uint8[])🇼](#setParty(string[],uint8[])🇼)|  |  |  |
-| 1️⃣0️⃣5️⃣ [suspend(bool)🇼](#suspend(bool)🇼)|  |  |  |
+| 0️⃣ [Details()🇷](#Details()🇷)| 资产介绍页面URL | ✅ |  |
+| 1️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
+| 2️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)| 查询某个地址拥有几个资产 | ✅ |  |
+| 3️⃣ [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
+| 4️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
+| 5️⃣ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
+| 6️⃣ [init(string,string,string,string)🇼](#init(string,string,string,string)🇼)| 初始化合约 | ✅ |  |
+| 7️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
+| 8️⃣ [mint(address,uint256)🇼](#mint(address,uint256)🇼)|  |  |  |
+| 9️⃣ [mint(address)🇼](#mint(address)🇼)|  铸造NFT | ✅ |  |
+| 1️⃣0️⃣ [name()🇷](#name()🇷)|  |  |  |
+| 1️⃣1️⃣ [owner()🇷](#owner()🇷)|  |  |  |
+| 1️⃣2️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)| 查询某个资产的拥有人 | ✅ |  |
+| 1️⃣3️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
+| 1️⃣4️⃣ [safeMint(address)🇼](#safeMint(address)🇼)|  |  |  |
+| 1️⃣5️⃣ [safeMint(address,uint256)🇼](#safeMint(address,uint256)🇼)|  |  |  |
+| 1️⃣6️⃣ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
+| 1️⃣7️⃣ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
+| 1️⃣8️⃣ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
+| 1️⃣9️⃣ [setBaseURI(string)🇼](#setBaseURI(string)🇼)| 更改metadata的目录URL | ✅ |  |
+| 2️⃣0️⃣ [setDetailsURI(string)🇼](#setDetailsURI(string)🇼)|  |  |  |
+| 2️⃣1️⃣ [setParty(string[],uint8[])🇼](#setParty(string[],uint8[])🇼)|  |  |  |
+| 2️⃣2️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
+| 2️⃣3️⃣ [suspend(bool)🇼](#suspend(bool)🇼)|  |  |  |
+| 2️⃣4️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
+| 2️⃣5️⃣ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
+| 2️⃣6️⃣ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
+| 2️⃣7️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| 资产的元数据metadata | ✅ |  |
+| 2️⃣8️⃣ [tokens(uint256,uint256)🇷](#tokens(uint256,uint256)🇷)|  |  |  |
+| 2️⃣9️⃣ [tokensOf(address,uint256,uint256)🇷](#tokensOf(address,uint256,uint256)🇷)|  |  |  |
+| 3️⃣0️⃣ [totalSupply()🇷](#totalSupply()🇷)| 资产的总发行量 | ✅ |  |
+| 3️⃣1️⃣ [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
+| 3️⃣2️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转移资产 | ✅ |  |
+| 3️⃣3️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
 
 - **合约及版本**: ISOTOP1017-v1.0
 
@@ -646,5 +574,5 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 18:31:14    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 18:43:25    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 

@@ -1,61 +1,55 @@
 | <b id="home">方法</b>   | 说明  | 重要  | 更新    |
 |-------|-------|-------|-------|
-| 0️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
-| 1️⃣ [deployContract(uint256,string)🇼](#deployContract(uint256,string)🇼)| 部署一个合约 | ✅ |  |
-| 2️⃣ [getContractDeployed(uint256,address)🇷](#getContractDeployed(uint256,address)🇷)| 获得已经部署的合约地址 | ✅ |  |
-| 3️⃣ [getContractInfo(address)🇷](#getContractInfo(address)🇷)| 查询某个工厂部署的合约的信息 | ✅ |  |
-| 4️⃣ [getContractRegisted()🇷](#getContractRegisted()🇷)| 查询工厂已经注册的合约模版 | ✅ |  |
-| 5️⃣ [getContractTemplate(string)🇷](#getContractTemplate(string)🇷)| 查询某个合约模版的信息 | ✅ |  |
-| 6️⃣ [register(string,address)🇼](#register(string,address)🇼)| 注册一个合约模版 | ✅ |  |
-| 7️⃣ [Account(uint256)🇷](#Account(uint256)🇷)| 通过编号获得对应的DID名称 | ✅ |  |
-| 8️⃣ [Account(string)🇷](#Account(string)🇷)| 通过DID名字取得链账户地址 | ✅ |  |
-| 9️⃣ [addAddress(string,address)🇼](#addAddress(string,address)🇼)| 添加DID的共享人地址 | ✅ |  |
-| 1️⃣0️⃣ [addAsset(string,address)🇼](#addAsset(string,address)🇼)| 添加DID资产 | ✅ |  |
-| 1️⃣1️⃣ [addOperator(address)🇼](#addOperator(address)🇼)| 添加管理员地址 | ✅ |  |
-| 1️⃣2️⃣ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制管理员能够操作的次数 | ✅ |  |
-| 1️⃣3️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
-| 1️⃣4️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)| 查询某个地址拥有的DID数量 | ✅ |  |
-| 1️⃣5️⃣ [burn(uint256)🇼](#burn(uint256)🇼)| 销毁DID | ✅ |  |
-| 1️⃣6️⃣ [create(string,string,address,uint256)🇼](#create(string,string,address,uint256)🇼)| 创建DID | ✅ |  |
-| 1️⃣7️⃣ [createAccount(string)🇼](#createAccount(string)🇼)|  |  |  |
-| 1️⃣8️⃣ [data(string)🇷](#data(string)🇷)|  |  |  |
-| 1️⃣9️⃣ [dump()🇷](#dump()🇷)| 导出所有创建的DID清单 | ✅ |  |
-| 2️⃣0️⃣ [erc6551ImplementationAddress()🇷](#erc6551ImplementationAddress()🇷)|  |  |  |
-| 2️⃣1️⃣ [expire(string)🇷](#expire(string)🇷)|  |  |  |
-| 2️⃣2️⃣ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
-| 2️⃣3️⃣ [getManagersAddress(string)🇷](#getManagersAddress(string)🇷)|  |  |  |
-| 2️⃣4️⃣ [getOperators()🇷](#getOperators()🇷)|  |  |  |
-| 2️⃣5️⃣ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
-| 2️⃣6️⃣ [hasAsset(string,address)🇷](#hasAsset(string,address)🇷)| 是否拥有一个资产 | ✅ |  |
-| 2️⃣7️⃣ [index(string)🇷](#index(string)🇷)| 查询DID的编号 | ✅ |  |
-| 2️⃣8️⃣ [init(address,address)🇼](#init(address,address)🇼)| 初始化合约 | ✅ |  |
-| 2️⃣9️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
-| 3️⃣0️⃣ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
-| 3️⃣1️⃣ [name()🇷](#name()🇷)|  |  |  |
-| 3️⃣2️⃣ [owner()🇷](#owner()🇷)|  |  |  |
-| 3️⃣3️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
-| 3️⃣4️⃣ [query(string)🇷](#query(string)🇷)| 查询DID的拥有人 | ✅ |  |
-| 3️⃣5️⃣ [query(uint256)🇷](#query(uint256)🇷)| 查询编号的DID名称 | ✅ |  |
-| 3️⃣6️⃣ [query(address)🇷](#query(address)🇷)| 查询某个地址拥有的DID清单 | ✅ |  |
-| 3️⃣7️⃣ [removeAddress(string,address)🇼](#removeAddress(string,address)🇼)|  |  |  |
-| 3️⃣8️⃣ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
-| 3️⃣9️⃣ [renew(uint256,uint256)🇼](#renew(uint256,uint256)🇼)| 续约 | ✅ |  |
-| 4️⃣0️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
-| 4️⃣1️⃣ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
-| 4️⃣2️⃣ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
-| 4️⃣3️⃣ [sell(address,address,uint256,uint256)🇼](#sell(address,address,uint256,uint256)🇼)| 售卖 | ✅ |  |
-| 4️⃣4️⃣ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
-| 4️⃣5️⃣ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
-| 4️⃣6️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
-| 4️⃣7️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
-| 4️⃣8️⃣ [tokenBoundRegistry()🇷](#tokenBoundRegistry()🇷)|  |  |  |
-| 4️⃣9️⃣ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
-| 5️⃣0️⃣ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
-| 5️⃣1️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| DID的元数据 | ✅ |  |
-| 5️⃣2️⃣ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
-| 5️⃣3️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转增 | ✅ |  |
-| 5️⃣4️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
-| 5️⃣5️⃣ [validateAddress(string,address)🇷](#validateAddress(string,address)🇷)| 验证某个地址是否是DID的共享人 | ✅ |  |
+| 0️⃣ [Account(uint256)🇷](#Account(uint256)🇷)| 通过编号获得对应的DID名称 | ✅ |  |
+| 1️⃣ [Account(string)🇷](#Account(string)🇷)| 通过DID名字取得链账户地址 | ✅ |  |
+| 2️⃣ [addAddress(string,address)🇼](#addAddress(string,address)🇼)| 添加DID的共享人地址 | ✅ |  |
+| 3️⃣ [addAsset(string,address)🇼](#addAsset(string,address)🇼)| 添加DID资产 | ✅ |  |
+| 4️⃣ [addOperator(address)🇼](#addOperator(address)🇼)| 添加管理员地址 | ✅ |  |
+| 5️⃣ [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制管理员能够操作的次数 | ✅ |  |
+| 6️⃣ [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
+| 7️⃣ [balanceOf(address)🇷](#balanceOf(address)🇷)| 查询某个地址拥有的DID数量 | ✅ |  |
+| 8️⃣ [burn(uint256)🇼](#burn(uint256)🇼)| 销毁DID | ✅ |  |
+| 9️⃣ [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
+| 1️⃣0️⃣ [create(string,string,address,uint256)🇼](#create(string,string,address,uint256)🇼)| 创建DID | ✅ |  |
+| 1️⃣1️⃣ [createAccount(string)🇼](#createAccount(string)🇼)|  |  |  |
+| 1️⃣2️⃣ [data(string)🇷](#data(string)🇷)|  |  |  |
+| 1️⃣3️⃣ [dump()🇷](#dump()🇷)| 导出所有创建的DID清单 | ✅ |  |
+| 1️⃣4️⃣ [erc6551ImplementationAddress()🇷](#erc6551ImplementationAddress()🇷)|  |  |  |
+| 1️⃣5️⃣ [expire(string)🇷](#expire(string)🇷)|  |  |  |
+| 1️⃣6️⃣ [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
+| 1️⃣7️⃣ [getManagersAddress(string)🇷](#getManagersAddress(string)🇷)|  |  |  |
+| 1️⃣8️⃣ [getOperators()🇷](#getOperators()🇷)|  |  |  |
+| 1️⃣9️⃣ [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
+| 2️⃣0️⃣ [hasAsset(string,address)🇷](#hasAsset(string,address)🇷)| 是否拥有一个资产 | ✅ |  |
+| 2️⃣1️⃣ [index(string)🇷](#index(string)🇷)| 查询DID的编号 | ✅ |  |
+| 2️⃣2️⃣ [init(address,address)🇼](#init(address,address)🇼)| 初始化合约 | ✅ |  |
+| 2️⃣3️⃣ [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
+| 2️⃣4️⃣ [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
+| 2️⃣5️⃣ [name()🇷](#name()🇷)|  |  |  |
+| 2️⃣6️⃣ [owner()🇷](#owner()🇷)|  |  |  |
+| 2️⃣7️⃣ [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
+| 2️⃣8️⃣ [query(string)🇷](#query(string)🇷)| 查询DID的拥有人 | ✅ |  |
+| 2️⃣9️⃣ [query(uint256)🇷](#query(uint256)🇷)| 查询编号的DID名称 | ✅ |  |
+| 3️⃣0️⃣ [query(address)🇷](#query(address)🇷)| 查询某个地址拥有的DID清单 | ✅ |  |
+| 3️⃣1️⃣ [removeAddress(string,address)🇼](#removeAddress(string,address)🇼)|  |  |  |
+| 3️⃣2️⃣ [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
+| 3️⃣3️⃣ [renew(uint256,uint256)🇼](#renew(uint256,uint256)🇼)| 续约 | ✅ |  |
+| 3️⃣4️⃣ [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
+| 3️⃣5️⃣ [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
+| 3️⃣6️⃣ [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
+| 3️⃣7️⃣ [sell(address,address,uint256,uint256)🇼](#sell(address,address,uint256,uint256)🇼)| 售卖 | ✅ |  |
+| 3️⃣8️⃣ [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
+| 3️⃣9️⃣ [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
+| 4️⃣0️⃣ [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
+| 4️⃣1️⃣ [symbol()🇷](#symbol()🇷)|  |  |  |
+| 4️⃣2️⃣ [tokenBoundRegistry()🇷](#tokenBoundRegistry()🇷)|  |  |  |
+| 4️⃣3️⃣ [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
+| 4️⃣4️⃣ [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
+| 4️⃣5️⃣ [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| DID的元数据 | ✅ |  |
+| 4️⃣6️⃣ [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
+| 4️⃣7️⃣ [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)| 转增 | ✅ |  |
+| 4️⃣8️⃣ [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
+| 4️⃣9️⃣ [validateAddress(string,address)🇷](#validateAddress(string,address)🇷)| 验证某个地址是否是DID的共享人 | ✅ |  |
 
 - **合约及版本**: DID-v1.6
 
@@ -851,5 +845,5 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 18:31:13    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 18:43:24    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
