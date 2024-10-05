@@ -18,7 +18,7 @@
 
 # 方法「✔ ᵛᵉʳᶦᶠᶦᵉᵈ」
 
-## 0️⃣ <b id="contractInfo()🇷">contractInfo()🇷</b> [🔙](#home)
+## 0️⃣ <b id="contractInfo()🇷">contractInfo()🇷</b>[^1]  [🔙](#home)
 - 描述: 
 
 - selector: 0x15c43aaf
@@ -31,7 +31,7 @@
 
 - 备注: 
 
-## 1️⃣ <b id="deployContract(uint256,string)🇼">deployContract(uint256,string)🇼</b> [🔙](#home)
+## 1️⃣ <b id="deployContract(uint256,string)🇼">deployContract(uint256,string)🇼</b>[^2]  [🔙](#home)
 - **描述**: 部署一个合约
 
 - selector: 0x988c6cfa
@@ -50,7 +50,7 @@
 
 - **备注**: 每个用户部署的合约id自己管理，和他人的独立
 
-## 2️⃣ <b id="getContractDeployed(uint256,address)🇷">getContractDeployed(uint256,address)🇷</b> [🔙](#home)
+## 2️⃣ <b id="getContractDeployed(uint256,address)🇷">getContractDeployed(uint256,address)🇷</b>[^1]  [🔙](#home)
 - **描述**: 获得已经部署的合约地址
 
 - selector: 0xcbfb2f08
@@ -69,7 +69,7 @@
 
 - 备注: 
 
-## 3️⃣ <b id="getContractInfo(address)🇷">getContractInfo(address)🇷</b> [🔙](#home)
+## 3️⃣ <b id="getContractInfo(address)🇷">getContractInfo(address)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询某个工厂部署的合约的信息
 
 - selector: 0xcd481e51
@@ -86,7 +86,7 @@
 
 - 备注: 
 
-## 4️⃣ <b id="getContractRegisted()🇷">getContractRegisted()🇷</b> [🔙](#home)
+## 4️⃣ <b id="getContractRegisted()🇷">getContractRegisted()🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询工厂已经注册的合约模版
 
 - selector: 0x6b94fa39
@@ -99,7 +99,7 @@
 
 - 备注: 
 
-## 5️⃣ <b id="getContractTemplate(string)🇷">getContractTemplate(string)🇷</b> [🔙](#home)
+## 5️⃣ <b id="getContractTemplate(string)🇷">getContractTemplate(string)🇷</b>[^1]  [🔙](#home)
 - **描述**: 查询某个合约模版的信息
 
 - selector: 0xcdc703b0
@@ -116,7 +116,7 @@
 
 - 备注: 
 
-## 6️⃣ <b id="register(string,address)🇼">register(string,address)🇼</b> [🔙](#home)
+## 6️⃣ <b id="register(string,address)🇼">register(string,address)🇼</b>[^2]  [🔙](#home)
 - **描述**: 注册一个合约模版
 
 - selector: 0x1e59c529
@@ -133,5 +133,7 @@
 
 ___
 
-*[🔙](#home) updated: 2024-10-05 18:43:24    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*[🔙](#home) updated: 2024-10-05 19:17:38    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
+[^1]: 🇷读方法是同步操作，可以直接得到返回值，不消耗GAS费用。
+[^2]: 🇼写方法是异步操作，需要消耗GAS费用，无法取得返回值，需要通过交易hash查询链上是否成功，建议设置循环等待直到交易成功。
