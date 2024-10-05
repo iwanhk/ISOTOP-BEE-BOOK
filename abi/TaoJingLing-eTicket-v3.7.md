@@ -1,14 +1,15 @@
 | 方法   | 说明  | 重要  | 更新    |
 |-------|-------|-------|-------|
-| [addBank(uint256)🇼](#addBank(uint256)🇼)| 增加票仓数量 | ✅ |  |
-| [addOperator(address)🇼](#addOperator(address)🇼)| 增加管理员 | ✅ |  |
-| [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 增加管理员操作的额度 | ✅ |  |
+| [addBank(uint256)🇼](#addBank(uint256)🇼)| 添加票仓数量 | ✅ |  |
+| [addOperator(address)🇼](#addOperator(address)🇼)|  |  |  |
+| [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 限制渠道发行数量 | ✅ |  |
 | [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
 | [balanceOf(address)🇷](#balanceOf(address)🇷)|  |  |  |
+| [beijingTimeMidnight(uint256)🇷](#beijingTimeMidnight(uint256)🇷)| 转化时间为北京时间午夜零点（已废弃 | ✅ |  |
+| [blockTimeMidnight()🇷](#blockTimeMidnight()🇷)| 转化当前时间为北京时间午夜零点（已废弃） | ✅ |  |
 | [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
-| [check(uint256,address,string,address)🇼](#check(uint256,address,string,address)🇼)| 核销权益卡 | ✅ |  |
-| [check(uint256,address,string,uint256,string,address)🇼](#check(uint256,address,string,uint256,string,address)🇼)| 预约核销卡权益 | ✅ |  |
-| [claim(address,uint256)🇼](#claim(address,uint256)🇼)| 活动（免费）领取 | ✅ |  |
+| [check(uint256,string,uint256,string,address)🇼](#check(uint256,string,uint256,string,address)🇼)| 预约 | ✅ |  |
+| [check(uint256,string,address)🇼](#check(uint256,string,address)🇼)| 核销 | ✅ |  |
 | [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
 | [exists(uint256)🇷](#exists(uint256)🇷)|  |  |  |
 | [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
@@ -16,63 +17,45 @@
 | [getOperator(uint256)🇷](#getOperator(uint256)🇷)|  |  |  |
 | [getOperators()🇷](#getOperators()🇷)|  |  |  |
 | [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
-| [getStatus(uint256,address,uint8)🇷](#getStatus(uint256,address,uint8)🇷)|  |  |  |
-| [init(string[],address[],uint8,uint256,uint256)🇼](#init(string[],address[],uint8,uint256,uint256)🇼)| 初始化 | ✅ |  |
+| [getStatus(uint256)🇷](#getStatus(uint256)🇷)|  |  |  |
+| [getStatus(uint256,uint8)🇷](#getStatus(uint256,uint8)🇷)|  |  |  |
+| [init(string[],string[],bytes1[],uint256,uint256)🇼](#init(string[],string[],bytes1[],uint256,uint256)🇼)| 初始化合约 | ✅ |  |
 | [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
 | [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
-| [mint(address,uint256)🇼](#mint(address,uint256)🇼)| 铸造门票/发票 | ✅ |  |
+| [isReservedDay(uint256,uint8)🇷](#isReservedDay(uint256,uint8)🇷)|  |  |  |
+| [mint(address,uint256)🇼](#mint(address,uint256)🇼)|  |  |  |
 | [name()🇷](#name()🇷)|  |  |  |
 | [owner()🇷](#owner()🇷)|  |  |  |
-| [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)| 检查某个资产的拥有人 | ✅ |  |
-| [refund(uint256)🇼](#refund(uint256)🇼)| 退票 | ✅ |  |
+| [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
+| [refund(uint256)🇼](#refund(uint256)🇼)|  |  |  |
 | [removeBank(uint256)🇼](#removeBank(uint256)🇼)|  |  |  |
 | [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
 | [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
-| [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)| 转移资产 | ✅ |  |
+| [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)|  |  |  |
 | [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
 | [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
 | [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
-| [setTreadstone(address)🇼](#setTreadstone(address)🇼)|  |  |  |
 | [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
 | [symbol()🇷](#symbol()🇷)|  |  |  |
-| [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
-| [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
-| [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)|  |  |  |
-| [tokens(uint256,uint256)🇷](#tokens(uint256,uint256)🇷)|  |  |  |
-| [tokensOf(address,uint256,uint256)🇷](#tokensOf(address,uint256,uint256)🇷)|  |  |  |
+| [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)| 读取门票的元数据 | ✅ |  |
 | [totalBank()🇷](#totalBank()🇷)|  |  |  |
 | [totalSupply()🇷](#totalSupply()🇷)|  |  |  |
 | [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
 | [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)|  |  |  |
 | [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
-| [check(uint256,uint16,string,address)🇼](#check(uint256,uint16,string,address)🇼)| 核销卡中的门票 | ✅ |  |
-| [check(uint256,uint16,string,uint256,string,address)🇼](#check(uint256,uint16,string,uint256,string,address)🇼)| 预约卡中的门票 | ✅ |  |
-| [getStatus(uint256,uint16,uint8)🇷](#getStatus(uint256,uint16,uint8)🇷)|  |  |  |
-| [init(string[],address[],uint16[],uint8[],uint16,uint256,uint256)🇼](#init(string[],address[],uint16[],uint8[],uint16,uint256,uint256)🇼)| 初始化卡片 | ✅ |  |
-| [redeem(uint256,address,uint8)🇼](#redeem(uint256,address,uint8)🇼)| 兑换门票 | ✅ |  |
-| [ticketsPool(uint256,uint256)🇷](#ticketsPool(uint256,uint256)🇷)|  |  |  |
-| [check(uint256,string,uint256,string,address)🇼](#check(uint256,string,uint256,string,address)🇼)| 预约 | ✅ |  |
-| [check(uint256,string,address)🇼](#check(uint256,string,address)🇼)| 核销 | ✅ |  |
-| [creator(uint256)🇷](#creator(uint256)🇷)|  |  |  |
-| [getStatus(uint256,uint8)🇷](#getStatus(uint256,uint8)🇷)| 获取门票的状态 | ✅ |  |
-| [init(string[],string[],bytes1[],uint256,uint256)🇼](#init(string[],string[],bytes1[],uint256,uint256)🇼)| 初始化门票 | ✅ |  |
-| [isReservedDay(uint256,uint8)🇷](#isReservedDay(uint256,uint8)🇷)| 判断是否是预约日期当天 | ✅ |  |
-| [setAttr(uint256,string,string)🇼](#setAttr(uint256,string,string)🇼)|  |  |  |
-| [ticketStatusInfo()🇷](#ticketStatusInfo()🇷)|  |  |  |
-| [update(string,string)🇼](#update(string,string)🇼)|  |  |  |
 
-- **合约及版本**: eTicket-v3.9
+- **合约及版本**: TaoJingLing-eTicket-v3.7
 
-- **获取方法**: 工厂合约clone eTicket
+- **获取方法**: 工厂部署
 
-- **描述**: 数字权益门票合约模板,改变了核销方式，需要预约，预约后过期就是核销
+- **描述**: 原央博eTicket合约，为桃精灵定制渠道为TAOJINGLING
 
-- **ABI📝**: eTicket-v3.9.json
+- **ABI📝**: TaoJingLing-eTicket-v3.7.json
 
 # 方法「✔ ᵛᵉʳᶦᶠᶦᵉᵈ」
 
 ## <b id="addBank(uint256)🇼">addBank(uint256)🇼</b>
-- **描述**: 增加票仓数量
+- **描述**: 添加票仓数量
 
 - selector: 0x9e8d004a
 
@@ -82,10 +65,10 @@
 
 - [uint256] _amount: 
 
-- 备注: 
+- **备注**: 默认门票数量为0，不能发行，添加后才能正常发行门票
 
 ## <b id="addOperator(address)🇼">addOperator(address)🇼</b>
-- **描述**: 增加管理员
+- 描述: 
 
 - selector: 0x9870d7fe
 
@@ -98,7 +81,7 @@
 - 备注: 
 
 ## <b id="addQuota(address,uint256)🇼">addQuota(address,uint256)🇼</b>
-- **描述**: 增加管理员操作的额度
+- **描述**: 限制渠道发行数量
 
 - selector: 0xf045000d
 
@@ -106,11 +89,11 @@
 
 ### 参数
 
-- [address] _operator: 
+- **[address] _operator**: 渠道
 
-- [uint256] _quota: 
+- **[uint256] _quota**: 限量
 
-- 备注: 
+- **备注**: 默认0为不限量
 
 ## <b id="approve(address,uint256)🇼">approve(address,uint256)🇼</b>
 - 描述: 
@@ -144,6 +127,36 @@
 
 - 备注: 
 
+## <b id="beijingTimeMidnight(uint256)🇷">beijingTimeMidnight(uint256)🇷</b>
+- **描述**: 转化时间为北京时间午夜零点（已废弃
+
+- selector: 0x9d3c22fb
+
+- 版本更新: 
+
+### 参数
+
+- [uint256] _time: 
+
+### 返回值
+
+- [uint256] : 
+
+- **备注**: 转化包含错误
+
+## <b id="blockTimeMidnight()🇷">blockTimeMidnight()🇷</b>
+- **描述**: 转化当前时间为北京时间午夜零点（已废弃）
+
+- selector: 0xdc572a30
+
+- 版本更新: 
+
+### 返回值
+
+- [uint256] : 
+
+- **备注**: 转化包含错误
+
 ## <b id="burn(uint256)🇼">burn(uint256)🇼</b>
 - 描述: 
 
@@ -166,18 +179,17 @@
 
 ### 参数
 
-- **[uint256] tokenId**: 门票ID
+- [uint256] tokenId: 
 
-- **[string] _right**: 权益/打卡点（注意是字符串，必须和创建时候的权益一致）
+- [string] _right: 
 
-- **[uint256] _time**: 预约时间（到日期）
+- [uint256] _time: 
 
-- **[string] _code**: 预约码（可以是闸机返回的系统预约码，也可以是随机生成的，供自己的小程序来核验）
+- [string] _code: 
 
-- **[address] _who**: 预约人的链地址
+- [address] _who: 
 
-- **备注**: 预约的时间是日期（没有小时，分钟），如果时间不是整数，合约按照北京时间零点做了截断。
-在预约当天可以核销，如果过期第二天，认为自动核销。在预约日期之前可以再次预约时间，或者退票，但是到了当天，就只能核销门票了。过了当天，不能退票，也不能核销了。
+- 备注: 
 
 ## <b id="check(uint256,string,address)🇼">check(uint256,string,address)🇼</b>
 - **描述**: 核销
@@ -188,28 +200,13 @@
 
 ### 参数
 
-- **[uint256] tokenId**: 门票ID
+- [uint256] tokenId: 
 
-- **[string] _right**: 权益/打卡点（注意是字符串，必须和创建时候的权益一致）
+- [string] _right: 
 
-- **[address] _who**: 预约人的链地址
+- [address] _who: 
 
-- **备注**: 核销需要在预约当天
-
-## <b id="claim(address,uint256)🇼">claim(address,uint256)🇼</b>
-- **描述**: 活动（免费）领取
-
-- selector: 0xaad3ec96
-
-- 版本更新: 
-
-### 参数
-
-- **[address] _to**: 给某人
-
-- **[uint256] tokenId**: 门票编号
-
-- **备注**: 领取的条件需要单独在合约定义
+- 备注: 
 
 ## <b id="contractInfo()🇷">contractInfo()🇷</b>
 - 描述: 
@@ -221,23 +218,6 @@
 ### 返回值
 
 - [string] : 
-
-- 备注: 
-
-## <b id="creator(uint256)🇷">creator(uint256)🇷</b>
-- 描述: 
-
-- selector: 0x510b5158
-
-- 版本更新: 
-
-### 参数
-
-- [uint256] : 
-
-### 返回值
-
-- [address] : 
 
 - 备注: 
 
@@ -335,8 +315,25 @@
 
 - 备注: 
 
+## <b id="getStatus(uint256)🇷">getStatus(uint256)🇷</b>
+- 描述: 
+
+- selector: 0x5c622a0e
+
+- 版本更新: 
+
+### 参数
+
+- [uint256] tokenId: 
+
+### 返回值
+
+- [string] : 
+
+- 备注: 
+
 ## <b id="getStatus(uint256,uint8)🇷">getStatus(uint256,uint8)🇷</b>
-- **描述**: 获取门票的状态
+- 描述: 
 
 - selector: 0xbec5c007
 
@@ -344,29 +341,18 @@
 
 ### 参数
 
-- **[uint256] tokenId**: 门票编号
+- [uint256] tokenId: 
 
-- **[uint8] rightId**: 权益打卡点的编号，注意不是字符串
+- [uint8] rightId: 
 
 ### 返回值
 
-- **[uint8]**: 状态码：
- 0= 未预约
- 1= 已预约未到时间 
- 2= 已预约已到今天 
- 3= 已过预约时间核销 
- 4= 已核销 
- 5= 已过期 
- 6= 未开始 
- 7= 门票不存在 
- 8= 其它错误
+- [uint8] : 
 
-- **[uint256]**: 预约/核销的时间戳
-
-- **备注**: 获得状态码后可以查询状态信息数组对应信息
+- 备注: 
 
 ## <b id="init(string[],string[],bytes1[],uint256,uint256)🇼">init(string[],string[],bytes1[],uint256,uint256)🇼</b>
-- **描述**: 初始化门票
+- **描述**: 初始化合约
 
 - selector: 0xea0ecdc4
 
@@ -374,17 +360,17 @@
 
 ### 参数
 
-- **[string[]] _info**: 6个字符串：名字，描述，图片地址，额外图片如3D地址，detailsURL（图文详情），did
+- [string[]] _info: 
 
-- **[string[]] _rights**: 若干权益数组及权益的图片数组。如果数组长度等同于_rights长度，则一一对应。如果是_rights长度的2倍，则前半部分对于权益名字，后半部分对应权益图片地址。
+- [string[]] _rights: 
 
-- **[bytes1[]] _types**: 字符数组。R代表亮码，S代表扫码，N代表预约入园码
+- [bytes1[]] _types: 
 
-- **[uint256] _startTime**: 开始时间
+- [uint256] _startTime: 
 
-- **[uint256] _validTime**: 到期时间
+- [uint256] _validTime: 
 
-- **备注**: 权益图片是可选的，可以不设置。如果设置了权益图片，则权益图片数组长度必须等于权益数组长度的2倍。权益图片会出现在tokenURI的属性中，属性名称为权益名称，value为图片的地址。
+- 备注: 
 
 ## <b id="isApprovedForAll(address,address)🇷">isApprovedForAll(address,address)🇷</b>
 - 描述: 
@@ -423,7 +409,7 @@
 - 备注: 
 
 ## <b id="isReservedDay(uint256,uint8)🇷">isReservedDay(uint256,uint8)🇷</b>
-- **描述**: 判断是否是预约日期当天
+- 描述: 
 
 - selector: 0x24bfeb95
 
@@ -442,7 +428,7 @@
 - 备注: 
 
 ## <b id="mint(address,uint256)🇼">mint(address,uint256)🇼</b>
-- **描述**: 铸造门票/发票
+- 描述: 
 
 - selector: 0x40c10f19
 
@@ -450,11 +436,11 @@
 
 ### 参数
 
-- **[address] _to**: 给用户的地址
+- [address] _to: 
 
-- **[uint256] tokenId**: 门票编号
+- [uint256] tokenId: 
 
-- **备注**: 门票编号不能重复，由发票方自己管理，总数量不能超过发票方的额度。
+- 备注: 
 
 ## <b id="name()🇷">name()🇷</b>
 - 描述: 
@@ -483,7 +469,7 @@
 - 备注: 
 
 ## <b id="ownerOf(uint256)🇷">ownerOf(uint256)🇷</b>
-- **描述**: 检查某个资产的拥有人
+- 描述: 
 
 - selector: 0x6352211e
 
@@ -500,7 +486,7 @@
 - 备注: 
 
 ## <b id="refund(uint256)🇼">refund(uint256)🇼</b>
-- **描述**: 退票
+- 描述: 
 
 - selector: 0x278ecde1
 
@@ -510,7 +496,7 @@
 
 - [uint256] tokenId: 
 
-- **备注**: 注意如果某个权益打卡点已经核销，不能退票
+- 备注: 
 
 ## <b id="removeBank(uint256)🇼">removeBank(uint256)🇼</b>
 - 描述: 
@@ -548,7 +534,7 @@
 - 备注: 
 
 ## <b id="safeTransferFrom(address,address,uint256)🇼">safeTransferFrom(address,address,uint256)🇼</b>
-- **描述**: 转移资产
+- 描述: 
 
 - selector: 0x42842e0e
 
@@ -598,23 +584,6 @@
 
 - 备注: 
 
-## <b id="setAttr(uint256,string,string)🇼">setAttr(uint256,string,string)🇼</b>
-- 描述: 
-
-- selector: 0x3c614562
-
-- 版本更新: 
-
-### 参数
-
-- [uint256] tokenId: 
-
-- [string] name: 
-
-- [string] value: 
-
-- 备注: 
-
 ## <b id="setQuota(address,uint256)🇼">setQuota(address,uint256)🇼</b>
 - 描述: 
 
@@ -627,19 +596,6 @@
 - [address] _operator: 
 
 - [uint256] _quota: 
-
-- 备注: 
-
-## <b id="setTreadstone(address)🇼">setTreadstone(address)🇼</b>
-- 描述: 
-
-- selector: 0xfc780816
-
-- 版本更新: 
-
-### 参数
-
-- [address] _treadstone: 
 
 - 备注: 
 
@@ -673,57 +629,8 @@
 
 - 备注: 
 
-## <b id="ticketStatusInfo()🇷">ticketStatusInfo()🇷</b>
-- 描述: 
-
-- selector: 0x27f1e6ca
-
-- 版本更新: 
-
-### 返回值
-
-- [string[9]] : 
-
-- 备注: 
-
-## <b id="tokenByIndex(uint256)🇷">tokenByIndex(uint256)🇷</b>
-- 描述: 
-
-- selector: 0x4f6ccce7
-
-- 版本更新: 
-
-### 参数
-
-- [uint256] index: 
-
-### 返回值
-
-- [uint256] : 
-
-- 备注: 
-
-## <b id="tokenOfOwnerByIndex(address,uint256)🇷">tokenOfOwnerByIndex(address,uint256)🇷</b>
-- 描述: 
-
-- selector: 0x2f745c59
-
-- 版本更新: 
-
-### 参数
-
-- [address] owner: 
-
-- [uint256] index: 
-
-### 返回值
-
-- [uint256] : 
-
-- 备注: 
-
 ## <b id="tokenURI(uint256)🇷">tokenURI(uint256)🇷</b>
-- 描述: 
+- **描述**: 读取门票的元数据
 
 - selector: 0xc87b56dd
 
@@ -735,51 +642,7 @@
 
 ### 返回值
 
-- [string] : 
-
-- 备注: 
-
-## <b id="tokens(uint256,uint256)🇷">tokens(uint256,uint256)🇷</b>
-- 描述: 
-
-- selector: 0x8b4864d6
-
-- 版本更新: 
-
-### 参数
-
-- [uint256] offset: 
-
-- [uint256] limit: 
-
-### 返回值
-
-- [uint256] total: 
-
-- [uint256[]] tokenIds: 
-
-- 备注: 
-
-## <b id="tokensOf(address,uint256,uint256)🇷">tokensOf(address,uint256,uint256)🇷</b>
-- 描述: 
-
-- selector: 0x23185dc9
-
-- 版本更新: 
-
-### 参数
-
-- [address] owner: 
-
-- [uint256] offset: 
-
-- [uint256] limit: 
-
-### 返回值
-
-- [uint256] total: 
-
-- [uint256[]] tokenIds: 
+- **[string] **: json格式的元数据，以base64编码
 
 - 备注: 
 
@@ -856,22 +719,7 @@
 
 - 备注: 
 
-## <b id="update(string,string)🇼">update(string,string)🇼</b>
-- 描述: 
-
-- selector: 0xf4c84d19
-
-- 版本更新: 
-
-### 参数
-
-- [string] _image: 
-
-- [string] _suffix: 
-
-- 备注: 
-
 ___
 
-*updated: 2024-10-05 10:25:56    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
+*updated: 2024-10-05 10:31:21    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
