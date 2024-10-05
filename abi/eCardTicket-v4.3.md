@@ -1,28 +1,26 @@
 | 方法   | 说明  | 重要  | 更新    |
 |-------|-------|-------|-------|
-| [addBank(uint256)🇼](#addBank(uint256)🇼)| 加库存 | :white_check_mark: |  |
+| [addBank(uint256)🇼](#addBank(uint256)🇼)| 加库存 | ✅ |  |
 | [addOperator(address)🇼](#addOperator(address)🇼)|  |  |  |
-| [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 给管理员渠道商限定最多可卖的票 | :white_check_mark: |  |
+| [addQuota(address,uint256)🇼](#addQuota(address,uint256)🇼)| 给管理员渠道商限定最多可卖的票 | ✅ |  |
 | [approve(address,uint256)🇼](#approve(address,uint256)🇼)|  |  |  |
 | [balanceOf(address)🇷](#balanceOf(address)🇷)|  |  |  |
 | [burn(uint256)🇼](#burn(uint256)🇼)|  |  |  |
-| [check(uint256,string,uint256,string,address)🇼](#check(uint256,string,uint256,string,address)🇼)| 预约 | :white_check_mark: |  |
-| [check(uint256,string,address)🇼](#check(uint256,string,address)🇼)| 核销 | :white_check_mark: |  |
-| [claim(address,uint256)🇼](#claim(address,uint256)🇼)| 活动（免费）领取 | :white_check_mark: |  |
+| [check(uint256,address,string,address)🇼](#check(uint256,address,string,address)🇼)| 核销权益卡 | ✅ |  |
+| [check(uint256,address,string,uint256,string,address)🇼](#check(uint256,address,string,uint256,string,address)🇼)| 预约核销卡权益 | ✅ |  |
+| [claim(address,uint256)🇼](#claim(address,uint256)🇼)| 活动（免费）领取 | ✅ |  |
 | [contractInfo()🇷](#contractInfo()🇷)|  |  |  |
-| [creator(uint256)🇷](#creator(uint256)🇷)|  |  |  |
 | [exists(uint256)🇷](#exists(uint256)🇷)|  |  |  |
 | [getApproved(uint256)🇷](#getApproved(uint256)🇷)|  |  |  |
 | [getBankRest()🇷](#getBankRest()🇷)|  |  |  |
 | [getOperator(uint256)🇷](#getOperator(uint256)🇷)|  |  |  |
 | [getOperators()🇷](#getOperators()🇷)|  |  |  |
 | [getQuota(address)🇷](#getQuota(address)🇷)|  |  |  |
-| [getStatus(uint256,uint8)🇷](#getStatus(uint256,uint8)🇷)| 获取门票的状态 | :white_check_mark: |  |
-| [init(string[],string[],bytes1[],uint256,uint256)🇼](#init(string[],string[],bytes1[],uint256,uint256)🇼)| 初始化门票 | :white_check_mark: |  |
+| [getStatus(uint256,address,uint8)🇷](#getStatus(uint256,address,uint8)🇷)|  |  |  |
+| [init(string[],address[],uint8,uint256,uint256)🇼](#init(string[],address[],uint8,uint256,uint256)🇼)| 初始化 | ✅ |  |
 | [isApprovedForAll(address,address)🇷](#isApprovedForAll(address,address)🇷)|  |  |  |
 | [isOperator(address)🇷](#isOperator(address)🇷)|  |  |  |
-| [isReservedDay(uint256,uint8)🇷](#isReservedDay(uint256,uint8)🇷)| 判断是否是预约日期当天 | :white_check_mark: |  |
-| [mint(address,uint256)🇼](#mint(address,uint256)🇼)| 发行权益卡 | :white_check_mark: |  |
+| [mint(address,uint256)🇼](#mint(address,uint256)🇼)| 发行权益卡 | ✅ |  |
 | [name()🇷](#name()🇷)|  |  |  |
 | [owner()🇷](#owner()🇷)|  |  |  |
 | [ownerOf(uint256)🇷](#ownerOf(uint256)🇷)|  |  |  |
@@ -30,15 +28,13 @@
 | [removeBank(uint256)🇼](#removeBank(uint256)🇼)|  |  |  |
 | [removeOperator(address)🇼](#removeOperator(address)🇼)|  |  |  |
 | [renounceOwnership()🇼](#renounceOwnership()🇼)|  |  |  |
-| [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)| 转增权益卡 | :white_check_mark: |  |
+| [safeTransferFrom(address,address,uint256)🇼](#safeTransferFrom(address,address,uint256)🇼)| 转增权益卡 | ✅ |  |
 | [safeTransferFrom(address,address,uint256,bytes)🇼](#safeTransferFrom(address,address,uint256,bytes)🇼)|  |  |  |
 | [setApprovalForAll(address,bool)🇼](#setApprovalForAll(address,bool)🇼)|  |  |  |
-| [setAttr(uint256,string,string)🇼](#setAttr(uint256,string,string)🇼)|  |  |  |
 | [setQuota(address,uint256)🇼](#setQuota(address,uint256)🇼)|  |  |  |
 | [setTreadstone(address)🇼](#setTreadstone(address)🇼)|  |  |  |
 | [supportsInterface(bytes4)🇷](#supportsInterface(bytes4)🇷)|  |  |  |
 | [symbol()🇷](#symbol()🇷)|  |  |  |
-| [ticketStatusInfo()🇷](#ticketStatusInfo()🇷)|  |  |  |
 | [tokenByIndex(uint256)🇷](#tokenByIndex(uint256)🇷)|  |  |  |
 | [tokenOfOwnerByIndex(address,uint256)🇷](#tokenOfOwnerByIndex(address,uint256)🇷)|  |  |  |
 | [tokenURI(uint256)🇷](#tokenURI(uint256)🇷)|  |  |  |
@@ -49,11 +45,6 @@
 | [transfer(address,address,uint256)🇼](#transfer(address,address,uint256)🇼)|  |  |  |
 | [transferFrom(address,address,uint256)🇼](#transferFrom(address,address,uint256)🇼)|  |  |  |
 | [transferOwnership(address)🇼](#transferOwnership(address)🇼)|  |  |  |
-| [update(string,string)🇼](#update(string,string)🇼)|  |  |  |
-| [check(uint256,address,string,address)🇼](#check(uint256,address,string,address)🇼)| 核销权益卡 | :white_check_mark: |  |
-| [check(uint256,address,string,uint256,string,address)🇼](#check(uint256,address,string,uint256,string,address)🇼)| 预约核销卡权益 | :white_check_mark: |  |
-| [getStatus(uint256,address,uint8)🇷](#getStatus(uint256,address,uint8)🇷)|  |  |  |
-| [init(string[],address[],uint8,uint256,uint256)🇼](#init(string[],address[],uint8,uint256,uint256)🇼)| 初始化 | :white_check_mark: |  |
 
 - **合约及版本**: eCardTicket-v4.3
 
@@ -782,5 +773,5 @@
 
 ___
 
-*updated: 2024-10-05 02:08:36 - isotop⚛“2024*
+*updated: 2024-10-05 09:05:53    i̧͎̩̦̯͓͓͔̯̦̭s͖̰̫͈̬͕̱̠͜o̖̗̩̬̥͖͕̝͢t̢͖̤̙̲o̪͉͕̲͔͉͈̥͕͜p̘̞͎̪̩̤͓͢*
 
